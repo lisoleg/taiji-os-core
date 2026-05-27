@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  taiji-os:
+    build: .
+    container_name: taiji-os-core
+    ports:
+      - "8000:8000"
+    environment:
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY:-}
+      - CLAUDE_API_KEY=${CLAUDE_API_KEY:-}
+    volumes:
+      - ./snapshots:/app/snapshots
+      - ./audit:/app/audit
+      - ./config.yaml:/app/config.yaml:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
