@@ -1,0 +1,17 @@
+[Unit]
+Description=FlowForge Taiji OS
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+WorkingDirectory=/opt/taiji-os-core
+ExecStart=/usr/local/bin/uvicorn api.server:app --host 0.0.0.0 --port 8000
+Restart=on-failure
+RestartSec=5s
+StandardOutput=journal
+StandardError=journal
+Environment=PYTHONPATH=/opt/taiji-os-core
+
+[Install]
+WantedBy=multi-user.target
