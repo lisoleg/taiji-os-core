@@ -1,0 +1,24 @@
+llm:
+  provider: deepseek
+  base_url: https://api.deepseek.com/v1
+  api_key: ${DEEPSEEK_API_KEY}
+  model: deepseek-reasoner
+  temperature: 0.2
+
+fallback:
+  enabled: true
+  provider: claude
+  base_url: https://api.anthropic.com/v1
+  api_key: ${CLAUDE_API_KEY}
+  model: claude-sonnet-4-20260514
+
+embedding:
+  provider: deepseek
+  base_url: https://api.deepseek.com/v1
+  api_key: ${DEEPSEEK_API_KEY}
+  model: deepseek-embedding
+
+taiji:
+  phi_threshold: 0.65
+  max_retry: 3
+  snapshot_dir: snapshots
