@@ -22,3 +22,10 @@ taiji:
   phi_threshold: 0.65
   max_retry: 3
   snapshot_dir: snapshots
+
+# 浏览器云脑配置（web 模式）
+browser:
+  mode: text          # "text" | "web"
+  headless: true      # web 模式下浏览器是否无头启动
+  default_engine: baidu   # 默认搜索引擎: baidu | google | bing
+  timeout_ms: 30000   # 页面加载超时（毫秒）
