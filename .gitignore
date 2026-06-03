@@ -1,10 +1,10 @@
 # Python
 __pycache__/
-**.pyc
-**.pyo
+*.pyc
+*.pyo
 .venv/
 venv/
-**.egg-info/
+*.egg-info/
 dist/
 build/
 
