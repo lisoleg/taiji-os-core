@@ -47,3 +47,79 @@ mcp:
     - taiji.memory_search
     - taiji.verify
     - taiji.list_sessions
+
+# ==========================================================================
+# 硅基代理治理 (Silicon Agent Governance) — 三旋治理架构
+# ==========================================================================
+
+# 三旋治理 (Tri-spin Governance)
+governance:
+  enabled: true
+  mode: tri-spin             # tri-spin | basic | none
+
+  # 情治 (Consensus) — 激活主体责任意识
+  consensus:
+    require_acknowledge: true   # 上线前强制主体认领
+    recursive_check: true       # 认识递归迭代验证
+    max_acknowledge_retry: 3
+
+  # 理治 (Cryptography) — 密码学锚定身份契约
+  cryptography:
+    require_aic: true           # 强制 AIC 凭证
+    require_seal: true          # 强制 M175 封印
+    signature_algo: sha256with_ecdsa
+
+  # 法治 (Statute) — 行为归责
+  statute:
+    require_gcd: true           # 强制 GCD 约束
+    auto_complete: false        # 自动 M106 验收
+    auto_slash_on_error: true   # 错误时自动 M178 罚没
+
+# AIC (Agent Identity Credential) 凭证系统
+aic:
+  credential_type: AgentIdentityCredential
+  standard: w3c_vc_v1.1_extended
+  fields:
+    - ownerDID             # 责任节点
+    - homotopyClassHash    # 同伦类哈希 H_h
+    - piSpecHash           # M88 一致性哈希
+    - capabilities         # 权限列表
+
+# GCD 归约算子
+gcd:
+  mode: strict               # strict（阻断）| loose（警告）| audit（仅记录）
+  builtin_rules:
+    - browser.navigate
+    - browser.click
+    - browser.type
+    - shell.exec
+    - file.read
+    - file.write
+    - api.call
+  custom_rules_dir: gcd_rules/  # 自定义约束目录
+
+# 约柜合约 (Ark Covenant)
+ark:
+  chain: simulated            # 区块链类型: simulated | ethereum | solana
+  po_s:
+    finality_depth: 12        # PoS 最终性确认深度
+    block_time_ms: 2000       # 模拟出块时间
+  covenant:
+    auto_seal: true           # 部署后自动 M175 封印
+    auto_settle: false        # 自动结算
+
+# 确权仪式 (Ratify Ritual)
+ratify:
+  phases:
+    - plan
+    - consult
+    - ratify
+  require_consult_approval: true   # 必须所有评审通过
+  auto_ratify: false                # 自动封印
+
+# OPC 注册表 (人人即法人)
+opc:
+  default_asset_pool: 0.0    # 默认资产池
+  max_agents_per_rn: 100     # 每 RN 最大代理数
+  personality:
+    auto_grant: false        # 自动授予临时法人人格

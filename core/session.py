@@ -1,4 +1,4 @@
-"""core/session.py — TaijiSession v3: AGI 进程主控 + Walrus Memory 集成
+"""core/session.py — TaijiSession v4: AGI 进程主控 + Walrus Memory + 硅基代理治理
 
 三种工作模式：
   - "text"   : 原始文本推演（默认）
@@ -9,6 +9,12 @@ Walrus Memory 集成：
   - _save_continuation() : 保存 Continuation 同时同步到 MemoryHub
   - search_memory()  : 代理到 MemoryHub.search()
   - verify_integrity(): 代理到 MemoryHub.verify_all()
+
+硅基代理治理集成（v4 新增）:
+  - tri_spin         : TriSpinGovernor 三旋治理引擎
+  - pipeline         : FiveLayerPipeline 五层次穿透架构
+  - ritual           : RatifyRitual 确权仪式
+  - governance_mode  : "tri-spin" | "basic" | "none"
 """
 
 from __future__ import annotations
@@ -24,8 +30,9 @@ from core.self_model import SelfModel
 
 class TaijiSession:
     """
-    TaijiSession v3 (AGI Process):
-    封装世界模型、自我模型、GAN推演、Continuation机制与 MemoryHub。
+    TaijiSession v4 (AGI Process):
+    封装世界模型、自我模型、GAN推演、Continuation机制、MemoryHub 与
+    三旋治理（五层次穿透架构）。
 
     参数:
         sid          : 会话 ID
@@ -34,6 +41,10 @@ class TaijiSession:
         mode         : "text"（纯文本）或 "web"（浏览器云脑）
         headless     : Web 模式下是否无头启动浏览器
         memory_hub   : MemoryHub 实例（可选，启用 Walrus Memory 集成）
+        governance   : 治理模式 "tri-spin"（默认）| "basic" | "none"
+        agent_spec   : (tri-spin 时必需) 代理行为规范文本
+        owner_did    : (tri-spin 时必需) 责任节点 DID
+        escrow_tokens: (tri-spin 时可选) 初始托管 Token 数
     """
 
     def __init__(
@@ -44,12 +55,48 @@ class TaijiSession:
         mode: str = "text",
         headless: bool = True,
         memory_hub=None,
+        governance: str = "tri-spin",
+        agent_spec: str = "",
+        owner_did: str = "",
+        escrow_tokens: float = 0.0,
     ):
         self.sid = sid
         self.snapshot_dir = snapshot_dir
         self.mode = mode
         self.memory_hub = memory_hub
+        self.governance_mode = governance
         self._last_kid: Optional[str] = None  # 用于记忆链
+
+        # 三旋治理 初始化
+        self.tri_spin = None
+        self.pipeline = None
+        self.ritual = None
+        if governance == "tri-spin" and owner_did and agent_spec:
+            from core.tri_spin_governor import TriSpinGovernor
+            from core.five_layer_architecture import FiveLayerPipeline
+            from core.ratify_ritual import RatifyRitual, AgentSpec
+
+            self.tri_spin = TriSpinGovernor()
+            self.tri_spin.bootstrap(
+                agent_name=sid,
+                owner_did=owner_did,
+                capabilities=["text_generate", "web_browse", "file_ops", "shell_exec"],
+                spec_text=agent_spec,
+                escrow_tokens=escrow_tokens,
+            )
+            self.pipeline = FiveLayerPipeline(self.tri_spin)
+
+            # 确权仪式
+            spec = AgentSpec(
+                agent_name=sid,
+                owner_did=owner_did,
+                purpose=f"Taiji Session: {sid}",
+                capabilities=["text_generate", "web_browse", "file_ops", "shell_exec"],
+                boundaries=["no_system_modify", "no_sensitive_read"],
+                constraints=["obey_gcd", "respect_ark"],
+            )
+            self.ritual = RatifyRitual()
+            self.ritual.plan(spec)
 
         # 根据模式选择 WorldModel 和执行器
         if mode == "web":
@@ -84,12 +131,58 @@ class TaijiSession:
     # ------------------------------------------------------------------
 
     def run(self, user_input: str) -> str:
-        """执行一轮推演，返回输出或 Continuation ID。"""
+        """执行一轮推演，返回输出或 Continuation ID。
+
+        tri-spin 模式下自动穿越五层次贯穿架构：
+          L1 流贯 → L2 代数壳 → L3 拓扑流贯(GCD) → L4 裁决 → L5 交付
+        """
         self.env.push("user", user_input)
+
+        # 三旋治理: 情治校验
+        if self.tri_spin and not self.tri_spin.consensus_verify():
+            if self.ritual and not self.ritual.verify_ratification():
+                return (
+                    "Governance BLOCKED: 确权仪式未完成\n"
+                    f"  状态: {self.ritual.status()['phase']}\n"
+                    "  请先完成 RatifyRitual (Plan → Consult → Ratify)"
+                )
+
+        # 五层次管道 (tri-spin 模式)
+        if self.pipeline:
+            return self._run_governed(user_input)
 
         if self.mode == "web":
             return self._run_web(user_input)
         return self._run_text(user_input)
+
+    def _run_governed(self, user_input: str) -> str:
+        """三旋治理模式 — 五层次贯穿推演。"""
+        from core.five_layer_architecture import PipelineResult
+
+        # L1-L5 贯穿
+        result: PipelineResult = self.pipeline.execute(
+            intent=user_input,
+            tool_name="text.generate",
+            tool_args={"prompt": user_input},
+            adjudicate=False,
+        )
+
+        # 如果 L3 GCD 阻断，返回阻断信息
+        if result.layers and result.layers[-1].status == "blocked":
+            return f"GCD BLOCKED: {result.final_output}"
+
+        # GAN 推演（L3 通过后进行）
+        gan_result, reason = self.gan.step(self.env.to_dict(), user_input)
+        if gan_result:
+            # L4 裁决（模拟验收）
+            if self.tri_spin:
+                self.tri_spin.statute_complete(
+                    self.tri_spin.aic.owner_did if self.tri_spin.aic else ""
+                )
+            self.env.push("assistant", gan_result)
+            return f"{gan_result}\n\n[Governance]\n{result.summary()}"
+        else:
+            return self._save_continuation(reason)
 
     def _run_text(self, user_input: str) -> str:
         """原始文本模式推演。"""
@@ -228,6 +321,7 @@ class TaijiSession:
         s = {
             "sid": self.sid,
             "mode": self.mode,
+            "governance": self.governance_mode,
             "world_version": self.w.version,
             "self_identity": self.self_model.identity(),
             "intent": self.env.intent,
@@ -240,6 +334,18 @@ class TaijiSession:
             s["memory_count"] = len(
                 self.memory_hub.load_by_sid(self.sid)
             )
+        # 治理状态
+        if self.tri_spin:
+            report = self.tri_spin.report()
+            s["governance_report"] = {
+                "aiс_valid": report.aic_valid,
+                "vacuum_risk": report.vacuum_risk,
+                "ark_status": report.ark_status,
+                "gcd_blocks": report.gcd_stats.get("blocks", 0),
+                "accountable": report.accountable,
+            }
+        if self.ritual:
+            s["ratify_status"] = self.ritual.status()
         return s
 
     # ------------------------------------------------------------------
