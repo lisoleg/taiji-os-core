@@ -29,3 +29,21 @@ browser:
   headless: true      # web 模式下浏览器是否无头启动
   default_engine: baidu   # 默认搜索引擎: baidu | google | bing
   timeout_ms: 30000   # 页面加载超时（毫秒）
+
+# Walrus Memory — 共享记忆空间
+memory:
+  enabled: true
+  store_dir: memory_store    # 记忆文件存储目录
+  auto_register: true        # 自动注册 session 到 MemoryHub
+
+# MCP Bridge — AI 生态桥接
+mcp:
+  enabled: true
+  transport: stdio           # MCP 传输协议: stdio | sse
+  tools:
+    - taiji.run
+    - taiji.status
+    - taiji.resume
+    - taiji.memory_search
+    - taiji.verify
+    - taiji.list_sessions
