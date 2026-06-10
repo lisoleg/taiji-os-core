@@ -1,6 +1,6 @@
 # 太极OS (Taiji OS) — FlowForge Core
 
-![Version](https://img.shields.io/badge/version-v4.1.0-blue)
+![Version](https://img.shields.io/badge/version-v4.2.0-blue)
 ![Tests](https://img.shields.io/badge/tests-65%20passed-green)
 ![License](https://img.shields.io/badge/license-MIT-orange)
 ![Python](https://img.shields.io/badge/python-3.10+-blueviolet)
@@ -25,6 +25,10 @@
 | **约柜合约** | M175封印 + M106验收 + M178罚没，模拟区块链智能合约 | ✅ 生产就绪 |
 | **确权仪式** | Plan→Consult→Ratify三阶段，消除事后推诿 | ✅ 生产就绪 |
 | **OPC注册表** | 人人即法人，责任节点注册，AIC生命周期管理 | ✅ 生产就绪 |
+| **USCS 页式内存** | PageTable/PageAllocator/PageReclaimer，4KB页粒度虚拟内存 | ✅ 生产就绪 |
+| **抢占调度** | PreemptiveScheduler 多级优先级队列 + ContextSwitch | ✅ 生产就绪 |
+| **跨节点迁移** | MigrationManager 进程热迁移 + SHA-256 完整性证明 | ✅ 生产就绪 |
+| **TruthfulQA 基准** | 50题7类别外部基准，GPT-4 vs DeepSeek 对比评测 | ✅ 生产就绪 |
 
 ---
 
@@ -132,6 +136,9 @@ uvicorn api.server:app --host 0.0.0.0 --port 8000
 | [使用文档](docs/USER_GUIDE.md) | 安装、配置、CLI使用、Python API、故障排除 |
 | [技术报告](docs/TECHNICAL_REPORT.md) | 设计与实现技术报告，含摘要、架构、测试验证 |
 | [架构文档](docs/ARCHITECTURE.md) | 模块依赖图、数据流、五层次穿透架构详解 |
+| [OSDI 论文](docs/osdi_paper_cn.md) | USCS统一语义-计算状态页式管理 (中文论文) |
+| [USCS 架构设计](docs/arch-uscs-kernel.md) | USCS 页式内存/抢占调度/跨节点迁移架构 |
+| [USCS 需求文档](docs/prd-uscs-kernel.md) | USCS 内核子系统增量需求 |
 
 ---
 
@@ -161,6 +168,11 @@ pytest tests/test_hdr.py -v
 
 # SCS（世界一致性）测试
 pytest tests/test_scs.py -v
+
+# TruthfulQA 外部基准
+python scripts/benchmark_gpt4_baseline.py --mock --sample 50
+python scripts/benchmark_compare.py --sample 50
+python scripts/benchmark_hdr.py --sample 50
 ```
 
 ---
@@ -257,7 +269,10 @@ taiji-os-core/
 │   ├── ark_covenant.py    # 约柜合约
 │   ├── tri_spin_governor.py   # 三旋治理
 │   ├── ratify_ritual.py   # 确权仪式
-│   └── five_layer_architecture.py  # 五层次穿透架构
+│   ├── five_layer_architecture.py  # 五层次穿透架构
+│   ├── uscs_mmu.py         # USCS 页式内存管理
+│   ├── preemptive_scheduler.py  # 抢占调度器
+│   └── migration_agent.py  # 跨节点迁移代理
 ├── syscalls/               # 系统调用层
 │   ├── executor.py         # 文本执行器
 │   ├── browser_executor.py # 浏览器执行器
@@ -266,6 +281,15 @@ taiji-os-core/
 │   ├── mcp_bridge.py      # MCP Bridge
 │   ├── opc_registry.py    # OPC注册表
 │   └── auditor.py         # 审计器
+├── scripts/                # 评测脚本
+│   ├── benchmark_gpt4_baseline.py  # GPT-4 零样本 baseline
+│   ├── benchmark_compare.py        # DeepSeek vs GPT-4 对比
+│   ├── benchmark_hdr.py            # HDR 在 TruthfulQA 上验证
+│   └── fetch_truthfulqa.py         # TruthfulQA 数据抓取
+├── data/test_sets/        # 测试数据集
+│   ├── truthfulqa_subset.json      # TruthfulQA 50题子集
+│   ├── hdr_contradictions.json     # HDR 矛盾正例
+│   └── hdr_consistent.json         # HDR 一致性负例
 ├── hal/                    # HAL层
 │   └── llm_router.py     # LLM Router
 ├── api/                    # API服务层
@@ -288,6 +312,26 @@ taiji-os-core/
 ---
 
 ## 📝 更新日志
+
+### v4.2.0 (2026-06-10)
+
+**新增**：
+- USCS 页式内存管理（PageTable/PageAllocator/PageReclaimer，4KB 页粒度）
+- 抢占调度器（PreemptiveScheduler 多级优先级队列 + ContextSwitch）
+- 跨节点迁移代理（MigrationManager + LoadBalancer）
+- TruthfulQA 50题外部基准（7类别，GPT-4 vs DeepSeek 对比评测框架）
+- OSDI 论文新增 §4.7 TruthfulQA 外部基准验证章节
+
+**Bug 修复**（4/4，回归测试 5/5 PASS）：
+- BUG-1: `[ERROR]` 答案标记为 untruthful
+- BUG-2: 添加 `--mock` 离线模式参数
+- BUG-3: DeepSeek 离线模式自动回退 mock
+- BUG-4: 字段名统一为 `correct_answers`/`incorrect_answers`
+
+**文档**：
+- 新增 `docs/osdi_paper_cn.md`（USCS 统一语义-计算状态论文）
+- 新增 `docs/arch-uscs-kernel.md`（USCS 内核架构设计）
+- 新增 `docs/prd-uscs-kernel.md`（USCS 内核需求文档）
 
 ### v4.0.0 (2026-06-04)
 
