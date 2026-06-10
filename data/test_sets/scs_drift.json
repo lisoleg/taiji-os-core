@@ -1,0 +1,15 @@
+[
+  {"input": "深度学习是机器学习的一个子领域。", "category": "ai_topic", "expected": "drift"},
+  {"input": "今天上海外滩的夜景灯光秀非常壮观。", "category": "urban_sightseeing", "expected": "drift"},
+  {"input": "红烧肉的关键在于先用中火煎至表面微焦。", "category": "cooking_recipe", "expected": "drift"},
+  {"input": "NBA总决赛今年湖人对阵凯尔特人。", "category": "sports_event", "expected": "drift"},
+  {"input": "莫奈的睡莲系列是印象派的代表作。", "category": "art_history", "expected": "drift"},
+  {"input": "量子纠缠是量子力学中最奇特的现象之一。", "category": "quantum_physics", "expected": "drift"},
+  {"input": "唐代诗人李白的将进酒豪迈奔放。", "category": "classical_poetry", "expected": "drift"},
+  {"input": "地中海饮食有助于降低心血管疾病风险。", "category": "medical_nutrition", "expected": "drift"},
+  {"input": "比特币的共识机制依赖工作量证明算法。", "category": "blockchain_tech", "expected": "drift"},
+  {"input": "亚马逊雨林是地球之肺，面积正在缩减。", "category": "environmental_issue", "expected": "drift"},
+  {"input": "围棋的收官阶段需要精确计算目数。", "category": "board_game", "expected": "drift"},
+  {"input": "埃及金字塔的建造技术至今仍有争议。", "category": "ancient_history", "expected": "drift"},
+  {"input": "Scala的隐式转换是类型系统的高级特性。", "category": "programming_language", "expected": "drift"}
+]
