@@ -1,0 +1,5996 @@
+{
+  "metadata": {
+    "name": "HDR Contradiction Dataset",
+    "version": "1.0",
+    "total": 664,
+    "categories": [
+      "attribute",
+      "causal",
+      "logical",
+      "numerical",
+      "referential",
+      "semantic_drift",
+      "spatial",
+      "temporal"
+    ],
+    "description": "标准化矛盾检测正例数据集,用于评估Φ门控的幻觉检测率(HDR)"
+  },
+  "entries": [
+    {
+      "id": "HDR-CON-0001",
+      "category": "spatial",
+      "subtype": "北京-vs-上海",
+      "statement_a": "张教授目前在北京的办公室工作",
+      "statement_b": "张教授今天在上海校区上课",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0002",
+      "category": "spatial",
+      "subtype": "海淀-vs-朝阳",
+      "statement_a": "张教授目前在海淀的办公室工作",
+      "statement_b": "张教授今天在朝阳校区上课",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0003",
+      "category": "spatial",
+      "subtype": "东区-vs-西区",
+      "statement_a": "张教授目前在东区的办公室工作",
+      "statement_b": "张教授今天在西区校区上课",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0004",
+      "category": "spatial",
+      "subtype": "A栋-vs-B栋",
+      "statement_a": "张教授目前在A栋的办公室工作",
+      "statement_b": "张教授今天在B栋校区上课",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0005",
+      "category": "spatial",
+      "subtype": "三楼-vs-五楼",
+      "statement_a": "张教授目前在三楼的办公室工作",
+      "statement_b": "张教授今天在五楼校区上课",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0006",
+      "category": "spatial",
+      "subtype": "前门-vs-后门",
+      "statement_a": "张教授目前在前门的办公室工作",
+      "statement_b": "张教授今天在后门校区上课",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0007",
+      "category": "spatial",
+      "subtype": "南沙-vs-西沙",
+      "statement_a": "张教授目前在南沙的办公室工作",
+      "statement_b": "张教授今天在西沙校区上课",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0008",
+      "category": "spatial",
+      "subtype": "东京-vs-大阪",
+      "statement_a": "张教授目前在东京的办公室工作",
+      "statement_b": "张教授今天在大阪校区上课",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0009",
+      "category": "spatial",
+      "subtype": "一楼-vs-地下室",
+      "statement_a": "张教授目前在一楼的办公室工作",
+      "statement_b": "张教授今天在地下室校区上课",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0010",
+      "category": "spatial",
+      "subtype": "华北-vs-华南",
+      "statement_a": "张教授目前在华北的办公室工作",
+      "statement_b": "张教授今天在华南校区上课",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0011",
+      "category": "spatial",
+      "subtype": "城区-vs-郊区",
+      "statement_a": "张教授目前在城区的办公室工作",
+      "statement_b": "张教授今天在郊区校区上课",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0012",
+      "category": "spatial",
+      "subtype": "机场-vs-火车站",
+      "statement_a": "张教授目前在机场的办公室工作",
+      "statement_b": "张教授今天在火车站校区上课",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0013",
+      "category": "spatial",
+      "subtype": "DC-A-vs-DC-B",
+      "statement_a": "张教授目前在DC-A的办公室工作",
+      "statement_b": "张教授今天在DC-B校区上课",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0014",
+      "category": "spatial",
+      "subtype": "主校区-vs-分校区",
+      "statement_a": "张教授目前在主校区的办公室工作",
+      "statement_b": "张教授今天在分校区校区上课",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0015",
+      "category": "spatial",
+      "subtype": "太平洋-vs-大西洋",
+      "statement_a": "张教授目前在太平洋的办公室工作",
+      "statement_b": "张教授今天在大西洋校区上课",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0016",
+      "category": "spatial",
+      "subtype": "北坡-vs-南坡",
+      "statement_a": "张教授目前在北坡的办公室工作",
+      "statement_b": "张教授今天在南坡校区上课",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0017",
+      "category": "spatial",
+      "subtype": "北京-vs-上海",
+      "statement_a": "快递包裹显示在北京中转站",
+      "statement_b": "物流信息显示包裹已到达上海配送点",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0018",
+      "category": "spatial",
+      "subtype": "海淀-vs-朝阳",
+      "statement_a": "快递包裹显示在海淀中转站",
+      "statement_b": "物流信息显示包裹已到达朝阳配送点",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0019",
+      "category": "spatial",
+      "subtype": "东区-vs-西区",
+      "statement_a": "快递包裹显示在东区中转站",
+      "statement_b": "物流信息显示包裹已到达西区配送点",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0020",
+      "category": "spatial",
+      "subtype": "A栋-vs-B栋",
+      "statement_a": "快递包裹显示在A栋中转站",
+      "statement_b": "物流信息显示包裹已到达B栋配送点",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0021",
+      "category": "spatial",
+      "subtype": "三楼-vs-五楼",
+      "statement_a": "快递包裹显示在三楼中转站",
+      "statement_b": "物流信息显示包裹已到达五楼配送点",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0022",
+      "category": "spatial",
+      "subtype": "前门-vs-后门",
+      "statement_a": "快递包裹显示在前门中转站",
+      "statement_b": "物流信息显示包裹已到达后门配送点",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0023",
+      "category": "spatial",
+      "subtype": "南沙-vs-西沙",
+      "statement_a": "快递包裹显示在南沙中转站",
+      "statement_b": "物流信息显示包裹已到达西沙配送点",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0024",
+      "category": "spatial",
+      "subtype": "东京-vs-大阪",
+      "statement_a": "快递包裹显示在东京中转站",
+      "statement_b": "物流信息显示包裹已到达大阪配送点",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0025",
+      "category": "spatial",
+      "subtype": "一楼-vs-地下室",
+      "statement_a": "快递包裹显示在一楼中转站",
+      "statement_b": "物流信息显示包裹已到达地下室配送点",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0026",
+      "category": "spatial",
+      "subtype": "华北-vs-华南",
+      "statement_a": "快递包裹显示在华北中转站",
+      "statement_b": "物流信息显示包裹已到达华南配送点",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0027",
+      "category": "spatial",
+      "subtype": "城区-vs-郊区",
+      "statement_a": "快递包裹显示在城区中转站",
+      "statement_b": "物流信息显示包裹已到达郊区配送点",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0028",
+      "category": "spatial",
+      "subtype": "机场-vs-火车站",
+      "statement_a": "快递包裹显示在机场中转站",
+      "statement_b": "物流信息显示包裹已到达火车站配送点",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0029",
+      "category": "spatial",
+      "subtype": "DC-A-vs-DC-B",
+      "statement_a": "快递包裹显示在DC-A中转站",
+      "statement_b": "物流信息显示包裹已到达DC-B配送点",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0030",
+      "category": "spatial",
+      "subtype": "主校区-vs-分校区",
+      "statement_a": "快递包裹显示在主校区中转站",
+      "statement_b": "物流信息显示包裹已到达分校区配送点",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0031",
+      "category": "spatial",
+      "subtype": "太平洋-vs-大西洋",
+      "statement_a": "快递包裹显示在太平洋中转站",
+      "statement_b": "物流信息显示包裹已到达大西洋配送点",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0032",
+      "category": "spatial",
+      "subtype": "北坡-vs-南坡",
+      "statement_a": "快递包裹显示在北坡中转站",
+      "statement_b": "物流信息显示包裹已到达南坡配送点",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0033",
+      "category": "spatial",
+      "subtype": "北京-vs-上海",
+      "statement_a": "卫星图像显示舰队位于北京海域",
+      "statement_b": "侦察报告称舰队正在上海附近演习",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0034",
+      "category": "spatial",
+      "subtype": "海淀-vs-朝阳",
+      "statement_a": "卫星图像显示舰队位于海淀海域",
+      "statement_b": "侦察报告称舰队正在朝阳附近演习",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0035",
+      "category": "spatial",
+      "subtype": "东区-vs-西区",
+      "statement_a": "卫星图像显示舰队位于东区海域",
+      "statement_b": "侦察报告称舰队正在西区附近演习",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0036",
+      "category": "spatial",
+      "subtype": "A栋-vs-B栋",
+      "statement_a": "卫星图像显示舰队位于A栋海域",
+      "statement_b": "侦察报告称舰队正在B栋附近演习",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0037",
+      "category": "spatial",
+      "subtype": "三楼-vs-五楼",
+      "statement_a": "卫星图像显示舰队位于三楼海域",
+      "statement_b": "侦察报告称舰队正在五楼附近演习",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0038",
+      "category": "spatial",
+      "subtype": "前门-vs-后门",
+      "statement_a": "卫星图像显示舰队位于前门海域",
+      "statement_b": "侦察报告称舰队正在后门附近演习",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0039",
+      "category": "spatial",
+      "subtype": "南沙-vs-西沙",
+      "statement_a": "卫星图像显示舰队位于南沙海域",
+      "statement_b": "侦察报告称舰队正在西沙附近演习",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0040",
+      "category": "spatial",
+      "subtype": "东京-vs-大阪",
+      "statement_a": "卫星图像显示舰队位于东京海域",
+      "statement_b": "侦察报告称舰队正在大阪附近演习",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0041",
+      "category": "spatial",
+      "subtype": "一楼-vs-地下室",
+      "statement_a": "卫星图像显示舰队位于一楼海域",
+      "statement_b": "侦察报告称舰队正在地下室附近演习",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0042",
+      "category": "spatial",
+      "subtype": "华北-vs-华南",
+      "statement_a": "卫星图像显示舰队位于华北海域",
+      "statement_b": "侦察报告称舰队正在华南附近演习",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0043",
+      "category": "spatial",
+      "subtype": "城区-vs-郊区",
+      "statement_a": "卫星图像显示舰队位于城区海域",
+      "statement_b": "侦察报告称舰队正在郊区附近演习",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0044",
+      "category": "spatial",
+      "subtype": "机场-vs-火车站",
+      "statement_a": "卫星图像显示舰队位于机场海域",
+      "statement_b": "侦察报告称舰队正在火车站附近演习",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0045",
+      "category": "spatial",
+      "subtype": "DC-A-vs-DC-B",
+      "statement_a": "卫星图像显示舰队位于DC-A海域",
+      "statement_b": "侦察报告称舰队正在DC-B附近演习",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0046",
+      "category": "spatial",
+      "subtype": "主校区-vs-分校区",
+      "statement_a": "卫星图像显示舰队位于主校区海域",
+      "statement_b": "侦察报告称舰队正在分校区附近演习",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0047",
+      "category": "spatial",
+      "subtype": "太平洋-vs-大西洋",
+      "statement_a": "卫星图像显示舰队位于太平洋海域",
+      "statement_b": "侦察报告称舰队正在大西洋附近演习",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0048",
+      "category": "spatial",
+      "subtype": "北坡-vs-南坡",
+      "statement_a": "卫星图像显示舰队位于北坡海域",
+      "statement_b": "侦察报告称舰队正在南坡附近演习",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0049",
+      "category": "spatial",
+      "subtype": "北京-vs-上海",
+      "statement_a": "服务器部署在北京数据中心",
+      "statement_b": "监控显示该服务器运行在上海机房",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0050",
+      "category": "spatial",
+      "subtype": "海淀-vs-朝阳",
+      "statement_a": "服务器部署在海淀数据中心",
+      "statement_b": "监控显示该服务器运行在朝阳机房",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0051",
+      "category": "spatial",
+      "subtype": "东区-vs-西区",
+      "statement_a": "服务器部署在东区数据中心",
+      "statement_b": "监控显示该服务器运行在西区机房",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0052",
+      "category": "spatial",
+      "subtype": "A栋-vs-B栋",
+      "statement_a": "服务器部署在A栋数据中心",
+      "statement_b": "监控显示该服务器运行在B栋机房",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0053",
+      "category": "spatial",
+      "subtype": "三楼-vs-五楼",
+      "statement_a": "服务器部署在三楼数据中心",
+      "statement_b": "监控显示该服务器运行在五楼机房",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0054",
+      "category": "spatial",
+      "subtype": "前门-vs-后门",
+      "statement_a": "服务器部署在前门数据中心",
+      "statement_b": "监控显示该服务器运行在后门机房",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0055",
+      "category": "spatial",
+      "subtype": "南沙-vs-西沙",
+      "statement_a": "服务器部署在南沙数据中心",
+      "statement_b": "监控显示该服务器运行在西沙机房",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0056",
+      "category": "spatial",
+      "subtype": "东京-vs-大阪",
+      "statement_a": "服务器部署在东京数据中心",
+      "statement_b": "监控显示该服务器运行在大阪机房",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0057",
+      "category": "spatial",
+      "subtype": "一楼-vs-地下室",
+      "statement_a": "服务器部署在一楼数据中心",
+      "statement_b": "监控显示该服务器运行在地下室机房",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0058",
+      "category": "spatial",
+      "subtype": "华北-vs-华南",
+      "statement_a": "服务器部署在华北数据中心",
+      "statement_b": "监控显示该服务器运行在华南机房",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0059",
+      "category": "spatial",
+      "subtype": "城区-vs-郊区",
+      "statement_a": "服务器部署在城区数据中心",
+      "statement_b": "监控显示该服务器运行在郊区机房",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0060",
+      "category": "spatial",
+      "subtype": "机场-vs-火车站",
+      "statement_a": "服务器部署在机场数据中心",
+      "statement_b": "监控显示该服务器运行在火车站机房",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0061",
+      "category": "spatial",
+      "subtype": "DC-A-vs-DC-B",
+      "statement_a": "服务器部署在DC-A数据中心",
+      "statement_b": "监控显示该服务器运行在DC-B机房",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0062",
+      "category": "spatial",
+      "subtype": "主校区-vs-分校区",
+      "statement_a": "服务器部署在主校区数据中心",
+      "statement_b": "监控显示该服务器运行在分校区机房",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0063",
+      "category": "spatial",
+      "subtype": "太平洋-vs-大西洋",
+      "statement_a": "服务器部署在太平洋数据中心",
+      "statement_b": "监控显示该服务器运行在大西洋机房",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0064",
+      "category": "spatial",
+      "subtype": "北坡-vs-南坡",
+      "statement_a": "服务器部署在北坡数据中心",
+      "statement_b": "监控显示该服务器运行在南坡机房",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0065",
+      "category": "spatial",
+      "subtype": "北京-vs-上海",
+      "statement_a": "实验设备存放在北京实验室",
+      "statement_b": "记录显示设备已被移至上海仓库",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0066",
+      "category": "spatial",
+      "subtype": "海淀-vs-朝阳",
+      "statement_a": "实验设备存放在海淀实验室",
+      "statement_b": "记录显示设备已被移至朝阳仓库",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0067",
+      "category": "spatial",
+      "subtype": "东区-vs-西区",
+      "statement_a": "实验设备存放在东区实验室",
+      "statement_b": "记录显示设备已被移至西区仓库",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0068",
+      "category": "spatial",
+      "subtype": "A栋-vs-B栋",
+      "statement_a": "实验设备存放在A栋实验室",
+      "statement_b": "记录显示设备已被移至B栋仓库",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0069",
+      "category": "spatial",
+      "subtype": "三楼-vs-五楼",
+      "statement_a": "实验设备存放在三楼实验室",
+      "statement_b": "记录显示设备已被移至五楼仓库",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0070",
+      "category": "spatial",
+      "subtype": "前门-vs-后门",
+      "statement_a": "实验设备存放在前门实验室",
+      "statement_b": "记录显示设备已被移至后门仓库",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0071",
+      "category": "spatial",
+      "subtype": "南沙-vs-西沙",
+      "statement_a": "实验设备存放在南沙实验室",
+      "statement_b": "记录显示设备已被移至西沙仓库",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0072",
+      "category": "spatial",
+      "subtype": "东京-vs-大阪",
+      "statement_a": "实验设备存放在东京实验室",
+      "statement_b": "记录显示设备已被移至大阪仓库",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0073",
+      "category": "spatial",
+      "subtype": "一楼-vs-地下室",
+      "statement_a": "实验设备存放在一楼实验室",
+      "statement_b": "记录显示设备已被移至地下室仓库",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0074",
+      "category": "spatial",
+      "subtype": "华北-vs-华南",
+      "statement_a": "实验设备存放在华北实验室",
+      "statement_b": "记录显示设备已被移至华南仓库",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0075",
+      "category": "spatial",
+      "subtype": "城区-vs-郊区",
+      "statement_a": "实验设备存放在城区实验室",
+      "statement_b": "记录显示设备已被移至郊区仓库",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0076",
+      "category": "spatial",
+      "subtype": "机场-vs-火车站",
+      "statement_a": "实验设备存放在机场实验室",
+      "statement_b": "记录显示设备已被移至火车站仓库",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0077",
+      "category": "spatial",
+      "subtype": "DC-A-vs-DC-B",
+      "statement_a": "实验设备存放在DC-A实验室",
+      "statement_b": "记录显示设备已被移至DC-B仓库",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0078",
+      "category": "spatial",
+      "subtype": "主校区-vs-分校区",
+      "statement_a": "实验设备存放在主校区实验室",
+      "statement_b": "记录显示设备已被移至分校区仓库",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0079",
+      "category": "spatial",
+      "subtype": "太平洋-vs-大西洋",
+      "statement_a": "实验设备存放在太平洋实验室",
+      "statement_b": "记录显示设备已被移至大西洋仓库",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0080",
+      "category": "spatial",
+      "subtype": "北坡-vs-南坡",
+      "statement_a": "实验设备存放在北坡实验室",
+      "statement_b": "记录显示设备已被移至南坡仓库",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0081",
+      "category": "spatial",
+      "subtype": "北京-vs-上海",
+      "statement_a": "目击者称嫌疑人逃往北京方向",
+      "statement_b": "监控拍到嫌疑人出现在上海出口",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0082",
+      "category": "spatial",
+      "subtype": "海淀-vs-朝阳",
+      "statement_a": "目击者称嫌疑人逃往海淀方向",
+      "statement_b": "监控拍到嫌疑人出现在朝阳出口",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0083",
+      "category": "spatial",
+      "subtype": "东区-vs-西区",
+      "statement_a": "目击者称嫌疑人逃往东区方向",
+      "statement_b": "监控拍到嫌疑人出现在西区出口",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0084",
+      "category": "spatial",
+      "subtype": "A栋-vs-B栋",
+      "statement_a": "目击者称嫌疑人逃往A栋方向",
+      "statement_b": "监控拍到嫌疑人出现在B栋出口",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0085",
+      "category": "spatial",
+      "subtype": "三楼-vs-五楼",
+      "statement_a": "目击者称嫌疑人逃往三楼方向",
+      "statement_b": "监控拍到嫌疑人出现在五楼出口",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0086",
+      "category": "spatial",
+      "subtype": "前门-vs-后门",
+      "statement_a": "目击者称嫌疑人逃往前门方向",
+      "statement_b": "监控拍到嫌疑人出现在后门出口",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0087",
+      "category": "spatial",
+      "subtype": "南沙-vs-西沙",
+      "statement_a": "目击者称嫌疑人逃往南沙方向",
+      "statement_b": "监控拍到嫌疑人出现在西沙出口",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0088",
+      "category": "spatial",
+      "subtype": "东京-vs-大阪",
+      "statement_a": "目击者称嫌疑人逃往东京方向",
+      "statement_b": "监控拍到嫌疑人出现在大阪出口",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0089",
+      "category": "spatial",
+      "subtype": "一楼-vs-地下室",
+      "statement_a": "目击者称嫌疑人逃往一楼方向",
+      "statement_b": "监控拍到嫌疑人出现在地下室出口",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0090",
+      "category": "spatial",
+      "subtype": "华北-vs-华南",
+      "statement_a": "目击者称嫌疑人逃往华北方向",
+      "statement_b": "监控拍到嫌疑人出现在华南出口",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0091",
+      "category": "spatial",
+      "subtype": "城区-vs-郊区",
+      "statement_a": "目击者称嫌疑人逃往城区方向",
+      "statement_b": "监控拍到嫌疑人出现在郊区出口",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0092",
+      "category": "spatial",
+      "subtype": "机场-vs-火车站",
+      "statement_a": "目击者称嫌疑人逃往机场方向",
+      "statement_b": "监控拍到嫌疑人出现在火车站出口",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0093",
+      "category": "spatial",
+      "subtype": "DC-A-vs-DC-B",
+      "statement_a": "目击者称嫌疑人逃往DC-A方向",
+      "statement_b": "监控拍到嫌疑人出现在DC-B出口",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0094",
+      "category": "spatial",
+      "subtype": "主校区-vs-分校区",
+      "statement_a": "目击者称嫌疑人逃往主校区方向",
+      "statement_b": "监控拍到嫌疑人出现在分校区出口",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0095",
+      "category": "spatial",
+      "subtype": "太平洋-vs-大西洋",
+      "statement_a": "目击者称嫌疑人逃往太平洋方向",
+      "statement_b": "监控拍到嫌疑人出现在大西洋出口",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0096",
+      "category": "spatial",
+      "subtype": "北坡-vs-南坡",
+      "statement_a": "目击者称嫌疑人逃往北坡方向",
+      "statement_b": "监控拍到嫌疑人出现在南坡出口",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0097",
+      "category": "spatial",
+      "subtype": "北京-vs-上海",
+      "statement_a": "地震震中定位在北京区域",
+      "statement_b": "余震分布表明主震位于上海断层",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0098",
+      "category": "spatial",
+      "subtype": "海淀-vs-朝阳",
+      "statement_a": "地震震中定位在海淀区域",
+      "statement_b": "余震分布表明主震位于朝阳断层",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0099",
+      "category": "spatial",
+      "subtype": "东区-vs-西区",
+      "statement_a": "地震震中定位在东区区域",
+      "statement_b": "余震分布表明主震位于西区断层",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0100",
+      "category": "spatial",
+      "subtype": "A栋-vs-B栋",
+      "statement_a": "地震震中定位在A栋区域",
+      "statement_b": "余震分布表明主震位于B栋断层",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0101",
+      "category": "spatial",
+      "subtype": "三楼-vs-五楼",
+      "statement_a": "地震震中定位在三楼区域",
+      "statement_b": "余震分布表明主震位于五楼断层",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0102",
+      "category": "spatial",
+      "subtype": "前门-vs-后门",
+      "statement_a": "地震震中定位在前门区域",
+      "statement_b": "余震分布表明主震位于后门断层",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0103",
+      "category": "spatial",
+      "subtype": "南沙-vs-西沙",
+      "statement_a": "地震震中定位在南沙区域",
+      "statement_b": "余震分布表明主震位于西沙断层",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0104",
+      "category": "spatial",
+      "subtype": "东京-vs-大阪",
+      "statement_a": "地震震中定位在东京区域",
+      "statement_b": "余震分布表明主震位于大阪断层",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0105",
+      "category": "spatial",
+      "subtype": "一楼-vs-地下室",
+      "statement_a": "地震震中定位在一楼区域",
+      "statement_b": "余震分布表明主震位于地下室断层",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0106",
+      "category": "spatial",
+      "subtype": "华北-vs-华南",
+      "statement_a": "地震震中定位在华北区域",
+      "statement_b": "余震分布表明主震位于华南断层",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0107",
+      "category": "spatial",
+      "subtype": "城区-vs-郊区",
+      "statement_a": "地震震中定位在城区区域",
+      "statement_b": "余震分布表明主震位于郊区断层",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0108",
+      "category": "spatial",
+      "subtype": "机场-vs-火车站",
+      "statement_a": "地震震中定位在机场区域",
+      "statement_b": "余震分布表明主震位于火车站断层",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0109",
+      "category": "spatial",
+      "subtype": "DC-A-vs-DC-B",
+      "statement_a": "地震震中定位在DC-A区域",
+      "statement_b": "余震分布表明主震位于DC-B断层",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0110",
+      "category": "spatial",
+      "subtype": "主校区-vs-分校区",
+      "statement_a": "地震震中定位在主校区区域",
+      "statement_b": "余震分布表明主震位于分校区断层",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0111",
+      "category": "spatial",
+      "subtype": "太平洋-vs-大西洋",
+      "statement_a": "地震震中定位在太平洋区域",
+      "statement_b": "余震分布表明主震位于大西洋断层",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0112",
+      "category": "spatial",
+      "subtype": "北坡-vs-南坡",
+      "statement_a": "地震震中定位在北坡区域",
+      "statement_b": "余震分布表明主震位于南坡断层",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0113",
+      "category": "spatial",
+      "subtype": "北京-vs-上海",
+      "statement_a": "公司总部设在北京",
+      "statement_b": "实际运营团队全在上海",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0114",
+      "category": "spatial",
+      "subtype": "海淀-vs-朝阳",
+      "statement_a": "公司总部设在海淀",
+      "statement_b": "实际运营团队全在朝阳",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0115",
+      "category": "spatial",
+      "subtype": "东区-vs-西区",
+      "statement_a": "公司总部设在东区",
+      "statement_b": "实际运营团队全在西区",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0116",
+      "category": "spatial",
+      "subtype": "A栋-vs-B栋",
+      "statement_a": "公司总部设在A栋",
+      "statement_b": "实际运营团队全在B栋",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0117",
+      "category": "spatial",
+      "subtype": "三楼-vs-五楼",
+      "statement_a": "公司总部设在三楼",
+      "statement_b": "实际运营团队全在五楼",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0118",
+      "category": "spatial",
+      "subtype": "前门-vs-后门",
+      "statement_a": "公司总部设在前门",
+      "statement_b": "实际运营团队全在后门",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0119",
+      "category": "spatial",
+      "subtype": "南沙-vs-西沙",
+      "statement_a": "公司总部设在南沙",
+      "statement_b": "实际运营团队全在西沙",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0120",
+      "category": "spatial",
+      "subtype": "东京-vs-大阪",
+      "statement_a": "公司总部设在东京",
+      "statement_b": "实际运营团队全在大阪",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0121",
+      "category": "spatial",
+      "subtype": "一楼-vs-地下室",
+      "statement_a": "公司总部设在一楼",
+      "statement_b": "实际运营团队全在地下室",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0122",
+      "category": "spatial",
+      "subtype": "华北-vs-华南",
+      "statement_a": "公司总部设在华北",
+      "statement_b": "实际运营团队全在华南",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0123",
+      "category": "spatial",
+      "subtype": "城区-vs-郊区",
+      "statement_a": "公司总部设在城区",
+      "statement_b": "实际运营团队全在郊区",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0124",
+      "category": "spatial",
+      "subtype": "机场-vs-火车站",
+      "statement_a": "公司总部设在机场",
+      "statement_b": "实际运营团队全在火车站",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0125",
+      "category": "spatial",
+      "subtype": "DC-A-vs-DC-B",
+      "statement_a": "公司总部设在DC-A",
+      "statement_b": "实际运营团队全在DC-B",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0126",
+      "category": "spatial",
+      "subtype": "主校区-vs-分校区",
+      "statement_a": "公司总部设在主校区",
+      "statement_b": "实际运营团队全在分校区",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0127",
+      "category": "spatial",
+      "subtype": "太平洋-vs-大西洋",
+      "statement_a": "公司总部设在太平洋",
+      "statement_b": "实际运营团队全在大西洋",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0128",
+      "category": "spatial",
+      "subtype": "北坡-vs-南坡",
+      "statement_a": "公司总部设在北坡",
+      "statement_b": "实际运营团队全在南坡",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0129",
+      "category": "temporal",
+      "subtype": "2020-vs-2019",
+      "statement_a": "该项目于2020年启动",
+      "statement_b": "项目负责人在2019年才提出立项申请",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0130",
+      "category": "temporal",
+      "subtype": "2021-vs-2020",
+      "statement_a": "该项目于2021年启动",
+      "statement_b": "项目负责人在2020年才提出立项申请",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0131",
+      "category": "temporal",
+      "subtype": "2022-vs-2021",
+      "statement_a": "该项目于2022年启动",
+      "statement_b": "项目负责人在2021年才提出立项申请",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0132",
+      "category": "temporal",
+      "subtype": "2023-vs-2022",
+      "statement_a": "该项目于2023年启动",
+      "statement_b": "项目负责人在2022年才提出立项申请",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0133",
+      "category": "temporal",
+      "subtype": "2018-vs-2016",
+      "statement_a": "该项目于2018年启动",
+      "statement_b": "项目负责人在2016年才提出立项申请",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0134",
+      "category": "temporal",
+      "subtype": "2015-vs-2013",
+      "statement_a": "该项目于2015年启动",
+      "statement_b": "项目负责人在2013年才提出立项申请",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0135",
+      "category": "temporal",
+      "subtype": "2010-vs-2008",
+      "statement_a": "该项目于2010年启动",
+      "statement_b": "项目负责人在2008年才提出立项申请",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0136",
+      "category": "temporal",
+      "subtype": "2005-vs-2003",
+      "statement_a": "该项目于2005年启动",
+      "statement_b": "项目负责人在2003年才提出立项申请",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0137",
+      "category": "temporal",
+      "subtype": "3-vs-5",
+      "statement_a": "该项目于3年启动",
+      "statement_b": "项目负责人在5年才提出立项申请",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0138",
+      "category": "temporal",
+      "subtype": "6-vs-7",
+      "statement_a": "该项目于6年启动",
+      "statement_b": "项目负责人在7年才提出立项申请",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0139",
+      "category": "temporal",
+      "subtype": "1-vs-12",
+      "statement_a": "该项目于1年启动",
+      "statement_b": "项目负责人在12年才提出立项申请",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0140",
+      "category": "temporal",
+      "subtype": "8-vs-10",
+      "statement_a": "该项目于8年启动",
+      "statement_b": "项目负责人在10年才提出立项申请",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0141",
+      "category": "temporal",
+      "subtype": "2020-vs-2019",
+      "statement_a": "论文发表于2020年1月",
+      "statement_b": "论文引用了2019年12月发表的研究",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0142",
+      "category": "temporal",
+      "subtype": "2021-vs-2020",
+      "statement_a": "论文发表于2021年2005月",
+      "statement_b": "论文引用了2020年2003月发表的研究",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0143",
+      "category": "temporal",
+      "subtype": "2022-vs-2021",
+      "statement_a": "论文发表于2022年3月",
+      "statement_b": "论文引用了2021年5月发表的研究",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0144",
+      "category": "temporal",
+      "subtype": "2023-vs-2022",
+      "statement_a": "论文发表于2023年2022月",
+      "statement_b": "论文引用了2022年2021月发表的研究",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0145",
+      "category": "temporal",
+      "subtype": "2018-vs-2016",
+      "statement_a": "论文发表于2018年2018月",
+      "statement_b": "论文引用了2016年2016月发表的研究",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0146",
+      "category": "temporal",
+      "subtype": "2015-vs-2013",
+      "statement_a": "论文发表于2015年3月",
+      "statement_b": "论文引用了2013年5月发表的研究",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0147",
+      "category": "temporal",
+      "subtype": "2010-vs-2008",
+      "statement_a": "论文发表于2010年6月",
+      "statement_b": "论文引用了2008年7月发表的研究",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0148",
+      "category": "temporal",
+      "subtype": "2005-vs-2003",
+      "statement_a": "论文发表于2005年2010月",
+      "statement_b": "论文引用了2003年2008月发表的研究",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0149",
+      "category": "temporal",
+      "subtype": "3-vs-5",
+      "statement_a": "论文发表于3年2023月",
+      "statement_b": "论文引用了5年2022月发表的研究",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0150",
+      "category": "temporal",
+      "subtype": "6-vs-7",
+      "statement_a": "论文发表于6年3月",
+      "statement_b": "论文引用了7年5月发表的研究",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0151",
+      "category": "temporal",
+      "subtype": "1-vs-12",
+      "statement_a": "论文发表于1年8月",
+      "statement_b": "论文引用了12年10月发表的研究",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0152",
+      "category": "temporal",
+      "subtype": "8-vs-10",
+      "statement_a": "论文发表于8年8月",
+      "statement_b": "论文引用了10年10月发表的研究",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0153",
+      "category": "temporal",
+      "subtype": "2020-vs-2019",
+      "statement_a": "公司成立于2020年",
+      "statement_b": "最早的营业执照显示注册时间为2019年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0154",
+      "category": "temporal",
+      "subtype": "2021-vs-2020",
+      "statement_a": "公司成立于2021年",
+      "statement_b": "最早的营业执照显示注册时间为2020年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0155",
+      "category": "temporal",
+      "subtype": "2022-vs-2021",
+      "statement_a": "公司成立于2022年",
+      "statement_b": "最早的营业执照显示注册时间为2021年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0156",
+      "category": "temporal",
+      "subtype": "2023-vs-2022",
+      "statement_a": "公司成立于2023年",
+      "statement_b": "最早的营业执照显示注册时间为2022年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0157",
+      "category": "temporal",
+      "subtype": "2018-vs-2016",
+      "statement_a": "公司成立于2018年",
+      "statement_b": "最早的营业执照显示注册时间为2016年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0158",
+      "category": "temporal",
+      "subtype": "2015-vs-2013",
+      "statement_a": "公司成立于2015年",
+      "statement_b": "最早的营业执照显示注册时间为2013年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0159",
+      "category": "temporal",
+      "subtype": "2010-vs-2008",
+      "statement_a": "公司成立于2010年",
+      "statement_b": "最早的营业执照显示注册时间为2008年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0160",
+      "category": "temporal",
+      "subtype": "2005-vs-2003",
+      "statement_a": "公司成立于2005年",
+      "statement_b": "最早的营业执照显示注册时间为2003年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0161",
+      "category": "temporal",
+      "subtype": "3-vs-5",
+      "statement_a": "公司成立于3年",
+      "statement_b": "最早的营业执照显示注册时间为5年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0162",
+      "category": "temporal",
+      "subtype": "6-vs-7",
+      "statement_a": "公司成立于6年",
+      "statement_b": "最早的营业执照显示注册时间为7年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0163",
+      "category": "temporal",
+      "subtype": "1-vs-12",
+      "statement_a": "公司成立于1年",
+      "statement_b": "最早的营业执照显示注册时间为12年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0164",
+      "category": "temporal",
+      "subtype": "8-vs-10",
+      "statement_a": "公司成立于8年",
+      "statement_b": "最早的营业执照显示注册时间为10年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0165",
+      "category": "temporal",
+      "subtype": "2020-vs-2019",
+      "statement_a": "病历记载患者于2020年首次就诊",
+      "statement_b": "患者身份证显示其出生于2019年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0166",
+      "category": "temporal",
+      "subtype": "2021-vs-2020",
+      "statement_a": "病历记载患者于2021年首次就诊",
+      "statement_b": "患者身份证显示其出生于2020年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0167",
+      "category": "temporal",
+      "subtype": "2022-vs-2021",
+      "statement_a": "病历记载患者于2022年首次就诊",
+      "statement_b": "患者身份证显示其出生于2021年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0168",
+      "category": "temporal",
+      "subtype": "2023-vs-2022",
+      "statement_a": "病历记载患者于2023年首次就诊",
+      "statement_b": "患者身份证显示其出生于2022年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0169",
+      "category": "temporal",
+      "subtype": "2018-vs-2016",
+      "statement_a": "病历记载患者于2018年首次就诊",
+      "statement_b": "患者身份证显示其出生于2016年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0170",
+      "category": "temporal",
+      "subtype": "2015-vs-2013",
+      "statement_a": "病历记载患者于2015年首次就诊",
+      "statement_b": "患者身份证显示其出生于2013年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0171",
+      "category": "temporal",
+      "subtype": "2010-vs-2008",
+      "statement_a": "病历记载患者于2010年首次就诊",
+      "statement_b": "患者身份证显示其出生于2008年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0172",
+      "category": "temporal",
+      "subtype": "2005-vs-2003",
+      "statement_a": "病历记载患者于2005年首次就诊",
+      "statement_b": "患者身份证显示其出生于2003年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0173",
+      "category": "temporal",
+      "subtype": "3-vs-5",
+      "statement_a": "病历记载患者于3年首次就诊",
+      "statement_b": "患者身份证显示其出生于5年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0174",
+      "category": "temporal",
+      "subtype": "6-vs-7",
+      "statement_a": "病历记载患者于6年首次就诊",
+      "statement_b": "患者身份证显示其出生于7年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0175",
+      "category": "temporal",
+      "subtype": "1-vs-12",
+      "statement_a": "病历记载患者于1年首次就诊",
+      "statement_b": "患者身份证显示其出生于12年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0176",
+      "category": "temporal",
+      "subtype": "8-vs-10",
+      "statement_a": "病历记载患者于8年首次就诊",
+      "statement_b": "患者身份证显示其出生于10年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0177",
+      "category": "temporal",
+      "subtype": "2020-vs-2019",
+      "statement_a": "文献记载该技术于2020年发明",
+      "statement_b": "专利文件显示申请日期为2019年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0178",
+      "category": "temporal",
+      "subtype": "2021-vs-2020",
+      "statement_a": "文献记载该技术于2021年发明",
+      "statement_b": "专利文件显示申请日期为2020年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0179",
+      "category": "temporal",
+      "subtype": "2022-vs-2021",
+      "statement_a": "文献记载该技术于2022年发明",
+      "statement_b": "专利文件显示申请日期为2021年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0180",
+      "category": "temporal",
+      "subtype": "2023-vs-2022",
+      "statement_a": "文献记载该技术于2023年发明",
+      "statement_b": "专利文件显示申请日期为2022年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0181",
+      "category": "temporal",
+      "subtype": "2018-vs-2016",
+      "statement_a": "文献记载该技术于2018年发明",
+      "statement_b": "专利文件显示申请日期为2016年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0182",
+      "category": "temporal",
+      "subtype": "2015-vs-2013",
+      "statement_a": "文献记载该技术于2015年发明",
+      "statement_b": "专利文件显示申请日期为2013年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0183",
+      "category": "temporal",
+      "subtype": "2010-vs-2008",
+      "statement_a": "文献记载该技术于2010年发明",
+      "statement_b": "专利文件显示申请日期为2008年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0184",
+      "category": "temporal",
+      "subtype": "2005-vs-2003",
+      "statement_a": "文献记载该技术于2005年发明",
+      "statement_b": "专利文件显示申请日期为2003年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0185",
+      "category": "temporal",
+      "subtype": "3-vs-5",
+      "statement_a": "文献记载该技术于3年发明",
+      "statement_b": "专利文件显示申请日期为5年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0186",
+      "category": "temporal",
+      "subtype": "6-vs-7",
+      "statement_a": "文献记载该技术于6年发明",
+      "statement_b": "专利文件显示申请日期为7年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0187",
+      "category": "temporal",
+      "subtype": "1-vs-12",
+      "statement_a": "文献记载该技术于1年发明",
+      "statement_b": "专利文件显示申请日期为12年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0188",
+      "category": "temporal",
+      "subtype": "8-vs-10",
+      "statement_a": "文献记载该技术于8年发明",
+      "statement_b": "专利文件显示申请日期为10年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0189",
+      "category": "temporal",
+      "subtype": "2020-vs-2019",
+      "statement_a": "航班于2020起飞",
+      "statement_b": "乘客登机记录显示登机时间为2019",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0190",
+      "category": "temporal",
+      "subtype": "2021-vs-2020",
+      "statement_a": "航班于2021起飞",
+      "statement_b": "乘客登机记录显示登机时间为2020",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0191",
+      "category": "temporal",
+      "subtype": "2022-vs-2021",
+      "statement_a": "航班于2022起飞",
+      "statement_b": "乘客登机记录显示登机时间为2021",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0192",
+      "category": "temporal",
+      "subtype": "2023-vs-2022",
+      "statement_a": "航班于2023起飞",
+      "statement_b": "乘客登机记录显示登机时间为2022",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0193",
+      "category": "temporal",
+      "subtype": "2018-vs-2016",
+      "statement_a": "航班于2018起飞",
+      "statement_b": "乘客登机记录显示登机时间为2016",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0194",
+      "category": "temporal",
+      "subtype": "2015-vs-2013",
+      "statement_a": "航班于2015起飞",
+      "statement_b": "乘客登机记录显示登机时间为2013",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0195",
+      "category": "temporal",
+      "subtype": "2010-vs-2008",
+      "statement_a": "航班于2010起飞",
+      "statement_b": "乘客登机记录显示登机时间为2008",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0196",
+      "category": "temporal",
+      "subtype": "2005-vs-2003",
+      "statement_a": "航班于2005起飞",
+      "statement_b": "乘客登机记录显示登机时间为2003",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0197",
+      "category": "temporal",
+      "subtype": "3-vs-5",
+      "statement_a": "航班于3起飞",
+      "statement_b": "乘客登机记录显示登机时间为5",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0198",
+      "category": "temporal",
+      "subtype": "6-vs-7",
+      "statement_a": "航班于6起飞",
+      "statement_b": "乘客登机记录显示登机时间为7",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0199",
+      "category": "temporal",
+      "subtype": "1-vs-12",
+      "statement_a": "航班于1起飞",
+      "statement_b": "乘客登机记录显示登机时间为12",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0200",
+      "category": "temporal",
+      "subtype": "8-vs-10",
+      "statement_a": "航班于8起飞",
+      "statement_b": "乘客登机记录显示登机时间为10",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0201",
+      "category": "temporal",
+      "subtype": "2020-vs-2019",
+      "statement_a": "合同签订于2020年2021月",
+      "statement_b": "合同中引用了2019年生效的法规",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0202",
+      "category": "temporal",
+      "subtype": "2021-vs-2020",
+      "statement_a": "合同签订于2021年1月",
+      "statement_b": "合同中引用了2020年生效的法规",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0203",
+      "category": "temporal",
+      "subtype": "2022-vs-2021",
+      "statement_a": "合同签订于2022年2010月",
+      "statement_b": "合同中引用了2021年生效的法规",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0204",
+      "category": "temporal",
+      "subtype": "2023-vs-2022",
+      "statement_a": "合同签订于2023年2015月",
+      "statement_b": "合同中引用了2022年生效的法规",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0205",
+      "category": "temporal",
+      "subtype": "2018-vs-2016",
+      "statement_a": "合同签订于2018年2010月",
+      "statement_b": "合同中引用了2016年生效的法规",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0206",
+      "category": "temporal",
+      "subtype": "2015-vs-2013",
+      "statement_a": "合同签订于2015年2010月",
+      "statement_b": "合同中引用了2013年生效的法规",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0207",
+      "category": "temporal",
+      "subtype": "2010-vs-2008",
+      "statement_a": "合同签订于2010年2005月",
+      "statement_b": "合同中引用了2008年生效的法规",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0208",
+      "category": "temporal",
+      "subtype": "2005-vs-2003",
+      "statement_a": "合同签订于2005年8月",
+      "statement_b": "合同中引用了2003年生效的法规",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0209",
+      "category": "temporal",
+      "subtype": "3-vs-5",
+      "statement_a": "合同签订于3年2020月",
+      "statement_b": "合同中引用了5年生效的法规",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0210",
+      "category": "temporal",
+      "subtype": "6-vs-7",
+      "statement_a": "合同签订于6年1月",
+      "statement_b": "合同中引用了7年生效的法规",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0211",
+      "category": "temporal",
+      "subtype": "1-vs-12",
+      "statement_a": "合同签订于1年1月",
+      "statement_b": "合同中引用了12年生效的法规",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0212",
+      "category": "temporal",
+      "subtype": "8-vs-10",
+      "statement_a": "合同签订于8年1月",
+      "statement_b": "合同中引用了10年生效的法规",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0213",
+      "category": "temporal",
+      "subtype": "2020-vs-2019",
+      "statement_a": "该建筑建于2020年",
+      "statement_b": "施工许可证签发于2019年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0214",
+      "category": "temporal",
+      "subtype": "2021-vs-2020",
+      "statement_a": "该建筑建于2021年",
+      "statement_b": "施工许可证签发于2020年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0215",
+      "category": "temporal",
+      "subtype": "2022-vs-2021",
+      "statement_a": "该建筑建于2022年",
+      "statement_b": "施工许可证签发于2021年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0216",
+      "category": "temporal",
+      "subtype": "2023-vs-2022",
+      "statement_a": "该建筑建于2023年",
+      "statement_b": "施工许可证签发于2022年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0217",
+      "category": "temporal",
+      "subtype": "2018-vs-2016",
+      "statement_a": "该建筑建于2018年",
+      "statement_b": "施工许可证签发于2016年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0218",
+      "category": "temporal",
+      "subtype": "2015-vs-2013",
+      "statement_a": "该建筑建于2015年",
+      "statement_b": "施工许可证签发于2013年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0219",
+      "category": "temporal",
+      "subtype": "2010-vs-2008",
+      "statement_a": "该建筑建于2010年",
+      "statement_b": "施工许可证签发于2008年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0220",
+      "category": "temporal",
+      "subtype": "2005-vs-2003",
+      "statement_a": "该建筑建于2005年",
+      "statement_b": "施工许可证签发于2003年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0221",
+      "category": "temporal",
+      "subtype": "3-vs-5",
+      "statement_a": "该建筑建于3年",
+      "statement_b": "施工许可证签发于5年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0222",
+      "category": "temporal",
+      "subtype": "6-vs-7",
+      "statement_a": "该建筑建于6年",
+      "statement_b": "施工许可证签发于7年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0223",
+      "category": "temporal",
+      "subtype": "1-vs-12",
+      "statement_a": "该建筑建于1年",
+      "statement_b": "施工许可证签发于12年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0224",
+      "category": "temporal",
+      "subtype": "8-vs-10",
+      "statement_a": "该建筑建于8年",
+      "statement_b": "施工许可证签发于10年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0225",
+      "category": "logical",
+      "subtype": "A-and-not-A",
+      "statement_a": "系统当前处于正常运行状态",
+      "statement_b": "系统因未知错误已停止响应",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0226",
+      "category": "logical",
+      "subtype": "A-and-not-A",
+      "statement_a": "该账户拥有全部管理权限",
+      "statement_b": "该账户无权访问此功能",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0227",
+      "category": "logical",
+      "subtype": "A-and-not-A",
+      "statement_a": "所有测试用例均已通过",
+      "statement_b": "集成测试中有3个用例报错",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0228",
+      "category": "logical",
+      "subtype": "A-and-not-A",
+      "statement_a": "数据库已完成备份",
+      "statement_b": "备份文件损坏，无法恢复",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0229",
+      "category": "logical",
+      "subtype": "A-and-not-A",
+      "statement_a": "该药物已通过临床试验",
+      "statement_b": "该药物的临床试验数据存在造假",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0230",
+      "category": "logical",
+      "subtype": "A-and-not-A",
+      "statement_a": "API服务可用性为100%",
+      "statement_b": "过去24小时内记录到2次宕机",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0231",
+      "category": "logical",
+      "subtype": "A-and-not-A",
+      "statement_a": "用户已阅读并同意所有条款",
+      "statement_b": "用户声称从未见过该协议",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0232",
+      "category": "logical",
+      "subtype": "A-and-not-A",
+      "statement_a": "产品符合所有安全标准",
+      "statement_b": "检测报告显示重金属含量超标",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0233",
+      "category": "logical",
+      "subtype": "A-and-not-A",
+      "statement_a": "该算法可保证找到全局最优解",
+      "statement_b": "在某些初始条件下算法收敛到局部最优",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0234",
+      "category": "logical",
+      "subtype": "A-and-not-A",
+      "statement_a": "系统架构完全解耦",
+      "statement_b": "修改订单模块导致支付模块崩溃",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0235",
+      "category": "logical",
+      "subtype": "A-and-not-A",
+      "statement_a": "已发送确认邮件",
+      "statement_b": "邮件服务器日志显示发送失败",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0236",
+      "category": "logical",
+      "subtype": "A-and-not-A",
+      "statement_a": "代码覆盖率达到100%",
+      "statement_b": "未覆盖分支: error_handler() L45-L52",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0237",
+      "category": "logical",
+      "subtype": "A-and-not-A",
+      "statement_a": "系统无任何安全漏洞",
+      "statement_b": "第三方审计发现3个高危CVE",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0238",
+      "category": "logical",
+      "subtype": "A-and-not-A",
+      "statement_a": "该设备防水等级为IP68",
+      "statement_b": "设备在1米水下浸泡30分钟后损坏",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0239",
+      "category": "logical",
+      "subtype": "A-and-not-A",
+      "statement_a": "账号已永久注销",
+      "statement_b": "注销后该账号仍在发送营销邮件",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0240",
+      "category": "logical",
+      "subtype": "A-and-not-A",
+      "statement_a": "该认证表明产品绝对安全",
+      "statement_b": "认证机构声明该认证不保证产品安全",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0241",
+      "category": "numerical",
+      "subtype": "500-vs-320",
+      "statement_a": "季度营收为500万元",
+      "statement_b": "同期财报显示营收为320万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0242",
+      "category": "numerical",
+      "subtype": "1200-vs-980",
+      "statement_a": "季度营收为1200万元",
+      "statement_b": "同期财报显示营收为980万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0243",
+      "category": "numerical",
+      "subtype": "10000-vs-7650",
+      "statement_a": "季度营收为10000万元",
+      "statement_b": "同期财报显示营收为7650万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0244",
+      "category": "numerical",
+      "subtype": "350-vs-280",
+      "statement_a": "季度营收为350万元",
+      "statement_b": "同期财报显示营收为280万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0245",
+      "category": "numerical",
+      "subtype": "800-vs-650",
+      "statement_a": "季度营收为800万元",
+      "statement_b": "同期财报显示营收为650万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0246",
+      "category": "numerical",
+      "subtype": "1500-vs-1200",
+      "statement_a": "季度营收为1500万元",
+      "statement_b": "同期财报显示营收为1200万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0247",
+      "category": "numerical",
+      "subtype": "200-vs-150",
+      "statement_a": "季度营收为200万元",
+      "statement_b": "同期财报显示营收为150万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0248",
+      "category": "numerical",
+      "subtype": "5000-vs-4200",
+      "statement_a": "季度营收为5000万元",
+      "statement_b": "同期财报显示营收为4200万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0249",
+      "category": "numerical",
+      "subtype": "100-vs-76",
+      "statement_a": "季度营收为100万元",
+      "statement_b": "同期财报显示营收为76万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0250",
+      "category": "numerical",
+      "subtype": "2500-vs-2000",
+      "statement_a": "季度营收为2500万元",
+      "statement_b": "同期财报显示营收为2000万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0251",
+      "category": "numerical",
+      "subtype": "999-vs-777",
+      "statement_a": "季度营收为999万元",
+      "statement_b": "同期财报显示营收为777万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0252",
+      "category": "numerical",
+      "subtype": "450-vs-380",
+      "statement_a": "季度营收为450万元",
+      "statement_b": "同期财报显示营收为380万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0253",
+      "category": "numerical",
+      "subtype": "500-vs-320",
+      "statement_a": "注册用户总数为500",
+      "statement_b": "活跃用户统计显示为320",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0254",
+      "category": "numerical",
+      "subtype": "1200-vs-980",
+      "statement_a": "注册用户总数为1200",
+      "statement_b": "活跃用户统计显示为980",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0255",
+      "category": "numerical",
+      "subtype": "10000-vs-7650",
+      "statement_a": "注册用户总数为10000",
+      "statement_b": "活跃用户统计显示为7650",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0256",
+      "category": "numerical",
+      "subtype": "350-vs-280",
+      "statement_a": "注册用户总数为350",
+      "statement_b": "活跃用户统计显示为280",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0257",
+      "category": "numerical",
+      "subtype": "800-vs-650",
+      "statement_a": "注册用户总数为800",
+      "statement_b": "活跃用户统计显示为650",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0258",
+      "category": "numerical",
+      "subtype": "1500-vs-1200",
+      "statement_a": "注册用户总数为1500",
+      "statement_b": "活跃用户统计显示为1200",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0259",
+      "category": "numerical",
+      "subtype": "200-vs-150",
+      "statement_a": "注册用户总数为200",
+      "statement_b": "活跃用户统计显示为150",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0260",
+      "category": "numerical",
+      "subtype": "5000-vs-4200",
+      "statement_a": "注册用户总数为5000",
+      "statement_b": "活跃用户统计显示为4200",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0261",
+      "category": "numerical",
+      "subtype": "100-vs-76",
+      "statement_a": "注册用户总数为100",
+      "statement_b": "活跃用户统计显示为76",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0262",
+      "category": "numerical",
+      "subtype": "2500-vs-2000",
+      "statement_a": "注册用户总数为2500",
+      "statement_b": "活跃用户统计显示为2000",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0263",
+      "category": "numerical",
+      "subtype": "999-vs-777",
+      "statement_a": "注册用户总数为999",
+      "statement_b": "活跃用户统计显示为777",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0264",
+      "category": "numerical",
+      "subtype": "450-vs-380",
+      "statement_a": "注册用户总数为450",
+      "statement_b": "活跃用户统计显示为380",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0265",
+      "category": "numerical",
+      "subtype": "500-vs-320",
+      "statement_a": "库存记录显示有500件商品",
+      "statement_b": "实际盘点只找到320件",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0266",
+      "category": "numerical",
+      "subtype": "1200-vs-980",
+      "statement_a": "库存记录显示有1200件商品",
+      "statement_b": "实际盘点只找到980件",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0267",
+      "category": "numerical",
+      "subtype": "10000-vs-7650",
+      "statement_a": "库存记录显示有10000件商品",
+      "statement_b": "实际盘点只找到7650件",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0268",
+      "category": "numerical",
+      "subtype": "350-vs-280",
+      "statement_a": "库存记录显示有350件商品",
+      "statement_b": "实际盘点只找到280件",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0269",
+      "category": "numerical",
+      "subtype": "800-vs-650",
+      "statement_a": "库存记录显示有800件商品",
+      "statement_b": "实际盘点只找到650件",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0270",
+      "category": "numerical",
+      "subtype": "1500-vs-1200",
+      "statement_a": "库存记录显示有1500件商品",
+      "statement_b": "实际盘点只找到1200件",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0271",
+      "category": "numerical",
+      "subtype": "200-vs-150",
+      "statement_a": "库存记录显示有200件商品",
+      "statement_b": "实际盘点只找到150件",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0272",
+      "category": "numerical",
+      "subtype": "5000-vs-4200",
+      "statement_a": "库存记录显示有5000件商品",
+      "statement_b": "实际盘点只找到4200件",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0273",
+      "category": "numerical",
+      "subtype": "100-vs-76",
+      "statement_a": "库存记录显示有100件商品",
+      "statement_b": "实际盘点只找到76件",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0274",
+      "category": "numerical",
+      "subtype": "2500-vs-2000",
+      "statement_a": "库存记录显示有2500件商品",
+      "statement_b": "实际盘点只找到2000件",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0275",
+      "category": "numerical",
+      "subtype": "999-vs-777",
+      "statement_a": "库存记录显示有999件商品",
+      "statement_b": "实际盘点只找到777件",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0276",
+      "category": "numerical",
+      "subtype": "450-vs-380",
+      "statement_a": "库存记录显示有450件商品",
+      "statement_b": "实际盘点只找到380件",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0277",
+      "category": "numerical",
+      "subtype": "500-vs-320",
+      "statement_a": "项目总预算为500万元",
+      "statement_b": "各项支出合计为320万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0278",
+      "category": "numerical",
+      "subtype": "1200-vs-980",
+      "statement_a": "项目总预算为1200万元",
+      "statement_b": "各项支出合计为980万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0279",
+      "category": "numerical",
+      "subtype": "10000-vs-7650",
+      "statement_a": "项目总预算为10000万元",
+      "statement_b": "各项支出合计为7650万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0280",
+      "category": "numerical",
+      "subtype": "350-vs-280",
+      "statement_a": "项目总预算为350万元",
+      "statement_b": "各项支出合计为280万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0281",
+      "category": "numerical",
+      "subtype": "800-vs-650",
+      "statement_a": "项目总预算为800万元",
+      "statement_b": "各项支出合计为650万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0282",
+      "category": "numerical",
+      "subtype": "1500-vs-1200",
+      "statement_a": "项目总预算为1500万元",
+      "statement_b": "各项支出合计为1200万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0283",
+      "category": "numerical",
+      "subtype": "200-vs-150",
+      "statement_a": "项目总预算为200万元",
+      "statement_b": "各项支出合计为150万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0284",
+      "category": "numerical",
+      "subtype": "5000-vs-4200",
+      "statement_a": "项目总预算为5000万元",
+      "statement_b": "各项支出合计为4200万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0285",
+      "category": "numerical",
+      "subtype": "100-vs-76",
+      "statement_a": "项目总预算为100万元",
+      "statement_b": "各项支出合计为76万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0286",
+      "category": "numerical",
+      "subtype": "2500-vs-2000",
+      "statement_a": "项目总预算为2500万元",
+      "statement_b": "各项支出合计为2000万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0287",
+      "category": "numerical",
+      "subtype": "999-vs-777",
+      "statement_a": "项目总预算为999万元",
+      "statement_b": "各项支出合计为777万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0288",
+      "category": "numerical",
+      "subtype": "450-vs-380",
+      "statement_a": "项目总预算为450万元",
+      "statement_b": "各项支出合计为380万元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0289",
+      "category": "numerical",
+      "subtype": "500-vs-320",
+      "statement_a": "页面加载时间为500毫秒",
+      "statement_b": "性能监控显示平均加载时间为320毫秒",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0290",
+      "category": "numerical",
+      "subtype": "1200-vs-980",
+      "statement_a": "页面加载时间为1200毫秒",
+      "statement_b": "性能监控显示平均加载时间为980毫秒",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0291",
+      "category": "numerical",
+      "subtype": "10000-vs-7650",
+      "statement_a": "页面加载时间为10000毫秒",
+      "statement_b": "性能监控显示平均加载时间为7650毫秒",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0292",
+      "category": "numerical",
+      "subtype": "350-vs-280",
+      "statement_a": "页面加载时间为350毫秒",
+      "statement_b": "性能监控显示平均加载时间为280毫秒",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0293",
+      "category": "numerical",
+      "subtype": "800-vs-650",
+      "statement_a": "页面加载时间为800毫秒",
+      "statement_b": "性能监控显示平均加载时间为650毫秒",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0294",
+      "category": "numerical",
+      "subtype": "1500-vs-1200",
+      "statement_a": "页面加载时间为1500毫秒",
+      "statement_b": "性能监控显示平均加载时间为1200毫秒",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0295",
+      "category": "numerical",
+      "subtype": "200-vs-150",
+      "statement_a": "页面加载时间为200毫秒",
+      "statement_b": "性能监控显示平均加载时间为150毫秒",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0296",
+      "category": "numerical",
+      "subtype": "5000-vs-4200",
+      "statement_a": "页面加载时间为5000毫秒",
+      "statement_b": "性能监控显示平均加载时间为4200毫秒",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0297",
+      "category": "numerical",
+      "subtype": "100-vs-76",
+      "statement_a": "页面加载时间为100毫秒",
+      "statement_b": "性能监控显示平均加载时间为76毫秒",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0298",
+      "category": "numerical",
+      "subtype": "2500-vs-2000",
+      "statement_a": "页面加载时间为2500毫秒",
+      "statement_b": "性能监控显示平均加载时间为2000毫秒",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0299",
+      "category": "numerical",
+      "subtype": "999-vs-777",
+      "statement_a": "页面加载时间为999毫秒",
+      "statement_b": "性能监控显示平均加载时间为777毫秒",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0300",
+      "category": "numerical",
+      "subtype": "450-vs-380",
+      "statement_a": "页面加载时间为450毫秒",
+      "statement_b": "性能监控显示平均加载时间为380毫秒",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0301",
+      "category": "numerical",
+      "subtype": "500-vs-320",
+      "statement_a": "员工总数为500人",
+      "statement_b": "各部门人数汇总为320人",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0302",
+      "category": "numerical",
+      "subtype": "1200-vs-980",
+      "statement_a": "员工总数为1200人",
+      "statement_b": "各部门人数汇总为980人",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0303",
+      "category": "numerical",
+      "subtype": "10000-vs-7650",
+      "statement_a": "员工总数为10000人",
+      "statement_b": "各部门人数汇总为7650人",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0304",
+      "category": "numerical",
+      "subtype": "350-vs-280",
+      "statement_a": "员工总数为350人",
+      "statement_b": "各部门人数汇总为280人",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0305",
+      "category": "numerical",
+      "subtype": "800-vs-650",
+      "statement_a": "员工总数为800人",
+      "statement_b": "各部门人数汇总为650人",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0306",
+      "category": "numerical",
+      "subtype": "1500-vs-1200",
+      "statement_a": "员工总数为1500人",
+      "statement_b": "各部门人数汇总为1200人",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0307",
+      "category": "numerical",
+      "subtype": "200-vs-150",
+      "statement_a": "员工总数为200人",
+      "statement_b": "各部门人数汇总为150人",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0308",
+      "category": "numerical",
+      "subtype": "5000-vs-4200",
+      "statement_a": "员工总数为5000人",
+      "statement_b": "各部门人数汇总为4200人",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0309",
+      "category": "numerical",
+      "subtype": "100-vs-76",
+      "statement_a": "员工总数为100人",
+      "statement_b": "各部门人数汇总为76人",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0310",
+      "category": "numerical",
+      "subtype": "2500-vs-2000",
+      "statement_a": "员工总数为2500人",
+      "statement_b": "各部门人数汇总为2000人",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0311",
+      "category": "numerical",
+      "subtype": "999-vs-777",
+      "statement_a": "员工总数为999人",
+      "statement_b": "各部门人数汇总为777人",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0312",
+      "category": "numerical",
+      "subtype": "450-vs-380",
+      "statement_a": "员工总数为450人",
+      "statement_b": "各部门人数汇总为380人",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0313",
+      "category": "numerical",
+      "subtype": "500-vs-320",
+      "statement_a": "今年粮食产量为500万吨",
+      "statement_b": "统计年鉴记录产量为320万吨",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0314",
+      "category": "numerical",
+      "subtype": "1200-vs-980",
+      "statement_a": "今年粮食产量为1200万吨",
+      "statement_b": "统计年鉴记录产量为980万吨",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0315",
+      "category": "numerical",
+      "subtype": "10000-vs-7650",
+      "statement_a": "今年粮食产量为10000万吨",
+      "statement_b": "统计年鉴记录产量为7650万吨",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0316",
+      "category": "numerical",
+      "subtype": "350-vs-280",
+      "statement_a": "今年粮食产量为350万吨",
+      "statement_b": "统计年鉴记录产量为280万吨",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0317",
+      "category": "numerical",
+      "subtype": "800-vs-650",
+      "statement_a": "今年粮食产量为800万吨",
+      "statement_b": "统计年鉴记录产量为650万吨",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0318",
+      "category": "numerical",
+      "subtype": "1500-vs-1200",
+      "statement_a": "今年粮食产量为1500万吨",
+      "statement_b": "统计年鉴记录产量为1200万吨",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0319",
+      "category": "numerical",
+      "subtype": "200-vs-150",
+      "statement_a": "今年粮食产量为200万吨",
+      "statement_b": "统计年鉴记录产量为150万吨",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0320",
+      "category": "numerical",
+      "subtype": "5000-vs-4200",
+      "statement_a": "今年粮食产量为5000万吨",
+      "statement_b": "统计年鉴记录产量为4200万吨",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0321",
+      "category": "numerical",
+      "subtype": "100-vs-76",
+      "statement_a": "今年粮食产量为100万吨",
+      "statement_b": "统计年鉴记录产量为76万吨",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0322",
+      "category": "numerical",
+      "subtype": "2500-vs-2000",
+      "statement_a": "今年粮食产量为2500万吨",
+      "statement_b": "统计年鉴记录产量为2000万吨",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0323",
+      "category": "numerical",
+      "subtype": "999-vs-777",
+      "statement_a": "今年粮食产量为999万吨",
+      "statement_b": "统计年鉴记录产量为777万吨",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0324",
+      "category": "numerical",
+      "subtype": "450-vs-380",
+      "statement_a": "今年粮食产量为450万吨",
+      "statement_b": "统计年鉴记录产量为380万吨",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0325",
+      "category": "numerical",
+      "subtype": "500-vs-320",
+      "statement_a": "土地面积为500平方公里",
+      "statement_b": "测绘数据显示面积为320平方公里",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0326",
+      "category": "numerical",
+      "subtype": "1200-vs-980",
+      "statement_a": "土地面积为1200平方公里",
+      "statement_b": "测绘数据显示面积为980平方公里",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0327",
+      "category": "numerical",
+      "subtype": "10000-vs-7650",
+      "statement_a": "土地面积为10000平方公里",
+      "statement_b": "测绘数据显示面积为7650平方公里",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0328",
+      "category": "numerical",
+      "subtype": "350-vs-280",
+      "statement_a": "土地面积为350平方公里",
+      "statement_b": "测绘数据显示面积为280平方公里",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0329",
+      "category": "numerical",
+      "subtype": "800-vs-650",
+      "statement_a": "土地面积为800平方公里",
+      "statement_b": "测绘数据显示面积为650平方公里",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0330",
+      "category": "numerical",
+      "subtype": "1500-vs-1200",
+      "statement_a": "土地面积为1500平方公里",
+      "statement_b": "测绘数据显示面积为1200平方公里",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0331",
+      "category": "numerical",
+      "subtype": "200-vs-150",
+      "statement_a": "土地面积为200平方公里",
+      "statement_b": "测绘数据显示面积为150平方公里",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0332",
+      "category": "numerical",
+      "subtype": "5000-vs-4200",
+      "statement_a": "土地面积为5000平方公里",
+      "statement_b": "测绘数据显示面积为4200平方公里",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0333",
+      "category": "numerical",
+      "subtype": "100-vs-76",
+      "statement_a": "土地面积为100平方公里",
+      "statement_b": "测绘数据显示面积为76平方公里",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0334",
+      "category": "numerical",
+      "subtype": "2500-vs-2000",
+      "statement_a": "土地面积为2500平方公里",
+      "statement_b": "测绘数据显示面积为2000平方公里",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0335",
+      "category": "numerical",
+      "subtype": "999-vs-777",
+      "statement_a": "土地面积为999平方公里",
+      "statement_b": "测绘数据显示面积为777平方公里",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0336",
+      "category": "numerical",
+      "subtype": "450-vs-380",
+      "statement_a": "土地面积为450平方公里",
+      "statement_b": "测绘数据显示面积为380平方公里",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0337",
+      "category": "numerical",
+      "subtype": "500-vs-320",
+      "statement_a": "银行贷款余额为500亿元",
+      "statement_b": "银行内部报告显示余额为320亿元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0338",
+      "category": "numerical",
+      "subtype": "1200-vs-980",
+      "statement_a": "银行贷款余额为1200亿元",
+      "statement_b": "银行内部报告显示余额为980亿元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0339",
+      "category": "numerical",
+      "subtype": "10000-vs-7650",
+      "statement_a": "银行贷款余额为10000亿元",
+      "statement_b": "银行内部报告显示余额为7650亿元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0340",
+      "category": "numerical",
+      "subtype": "350-vs-280",
+      "statement_a": "银行贷款余额为350亿元",
+      "statement_b": "银行内部报告显示余额为280亿元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0341",
+      "category": "numerical",
+      "subtype": "800-vs-650",
+      "statement_a": "银行贷款余额为800亿元",
+      "statement_b": "银行内部报告显示余额为650亿元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0342",
+      "category": "numerical",
+      "subtype": "1500-vs-1200",
+      "statement_a": "银行贷款余额为1500亿元",
+      "statement_b": "银行内部报告显示余额为1200亿元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0343",
+      "category": "numerical",
+      "subtype": "200-vs-150",
+      "statement_a": "银行贷款余额为200亿元",
+      "statement_b": "银行内部报告显示余额为150亿元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0344",
+      "category": "numerical",
+      "subtype": "5000-vs-4200",
+      "statement_a": "银行贷款余额为5000亿元",
+      "statement_b": "银行内部报告显示余额为4200亿元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0345",
+      "category": "numerical",
+      "subtype": "100-vs-76",
+      "statement_a": "银行贷款余额为100亿元",
+      "statement_b": "银行内部报告显示余额为76亿元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0346",
+      "category": "numerical",
+      "subtype": "2500-vs-2000",
+      "statement_a": "银行贷款余额为2500亿元",
+      "statement_b": "银行内部报告显示余额为2000亿元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0347",
+      "category": "numerical",
+      "subtype": "999-vs-777",
+      "statement_a": "银行贷款余额为999亿元",
+      "statement_b": "银行内部报告显示余额为777亿元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0348",
+      "category": "numerical",
+      "subtype": "450-vs-380",
+      "statement_a": "银行贷款余额为450亿元",
+      "statement_b": "银行内部报告显示余额为380亿元",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0349",
+      "category": "numerical",
+      "subtype": "500-vs-320",
+      "statement_a": "测试覆盖500个场景",
+      "statement_b": "测试报告中只列出了320个场景",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0350",
+      "category": "numerical",
+      "subtype": "1200-vs-980",
+      "statement_a": "测试覆盖1200个场景",
+      "statement_b": "测试报告中只列出了980个场景",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0351",
+      "category": "numerical",
+      "subtype": "10000-vs-7650",
+      "statement_a": "测试覆盖10000个场景",
+      "statement_b": "测试报告中只列出了7650个场景",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0352",
+      "category": "numerical",
+      "subtype": "350-vs-280",
+      "statement_a": "测试覆盖350个场景",
+      "statement_b": "测试报告中只列出了280个场景",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0353",
+      "category": "numerical",
+      "subtype": "800-vs-650",
+      "statement_a": "测试覆盖800个场景",
+      "statement_b": "测试报告中只列出了650个场景",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0354",
+      "category": "numerical",
+      "subtype": "1500-vs-1200",
+      "statement_a": "测试覆盖1500个场景",
+      "statement_b": "测试报告中只列出了1200个场景",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0355",
+      "category": "numerical",
+      "subtype": "200-vs-150",
+      "statement_a": "测试覆盖200个场景",
+      "statement_b": "测试报告中只列出了150个场景",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0356",
+      "category": "numerical",
+      "subtype": "5000-vs-4200",
+      "statement_a": "测试覆盖5000个场景",
+      "statement_b": "测试报告中只列出了4200个场景",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0357",
+      "category": "numerical",
+      "subtype": "100-vs-76",
+      "statement_a": "测试覆盖100个场景",
+      "statement_b": "测试报告中只列出了76个场景",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0358",
+      "category": "numerical",
+      "subtype": "2500-vs-2000",
+      "statement_a": "测试覆盖2500个场景",
+      "statement_b": "测试报告中只列出了2000个场景",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0359",
+      "category": "numerical",
+      "subtype": "999-vs-777",
+      "statement_a": "测试覆盖999个场景",
+      "statement_b": "测试报告中只列出了777个场景",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0360",
+      "category": "numerical",
+      "subtype": "450-vs-380",
+      "statement_a": "测试覆盖450个场景",
+      "statement_b": "测试报告中只列出了380个场景",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0361",
+      "category": "causal",
+      "subtype": "气温升高->海平面上升",
+      "statement_a": "因为气温升高，所以海平面上升",
+      "statement_b": "实际上是因为海平面上升，才导致了气温升高",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0362",
+      "category": "causal",
+      "subtype": "广告投放增加->销售额增长",
+      "statement_a": "因为广告投放增加，所以销售额增长",
+      "statement_b": "实际上是因为销售额增长，才导致了广告投放增加",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0363",
+      "category": "causal",
+      "subtype": "教育投入->经济增长",
+      "statement_a": "因为教育投入，所以经济增长",
+      "statement_b": "实际上是因为经济增长，才导致了教育投入",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0364",
+      "category": "causal",
+      "subtype": "员工满意度->生产力提升",
+      "statement_a": "因为员工满意度，所以生产力提升",
+      "statement_b": "实际上是因为生产力提升，才导致了员工满意度",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0365",
+      "category": "causal",
+      "subtype": "社交媒体使用->抑郁率上升",
+      "statement_a": "因为社交媒体使用，所以抑郁率上升",
+      "statement_b": "实际上是因为抑郁率上升，才导致了社交媒体使用",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0366",
+      "category": "causal",
+      "subtype": "降雨量减少->农作物减产",
+      "statement_a": "因为降雨量减少，所以农作物减产",
+      "statement_b": "实际上是因为农作物减产，才导致了降雨量减少",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0367",
+      "category": "causal",
+      "subtype": "利率下调->房价上涨",
+      "statement_a": "因为利率下调，所以房价上涨",
+      "statement_b": "实际上是因为房价上涨，才导致了利率下调",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0368",
+      "category": "causal",
+      "subtype": "研发投入->专利申请",
+      "statement_a": "因为研发投入，所以专利申请",
+      "statement_b": "实际上是因为专利申请，才导致了研发投入",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0369",
+      "category": "causal",
+      "subtype": "气温升高->海平面上升",
+      "statement_a": "气温升高是海平面上升的主要原因",
+      "statement_b": "研究表明海平面上升才是气温升高的驱动因素",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0370",
+      "category": "causal",
+      "subtype": "广告投放增加->销售额增长",
+      "statement_a": "广告投放增加是销售额增长的主要原因",
+      "statement_b": "研究表明销售额增长才是广告投放增加的驱动因素",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0371",
+      "category": "causal",
+      "subtype": "教育投入->经济增长",
+      "statement_a": "教育投入是经济增长的主要原因",
+      "statement_b": "研究表明经济增长才是教育投入的驱动因素",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0372",
+      "category": "causal",
+      "subtype": "员工满意度->生产力提升",
+      "statement_a": "员工满意度是生产力提升的主要原因",
+      "statement_b": "研究表明生产力提升才是员工满意度的驱动因素",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0373",
+      "category": "causal",
+      "subtype": "社交媒体使用->抑郁率上升",
+      "statement_a": "社交媒体使用是抑郁率上升的主要原因",
+      "statement_b": "研究表明抑郁率上升才是社交媒体使用的驱动因素",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0374",
+      "category": "causal",
+      "subtype": "降雨量减少->农作物减产",
+      "statement_a": "降雨量减少是农作物减产的主要原因",
+      "statement_b": "研究表明农作物减产才是降雨量减少的驱动因素",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0375",
+      "category": "causal",
+      "subtype": "利率下调->房价上涨",
+      "statement_a": "利率下调是房价上涨的主要原因",
+      "statement_b": "研究表明房价上涨才是利率下调的驱动因素",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0376",
+      "category": "causal",
+      "subtype": "研发投入->专利申请",
+      "statement_a": "研发投入是专利申请的主要原因",
+      "statement_b": "研究表明专利申请才是研发投入的驱动因素",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0377",
+      "category": "causal",
+      "subtype": "气温升高->海平面上升",
+      "statement_a": "由于气温升高不足，导致海平面上升下降",
+      "statement_b": "数据显示海平面上升下降发生在前，气温升高不足在后",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0378",
+      "category": "causal",
+      "subtype": "广告投放增加->销售额增长",
+      "statement_a": "由于广告投放增加不足，导致销售额增长下降",
+      "statement_b": "数据显示销售额增长下降发生在前，广告投放增加不足在后",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0379",
+      "category": "causal",
+      "subtype": "教育投入->经济增长",
+      "statement_a": "由于教育投入不足，导致经济增长下降",
+      "statement_b": "数据显示经济增长下降发生在前，教育投入不足在后",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0380",
+      "category": "causal",
+      "subtype": "员工满意度->生产力提升",
+      "statement_a": "由于员工满意度不足，导致生产力提升下降",
+      "statement_b": "数据显示生产力提升下降发生在前，员工满意度不足在后",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0381",
+      "category": "causal",
+      "subtype": "社交媒体使用->抑郁率上升",
+      "statement_a": "由于社交媒体使用不足，导致抑郁率上升下降",
+      "statement_b": "数据显示抑郁率上升下降发生在前，社交媒体使用不足在后",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0382",
+      "category": "causal",
+      "subtype": "降雨量减少->农作物减产",
+      "statement_a": "由于降雨量减少不足，导致农作物减产下降",
+      "statement_b": "数据显示农作物减产下降发生在前，降雨量减少不足在后",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0383",
+      "category": "causal",
+      "subtype": "利率下调->房价上涨",
+      "statement_a": "由于利率下调不足，导致房价上涨下降",
+      "statement_b": "数据显示房价上涨下降发生在前，利率下调不足在后",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0384",
+      "category": "causal",
+      "subtype": "研发投入->专利申请",
+      "statement_a": "由于研发投入不足，导致专利申请下降",
+      "statement_b": "数据显示专利申请下降发生在前，研发投入不足在后",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0385",
+      "category": "causal",
+      "subtype": "气温升高->海平面上升",
+      "statement_a": "气温升高的改善带来了海平面上升的提升",
+      "statement_b": "相关分析表明海平面上升提升与气温升高改善无因果关系",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0386",
+      "category": "causal",
+      "subtype": "广告投放增加->销售额增长",
+      "statement_a": "广告投放增加的改善带来了销售额增长的提升",
+      "statement_b": "相关分析表明销售额增长提升与广告投放增加改善无因果关系",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0387",
+      "category": "causal",
+      "subtype": "教育投入->经济增长",
+      "statement_a": "教育投入的改善带来了经济增长的提升",
+      "statement_b": "相关分析表明经济增长提升与教育投入改善无因果关系",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0388",
+      "category": "causal",
+      "subtype": "员工满意度->生产力提升",
+      "statement_a": "员工满意度的改善带来了生产力提升的提升",
+      "statement_b": "相关分析表明生产力提升提升与员工满意度改善无因果关系",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0389",
+      "category": "causal",
+      "subtype": "社交媒体使用->抑郁率上升",
+      "statement_a": "社交媒体使用的改善带来了抑郁率上升的提升",
+      "statement_b": "相关分析表明抑郁率上升提升与社交媒体使用改善无因果关系",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0390",
+      "category": "causal",
+      "subtype": "降雨量减少->农作物减产",
+      "statement_a": "降雨量减少的改善带来了农作物减产的提升",
+      "statement_b": "相关分析表明农作物减产提升与降雨量减少改善无因果关系",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0391",
+      "category": "causal",
+      "subtype": "利率下调->房价上涨",
+      "statement_a": "利率下调的改善带来了房价上涨的提升",
+      "statement_b": "相关分析表明房价上涨提升与利率下调改善无因果关系",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0392",
+      "category": "causal",
+      "subtype": "研发投入->专利申请",
+      "statement_a": "研发投入的改善带来了专利申请的提升",
+      "statement_b": "相关分析表明专利申请提升与研发投入改善无因果关系",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0393",
+      "category": "causal",
+      "subtype": "气温升高->海平面上升",
+      "statement_a": "气温升高政策导致了海平面上升",
+      "statement_b": "时间序列分析显示海平面上升先于气温升高出现",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0394",
+      "category": "causal",
+      "subtype": "广告投放增加->销售额增长",
+      "statement_a": "广告投放增加政策导致了销售额增长",
+      "statement_b": "时间序列分析显示销售额增长先于广告投放增加出现",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0395",
+      "category": "causal",
+      "subtype": "教育投入->经济增长",
+      "statement_a": "教育投入政策导致了经济增长",
+      "statement_b": "时间序列分析显示经济增长先于教育投入出现",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0396",
+      "category": "causal",
+      "subtype": "员工满意度->生产力提升",
+      "statement_a": "员工满意度政策导致了生产力提升",
+      "statement_b": "时间序列分析显示生产力提升先于员工满意度出现",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0397",
+      "category": "causal",
+      "subtype": "社交媒体使用->抑郁率上升",
+      "statement_a": "社交媒体使用政策导致了抑郁率上升",
+      "statement_b": "时间序列分析显示抑郁率上升先于社交媒体使用出现",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0398",
+      "category": "causal",
+      "subtype": "降雨量减少->农作物减产",
+      "statement_a": "降雨量减少政策导致了农作物减产",
+      "statement_b": "时间序列分析显示农作物减产先于降雨量减少出现",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0399",
+      "category": "causal",
+      "subtype": "利率下调->房价上涨",
+      "statement_a": "利率下调政策导致了房价上涨",
+      "statement_b": "时间序列分析显示房价上涨先于利率下调出现",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0400",
+      "category": "causal",
+      "subtype": "研发投入->专利申请",
+      "statement_a": "研发投入政策导致了专利申请",
+      "statement_b": "时间序列分析显示专利申请先于研发投入出现",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0401",
+      "category": "causal",
+      "subtype": "气温升高->海平面上升",
+      "statement_a": "气温升高的增加引起海平面上升减少",
+      "statement_b": "控制实验表明气温升高和海平面上升相互独立",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0402",
+      "category": "causal",
+      "subtype": "广告投放增加->销售额增长",
+      "statement_a": "广告投放增加的增加引起销售额增长减少",
+      "statement_b": "控制实验表明广告投放增加和销售额增长相互独立",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0403",
+      "category": "causal",
+      "subtype": "教育投入->经济增长",
+      "statement_a": "教育投入的增加引起经济增长减少",
+      "statement_b": "控制实验表明教育投入和经济增长相互独立",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0404",
+      "category": "causal",
+      "subtype": "员工满意度->生产力提升",
+      "statement_a": "员工满意度的增加引起生产力提升减少",
+      "statement_b": "控制实验表明员工满意度和生产力提升相互独立",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0405",
+      "category": "causal",
+      "subtype": "社交媒体使用->抑郁率上升",
+      "statement_a": "社交媒体使用的增加引起抑郁率上升减少",
+      "statement_b": "控制实验表明社交媒体使用和抑郁率上升相互独立",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0406",
+      "category": "causal",
+      "subtype": "降雨量减少->农作物减产",
+      "statement_a": "降雨量减少的增加引起农作物减产减少",
+      "statement_b": "控制实验表明降雨量减少和农作物减产相互独立",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0407",
+      "category": "causal",
+      "subtype": "利率下调->房价上涨",
+      "statement_a": "利率下调的增加引起房价上涨减少",
+      "statement_b": "控制实验表明利率下调和房价上涨相互独立",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0408",
+      "category": "causal",
+      "subtype": "研发投入->专利申请",
+      "statement_a": "研发投入的增加引起专利申请减少",
+      "statement_b": "控制实验表明研发投入和专利申请相互独立",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0409",
+      "category": "attribute",
+      "subtype": "红色-vs-蓝色",
+      "statement_a": "这件衣服的颜色是红色的",
+      "statement_b": "这件衣服在灯光下呈现蓝色",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0410",
+      "category": "attribute",
+      "subtype": "酸性-vs-碱性",
+      "statement_a": "这件衣服的颜色是酸性的",
+      "statement_b": "这件衣服在灯光下呈现碱性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0411",
+      "category": "attribute",
+      "subtype": "固态-vs-液态",
+      "statement_a": "这件衣服的颜色是固态的",
+      "statement_b": "这件衣服在灯光下呈现液态",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0412",
+      "category": "attribute",
+      "subtype": "有机-vs-无机",
+      "statement_a": "这件衣服的颜色是有机的",
+      "statement_b": "这件衣服在灯光下呈现无机",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0413",
+      "category": "attribute",
+      "subtype": "导体-vs-绝缘体",
+      "statement_a": "这件衣服的颜色是导体的",
+      "statement_b": "这件衣服在灯光下呈现绝缘体",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0414",
+      "category": "attribute",
+      "subtype": "刚性-vs-柔性",
+      "statement_a": "这件衣服的颜色是刚性的",
+      "statement_b": "这件衣服在灯光下呈现柔性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0415",
+      "category": "attribute",
+      "subtype": "动物-vs-植物",
+      "statement_a": "这件衣服的颜色是动物的",
+      "statement_b": "这件衣服在灯光下呈现植物",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0416",
+      "category": "attribute",
+      "subtype": "天然-vs-合成",
+      "statement_a": "这件衣服的颜色是天然的",
+      "statement_b": "这件衣服在灯光下呈现合成",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0417",
+      "category": "attribute",
+      "subtype": "开源-vs-闭源",
+      "statement_a": "这件衣服的颜色是开源的",
+      "statement_b": "这件衣服在灯光下呈现闭源",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0418",
+      "category": "attribute",
+      "subtype": "集中式-vs-分布式",
+      "statement_a": "这件衣服的颜色是集中式的",
+      "statement_b": "这件衣服在灯光下呈现分布式",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0419",
+      "category": "attribute",
+      "subtype": "关系型-vs-非关系型",
+      "statement_a": "这件衣服的颜色是关系型的",
+      "statement_b": "这件衣服在灯光下呈现非关系型",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0420",
+      "category": "attribute",
+      "subtype": "猫科-vs-犬科",
+      "statement_a": "这件衣服的颜色是猫科的",
+      "statement_b": "这件衣服在灯光下呈现犬科",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0421",
+      "category": "attribute",
+      "subtype": "鱼类-vs-哺乳类",
+      "statement_a": "这件衣服的颜色是鱼类的",
+      "statement_b": "这件衣服在灯光下呈现哺乳类",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0422",
+      "category": "attribute",
+      "subtype": "UTF-8-vs-GBK",
+      "statement_a": "这件衣服的颜色是UTF-8的",
+      "statement_b": "这件衣服在灯光下呈现GBK",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0423",
+      "category": "attribute",
+      "subtype": "同步-vs-异步",
+      "statement_a": "这件衣服的颜色是同步的",
+      "statement_b": "这件衣服在灯光下呈现异步",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0424",
+      "category": "attribute",
+      "subtype": "红色-vs-蓝色",
+      "statement_a": "该金属在常温下是红色态",
+      "statement_b": "实验记录显示该金属在常温下是蓝色态",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0425",
+      "category": "attribute",
+      "subtype": "酸性-vs-碱性",
+      "statement_a": "该金属在常温下是酸性态",
+      "statement_b": "实验记录显示该金属在常温下是碱性态",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0426",
+      "category": "attribute",
+      "subtype": "固态-vs-液态",
+      "statement_a": "该金属在常温下是固态态",
+      "statement_b": "实验记录显示该金属在常温下是液态态",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0427",
+      "category": "attribute",
+      "subtype": "有机-vs-无机",
+      "statement_a": "该金属在常温下是有机态",
+      "statement_b": "实验记录显示该金属在常温下是无机态",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0428",
+      "category": "attribute",
+      "subtype": "导体-vs-绝缘体",
+      "statement_a": "该金属在常温下是导体态",
+      "statement_b": "实验记录显示该金属在常温下是绝缘体态",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0429",
+      "category": "attribute",
+      "subtype": "刚性-vs-柔性",
+      "statement_a": "该金属在常温下是刚性态",
+      "statement_b": "实验记录显示该金属在常温下是柔性态",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0430",
+      "category": "attribute",
+      "subtype": "动物-vs-植物",
+      "statement_a": "该金属在常温下是动物态",
+      "statement_b": "实验记录显示该金属在常温下是植物态",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0431",
+      "category": "attribute",
+      "subtype": "天然-vs-合成",
+      "statement_a": "该金属在常温下是天然态",
+      "statement_b": "实验记录显示该金属在常温下是合成态",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0432",
+      "category": "attribute",
+      "subtype": "开源-vs-闭源",
+      "statement_a": "该金属在常温下是开源态",
+      "statement_b": "实验记录显示该金属在常温下是闭源态",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0433",
+      "category": "attribute",
+      "subtype": "集中式-vs-分布式",
+      "statement_a": "该金属在常温下是集中式态",
+      "statement_b": "实验记录显示该金属在常温下是分布式态",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0434",
+      "category": "attribute",
+      "subtype": "关系型-vs-非关系型",
+      "statement_a": "该金属在常温下是关系型态",
+      "statement_b": "实验记录显示该金属在常温下是非关系型态",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0435",
+      "category": "attribute",
+      "subtype": "猫科-vs-犬科",
+      "statement_a": "该金属在常温下是猫科态",
+      "statement_b": "实验记录显示该金属在常温下是犬科态",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0436",
+      "category": "attribute",
+      "subtype": "鱼类-vs-哺乳类",
+      "statement_a": "该金属在常温下是鱼类态",
+      "statement_b": "实验记录显示该金属在常温下是哺乳类态",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0437",
+      "category": "attribute",
+      "subtype": "UTF-8-vs-GBK",
+      "statement_a": "该金属在常温下是UTF-8态",
+      "statement_b": "实验记录显示该金属在常温下是GBK态",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0438",
+      "category": "attribute",
+      "subtype": "同步-vs-异步",
+      "statement_a": "该金属在常温下是同步态",
+      "statement_b": "实验记录显示该金属在常温下是异步态",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0439",
+      "category": "attribute",
+      "subtype": "红色-vs-蓝色",
+      "statement_a": "这种化合物的pH为红色",
+      "statement_b": "检测报告显示pH值为蓝色",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0440",
+      "category": "attribute",
+      "subtype": "酸性-vs-碱性",
+      "statement_a": "这种化合物的pH为酸性",
+      "statement_b": "检测报告显示pH值为碱性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0441",
+      "category": "attribute",
+      "subtype": "固态-vs-液态",
+      "statement_a": "这种化合物的pH为固态",
+      "statement_b": "检测报告显示pH值为液态",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0442",
+      "category": "attribute",
+      "subtype": "有机-vs-无机",
+      "statement_a": "这种化合物的pH为有机",
+      "statement_b": "检测报告显示pH值为无机",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0443",
+      "category": "attribute",
+      "subtype": "导体-vs-绝缘体",
+      "statement_a": "这种化合物的pH为导体",
+      "statement_b": "检测报告显示pH值为绝缘体",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0444",
+      "category": "attribute",
+      "subtype": "刚性-vs-柔性",
+      "statement_a": "这种化合物的pH为刚性",
+      "statement_b": "检测报告显示pH值为柔性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0445",
+      "category": "attribute",
+      "subtype": "动物-vs-植物",
+      "statement_a": "这种化合物的pH为动物",
+      "statement_b": "检测报告显示pH值为植物",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0446",
+      "category": "attribute",
+      "subtype": "天然-vs-合成",
+      "statement_a": "这种化合物的pH为天然",
+      "statement_b": "检测报告显示pH值为合成",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0447",
+      "category": "attribute",
+      "subtype": "开源-vs-闭源",
+      "statement_a": "这种化合物的pH为开源",
+      "statement_b": "检测报告显示pH值为闭源",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0448",
+      "category": "attribute",
+      "subtype": "集中式-vs-分布式",
+      "statement_a": "这种化合物的pH为集中式",
+      "statement_b": "检测报告显示pH值为分布式",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0449",
+      "category": "attribute",
+      "subtype": "关系型-vs-非关系型",
+      "statement_a": "这种化合物的pH为关系型",
+      "statement_b": "检测报告显示pH值为非关系型",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0450",
+      "category": "attribute",
+      "subtype": "猫科-vs-犬科",
+      "statement_a": "这种化合物的pH为猫科",
+      "statement_b": "检测报告显示pH值为犬科",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0451",
+      "category": "attribute",
+      "subtype": "鱼类-vs-哺乳类",
+      "statement_a": "这种化合物的pH为鱼类",
+      "statement_b": "检测报告显示pH值为哺乳类",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0452",
+      "category": "attribute",
+      "subtype": "UTF-8-vs-GBK",
+      "statement_a": "这种化合物的pH为UTF-8",
+      "statement_b": "检测报告显示pH值为GBK",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0453",
+      "category": "attribute",
+      "subtype": "同步-vs-异步",
+      "statement_a": "这种化合物的pH为同步",
+      "statement_b": "检测报告显示pH值为异步",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0454",
+      "category": "attribute",
+      "subtype": "红色-vs-蓝色",
+      "statement_a": "材料具有红色性",
+      "statement_b": "力学测试显示材料呈蓝色性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0455",
+      "category": "attribute",
+      "subtype": "酸性-vs-碱性",
+      "statement_a": "材料具有酸性性",
+      "statement_b": "力学测试显示材料呈碱性性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0456",
+      "category": "attribute",
+      "subtype": "固态-vs-液态",
+      "statement_a": "材料具有固态性",
+      "statement_b": "力学测试显示材料呈液态性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0457",
+      "category": "attribute",
+      "subtype": "有机-vs-无机",
+      "statement_a": "材料具有有机性",
+      "statement_b": "力学测试显示材料呈无机性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0458",
+      "category": "attribute",
+      "subtype": "导体-vs-绝缘体",
+      "statement_a": "材料具有导体性",
+      "statement_b": "力学测试显示材料呈绝缘体性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0459",
+      "category": "attribute",
+      "subtype": "刚性-vs-柔性",
+      "statement_a": "材料具有刚性性",
+      "statement_b": "力学测试显示材料呈柔性性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0460",
+      "category": "attribute",
+      "subtype": "动物-vs-植物",
+      "statement_a": "材料具有动物性",
+      "statement_b": "力学测试显示材料呈植物性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0461",
+      "category": "attribute",
+      "subtype": "天然-vs-合成",
+      "statement_a": "材料具有天然性",
+      "statement_b": "力学测试显示材料呈合成性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0462",
+      "category": "attribute",
+      "subtype": "开源-vs-闭源",
+      "statement_a": "材料具有开源性",
+      "statement_b": "力学测试显示材料呈闭源性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0463",
+      "category": "attribute",
+      "subtype": "集中式-vs-分布式",
+      "statement_a": "材料具有集中式性",
+      "statement_b": "力学测试显示材料呈分布式性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0464",
+      "category": "attribute",
+      "subtype": "关系型-vs-非关系型",
+      "statement_a": "材料具有关系型性",
+      "statement_b": "力学测试显示材料呈非关系型性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0465",
+      "category": "attribute",
+      "subtype": "猫科-vs-犬科",
+      "statement_a": "材料具有猫科性",
+      "statement_b": "力学测试显示材料呈犬科性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0466",
+      "category": "attribute",
+      "subtype": "鱼类-vs-哺乳类",
+      "statement_a": "材料具有鱼类性",
+      "statement_b": "力学测试显示材料呈哺乳类性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0467",
+      "category": "attribute",
+      "subtype": "UTF-8-vs-GBK",
+      "statement_a": "材料具有UTF-8性",
+      "statement_b": "力学测试显示材料呈GBK性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0468",
+      "category": "attribute",
+      "subtype": "同步-vs-异步",
+      "statement_a": "材料具有同步性",
+      "statement_b": "力学测试显示材料呈异步性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0469",
+      "category": "attribute",
+      "subtype": "红色-vs-蓝色",
+      "statement_a": "产品定位为红色市场",
+      "statement_b": "销售数据显示主要购买力来自蓝色市场",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0470",
+      "category": "attribute",
+      "subtype": "酸性-vs-碱性",
+      "statement_a": "产品定位为酸性市场",
+      "statement_b": "销售数据显示主要购买力来自碱性市场",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0471",
+      "category": "attribute",
+      "subtype": "固态-vs-液态",
+      "statement_a": "产品定位为固态市场",
+      "statement_b": "销售数据显示主要购买力来自液态市场",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0472",
+      "category": "attribute",
+      "subtype": "有机-vs-无机",
+      "statement_a": "产品定位为有机市场",
+      "statement_b": "销售数据显示主要购买力来自无机市场",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0473",
+      "category": "attribute",
+      "subtype": "导体-vs-绝缘体",
+      "statement_a": "产品定位为导体市场",
+      "statement_b": "销售数据显示主要购买力来自绝缘体市场",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0474",
+      "category": "attribute",
+      "subtype": "刚性-vs-柔性",
+      "statement_a": "产品定位为刚性市场",
+      "statement_b": "销售数据显示主要购买力来自柔性市场",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0475",
+      "category": "attribute",
+      "subtype": "动物-vs-植物",
+      "statement_a": "产品定位为动物市场",
+      "statement_b": "销售数据显示主要购买力来自植物市场",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0476",
+      "category": "attribute",
+      "subtype": "天然-vs-合成",
+      "statement_a": "产品定位为天然市场",
+      "statement_b": "销售数据显示主要购买力来自合成市场",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0477",
+      "category": "attribute",
+      "subtype": "开源-vs-闭源",
+      "statement_a": "产品定位为开源市场",
+      "statement_b": "销售数据显示主要购买力来自闭源市场",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0478",
+      "category": "attribute",
+      "subtype": "集中式-vs-分布式",
+      "statement_a": "产品定位为集中式市场",
+      "statement_b": "销售数据显示主要购买力来自分布式市场",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0479",
+      "category": "attribute",
+      "subtype": "关系型-vs-非关系型",
+      "statement_a": "产品定位为关系型市场",
+      "statement_b": "销售数据显示主要购买力来自非关系型市场",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0480",
+      "category": "attribute",
+      "subtype": "猫科-vs-犬科",
+      "statement_a": "产品定位为猫科市场",
+      "statement_b": "销售数据显示主要购买力来自犬科市场",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0481",
+      "category": "attribute",
+      "subtype": "鱼类-vs-哺乳类",
+      "statement_a": "产品定位为鱼类市场",
+      "statement_b": "销售数据显示主要购买力来自哺乳类市场",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0482",
+      "category": "attribute",
+      "subtype": "UTF-8-vs-GBK",
+      "statement_a": "产品定位为UTF-8市场",
+      "statement_b": "销售数据显示主要购买力来自GBK市场",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0483",
+      "category": "attribute",
+      "subtype": "同步-vs-异步",
+      "statement_a": "产品定位为同步市场",
+      "statement_b": "销售数据显示主要购买力来自异步市场",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0484",
+      "category": "attribute",
+      "subtype": "红色-vs-蓝色",
+      "statement_a": "组织架构为红色结构",
+      "statement_b": "实际运作模式更接近蓝色结构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0485",
+      "category": "attribute",
+      "subtype": "酸性-vs-碱性",
+      "statement_a": "组织架构为酸性结构",
+      "statement_b": "实际运作模式更接近碱性结构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0486",
+      "category": "attribute",
+      "subtype": "固态-vs-液态",
+      "statement_a": "组织架构为固态结构",
+      "statement_b": "实际运作模式更接近液态结构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0487",
+      "category": "attribute",
+      "subtype": "有机-vs-无机",
+      "statement_a": "组织架构为有机结构",
+      "statement_b": "实际运作模式更接近无机结构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0488",
+      "category": "attribute",
+      "subtype": "导体-vs-绝缘体",
+      "statement_a": "组织架构为导体结构",
+      "statement_b": "实际运作模式更接近绝缘体结构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0489",
+      "category": "attribute",
+      "subtype": "刚性-vs-柔性",
+      "statement_a": "组织架构为刚性结构",
+      "statement_b": "实际运作模式更接近柔性结构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0490",
+      "category": "attribute",
+      "subtype": "动物-vs-植物",
+      "statement_a": "组织架构为动物结构",
+      "statement_b": "实际运作模式更接近植物结构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0491",
+      "category": "attribute",
+      "subtype": "天然-vs-合成",
+      "statement_a": "组织架构为天然结构",
+      "statement_b": "实际运作模式更接近合成结构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0492",
+      "category": "attribute",
+      "subtype": "开源-vs-闭源",
+      "statement_a": "组织架构为开源结构",
+      "statement_b": "实际运作模式更接近闭源结构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0493",
+      "category": "attribute",
+      "subtype": "集中式-vs-分布式",
+      "statement_a": "组织架构为集中式结构",
+      "statement_b": "实际运作模式更接近分布式结构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0494",
+      "category": "attribute",
+      "subtype": "关系型-vs-非关系型",
+      "statement_a": "组织架构为关系型结构",
+      "statement_b": "实际运作模式更接近非关系型结构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0495",
+      "category": "attribute",
+      "subtype": "猫科-vs-犬科",
+      "statement_a": "组织架构为猫科结构",
+      "statement_b": "实际运作模式更接近犬科结构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0496",
+      "category": "attribute",
+      "subtype": "鱼类-vs-哺乳类",
+      "statement_a": "组织架构为鱼类结构",
+      "statement_b": "实际运作模式更接近哺乳类结构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0497",
+      "category": "attribute",
+      "subtype": "UTF-8-vs-GBK",
+      "statement_a": "组织架构为UTF-8结构",
+      "statement_b": "实际运作模式更接近GBK结构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0498",
+      "category": "attribute",
+      "subtype": "同步-vs-异步",
+      "statement_a": "组织架构为同步结构",
+      "statement_b": "实际运作模式更接近异步结构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0499",
+      "category": "attribute",
+      "subtype": "红色-vs-蓝色",
+      "statement_a": "该系统采用红色架构",
+      "statement_b": "代码审查显示实际为蓝色架构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0500",
+      "category": "attribute",
+      "subtype": "酸性-vs-碱性",
+      "statement_a": "该系统采用酸性架构",
+      "statement_b": "代码审查显示实际为碱性架构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0501",
+      "category": "attribute",
+      "subtype": "固态-vs-液态",
+      "statement_a": "该系统采用固态架构",
+      "statement_b": "代码审查显示实际为液态架构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0502",
+      "category": "attribute",
+      "subtype": "有机-vs-无机",
+      "statement_a": "该系统采用有机架构",
+      "statement_b": "代码审查显示实际为无机架构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0503",
+      "category": "attribute",
+      "subtype": "导体-vs-绝缘体",
+      "statement_a": "该系统采用导体架构",
+      "statement_b": "代码审查显示实际为绝缘体架构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0504",
+      "category": "attribute",
+      "subtype": "刚性-vs-柔性",
+      "statement_a": "该系统采用刚性架构",
+      "statement_b": "代码审查显示实际为柔性架构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0505",
+      "category": "attribute",
+      "subtype": "动物-vs-植物",
+      "statement_a": "该系统采用动物架构",
+      "statement_b": "代码审查显示实际为植物架构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0506",
+      "category": "attribute",
+      "subtype": "天然-vs-合成",
+      "statement_a": "该系统采用天然架构",
+      "statement_b": "代码审查显示实际为合成架构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0507",
+      "category": "attribute",
+      "subtype": "开源-vs-闭源",
+      "statement_a": "该系统采用开源架构",
+      "statement_b": "代码审查显示实际为闭源架构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0508",
+      "category": "attribute",
+      "subtype": "集中式-vs-分布式",
+      "statement_a": "该系统采用集中式架构",
+      "statement_b": "代码审查显示实际为分布式架构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0509",
+      "category": "attribute",
+      "subtype": "关系型-vs-非关系型",
+      "statement_a": "该系统采用关系型架构",
+      "statement_b": "代码审查显示实际为非关系型架构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0510",
+      "category": "attribute",
+      "subtype": "猫科-vs-犬科",
+      "statement_a": "该系统采用猫科架构",
+      "statement_b": "代码审查显示实际为犬科架构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0511",
+      "category": "attribute",
+      "subtype": "鱼类-vs-哺乳类",
+      "statement_a": "该系统采用鱼类架构",
+      "statement_b": "代码审查显示实际为哺乳类架构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0512",
+      "category": "attribute",
+      "subtype": "UTF-8-vs-GBK",
+      "statement_a": "该系统采用UTF-8架构",
+      "statement_b": "代码审查显示实际为GBK架构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0513",
+      "category": "attribute",
+      "subtype": "同步-vs-异步",
+      "statement_a": "该系统采用同步架构",
+      "statement_b": "代码审查显示实际为异步架构",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0514",
+      "category": "attribute",
+      "subtype": "红色-vs-蓝色",
+      "statement_a": "该文件编码格式为红色",
+      "statement_b": "字节分析显示实际编码为蓝色",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0515",
+      "category": "attribute",
+      "subtype": "酸性-vs-碱性",
+      "statement_a": "该文件编码格式为酸性",
+      "statement_b": "字节分析显示实际编码为碱性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0516",
+      "category": "attribute",
+      "subtype": "固态-vs-液态",
+      "statement_a": "该文件编码格式为固态",
+      "statement_b": "字节分析显示实际编码为液态",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0517",
+      "category": "attribute",
+      "subtype": "有机-vs-无机",
+      "statement_a": "该文件编码格式为有机",
+      "statement_b": "字节分析显示实际编码为无机",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0518",
+      "category": "attribute",
+      "subtype": "导体-vs-绝缘体",
+      "statement_a": "该文件编码格式为导体",
+      "statement_b": "字节分析显示实际编码为绝缘体",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0519",
+      "category": "attribute",
+      "subtype": "刚性-vs-柔性",
+      "statement_a": "该文件编码格式为刚性",
+      "statement_b": "字节分析显示实际编码为柔性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0520",
+      "category": "attribute",
+      "subtype": "动物-vs-植物",
+      "statement_a": "该文件编码格式为动物",
+      "statement_b": "字节分析显示实际编码为植物",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0521",
+      "category": "attribute",
+      "subtype": "天然-vs-合成",
+      "statement_a": "该文件编码格式为天然",
+      "statement_b": "字节分析显示实际编码为合成",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0522",
+      "category": "attribute",
+      "subtype": "开源-vs-闭源",
+      "statement_a": "该文件编码格式为开源",
+      "statement_b": "字节分析显示实际编码为闭源",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0523",
+      "category": "attribute",
+      "subtype": "集中式-vs-分布式",
+      "statement_a": "该文件编码格式为集中式",
+      "statement_b": "字节分析显示实际编码为分布式",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0524",
+      "category": "attribute",
+      "subtype": "关系型-vs-非关系型",
+      "statement_a": "该文件编码格式为关系型",
+      "statement_b": "字节分析显示实际编码为非关系型",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0525",
+      "category": "attribute",
+      "subtype": "猫科-vs-犬科",
+      "statement_a": "该文件编码格式为猫科",
+      "statement_b": "字节分析显示实际编码为犬科",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0526",
+      "category": "attribute",
+      "subtype": "鱼类-vs-哺乳类",
+      "statement_a": "该文件编码格式为鱼类",
+      "statement_b": "字节分析显示实际编码为哺乳类",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0527",
+      "category": "attribute",
+      "subtype": "UTF-8-vs-GBK",
+      "statement_a": "该文件编码格式为UTF-8",
+      "statement_b": "字节分析显示实际编码为GBK",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0528",
+      "category": "attribute",
+      "subtype": "同步-vs-异步",
+      "statement_a": "该文件编码格式为同步",
+      "statement_b": "字节分析显示实际编码为异步",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0529",
+      "category": "referential",
+      "subtype": "WHO",
+      "statement_a": "根据WHO第第12条条规定，无条件支持该决议",
+      "statement_b": "查阅WHO原文，该条款实际规定对决议的部分条款持保留意见",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0530",
+      "category": "referential",
+      "subtype": "联合国教科文组织",
+      "statement_a": "根据联合国教科文组织第第29条条规定，该政策有助于减少污染",
+      "statement_b": "查阅联合国教科文组织原文，该条款实际规定该政策实际增加了企业排污",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0531",
+      "category": "referential",
+      "subtype": "国家标准委员会",
+      "statement_a": "根据国家标准委员会第第35条条规定，该物质对人体无害",
+      "statement_b": "查阅国家标准委员会原文，该条款实际规定该物质在特定剂量下可能具有毒性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0532",
+      "category": "referential",
+      "subtype": "FDA",
+      "statement_a": "根据FDA第第27条条规定，设备故障是事故的唯一原因",
+      "statement_b": "查阅FDA原文，该条款实际规定多重因素导致了事故的发生",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0533",
+      "category": "referential",
+      "subtype": "北京大学",
+      "statement_a": "根据北京大学第第4条条规定，经济增长将超过预期",
+      "statement_b": "查阅北京大学原文，该条款实际规定经济面临下行风险",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0534",
+      "category": "referential",
+      "subtype": "中国科学院",
+      "statement_a": "根据中国科学院第第17条条规定，设备故障是事故的唯一原因",
+      "statement_b": "查阅中国科学院原文，该条款实际规定多重因素导致了事故的发生",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0535",
+      "category": "referential",
+      "subtype": "最高人民法院",
+      "statement_a": "根据最高人民法院第第47条条规定，该政策有助于减少污染",
+      "statement_b": "查阅最高人民法院原文，该条款实际规定该政策实际增加了企业排污",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0536",
+      "category": "referential",
+      "subtype": "IEEE",
+      "statement_a": "根据IEEE第第19条条规定，经济增长将超过预期",
+      "statement_b": "查阅IEEE原文，该条款实际规定经济面临下行风险",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0537",
+      "category": "referential",
+      "subtype": "ISO",
+      "statement_a": "根据ISO第第35条条规定，该物质对人体无害",
+      "statement_b": "查阅ISO原文，该条款实际规定该物质在特定剂量下可能具有毒性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0538",
+      "category": "referential",
+      "subtype": "中国人民银行",
+      "statement_a": "根据中国人民银行第第38条条规定，设备故障是事故的唯一原因",
+      "statement_b": "查阅中国人民银行原文，该条款实际规定多重因素导致了事故的发生",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0539",
+      "category": "referential",
+      "subtype": "国家统计局",
+      "statement_a": "根据国家统计局第第4条条规定，该政策有助于减少污染",
+      "statement_b": "查阅国家统计局原文，该条款实际规定该政策实际增加了企业排污",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0540",
+      "category": "referential",
+      "subtype": "世界银行",
+      "statement_a": "根据世界银行第第5条条规定，该政策有助于减少污染",
+      "statement_b": "查阅世界银行原文，该条款实际规定该政策实际增加了企业排污",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0541",
+      "category": "referential",
+      "subtype": "WHO",
+      "statement_a": "WHO在最高人民法院年的研究中指出该政策有助于减少污染",
+      "statement_b": "WHO的原文写道该政策实际增加了企业排污，与引用相反",
+      "label": "contradiction",
+      "contradiction_type": "explicit"
+    },
+    {
+      "id": "HDR-CON-0542",
+      "category": "referential",
+      "subtype": "联合国教科文组织",
+      "statement_a": "联合国教科文组织在中国人民银行年的研究中指出设备故障是事故的唯一原因",
+      "statement_b": "联合国教科文组织的原文写道多重因素导致了事故的发生，与引用相反",
+      "label": "contradiction",
+      "contradiction_type": "explicit"
+    },
+    {
+      "id": "HDR-CON-0543",
+      "category": "referential",
+      "subtype": "国家标准委员会",
+      "statement_a": "国家标准委员会在北京大学年的研究中指出研究证实了该假设",
+      "statement_b": "国家标准委员会的原文写道实验数据无法复现原文结论，与引用相反",
+      "label": "contradiction",
+      "contradiction_type": "explicit"
+    },
+    {
+      "id": "HDR-CON-0544",
+      "category": "referential",
+      "subtype": "FDA",
+      "statement_a": "FDA在北京大学年的研究中指出经济增长将超过预期",
+      "statement_b": "FDA的原文写道经济面临下行风险，与引用相反",
+      "label": "contradiction",
+      "contradiction_type": "explicit"
+    },
+    {
+      "id": "HDR-CON-0545",
+      "category": "referential",
+      "subtype": "北京大学",
+      "statement_a": "北京大学在中国科学院年的研究中指出该物质对人体无害",
+      "statement_b": "北京大学的原文写道该物质在特定剂量下可能具有毒性，与引用相反",
+      "label": "contradiction",
+      "contradiction_type": "explicit"
+    },
+    {
+      "id": "HDR-CON-0546",
+      "category": "referential",
+      "subtype": "中国科学院",
+      "statement_a": "中国科学院在中国人民银行年的研究中指出该物质对人体无害",
+      "statement_b": "中国科学院的原文写道该物质在特定剂量下可能具有毒性，与引用相反",
+      "label": "contradiction",
+      "contradiction_type": "explicit"
+    },
+    {
+      "id": "HDR-CON-0547",
+      "category": "referential",
+      "subtype": "最高人民法院",
+      "statement_a": "最高人民法院在FDA年的研究中指出无条件支持该决议",
+      "statement_b": "最高人民法院的原文写道对决议的部分条款持保留意见，与引用相反",
+      "label": "contradiction",
+      "contradiction_type": "explicit"
+    },
+    {
+      "id": "HDR-CON-0548",
+      "category": "referential",
+      "subtype": "IEEE",
+      "statement_a": "IEEE在联合国教科文组织年的研究中指出无条件支持该决议",
+      "statement_b": "IEEE的原文写道对决议的部分条款持保留意见，与引用相反",
+      "label": "contradiction",
+      "contradiction_type": "explicit"
+    },
+    {
+      "id": "HDR-CON-0549",
+      "category": "referential",
+      "subtype": "ISO",
+      "statement_a": "ISO在IEEE年的研究中指出研究证实了该假设",
+      "statement_b": "ISO的原文写道实验数据无法复现原文结论，与引用相反",
+      "label": "contradiction",
+      "contradiction_type": "explicit"
+    },
+    {
+      "id": "HDR-CON-0550",
+      "category": "referential",
+      "subtype": "中国人民银行",
+      "statement_a": "中国人民银行在国家统计局年的研究中指出该物质对人体无害",
+      "statement_b": "中国人民银行的原文写道该物质在特定剂量下可能具有毒性，与引用相反",
+      "label": "contradiction",
+      "contradiction_type": "explicit"
+    },
+    {
+      "id": "HDR-CON-0551",
+      "category": "referential",
+      "subtype": "国家统计局",
+      "statement_a": "国家统计局在国家统计局年的研究中指出经济增长将超过预期",
+      "statement_b": "国家统计局的原文写道经济面临下行风险，与引用相反",
+      "label": "contradiction",
+      "contradiction_type": "explicit"
+    },
+    {
+      "id": "HDR-CON-0552",
+      "category": "referential",
+      "subtype": "世界银行",
+      "statement_a": "世界银行在联合国教科文组织年的研究中指出该政策有助于减少污染",
+      "statement_b": "世界银行的原文写道该政策实际增加了企业排污，与引用相反",
+      "label": "contradiction",
+      "contradiction_type": "explicit"
+    },
+    {
+      "id": "HDR-CON-0553",
+      "category": "referential",
+      "subtype": "WHO",
+      "statement_a": "官方声明称WHO表示赞成",
+      "statement_b": "会议记录显示WHO投了反对票",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0554",
+      "category": "referential",
+      "subtype": "联合国教科文组织",
+      "statement_a": "官方声明称联合国教科文组织表示赞成",
+      "statement_b": "会议记录显示联合国教科文组织投了反对票",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0555",
+      "category": "referential",
+      "subtype": "国家标准委员会",
+      "statement_a": "官方声明称国家标准委员会表示赞成",
+      "statement_b": "会议记录显示国家标准委员会投了反对票",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0556",
+      "category": "referential",
+      "subtype": "FDA",
+      "statement_a": "官方声明称FDA表示赞成",
+      "statement_b": "会议记录显示FDA投了反对票",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0557",
+      "category": "referential",
+      "subtype": "北京大学",
+      "statement_a": "官方声明称北京大学表示赞成",
+      "statement_b": "会议记录显示北京大学投了反对票",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0558",
+      "category": "referential",
+      "subtype": "中国科学院",
+      "statement_a": "官方声明称中国科学院表示赞成",
+      "statement_b": "会议记录显示中国科学院投了反对票",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0559",
+      "category": "referential",
+      "subtype": "最高人民法院",
+      "statement_a": "官方声明称最高人民法院表示赞成",
+      "statement_b": "会议记录显示最高人民法院投了反对票",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0560",
+      "category": "referential",
+      "subtype": "IEEE",
+      "statement_a": "官方声明称IEEE表示赞成",
+      "statement_b": "会议记录显示IEEE投了反对票",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0561",
+      "category": "referential",
+      "subtype": "ISO",
+      "statement_a": "官方声明称ISO表示赞成",
+      "statement_b": "会议记录显示ISO投了反对票",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0562",
+      "category": "referential",
+      "subtype": "中国人民银行",
+      "statement_a": "官方声明称中国人民银行表示赞成",
+      "statement_b": "会议记录显示中国人民银行投了反对票",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0563",
+      "category": "referential",
+      "subtype": "国家统计局",
+      "statement_a": "官方声明称国家统计局表示赞成",
+      "statement_b": "会议记录显示国家统计局投了反对票",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0564",
+      "category": "referential",
+      "subtype": "世界银行",
+      "statement_a": "官方声明称世界银行表示赞成",
+      "statement_b": "会议记录显示世界银行投了反对票",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0565",
+      "category": "referential",
+      "subtype": "WHO",
+      "statement_a": "WHO的报告称事故原因为该物质对人体无害",
+      "statement_b": "报告原文将事故归因于该物质在特定剂量下可能具有毒性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0566",
+      "category": "referential",
+      "subtype": "联合国教科文组织",
+      "statement_a": "联合国教科文组织的报告称事故原因为研究证实了该假设",
+      "statement_b": "报告原文将事故归因于实验数据无法复现原文结论",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0567",
+      "category": "referential",
+      "subtype": "国家标准委员会",
+      "statement_a": "国家标准委员会的报告称事故原因为该物质对人体无害",
+      "statement_b": "报告原文将事故归因于该物质在特定剂量下可能具有毒性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0568",
+      "category": "referential",
+      "subtype": "FDA",
+      "statement_a": "FDA的报告称事故原因为经济增长将超过预期",
+      "statement_b": "报告原文将事故归因于经济面临下行风险",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0569",
+      "category": "referential",
+      "subtype": "北京大学",
+      "statement_a": "北京大学的报告称事故原因为经济增长将超过预期",
+      "statement_b": "报告原文将事故归因于经济面临下行风险",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0570",
+      "category": "referential",
+      "subtype": "中国科学院",
+      "statement_a": "中国科学院的报告称事故原因为无条件支持该决议",
+      "statement_b": "报告原文将事故归因于对决议的部分条款持保留意见",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0571",
+      "category": "referential",
+      "subtype": "最高人民法院",
+      "statement_a": "最高人民法院的报告称事故原因为研究证实了该假设",
+      "statement_b": "报告原文将事故归因于实验数据无法复现原文结论",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0572",
+      "category": "referential",
+      "subtype": "IEEE",
+      "statement_a": "IEEE的报告称事故原因为无条件支持该决议",
+      "statement_b": "报告原文将事故归因于对决议的部分条款持保留意见",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0573",
+      "category": "referential",
+      "subtype": "ISO",
+      "statement_a": "ISO的报告称事故原因为该政策有助于减少污染",
+      "statement_b": "报告原文将事故归因于该政策实际增加了企业排污",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0574",
+      "category": "referential",
+      "subtype": "中国人民银行",
+      "statement_a": "中国人民银行的报告称事故原因为设备故障是事故的唯一原因",
+      "statement_b": "报告原文将事故归因于多重因素导致了事故的发生",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0575",
+      "category": "referential",
+      "subtype": "国家统计局",
+      "statement_a": "国家统计局的报告称事故原因为该政策有助于减少污染",
+      "statement_b": "报告原文将事故归因于该政策实际增加了企业排污",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0576",
+      "category": "referential",
+      "subtype": "世界银行",
+      "statement_a": "世界银行的报告称事故原因为经济增长将超过预期",
+      "statement_b": "报告原文将事故归因于经济面临下行风险",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0577",
+      "category": "referential",
+      "subtype": "WHO",
+      "statement_a": "新闻引用WHO的话说该物质对人体无害",
+      "statement_b": "录音显示WHO实际说的是该物质在特定剂量下可能具有毒性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0578",
+      "category": "referential",
+      "subtype": "联合国教科文组织",
+      "statement_a": "新闻引用联合国教科文组织的话说研究证实了该假设",
+      "statement_b": "录音显示联合国教科文组织实际说的是实验数据无法复现原文结论",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0579",
+      "category": "referential",
+      "subtype": "国家标准委员会",
+      "statement_a": "新闻引用国家标准委员会的话说研究证实了该假设",
+      "statement_b": "录音显示国家标准委员会实际说的是实验数据无法复现原文结论",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0580",
+      "category": "referential",
+      "subtype": "FDA",
+      "statement_a": "新闻引用FDA的话说该物质对人体无害",
+      "statement_b": "录音显示FDA实际说的是该物质在特定剂量下可能具有毒性",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0581",
+      "category": "referential",
+      "subtype": "北京大学",
+      "statement_a": "新闻引用北京大学的话说设备故障是事故的唯一原因",
+      "statement_b": "录音显示北京大学实际说的是多重因素导致了事故的发生",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0582",
+      "category": "referential",
+      "subtype": "中国科学院",
+      "statement_a": "新闻引用中国科学院的话说该政策有助于减少污染",
+      "statement_b": "录音显示中国科学院实际说的是该政策实际增加了企业排污",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0583",
+      "category": "referential",
+      "subtype": "最高人民法院",
+      "statement_a": "新闻引用最高人民法院的话说设备故障是事故的唯一原因",
+      "statement_b": "录音显示最高人民法院实际说的是多重因素导致了事故的发生",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0584",
+      "category": "referential",
+      "subtype": "IEEE",
+      "statement_a": "新闻引用IEEE的话说该政策有助于减少污染",
+      "statement_b": "录音显示IEEE实际说的是该政策实际增加了企业排污",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0585",
+      "category": "referential",
+      "subtype": "ISO",
+      "statement_a": "新闻引用ISO的话说设备故障是事故的唯一原因",
+      "statement_b": "录音显示ISO实际说的是多重因素导致了事故的发生",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0586",
+      "category": "referential",
+      "subtype": "中国人民银行",
+      "statement_a": "新闻引用中国人民银行的话说研究证实了该假设",
+      "statement_b": "录音显示中国人民银行实际说的是实验数据无法复现原文结论",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0587",
+      "category": "referential",
+      "subtype": "国家统计局",
+      "statement_a": "新闻引用国家统计局的话说经济增长将超过预期",
+      "statement_b": "录音显示国家统计局实际说的是经济面临下行风险",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0588",
+      "category": "referential",
+      "subtype": "世界银行",
+      "statement_a": "新闻引用世界银行的话说研究证实了该假设",
+      "statement_b": "录音显示世界银行实际说的是实验数据无法复现原文结论",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0589",
+      "category": "referential",
+      "subtype": "WHO",
+      "statement_a": "据WHO统计，无条件支持该决议为74%",
+      "statement_b": "WHO原始数据表中无条件支持该决议为71%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0590",
+      "category": "referential",
+      "subtype": "联合国教科文组织",
+      "statement_a": "据联合国教科文组织统计，该物质对人体无害为62%",
+      "statement_b": "联合国教科文组织原始数据表中该物质对人体无害为35%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0591",
+      "category": "referential",
+      "subtype": "国家标准委员会",
+      "statement_a": "据国家标准委员会统计，该物质对人体无害为89%",
+      "statement_b": "国家标准委员会原始数据表中该物质对人体无害为46%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0592",
+      "category": "referential",
+      "subtype": "FDA",
+      "statement_a": "据FDA统计，经济增长将超过预期为84%",
+      "statement_b": "FDA原始数据表中经济增长将超过预期为51%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0593",
+      "category": "referential",
+      "subtype": "北京大学",
+      "statement_a": "据北京大学统计，经济增长将超过预期为60%",
+      "statement_b": "北京大学原始数据表中经济增长将超过预期为68%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0594",
+      "category": "referential",
+      "subtype": "中国科学院",
+      "statement_a": "据中国科学院统计，设备故障是事故的唯一原因为74%",
+      "statement_b": "中国科学院原始数据表中设备故障是事故的唯一原因为25%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0595",
+      "category": "referential",
+      "subtype": "最高人民法院",
+      "statement_a": "据最高人民法院统计，设备故障是事故的唯一原因为63%",
+      "statement_b": "最高人民法院原始数据表中设备故障是事故的唯一原因为55%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0596",
+      "category": "referential",
+      "subtype": "IEEE",
+      "statement_a": "据IEEE统计，设备故障是事故的唯一原因为68%",
+      "statement_b": "IEEE原始数据表中设备故障是事故的唯一原因为49%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0597",
+      "category": "referential",
+      "subtype": "ISO",
+      "statement_a": "据ISO统计，该政策有助于减少污染为80%",
+      "statement_b": "ISO原始数据表中该政策有助于减少污染为48%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0598",
+      "category": "referential",
+      "subtype": "中国人民银行",
+      "statement_a": "据中国人民银行统计，该政策有助于减少污染为87%",
+      "statement_b": "中国人民银行原始数据表中该政策有助于减少污染为55%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0599",
+      "category": "referential",
+      "subtype": "国家统计局",
+      "statement_a": "据国家统计局统计，研究证实了该假设为90%",
+      "statement_b": "国家统计局原始数据表中研究证实了该假设为48%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0600",
+      "category": "referential",
+      "subtype": "世界银行",
+      "statement_a": "据世界银行统计，经济增长将超过预期为77%",
+      "statement_b": "世界银行原始数据表中经济增长将超过预期为69%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0601",
+      "category": "semantic_drift",
+      "subtype": "98%-vs-35%",
+      "statement_a": "该模型在测试集上准确率为98%",
+      "statement_b": "在实际应用中，该模型的误判率高达35%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0602",
+      "category": "semantic_drift",
+      "subtype": "99%-vs-42%",
+      "statement_a": "该模型在测试集上准确率为99%",
+      "statement_b": "在实际应用中，该模型的误判率高达42%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0603",
+      "category": "semantic_drift",
+      "subtype": "95%-vs-28%",
+      "statement_a": "该模型在测试集上准确率为95%",
+      "statement_b": "在实际应用中，该模型的误判率高达28%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0604",
+      "category": "semantic_drift",
+      "subtype": "97%-vs-15%",
+      "statement_a": "该模型在测试集上准确率为97%",
+      "statement_b": "在实际应用中，该模型的误判率高达15%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0605",
+      "category": "semantic_drift",
+      "subtype": "20%-vs-5%",
+      "statement_a": "该模型在测试集上准确率为20%",
+      "statement_b": "在实际应用中，该模型的误判率高达5%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0606",
+      "category": "semantic_drift",
+      "subtype": "15%-vs-8%",
+      "statement_a": "该模型在测试集上准确率为15%",
+      "statement_b": "在实际应用中，该模型的误判率高达8%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0607",
+      "category": "semantic_drift",
+      "subtype": "12%-vs-3%",
+      "statement_a": "该模型在测试集上准确率为12%",
+      "statement_b": "在实际应用中，该模型的误判率高达3%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0608",
+      "category": "semantic_drift",
+      "subtype": "30%-vs-12%",
+      "statement_a": "该模型在测试集上准确率为30%",
+      "statement_b": "在实际应用中，该模型的误判率高达12%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0609",
+      "category": "semantic_drift",
+      "subtype": "98%-vs-35%",
+      "statement_a": "公司承诺提供终身免费维护",
+      "statement_b": "维护合同仅涵盖购买后前3年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0610",
+      "category": "semantic_drift",
+      "subtype": "99%-vs-42%",
+      "statement_a": "公司承诺提供终身免费维护",
+      "statement_b": "维护合同仅涵盖购买后前3年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0611",
+      "category": "semantic_drift",
+      "subtype": "95%-vs-28%",
+      "statement_a": "公司承诺提供终身免费维护",
+      "statement_b": "维护合同仅涵盖购买后前3年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0612",
+      "category": "semantic_drift",
+      "subtype": "97%-vs-15%",
+      "statement_a": "公司承诺提供终身免费维护",
+      "statement_b": "维护合同仅涵盖购买后前3年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0613",
+      "category": "semantic_drift",
+      "subtype": "20%-vs-5%",
+      "statement_a": "公司承诺提供终身免费维护",
+      "statement_b": "维护合同仅涵盖购买后前3年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0614",
+      "category": "semantic_drift",
+      "subtype": "15%-vs-8%",
+      "statement_a": "公司承诺提供终身免费维护",
+      "statement_b": "维护合同仅涵盖购买后前3年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0615",
+      "category": "semantic_drift",
+      "subtype": "12%-vs-3%",
+      "statement_a": "公司承诺提供终身免费维护",
+      "statement_b": "维护合同仅涵盖购买后前3年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0616",
+      "category": "semantic_drift",
+      "subtype": "30%-vs-12%",
+      "statement_a": "公司承诺提供终身免费维护",
+      "statement_b": "维护合同仅涵盖购买后前3年",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0617",
+      "category": "semantic_drift",
+      "subtype": "98%-vs-35%",
+      "statement_a": "该算法的时间复杂度为O(n)",
+      "statement_b": "对于大规模数据，实际运行时间呈指数增长",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0618",
+      "category": "semantic_drift",
+      "subtype": "99%-vs-42%",
+      "statement_a": "该算法的时间复杂度为O(n)",
+      "statement_b": "对于大规模数据，实际运行时间呈指数增长",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0619",
+      "category": "semantic_drift",
+      "subtype": "95%-vs-28%",
+      "statement_a": "该算法的时间复杂度为O(n)",
+      "statement_b": "对于大规模数据，实际运行时间呈指数增长",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0620",
+      "category": "semantic_drift",
+      "subtype": "97%-vs-15%",
+      "statement_a": "该算法的时间复杂度为O(n)",
+      "statement_b": "对于大规模数据，实际运行时间呈指数增长",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0621",
+      "category": "semantic_drift",
+      "subtype": "20%-vs-5%",
+      "statement_a": "该算法的时间复杂度为O(n)",
+      "statement_b": "对于大规模数据，实际运行时间呈指数增长",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0622",
+      "category": "semantic_drift",
+      "subtype": "15%-vs-8%",
+      "statement_a": "该算法的时间复杂度为O(n)",
+      "statement_b": "对于大规模数据，实际运行时间呈指数增长",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0623",
+      "category": "semantic_drift",
+      "subtype": "12%-vs-3%",
+      "statement_a": "该算法的时间复杂度为O(n)",
+      "statement_b": "对于大规模数据，实际运行时间呈指数增长",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0624",
+      "category": "semantic_drift",
+      "subtype": "30%-vs-12%",
+      "statement_a": "该算法的时间复杂度为O(n)",
+      "statement_b": "对于大规模数据，实际运行时间呈指数增长",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0625",
+      "category": "semantic_drift",
+      "subtype": "98%-vs-35%",
+      "statement_a": "政策保障所有公民的基本医疗",
+      "statement_b": "实施细则将保障范围限定为参保人员",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0626",
+      "category": "semantic_drift",
+      "subtype": "99%-vs-42%",
+      "statement_a": "政策保障所有公民的基本医疗",
+      "statement_b": "实施细则将保障范围限定为参保人员",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0627",
+      "category": "semantic_drift",
+      "subtype": "95%-vs-28%",
+      "statement_a": "政策保障所有公民的基本医疗",
+      "statement_b": "实施细则将保障范围限定为参保人员",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0628",
+      "category": "semantic_drift",
+      "subtype": "97%-vs-15%",
+      "statement_a": "政策保障所有公民的基本医疗",
+      "statement_b": "实施细则将保障范围限定为参保人员",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0629",
+      "category": "semantic_drift",
+      "subtype": "20%-vs-5%",
+      "statement_a": "政策保障所有公民的基本医疗",
+      "statement_b": "实施细则将保障范围限定为参保人员",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0630",
+      "category": "semantic_drift",
+      "subtype": "15%-vs-8%",
+      "statement_a": "政策保障所有公民的基本医疗",
+      "statement_b": "实施细则将保障范围限定为参保人员",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0631",
+      "category": "semantic_drift",
+      "subtype": "12%-vs-3%",
+      "statement_a": "政策保障所有公民的基本医疗",
+      "statement_b": "实施细则将保障范围限定为参保人员",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0632",
+      "category": "semantic_drift",
+      "subtype": "30%-vs-12%",
+      "statement_a": "政策保障所有公民的基本医疗",
+      "statement_b": "实施细则将保障范围限定为参保人员",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0633",
+      "category": "semantic_drift",
+      "subtype": "98%-vs-35%",
+      "statement_a": "产品声称使用天然成分",
+      "statement_b": "成分表显示主要成分为合成化学物",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0634",
+      "category": "semantic_drift",
+      "subtype": "99%-vs-42%",
+      "statement_a": "产品声称使用天然成分",
+      "statement_b": "成分表显示主要成分为合成化学物",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0635",
+      "category": "semantic_drift",
+      "subtype": "95%-vs-28%",
+      "statement_a": "产品声称使用天然成分",
+      "statement_b": "成分表显示主要成分为合成化学物",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0636",
+      "category": "semantic_drift",
+      "subtype": "97%-vs-15%",
+      "statement_a": "产品声称使用天然成分",
+      "statement_b": "成分表显示主要成分为合成化学物",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0637",
+      "category": "semantic_drift",
+      "subtype": "20%-vs-5%",
+      "statement_a": "产品声称使用天然成分",
+      "statement_b": "成分表显示主要成分为合成化学物",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0638",
+      "category": "semantic_drift",
+      "subtype": "15%-vs-8%",
+      "statement_a": "产品声称使用天然成分",
+      "statement_b": "成分表显示主要成分为合成化学物",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0639",
+      "category": "semantic_drift",
+      "subtype": "12%-vs-3%",
+      "statement_a": "产品声称使用天然成分",
+      "statement_b": "成分表显示主要成分为合成化学物",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0640",
+      "category": "semantic_drift",
+      "subtype": "30%-vs-12%",
+      "statement_a": "产品声称使用天然成分",
+      "statement_b": "成分表显示主要成分为合成化学物",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0641",
+      "category": "semantic_drift",
+      "subtype": "98%-vs-35%",
+      "statement_a": "该系统支持毫秒级实时响应",
+      "statement_b": "实测延迟在2-5秒之间波动",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0642",
+      "category": "semantic_drift",
+      "subtype": "99%-vs-42%",
+      "statement_a": "该系统支持毫秒级实时响应",
+      "statement_b": "实测延迟在2-5秒之间波动",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0643",
+      "category": "semantic_drift",
+      "subtype": "95%-vs-28%",
+      "statement_a": "该系统支持毫秒级实时响应",
+      "statement_b": "实测延迟在2-5秒之间波动",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0644",
+      "category": "semantic_drift",
+      "subtype": "97%-vs-15%",
+      "statement_a": "该系统支持毫秒级实时响应",
+      "statement_b": "实测延迟在2-5秒之间波动",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0645",
+      "category": "semantic_drift",
+      "subtype": "20%-vs-5%",
+      "statement_a": "该系统支持毫秒级实时响应",
+      "statement_b": "实测延迟在2-5秒之间波动",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0646",
+      "category": "semantic_drift",
+      "subtype": "15%-vs-8%",
+      "statement_a": "该系统支持毫秒级实时响应",
+      "statement_b": "实测延迟在2-5秒之间波动",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0647",
+      "category": "semantic_drift",
+      "subtype": "12%-vs-3%",
+      "statement_a": "该系统支持毫秒级实时响应",
+      "statement_b": "实测延迟在2-5秒之间波动",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0648",
+      "category": "semantic_drift",
+      "subtype": "30%-vs-12%",
+      "statement_a": "该系统支持毫秒级实时响应",
+      "statement_b": "实测延迟在2-5秒之间波动",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0649",
+      "category": "semantic_drift",
+      "subtype": "98%-vs-35%",
+      "statement_a": "该基金年化收益率为98%",
+      "statement_b": "扣除费用后实际收益率为-35%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0650",
+      "category": "semantic_drift",
+      "subtype": "99%-vs-42%",
+      "statement_a": "该基金年化收益率为99%",
+      "statement_b": "扣除费用后实际收益率为-42%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0651",
+      "category": "semantic_drift",
+      "subtype": "95%-vs-28%",
+      "statement_a": "该基金年化收益率为95%",
+      "statement_b": "扣除费用后实际收益率为-28%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0652",
+      "category": "semantic_drift",
+      "subtype": "97%-vs-15%",
+      "statement_a": "该基金年化收益率为97%",
+      "statement_b": "扣除费用后实际收益率为-15%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0653",
+      "category": "semantic_drift",
+      "subtype": "20%-vs-5%",
+      "statement_a": "该基金年化收益率为20%",
+      "statement_b": "扣除费用后实际收益率为-5%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0654",
+      "category": "semantic_drift",
+      "subtype": "15%-vs-8%",
+      "statement_a": "该基金年化收益率为15%",
+      "statement_b": "扣除费用后实际收益率为-8%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0655",
+      "category": "semantic_drift",
+      "subtype": "12%-vs-3%",
+      "statement_a": "该基金年化收益率为12%",
+      "statement_b": "扣除费用后实际收益率为-3%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0656",
+      "category": "semantic_drift",
+      "subtype": "30%-vs-12%",
+      "statement_a": "该基金年化收益率为30%",
+      "statement_b": "扣除费用后实际收益率为-12%",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0657",
+      "category": "semantic_drift",
+      "subtype": "98%-vs-35%",
+      "statement_a": "AI声称理解用户意图",
+      "statement_b": "底层仅做关键词匹配，不理解语义",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0658",
+      "category": "semantic_drift",
+      "subtype": "99%-vs-42%",
+      "statement_a": "AI声称理解用户意图",
+      "statement_b": "底层仅做关键词匹配，不理解语义",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0659",
+      "category": "semantic_drift",
+      "subtype": "95%-vs-28%",
+      "statement_a": "AI声称理解用户意图",
+      "statement_b": "底层仅做关键词匹配，不理解语义",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0660",
+      "category": "semantic_drift",
+      "subtype": "97%-vs-15%",
+      "statement_a": "AI声称理解用户意图",
+      "statement_b": "底层仅做关键词匹配，不理解语义",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0661",
+      "category": "semantic_drift",
+      "subtype": "20%-vs-5%",
+      "statement_a": "AI声称理解用户意图",
+      "statement_b": "底层仅做关键词匹配，不理解语义",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0662",
+      "category": "semantic_drift",
+      "subtype": "15%-vs-8%",
+      "statement_a": "AI声称理解用户意图",
+      "statement_b": "底层仅做关键词匹配，不理解语义",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0663",
+      "category": "semantic_drift",
+      "subtype": "12%-vs-3%",
+      "statement_a": "AI声称理解用户意图",
+      "statement_b": "底层仅做关键词匹配，不理解语义",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    },
+    {
+      "id": "HDR-CON-0664",
+      "category": "semantic_drift",
+      "subtype": "30%-vs-12%",
+      "statement_a": "AI声称理解用户意图",
+      "statement_b": "底层仅做关键词匹配，不理解语义",
+      "label": "contradiction",
+      "contradiction_type": "implicit"
+    }
+  ]
+}

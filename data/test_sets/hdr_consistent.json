@@ -1,0 +1,1626 @@
+{
+  "metadata": {
+    "name": "HDR Consistent Dataset",
+    "version": "1.0",
+    "total": 202,
+    "description": "标准化一致性负例数据集,用于评估Φ门控的误判率(FPR)"
+  },
+  "entries": [
+    {
+      "id": "HDR-CON-0001",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "北京是中国的首都",
+      "statement_b": "北京市拥有超过2000万人口",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0002",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "上海是中国最大的经济中心",
+      "statement_b": "上海港是全球最繁忙的集装箱港口之一",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0003",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "珠穆朗玛峰是世界最高峰",
+      "statement_b": "珠穆朗玛峰海拔8848.86米",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0004",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "长江是中国最长的河流",
+      "statement_b": "长江全长约6300公里",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0005",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "故宫位于北京中轴线上",
+      "statement_b": "故宫是明清两代的皇家宫殿",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0006",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "长城是中国古代防御工程",
+      "statement_b": "长城的总长度超过2万公里",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0007",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "西安曾是多个朝代的首都",
+      "statement_b": "西安以兵马俑闻名于世",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0008",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "黄河是中华文明的摇篮",
+      "statement_b": "黄河流域发现了大量史前文化遗址",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0009",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "水的沸点在标准大气压下为100°C",
+      "statement_b": "在高海拔地区水的沸点会降低",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0010",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "爱因斯坦提出了相对论",
+      "statement_b": "爱因斯坦在1921年获得了诺贝尔物理学奖",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0011",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "地球围绕太阳公转",
+      "statement_b": "地球公转一周大约需要365天",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0012",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "DNA是双螺旋结构",
+      "statement_b": "DNA由核苷酸组成",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0013",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "光合作用需要阳光",
+      "statement_b": "植物通过光合作用产生氧气",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0014",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "牛顿发现了万有引力定律",
+      "statement_b": "万有引力定律解释了天体运动规律",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0015",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "太阳从东方升起",
+      "statement_b": "地球自转导致了昼夜交替",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0016",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "声音在空气中速度约340米/秒",
+      "statement_b": "声音在固体中传播速度更快",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0017",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "二氧化碳是温室气体",
+      "statement_b": "全球变暖与温室气体排放有关",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0018",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "细胞是生物体的基本单位",
+      "statement_b": "人体由数万亿个细胞组成",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0019",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "雷达使用电磁波探测目标",
+      "statement_b": "雷达广泛应用于军事和民用领域",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0020",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "化学元素周期表有118个元素",
+      "statement_b": "氢是宇宙中最丰富的元素",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0021",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "GPS使用卫星进行定位",
+      "statement_b": "GPS需要至少4颗卫星才能精确定位",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0022",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "量子计算机使用量子比特",
+      "statement_b": "量子计算机在特定问题上远超经典计算机",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0023",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "暗物质占宇宙质量的约27%",
+      "statement_b": "暗物质不发射电磁辐射",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0024",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "激光具有高度相干性",
+      "statement_b": "激光广泛应用于光纤通信",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0025",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Python是一种高级编程语言",
+      "statement_b": "Python被广泛应用于数据科学领域",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0026",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "机器学习是AI的子领域",
+      "statement_b": "深度学习是机器学习的一个重要分支",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0027",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "SQL用于管理关系数据库",
+      "statement_b": "关系数据库以表的形式存储数据",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0028",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Git是目前最流行的版本控制系统",
+      "statement_b": "Git由Linus Torvalds创建",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0029",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "互联网改变了信息传播方式",
+      "statement_b": "社交媒体是互联网应用的重要组成部分",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0030",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "区块链是一种去中心化技术",
+      "statement_b": "比特币是基于区块链的加密货币",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0031",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "云计算降低了企业IT成本",
+      "statement_b": "企业可以将数据存储在云端",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0032",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "5G网络提供高速低延迟连接",
+      "statement_b": "5G技术推动了物联网的发展",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0033",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Docker是容器化平台",
+      "statement_b": "Docker简化了应用部署流程",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0034",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Linux是开源操作系统",
+      "statement_b": "Linux由Linus Torvalds于1991年创建",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0035",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "TCP/IP是互联网的基础协议",
+      "statement_b": "HTTP协议运行在TCP/IP之上",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0036",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "RESTful API使用HTTP方法",
+      "statement_b": "GET请求用于获取资源",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0037",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "JSON是一种轻量级数据交换格式",
+      "statement_b": "JSON易于人类阅读和机器解析",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0038",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "正则表达式用于模式匹配",
+      "statement_b": "正则表达式在文本处理中广泛使用",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0039",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "NoSQL数据库不要求固定表结构",
+      "statement_b": "MongoDB是一种文档型NoSQL数据库",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0040",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "微服务架构将应用拆分为独立服务",
+      "statement_b": "每个微服务可以独立部署和扩展",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0041",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "敏捷开发强调迭代和增量交付",
+      "statement_b": "Scrum是敏捷开发的常用框架",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0042",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "加密技术保护数据安全",
+      "statement_b": "HTTPS使用TLS协议加密通信",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0043",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "单元测试验证代码的最小可测单元",
+      "statement_b": "JUnit是Java常用的单元测试框架",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0044",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "持续集成自动构建和测试代码",
+      "statement_b": "Jenkins是流行的CI/CD工具",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0045",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "疫苗可以预防传染病",
+      "statement_b": "接种疫苗是公共卫生的重要措施",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0046",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "青霉素是第一种广泛使用的抗生素",
+      "statement_b": "青霉素由亚历山大·弗莱明发现",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0047",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "维生素C存在于柑橘类水果中",
+      "statement_b": "维生素C有助于增强免疫力",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0048",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "胰岛素调节血糖水平",
+      "statement_b": "糖尿病患者需要补充胰岛素",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0049",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "基因突变可以导致疾病",
+      "statement_b": "某些基因突变也可能带来进化优势",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0050",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "血红蛋白负责运输氧气",
+      "statement_b": "红细胞中含有大量血红蛋白",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0051",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "线粒体是细胞的能量工厂",
+      "statement_b": "线粒体拥有自己的DNA",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0052",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "抗生素不适用于病毒感染",
+      "statement_b": "普通感冒是由病毒引起的",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0053",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "莎士比亚写了《哈姆雷特》",
+      "statement_b": "《哈姆雷特》是西方文学中最著名的悲剧之一",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0054",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "鲁迅是中国现代文学的奠基人",
+      "statement_b": "《狂人日记》是鲁迅的代表作之一",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0055",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "莫扎特是奥地利作曲家",
+      "statement_b": "莫扎特从5岁开始作曲",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0056",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "贝多芬晚年失聪",
+      "statement_b": "贝多芬在失聪后仍在创作音乐",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0057",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "《蒙娜丽莎》收藏于卢浮宫",
+      "statement_b": "达芬奇是文艺复兴时期的画家",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0058",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "梵高的《星空》创作于1889年",
+      "statement_b": "梵高是后印象派画家",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0059",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "京剧是中国的国粹",
+      "statement_b": "京剧有生旦净末丑五个行当",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0060",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "《红楼梦》是中国古典四大名著之一",
+      "statement_b": "《红楼梦》的作者是曹雪芹",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0061",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "足球是世界上最受欢迎的运动",
+      "statement_b": "世界杯每四年举办一次",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0062",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "奥运会起源于古希腊",
+      "statement_b": "现代奥运会由顾拜旦复兴",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0063",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "网球大满贯包括四个赛事",
+      "statement_b": "温布尔登是最古老的网球锦标赛",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0064",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "汉语是中国的官方语言",
+      "statement_b": "汉字是世界上最古老的文字之一",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0065",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "亚马逊雨林被称为地球之肺",
+      "statement_b": "热带雨林对全球气候调节起关键作用",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0066",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "茶叶原产于中国",
+      "statement_b": "中国是世界上最大的茶叶生产国",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0067",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "钢琴有88个键",
+      "statement_b": "钢琴是一种键盘乐器",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0068",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "火星是太阳系的第四颗行星",
+      "statement_b": "火星表面呈现红色是因为氧化铁",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0069",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "日语使用三种文字系统",
+      "statement_b": "日语中包含大量汉字",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0070",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "大气层分为多个层次",
+      "statement_b": "对流层是最靠近地表的大气层",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0071",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "海平面上升威胁沿海城市",
+      "statement_b": "巴黎协定旨在限制全球变暖",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0072",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "微积分由牛顿和莱布尼茨独立发明",
+      "statement_b": "微积分是现代数学的基础工具",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0073",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "操作系统管理计算机硬件资源",
+      "statement_b": "进程是操作系统资源分配的基本单位",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0074",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "二战始于1939年",
+      "statement_b": "二战以同盟国的胜利告终",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0075",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "股市是企业融资的重要渠道",
+      "statement_b": "分散投资可以降低非系统性风险",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0076",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "人工智能在医疗领域有广泛应用",
+      "statement_b": "AI辅助诊断可以提高医生的诊断效率",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0077",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "电动汽车使用电池驱动",
+      "statement_b": "电动汽车相比燃油车更加环保",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0078",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "DNA复制是半保留复制",
+      "statement_b": "DNA聚合酶负责合成新的DNA链",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0079",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "古希腊哲学奠定了西方哲学的基础",
+      "statement_b": "苏格拉底方法强调对话和诘问",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0080",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "中国有五千年的文明史",
+      "statement_b": "甲骨文是中国最早的成熟文字系统之一",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0081",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "软件开发需要版本控制",
+      "statement_b": "代码审查有助于提高软件质量",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0082",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "开源软件可以免费使用和修改",
+      "statement_b": "Linux是著名的开源操作系统",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0083",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "C语言是最早的高级语言之一",
+      "statement_b": "C语言对后来的编程语言影响深远",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0084",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "JavaScript主要用于Web前端",
+      "statement_b": "Node.js使JavaScript可用于服务端",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0085",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "MySQL是流行的开源数据库",
+      "statement_b": "关系型数据库使用SQL查询语言",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0086",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Redis是内存数据库",
+      "statement_b": "Redis常用于缓存和会话存储",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0087",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "CDN加速内容分发",
+      "statement_b": "CDN通过边缘节点减少延迟",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0088",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "WebSocket支持全双工通信",
+      "statement_b": "WebSocket适合实时应用",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0089",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "OAuth2.0是授权框架",
+      "statement_b": "OAuth2.0广泛用于第三方登录",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0090",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "SSH用于安全远程登录",
+      "statement_b": "SSH通过加密保护通信",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0091",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "防火墙过滤网络流量",
+      "statement_b": "防火墙是网络安全的基础防线",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0092",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "负载均衡分发请求到多台服务器",
+      "statement_b": "负载均衡提高系统可用性",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0093",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "消息队列实现异步通信",
+      "statement_b": "Kafka是流行的分布式消息队列",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0094",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "ZooKeeper用于分布式协调",
+      "statement_b": "ZooKeeper提供分布式锁服务",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0095",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Service Mesh管理服务间通信",
+      "statement_b": "Istio是常用的Service Mesh实现",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0096",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Prometheus是监控系统",
+      "statement_b": "Prometheus采集时序指标数据",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0097",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "ELK用于日志收集和分析",
+      "statement_b": "Elasticsearch是ELK的核心组件",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0098",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "GraphQL由Facebook开发",
+      "statement_b": "GraphQL允许客户端精确指定所需数据",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0099",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "gRPC使用Protocol Buffers",
+      "statement_b": "gRPC基于HTTP/2协议",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0100",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "WebAssembly在浏览器中运行",
+      "statement_b": "WebAssembly提供接近原生的执行速度",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0101",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Serverless免去服务器管理",
+      "statement_b": "AWS Lambda是Serverless计算服务",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0102",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "IaC用代码管理基础设施",
+      "statement_b": "Terraform是常用的IaC工具",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0103",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "CI/CD自动化构建测试部署",
+      "statement_b": "GitHub Actions提供CI/CD功能",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0104",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "DevOps强调开发运维协作",
+      "statement_b": "DevOps文化缩短了软件交付周期",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0105",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "A/B测试对比不同版本效果",
+      "statement_b": "A/B测试基于统计假设检验",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0106",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Feature Flag控制功能发布",
+      "statement_b": "Feature Flag支持灰度发布策略",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0107",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Chaos Engineering测试系统韧性",
+      "statement_b": "Netflix的Chaos Monkey是典型案例",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0108",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "SRE用工程方法管理运维",
+      "statement_b": "SRE的核心概念是错误预算",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0109",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "TDD强调先写测试后写代码",
+      "statement_b": "TDD的红绿重构循环是核心实践",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0110",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "DDD聚焦领域模型设计",
+      "statement_b": "DDD的聚合根是领域模型的核心",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0111",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Event Sourcing记录所有状态变更",
+      "statement_b": "Event Sourcing支持时间旅行查询",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0112",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "CQRS分离读写模型",
+      "statement_b": "CQRS适用于读写负载不对称的场景",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0113",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "十二因子应用是云原生方法论",
+      "statement_b": "十二因子应用强调无状态进程",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0114",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Backend-for-Frontend为前端定制API",
+      "statement_b": "BFF模式减少前端数据过度获取",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0115",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "SPA是单页应用架构",
+      "statement_b": "React和Vue是构建SPA的主流框架",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0116",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "SSR在服务端渲染页面",
+      "statement_b": "SSR改善首屏加载速度和SEO",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0117",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Web Components是原生组件标准",
+      "statement_b": "Shadow DOM是Web Components的一部分",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0118",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "CSS Grid是二维布局系统",
+      "statement_b": "CSS Grid适合复杂的页面布局",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0119",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "TypeScript是JavaScript的超集",
+      "statement_b": "TypeScript增加了静态类型检查",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0120",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Webpack是模块打包工具",
+      "statement_b": "Webpack的loader处理不同类型的文件",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0121",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Babel将新语法转译兼容旧浏览器",
+      "statement_b": "Babel是JavaScript编译器",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0122",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "ESLint检查代码质量",
+      "statement_b": "Prettier统一代码格式",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0123",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "npm是Node.js的包管理器",
+      "statement_b": "package.json记录项目依赖",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0124",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Monorepo管理多个相关项目",
+      "statement_b": "Lerna和Nx是Monorepo管理工具",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0125",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Semantic Versioning用三段式版本号",
+      "statement_b": "MAJOR版本变更表示不兼容的API修改",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0126",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Apache License是宽松开源协议",
+      "statement_b": "MIT License也是宽松开源协议",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0127",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "GPL是copyleft许可证",
+      "statement_b": "GPL要求衍生作品也使用相同许可证",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0128",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "MVC将应用分为三层",
+      "statement_b": "Controller是MVC中的控制器层",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0129",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "OOP的四大特性是封装继承多态抽象",
+      "statement_b": "SOLID是面向对象设计原则",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0130",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "设计模式是可复用的解决方案",
+      "statement_b": "单例模式确保类只有一个实例",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0131",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "工厂模式封装对象创建逻辑",
+      "statement_b": "策略模式使算法可互换",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0132",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "观察者模式实现发布订阅",
+      "statement_b": "观察者模式用于事件驱动系统",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0133",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "装饰器模式动态添加功能",
+      "statement_b": "Python的@语法糖实现了装饰器模式",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0134",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "函数式编程强调纯函数",
+      "statement_b": "高阶函数接收或返回函数",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0135",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "不可变数据结构避免副作用",
+      "statement_b": "持久化数据结构共享结构",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0136",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Actor模型通过消息传递通信",
+      "statement_b": "Erlang是基于Actor模型的语言",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0137",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "CSP用通道传递消息",
+      "statement_b": "Go语言的goroutine基于CSP模型",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0138",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "响应式编程处理异步数据流",
+      "statement_b": "RxJS是响应式编程的JavaScript实现",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0139",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "MapReduce处理大规模数据集",
+      "statement_b": "MapReduce包含Map和Reduce两个阶段",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0140",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Spark是基于内存的分布式计算框架",
+      "statement_b": "Spark比Hadoop MapReduce更快",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0141",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Flink是流处理框架",
+      "statement_b": "Flink支持事件时间处理",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0142",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Kubernetes编排容器化应用",
+      "statement_b": "Pod是Kubernetes的最小调度单元",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0143",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Helm是Kubernetes的包管理器",
+      "statement_b": "Helm Chart定义了应用部署配置",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0144",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "服务网格通过Sidecar代理流量",
+      "statement_b": "Envoy是常用的Sidecar代理",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0145",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "边缘计算在靠近数据源处处理数据",
+      "statement_b": "边缘计算减少了数据传输延迟",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0146",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "零信任安全模型不信任任何网络",
+      "statement_b": "零信任要求持续验证身份",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0147",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "同态加密允许对密文进行计算",
+      "statement_b": "同态加密保护数据隐私",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0148",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "联邦学习在本地训练模型",
+      "statement_b": "联邦学习保护数据不出本地",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0149",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "差分隐私添加噪声保护个体",
+      "statement_b": "差分隐私提供数学上可证明的隐私保证",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0150",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "零知识证明在不泄露秘密的情况下验证",
+      "statement_b": "零知识证明增强了区块链隐私",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0151",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "CAP定理指出分布式系统最多满足两个性质",
+      "statement_b": "最终一致性是AP系统的折中",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0152",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "BASE是分布式系统的另一种一致性模型",
+      "statement_b": "BASE牺牲强一致性换取可用性",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0153",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Raft是共识算法",
+      "statement_b": "Raft通过领导者选举达成一致",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0154",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Paxos是经典的分布式共识算法",
+      "statement_b": "Paxos在高可用系统中保证数据一致",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0155",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "两阶段提交保证分布式事务原子性",
+      "statement_b": "2PC在协调者故障时可能阻塞",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0156",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Saga模式实现分布式事务",
+      "statement_b": "Saga通过补偿操作回滚失败步骤",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0157",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "幂等性确保重复操作结果相同",
+      "statement_b": "幂等设计提高了系统的容错性",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0158",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "断路器模式防止级联故障",
+      "statement_b": "熔断后系统进入降级状态",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0159",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "限流保护系统不被过载",
+      "statement_b": "令牌桶算法是常用的限流策略",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0160",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "降级保证核心功能的可用性",
+      "statement_b": "兜底逻辑在服务不可用时提供备选方案",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0161",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "蓝绿部署实现零停机发布",
+      "statement_b": "蓝绿部署同时维护两个生产环境",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0162",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "金丝雀发布逐步引入新版本",
+      "statement_b": "金丝雀发布降低了发布风险",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0163",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "暗启动在后台预热新功能",
+      "statement_b": "Feature Toggle控制新功能的开关",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0164",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Ephemeral环境在PR中创建",
+      "statement_b": "Ephemeral环境用于自动化测试",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0165",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "可观测性包含三大支柱",
+      "statement_b": "日志指标和追踪是可观测性的基础",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0166",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "OpenTelemetry标准化可观测数据",
+      "statement_b": "OpenTelemetry是CNCF的项目",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0167",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Jaeger是分布式追踪系统",
+      "statement_b": "Jaeger基于OpenTracing标准",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0168",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "eBPF在内核中安全运行沙盒程序",
+      "statement_b": "eBPF用于可观测性和网络",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0169",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Linux namespace隔离系统资源",
+      "statement_b": "namespace是容器技术的基础",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0170",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "cgroup限制进程资源使用",
+      "statement_b": "cgroup防止单个容器耗尽系统资源",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0171",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "overlayfs实现容器镜像分层",
+      "statement_b": "写时复制减少磁盘空间占用",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0172",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "BPF CO-RE实现可移植eBPF程序",
+      "statement_b": "BTF提供类型信息给BPF CO-RE",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0173",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "KVM是Linux内核虚拟化模块",
+      "statement_b": "KVM将Linux转成Hypervisor",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0174",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "QEMU是通用的机器模拟器",
+      "statement_b": "QEMU常与KVM配合实现虚拟化",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0175",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Virtio是半虚拟化驱动框架",
+      "statement_b": "Virtio减少了虚拟化开销",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0176",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "SR-IOV将PCIe设备虚拟化为多个VF",
+      "statement_b": "SR-IOV实现接近原生的I/O性能",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0177",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "DPDK绕过内核处理网络数据包",
+      "statement_b": "DPDK适用于高性能网络场景",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0178",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "SPDK加速存储设备访问",
+      "statement_b": "SPDK在用户态运行存储驱动",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0179",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "RDMA实现远程直接内存访问",
+      "statement_b": "RDMA提供极低的网络延迟",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0180",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "NVMe是高性能存储协议",
+      "statement_b": "NVMe-oF扩展NVMe到网络存储",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0181",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Ceph是分布式存储系统",
+      "statement_b": "Ceph提供对象块和文件三种存储接口",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0182",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "MinIO是对象存储服务",
+      "statement_b": "MinIO兼容Amazon S3 API",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0183",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Rook在Kubernetes上运行存储",
+      "statement_b": "Rook自动化Ceph集群管理",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0184",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Vitess是MySQL的分布式集群方案",
+      "statement_b": "Vitess由YouTube开发并开源",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0185",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "TiDB是分布式SQL数据库",
+      "statement_b": "TiDB兼容MySQL协议",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0186",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "CockroachDB是分布式SQL数据库",
+      "statement_b": "CockroachDB具有强大的容错能力",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0187",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Cassandra是分布式NoSQL数据库",
+      "statement_b": "Cassandra采用对等节点架构",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0188",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "ScyllaDB兼容Cassandra协议",
+      "statement_b": "ScyllaDB用C++重写以提升性能",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0189",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Neo4j是图数据库",
+      "statement_b": "Cypher是Neo4j的查询语言",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0190",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "InfluxDB是时序数据库",
+      "statement_b": "InfluxDB适用于物联网监控场景",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0191",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Elasticsearch是搜索引擎",
+      "statement_b": "Elasticsearch基于Apache Lucene",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0192",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "PostgreSQL支持JSON和全文搜索",
+      "statement_b": "PostgreSQL是最先进的开源关系数据库",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0193",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "SQLite是嵌入式数据库",
+      "statement_b": "SQLite不需要独立的服务器进程",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0194",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "DuckDB是嵌入式OLAP数据库",
+      "statement_b": "DuckDB针对分析查询优化",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0195",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Polars是用Rust写的高性能DataFrame库",
+      "statement_b": "Polars比Pandas更快且内存安全",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0196",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Apache Arrow定义列式内存格式",
+      "statement_b": "Arrow实现跨语言零拷贝数据交换",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0197",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Parquet是列式存储格式",
+      "statement_b": "Parquet在数据湖中广泛使用",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0198",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Iceberg是开放表格式",
+      "statement_b": "Iceberg解决了Hive表的局限性",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0199",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Delta Lake提供ACID事务",
+      "statement_b": "Delta Lake在数据湖上实现时间旅行",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0200",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "dbt是数据转换工具",
+      "statement_b": "dbt实现了ELT中的数据转换",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0201",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "Airflow编排数据管道",
+      "statement_b": "Airflow的DAG定义了任务依赖",
+      "label": "consistent"
+    },
+    {
+      "id": "HDR-CON-0202",
+      "category": "consistent",
+      "subtype": "real_world_knowledge",
+      "statement_a": "dbt和Airflow可以配合使用",
+      "statement_b": "dbt负责转换Airflow负责调度",
+      "label": "consistent"
+    }
+  ]
+}

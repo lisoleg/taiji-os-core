@@ -1,0 +1,7043 @@
+{
+  "config": {
+    "threshold": 0.65,
+    "phi_mode": "static",
+    "dcore_mode": "offline",
+    "online": false
+  },
+  "overall": {
+    "accuracy": 0.7667,
+    "precision": 0.7667,
+    "recall": 1.0,
+    "f1": 0.868,
+    "tp": 664,
+    "fp": 202,
+    "fn": 0,
+    "tn": 0,
+    "total": 866
+  },
+  "by_category": {
+    "spatial": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 128,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "total": 128
+    },
+    "temporal": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 96,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "total": 96
+    },
+    "logical": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 16,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "total": 16
+    },
+    "numerical": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 120,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "total": 120
+    },
+    "causal": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 48,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "total": 48
+    },
+    "attribute": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 120,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "total": 120
+    },
+    "referential": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 72,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "total": 72
+    },
+    "semantic_drift": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 64,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "total": 64
+    }
+  },
+  "per_sample": [
+    {
+      "id": "HDR-CON-0001",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0008,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0002",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0148,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0003",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0005,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0004",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0226,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0005",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0325,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0006",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.008,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0007",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0345,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0008",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0254,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0009",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0129,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0010",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0276,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0011",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0289,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0012",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0002,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0013",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.01,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0014",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0438,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0015",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0275,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0016",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0099,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0017",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0483,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0018",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0158,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0019",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0109,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0020",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0027,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0021",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0021,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0022",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.029,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0023",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0137,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0024",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0366,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0025",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0099,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0026",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0508,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0027",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.02,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0028",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0245,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0029",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0176,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0030",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0028,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0031",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0037,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0032",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0068,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0033",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0192,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0034",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0104,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0035",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0134,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0036",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0011,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0037",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0221,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0038",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0242,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0039",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0145,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0040",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0103,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0041",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0151,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0042",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0299,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0043",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0215,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0044",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0141,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0045",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0157,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0046",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0183,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0047",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0245,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0048",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0049,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0049",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.018,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0050",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0373,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0051",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0014,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0052",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0239,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0053",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0191,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0054",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0318,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0055",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0379,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0056",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0301,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0057",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0164,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0058",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0351,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0059",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0647,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0060",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0127,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0061",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0205,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0062",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0637,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0063",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0194,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0064",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0082,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0065",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0382,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0066",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.029,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0067",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0281,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0068",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.005,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0069",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.003,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0070",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0267,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0071",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0557,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0072",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0149,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0073",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0032,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0074",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0058,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0075",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0033,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0076",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0291,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0077",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0031,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0078",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0122,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0079",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.008,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0080",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0361,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0081",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0167,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0082",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0003,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0083",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0299,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0084",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0012,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0085",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0158,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0086",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0362,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0087",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0028,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0088",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0002,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0089",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0065,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0090",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.069,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0091",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0128,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0092",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.019,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0093",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0026,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0094",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0611,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0095",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0041,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0096",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0007,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0097",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0242,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0098",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0226,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0099",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0301,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0100",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.014,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0101",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0093,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0102",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0175,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0103",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0014,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0104",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0267,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0105",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0271,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0106",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.022,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0107",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0381,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0108",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0003,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0109",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0033,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0110",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0069,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0111",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0254,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0112",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0063,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0113",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0343,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0114",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.008,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0115",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0234,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0116",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0014,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0117",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0029,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0118",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.016,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0119",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0329,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0120",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.006,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0121",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0111,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0122",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0138,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0123",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0152,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0124",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0555,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0125",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.017,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0126",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": 0.0146,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0127",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0159,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0128",
+      "category": "spatial",
+      "label": "contradiction",
+      "phi": -0.0036,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0129",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0177,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0130",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0076,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0131",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.035,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0132",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.015,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0133",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0436,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0134",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0119,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0135",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0118,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0136",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.022,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0137",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0624,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0138",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0054,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0139",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0497,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0140",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0047,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0141",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0018,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0142",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0053,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0143",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0301,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0144",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0008,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0145",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0172,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0146",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0172,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0147",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.019,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0148",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0355,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0149",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0145,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0150",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.007,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0151",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0257,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0152",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0616,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0153",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0296,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0154",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0249,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0155",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0017,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0156",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0064,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0157",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0335,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0158",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0171,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0159",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0029,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0160",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0063,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0161",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0048,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0162",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0239,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0163",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0525,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0164",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.02,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0165",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0258,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0166",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0005,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0167",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0228,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0168",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0172,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0169",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0144,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0170",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0379,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0171",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0471,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0172",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0203,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0173",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0185,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0174",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0112,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0175",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.022,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0176",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0083,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0177",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0167,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0178",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0445,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0179",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0025,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0180",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0038,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0181",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0006,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0182",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0044,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0183",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0225,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0184",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0097,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0185",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0097,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0186",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0139,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0187",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0109,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0188",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0585,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0189",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0696,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0190",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0281,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0191",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0055,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0192",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0128,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0193",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0254,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0194",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.005,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0195",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0077,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0196",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.004,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0197",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0173,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0198",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0014,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0199",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0238,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0200",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0224,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0201",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0281,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0202",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0275,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0203",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0002,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0204",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0347,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0205",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0132,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0206",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0094,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0207",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0266,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0208",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0439,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0209",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0023,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0210",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0174,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0211",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0594,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0212",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0467,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0213",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0289,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0214",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0007,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0215",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0008,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0216",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0544,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0217",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.031,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0218",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0022,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0219",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0278,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0220",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0097,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0221",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0533,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0222",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0296,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0223",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": -0.0122,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0224",
+      "category": "temporal",
+      "label": "contradiction",
+      "phi": 0.0066,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0225",
+      "category": "logical",
+      "label": "contradiction",
+      "phi": -0.0047,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0226",
+      "category": "logical",
+      "label": "contradiction",
+      "phi": 0.0325,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0227",
+      "category": "logical",
+      "label": "contradiction",
+      "phi": -0.0212,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0228",
+      "category": "logical",
+      "label": "contradiction",
+      "phi": 0.0378,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0229",
+      "category": "logical",
+      "label": "contradiction",
+      "phi": 0.0024,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0230",
+      "category": "logical",
+      "label": "contradiction",
+      "phi": -0.0513,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0231",
+      "category": "logical",
+      "label": "contradiction",
+      "phi": -0.0056,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0232",
+      "category": "logical",
+      "label": "contradiction",
+      "phi": 0.0255,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0233",
+      "category": "logical",
+      "label": "contradiction",
+      "phi": -0.0154,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0234",
+      "category": "logical",
+      "label": "contradiction",
+      "phi": -0.0435,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0235",
+      "category": "logical",
+      "label": "contradiction",
+      "phi": -0.0274,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0236",
+      "category": "logical",
+      "label": "contradiction",
+      "phi": 0.0507,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0237",
+      "category": "logical",
+      "label": "contradiction",
+      "phi": -0.0285,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0238",
+      "category": "logical",
+      "label": "contradiction",
+      "phi": 0.0168,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0239",
+      "category": "logical",
+      "label": "contradiction",
+      "phi": -0.0111,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0240",
+      "category": "logical",
+      "label": "contradiction",
+      "phi": 0.0252,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0241",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0101,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0242",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0173,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0243",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0779,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0244",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0206,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0245",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0199,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0246",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0294,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0247",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0233,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0248",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0223,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0249",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0136,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0250",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0356,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0251",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0113,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0252",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0145,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0253",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0039,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0254",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0186,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0255",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0131,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0256",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0146,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0257",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0353,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0258",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0007,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0259",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0107,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0260",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0205,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0261",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0219,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0262",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0222,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0263",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.035,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0264",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0349,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0265",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0333,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0266",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0115,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0267",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0145,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0268",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0239,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0269",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0248,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0270",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0208,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0271",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0009,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0272",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0057,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0273",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0372,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0274",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0405,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0275",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0227,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0276",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0391,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0277",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0193,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0278",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0279",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.013,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0280",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0108,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0281",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0331,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0282",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0045,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0283",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0047,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0284",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0105,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0285",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0291,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0286",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0231,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0287",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0131,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0288",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0351,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0289",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0418,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0290",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0124,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0291",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0095,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0292",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0075,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0293",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0233,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0294",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0093,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0295",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0474,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0296",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0038,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0297",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.029,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0298",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0132,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0299",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0141,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0300",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.009,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0301",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0464,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0302",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0514,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0303",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0348,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0304",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0125,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0305",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0155,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0306",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.029,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0307",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0158,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0308",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.005,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0309",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0209,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0310",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0037,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0311",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0135,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0312",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0236,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0313",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0361,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0314",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0008,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0315",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.008,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0316",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.007,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0317",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0171,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0318",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0087,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0319",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0066,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0320",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0197,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0321",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0297,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0322",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.034,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0323",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.028,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0324",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0186,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0325",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0031,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0326",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0184,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0327",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0246,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0328",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0218,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0329",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0034,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0330",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.011,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0331",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0057,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0332",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0178,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0333",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0119,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0334",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0185,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0335",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0123,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0336",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0296,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0337",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0183,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0338",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0411,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0339",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0363,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0340",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0003,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0341",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0049,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0342",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0416,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0343",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0088,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0344",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0172,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0345",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0315,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0346",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0063,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0347",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0096,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0348",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0332,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0349",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0171,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0350",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0072,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0351",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.025,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0352",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0054,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0353",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0028,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0354",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0028,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0355",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.073,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0356",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0156,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0357",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0029,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0358",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0353,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0359",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": 0.0259,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0360",
+      "category": "numerical",
+      "label": "contradiction",
+      "phi": -0.0245,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0361",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.0118,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0362",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.0121,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0363",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0082,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0364",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0182,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0365",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0155,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0366",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.0027,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0367",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0171,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0368",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.0401,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0369",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.0146,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0370",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.0338,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0371",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0224,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0372",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.0166,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0373",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.0142,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0374",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.0285,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0375",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.0122,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0376",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.0051,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0377",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0118,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0378",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0064,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0379",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.007,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0380",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0177,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0381",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0229,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0382",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.0158,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0383",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0106,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0384",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.0299,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0385",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.0156,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0386",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.0032,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0387",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0055,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0388",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0016,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0389",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.0346,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0390",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0127,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0391",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0094,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0392",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.018,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0393",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0224,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0394",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0327,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0395",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0007,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0396",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.021,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0397",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0102,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0398",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0315,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0399",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0193,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0400",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0385,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0401",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0349,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0402",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0195,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0403",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0075,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0404",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0236,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0405",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.0384,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0406",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.017,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0407",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": 0.0164,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0408",
+      "category": "causal",
+      "label": "contradiction",
+      "phi": -0.0028,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0409",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0057,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0410",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0548,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0411",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0016,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0412",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0369,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0413",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0055,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0414",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0219,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0415",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0248,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0416",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0574,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0417",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0467,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0418",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.007,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0419",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0044,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0420",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0236,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0421",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0123,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0422",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0081,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0423",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0119,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0424",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0217,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0425",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0435,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0426",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0078,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0427",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0427,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0428",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0391,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0429",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0224,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0430",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0218,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0431",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0317,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0432",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0309,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0433",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0455,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0434",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0311,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0435",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0184,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0436",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0166,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0437",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0407,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0438",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.01,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0439",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0226,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0440",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0374,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0441",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0265,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0442",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0089,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0443",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0252,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0444",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0101,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0445",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0123,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0446",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0182,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0447",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0239,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0448",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0025,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0449",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0004,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0450",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0265,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0451",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0221,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0452",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0348,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0453",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0037,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0454",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0028,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0455",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0264,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0456",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0111,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0457",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0145,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0458",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0437,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0459",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0506,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0460",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0532,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0461",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0336,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0462",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0162,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0463",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0304,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0464",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0126,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0465",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0148,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0466",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0016,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0467",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0195,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0468",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0121,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0469",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0276,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0470",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0045,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0471",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0066,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0472",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.02,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0473",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0266,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0474",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.011,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0475",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0011,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0476",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0042,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0477",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0017,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0478",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0223,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0479",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0525,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0480",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.037,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0481",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0242,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0482",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0336,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0483",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.004,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0484",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0153,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0485",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0064,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0486",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0014,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0487",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0137,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0488",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0472,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0489",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0154,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0490",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0399,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0491",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0023,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0492",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0098,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0493",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0176,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0494",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0029,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0495",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0813,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0496",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0133,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0497",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0132,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0498",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0472,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0499",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0252,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0500",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0377,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0501",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0297,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0502",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0258,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0503",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0783,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0504",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0479,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0505",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0125,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0506",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.028,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0507",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0389,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0508",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0466,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0509",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0013,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0510",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0323,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0511",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0174,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0512",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0143,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0513",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0152,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0514",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0104,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0515",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0261,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0516",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0115,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0517",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0032,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0518",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0199,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0519",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0387,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0520",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.045,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0521",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.026,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0522",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0254,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0523",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0676,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0524",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0223,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0525",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0135,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0526",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.0233,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0527",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": 0.014,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0528",
+      "category": "attribute",
+      "label": "contradiction",
+      "phi": -0.0288,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0529",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0435,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0530",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0193,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0531",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0064,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0532",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0034,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0533",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0165,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0534",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0023,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0535",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0334,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0536",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0276,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0537",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0028,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0538",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0045,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0539",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0255,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0540",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0352,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0541",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0329,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0542",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0296,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0543",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0225,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0544",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0179,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0545",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0158,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0546",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0426,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0547",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.044,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0548",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0236,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0549",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0281,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0550",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.017,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0551",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.006,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0552",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0487,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0553",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0178,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0554",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0202,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0555",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0089,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0556",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0147,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0557",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0305,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0558",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0255,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0559",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0295,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0560",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0305,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0561",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0202,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0562",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0097,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0563",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0144,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0564",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0069,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0565",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0192,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0566",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0094,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0567",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0092,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0568",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0062,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0569",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0096,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0570",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0132,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0571",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0119,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0572",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0443,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0573",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0314,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0574",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0072,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0575",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0061,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0576",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0367,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0577",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0048,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0578",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0037,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0579",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0047,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0580",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0618,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0581",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0184,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0582",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0288,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0583",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0341,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0584",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0246,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0585",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0077,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0586",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0029,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0587",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0087,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0588",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0094,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0589",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0071,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0590",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0165,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0591",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0439,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0592",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0091,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0593",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0009,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0594",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0064,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0595",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0322,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0596",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0196,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0597",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0023,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0598",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0084,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0599",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": 0.0226,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0600",
+      "category": "referential",
+      "label": "contradiction",
+      "phi": -0.0321,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0601",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0082,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0602",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0115,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0603",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0393,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0604",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0269,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0605",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0202,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0606",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0081,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0607",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0322,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0608",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0335,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0609",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0119,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0610",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0052,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0611",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0006,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0612",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0023,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0613",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0042,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0614",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0055,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0615",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0065,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0616",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0072,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0617",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0015,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0618",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0048,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0619",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0078,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0620",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0102,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0621",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0121,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0622",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0134,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0623",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0144,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0624",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0151,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0625",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0045,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0626",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0062,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0627",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0076,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0628",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0087,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0629",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0094,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0630",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0099,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0631",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0102,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0632",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0104,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0633",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0477,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0634",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0449,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0635",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0407,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0636",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0359,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0637",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.031,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0638",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0264,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0639",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0224,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0640",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0189,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0641",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0249,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0642",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0223,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0643",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0191,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0644",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0155,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0645",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0121,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0646",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.009,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0647",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0064,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0648",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0042,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0649",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0086,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0650",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0075,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0651",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0048,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0652",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0287,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0653",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0209,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0654",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": 0.0032,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0655",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0775,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0656",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0129,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0657",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0372,
+      "predicted": 1,
+      "semantic_method": "keyword"
+    },
+    {
+      "id": "HDR-CON-0658",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.038,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0659",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0363,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0660",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0338,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0661",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0314,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0662",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0294,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0663",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0277,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0664",
+      "category": "semantic_drift",
+      "label": "contradiction",
+      "phi": -0.0263,
+      "predicted": 1,
+      "semantic_method": "cache"
+    },
+    {
+      "id": "HDR-CON-0001",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0003,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0002",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0171,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0003",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0254,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0004",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0265,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0005",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0164,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0006",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0036,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0007",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0243,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0008",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0014,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0009",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0216,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0010",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0232,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0011",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0347,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0012",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0362,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0013",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0023,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0014",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0302,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0015",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0282,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0016",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0172,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0017",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0302,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0018",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0422,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0019",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0446,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0020",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0237,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0021",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0219,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0022",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.025,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0023",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0002,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0024",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0374,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0025",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0068,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0026",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0143,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0027",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0012,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0028",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0086,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0029",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0206,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0030",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0356,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0031",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0031,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0032",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0039,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0033",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0498,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0034",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0445,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0035",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0356,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0036",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0262,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0037",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0042,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0038",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0071,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0039",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0078,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0040",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0419,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0041",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0174,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0042",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0075,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0043",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0164,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0044",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0273,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0045",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0345,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0046",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0281,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0047",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0376,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0048",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0207,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0049",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.015,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0050",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0027,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0051",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0109,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0052",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0284,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0053",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0226,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0054",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.032,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0055",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0047,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0056",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0157,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0057",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.05,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0058",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0221,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0059",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0117,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0060",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0762,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0061",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0021,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0062",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.005,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0063",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0272,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0064",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0128,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0065",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0013,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0066",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0355,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0067",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0117,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0068",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0292,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0069",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0018,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0070",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.03,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0071",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0558,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0072",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0085,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0073",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0285,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0074",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0234,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0075",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0039,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0076",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0151,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0077",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0132,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0078",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0546,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0079",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0142,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0080",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0084,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0081",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0485,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0082",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0042,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0083",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0112,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0084",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0064,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0085",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0097,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0086",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0016,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0087",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0418,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0088",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0265,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0089",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0411,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0090",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0015,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0091",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0414,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0092",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0073,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0093",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.009,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0094",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0395,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0095",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0069,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0096",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0089,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0097",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0117,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0098",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0297,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0099",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0257,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0100",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0458,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0101",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0615,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0102",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0013,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0103",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0037,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0104",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0016,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0105",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0031,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0106",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0518,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0107",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0188,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0108",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0461,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0109",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0231,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0110",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0141,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0111",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0155,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0112",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0073,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0113",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0336,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0114",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0272,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0115",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0067,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0116",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0135,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0117",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0153,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0118",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0157,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0119",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0253,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0120",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0312,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0121",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0197,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0122",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0242,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0123",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0707,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0124",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0512,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0125",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0173,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0126",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0459,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0127",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0424,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0128",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0011,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0129",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0382,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0130",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0134,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0131",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0172,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0132",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0069,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0133",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0033,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0134",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0047,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0135",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0325,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0136",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.02,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0137",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0332,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0138",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.016,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0139",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0201,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0140",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0025,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0141",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0174,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0142",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0373,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0143",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0362,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0144",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0053,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0145",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0364,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0146",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.005,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0147",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0283,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0148",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.018,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0149",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0639,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0150",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0152,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0151",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0371,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0152",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0248,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0153",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0043,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0154",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0268,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0155",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0377,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0156",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0088,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0157",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0057,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0158",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.03,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0159",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0048,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0160",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0244,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0161",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0045,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0162",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0233,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0163",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0114,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0164",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0067,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0165",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0154,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0166",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0097,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0167",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0091,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0168",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0469,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0169",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0165,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0170",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0281,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0171",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0222,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0172",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0132,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0173",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0168,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0174",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0029,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0175",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0058,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0176",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0219,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0177",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0119,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0178",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0107,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0179",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0232,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0180",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0335,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0181",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0428,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0182",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0119,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0183",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0017,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0184",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0015,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0185",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0014,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0186",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0175,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0187",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0189,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0188",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0126,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0189",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0131,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0190",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0078,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0191",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0251,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0192",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0284,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0193",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0018,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0194",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0009,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0195",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0096,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0196",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0003,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0197",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0273,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0198",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0132,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0199",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0414,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0200",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": -0.0232,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0201",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0263,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    },
+    {
+      "id": "HDR-CON-0202",
+      "category": "consistent",
+      "label": "consistent",
+      "phi": 0.0103,
+      "predicted": 1,
+      "semantic_method": "n/a"
+    }
+  ],
+  "phi_stats": {
+    "contradiction_mean": 0.0014,
+    "consistent_mean": -0.0029
+  }
+}

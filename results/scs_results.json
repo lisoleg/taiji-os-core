@@ -1,0 +1,2029 @@
+{
+  "config": {
+    "phi_mode": "static"
+  },
+  "stable": [
+    {
+      "id": "SCS-STB-0001",
+      "topic": "太阳系",
+      "n_statements": 7,
+      "cv": -6.214564
+    },
+    {
+      "id": "SCS-STB-0002",
+      "topic": "Python语言",
+      "n_statements": 7,
+      "cv": -3.910756
+    },
+    {
+      "id": "SCS-STB-0003",
+      "topic": "光合作用",
+      "n_statements": 6,
+      "cv": 8.492382
+    },
+    {
+      "id": "SCS-STB-0004",
+      "topic": "量子力学",
+      "n_statements": 6,
+      "cv": -7.737125
+    },
+    {
+      "id": "SCS-STB-0005",
+      "topic": "汉语",
+      "n_statements": 6,
+      "cv": -2.057699
+    },
+    {
+      "id": "SCS-STB-0006",
+      "topic": "机器学习",
+      "n_statements": 6,
+      "cv": 2.549613
+    },
+    {
+      "id": "SCS-STB-0007",
+      "topic": "人体消化",
+      "n_statements": 6,
+      "cv": 5.887423
+    },
+    {
+      "id": "SCS-STB-0008",
+      "topic": "贝多芬",
+      "n_statements": 6,
+      "cv": 236.681597
+    },
+    {
+      "id": "SCS-STB-0009",
+      "topic": "二战",
+      "n_statements": 6,
+      "cv": -4.205478
+    },
+    {
+      "id": "SCS-STB-0010",
+      "topic": "微服务",
+      "n_statements": 6,
+      "cv": 8.995673
+    },
+    {
+      "id": "SCS-STB-0011",
+      "topic": "气候变化",
+      "n_statements": 6,
+      "cv": 1.308794
+    },
+    {
+      "id": "SCS-STB-0012",
+      "topic": "古希腊哲学",
+      "n_statements": 6,
+      "cv": 2.356934
+    },
+    {
+      "id": "SCS-STB-0013",
+      "topic": "操作系统",
+      "n_statements": 6,
+      "cv": -0.881091
+    },
+    {
+      "id": "SCS-STB-0014",
+      "topic": "金融市场",
+      "n_statements": 6,
+      "cv": 0.937886
+    },
+    {
+      "id": "SCS-STB-0015",
+      "topic": "大气层",
+      "n_statements": 6,
+      "cv": 13.970112
+    },
+    {
+      "id": "SCS-STB-0016",
+      "topic": "DNA",
+      "n_statements": 6,
+      "cv": -0.929413
+    },
+    {
+      "id": "SCS-STB-0017",
+      "topic": "计算机网络",
+      "n_statements": 6,
+      "cv": 5.677421
+    },
+    {
+      "id": "SCS-STB-0018",
+      "topic": "经济学基础",
+      "n_statements": 6,
+      "cv": -6.972062
+    },
+    {
+      "id": "SCS-STB-0019",
+      "topic": "认知心理学",
+      "n_statements": 6,
+      "cv": 5.113381
+    },
+    {
+      "id": "SCS-STB-0020",
+      "topic": "电磁学",
+      "n_statements": 6,
+      "cv": -6.976069
+    },
+    {
+      "id": "SCS-STB-0021",
+      "topic": "文艺复兴",
+      "n_statements": 6,
+      "cv": 0.9945
+    },
+    {
+      "id": "SCS-STB-0022",
+      "topic": "第一次世界大战",
+      "n_statements": 6,
+      "cv": -10.973829
+    },
+    {
+      "id": "SCS-STB-0023",
+      "topic": "进化论",
+      "n_statements": 6,
+      "cv": 1.653503
+    },
+    {
+      "id": "SCS-STB-0024",
+      "topic": "黑洞",
+      "n_statements": 6,
+      "cv": 1.860941
+    },
+    {
+      "id": "SCS-STB-0025",
+      "topic": "儒家思想",
+      "n_statements": 6,
+      "cv": 0.636982
+    },
+    {
+      "id": "SCS-STB-0026",
+      "topic": "免疫系统",
+      "n_statements": 6,
+      "cv": -0.644796
+    },
+    {
+      "id": "SCS-STB-0027",
+      "topic": "电磁波",
+      "n_statements": 6,
+      "cv": 1.535474
+    },
+    {
+      "id": "SCS-STB-0028",
+      "topic": "日本历史",
+      "n_statements": 6,
+      "cv": -2.309271
+    },
+    {
+      "id": "SCS-STB-0029",
+      "topic": "纳米技术",
+      "n_statements": 6,
+      "cv": 1.351667
+    },
+    {
+      "id": "SCS-STB-0030",
+      "topic": "佛教哲学",
+      "n_statements": 6,
+      "cv": 0.399618
+    },
+    {
+      "id": "SCS-STB-0031",
+      "topic": "虚拟现实",
+      "n_statements": 6,
+      "cv": -1.562338
+    },
+    {
+      "id": "SCS-STB-0032",
+      "topic": "石油化工",
+      "n_statements": 6,
+      "cv": 8.904209
+    },
+    {
+      "id": "SCS-STB-0033",
+      "topic": "刑法",
+      "n_statements": 6,
+      "cv": -2.687392
+    },
+    {
+      "id": "SCS-STB-0034",
+      "topic": "Linux内核",
+      "n_statements": 6,
+      "cv": 9.657954
+    },
+    {
+      "id": "SCS-STB-0035",
+      "topic": "认知神经科学",
+      "n_statements": 6,
+      "cv": -3.586793
+    },
+    {
+      "id": "SCS-STB-0036",
+      "topic": "刑法修正案",
+      "n_statements": 6,
+      "cv": 3.908489
+    },
+    {
+      "id": "SCS-STB-0037",
+      "topic": "希腊神话",
+      "n_statements": 6,
+      "cv": -1.516551
+    },
+    {
+      "id": "SCS-STB-0038",
+      "topic": "密码学",
+      "n_statements": 6,
+      "cv": -7.684614
+    },
+    {
+      "id": "SCS-STB-0039",
+      "topic": "市场营销",
+      "n_statements": 6,
+      "cv": -2.924181
+    },
+    {
+      "id": "SCS-STB-0040",
+      "topic": "核物理",
+      "n_statements": 6,
+      "cv": -3.231187
+    },
+    {
+      "id": "SCS-STB-0041",
+      "topic": "机器人学",
+      "n_statements": 6,
+      "cv": -1.71656
+    },
+    {
+      "id": "SCS-STB-0042",
+      "topic": "地质学",
+      "n_statements": 6,
+      "cv": -2.889349
+    },
+    {
+      "id": "SCS-STB-0043",
+      "topic": "营养学",
+      "n_statements": 6,
+      "cv": -3.372795
+    },
+    {
+      "id": "SCS-STB-0044",
+      "topic": "古罗马",
+      "n_statements": 6,
+      "cv": -3.361123
+    },
+    {
+      "id": "SCS-STB-0045",
+      "topic": "动画制作",
+      "n_statements": 6,
+      "cv": -2.065974
+    },
+    {
+      "id": "SCS-STB-0046",
+      "topic": "信息论",
+      "n_statements": 6,
+      "cv": -1.636919
+    },
+    {
+      "id": "SCS-STB-0047",
+      "topic": "法国大革命",
+      "n_statements": 6,
+      "cv": -4.541607
+    },
+    {
+      "id": "SCS-STB-0048",
+      "topic": "蛋白质科学",
+      "n_statements": 6,
+      "cv": -2.008467
+    },
+    {
+      "id": "SCS-STB-0049",
+      "topic": "声音工程",
+      "n_statements": 6,
+      "cv": 6.878672
+    },
+    {
+      "id": "SCS-STB-0050",
+      "topic": "印刷术",
+      "n_statements": 6,
+      "cv": -1.843476
+    },
+    {
+      "id": "SCS-STB-0051",
+      "topic": "宇宙学",
+      "n_statements": 6,
+      "cv": -1.13738
+    },
+    {
+      "id": "SCS-STB-0052",
+      "topic": "热力学",
+      "n_statements": 6,
+      "cv": -5.451125
+    },
+    {
+      "id": "SCS-STB-0053",
+      "topic": "遗传学",
+      "n_statements": 6,
+      "cv": 2.578696
+    },
+    {
+      "id": "SCS-STB-0054",
+      "topic": "蒙古帝国",
+      "n_statements": 6,
+      "cv": 1.865359
+    },
+    {
+      "id": "SCS-STB-0055",
+      "topic": "宪法学",
+      "n_statements": 6,
+      "cv": -0.821674
+    },
+    {
+      "id": "SCS-STB-0056",
+      "topic": "高能物理",
+      "n_statements": 6,
+      "cv": -0.943689
+    },
+    {
+      "id": "SCS-STB-0057",
+      "topic": "水文学",
+      "n_statements": 6,
+      "cv": 4.695001
+    },
+    {
+      "id": "SCS-STB-0058",
+      "topic": "概率论",
+      "n_statements": 6,
+      "cv": 44.241654
+    },
+    {
+      "id": "SCS-STB-0059",
+      "topic": "古埃及",
+      "n_statements": 6,
+      "cv": -6.92455
+    },
+    {
+      "id": "SCS-STB-0060",
+      "topic": "比较文学",
+      "n_statements": 6,
+      "cv": 29.628533
+    },
+    {
+      "id": "SCS-STB-0061",
+      "topic": "地震学",
+      "n_statements": 6,
+      "cv": 1.476208
+    },
+    {
+      "id": "SCS-STB-0062",
+      "topic": "阿拉伯文化",
+      "n_statements": 6,
+      "cv": 4.512213
+    },
+    {
+      "id": "SCS-STB-0063",
+      "topic": "声学",
+      "n_statements": 6,
+      "cv": -2.781734
+    },
+    {
+      "id": "SCS-STB-0064",
+      "topic": "知识产权法",
+      "n_statements": 6,
+      "cv": 1.761681
+    },
+    {
+      "id": "SCS-STB-0065",
+      "topic": "编程语言理论",
+      "n_statements": 6,
+      "cv": -7.329521
+    },
+    {
+      "id": "SCS-STB-0066",
+      "topic": "茶文化",
+      "n_statements": 6,
+      "cv": 449.065675
+    },
+    {
+      "id": "SCS-STB-0067",
+      "topic": "中东历史",
+      "n_statements": 6,
+      "cv": -10.342582
+    },
+    {
+      "id": "SCS-STB-0068",
+      "topic": "生物化学",
+      "n_statements": 6,
+      "cv": -2.171304
+    },
+    {
+      "id": "SCS-STB-0069",
+      "topic": "美国历史",
+      "n_statements": 6,
+      "cv": -2.970235
+    },
+    {
+      "id": "SCS-STB-0070",
+      "topic": "城市规划",
+      "n_statements": 6,
+      "cv": -5.685926
+    },
+    {
+      "id": "SCS-STB-0071",
+      "topic": "博弈论",
+      "n_statements": 6,
+      "cv": -3.034894
+    },
+    {
+      "id": "SCS-STB-0072",
+      "topic": "东南亚历史",
+      "n_statements": 6,
+      "cv": 4.853573
+    },
+    {
+      "id": "SCS-STB-0073",
+      "topic": "材料科学",
+      "n_statements": 6,
+      "cv": 1.654958
+    },
+    {
+      "id": "SCS-STB-0074",
+      "topic": "植物学",
+      "n_statements": 6,
+      "cv": 6.218983
+    },
+    {
+      "id": "SCS-STB-0075",
+      "topic": "国际关系",
+      "n_statements": 6,
+      "cv": -33.186752
+    },
+    {
+      "id": "SCS-STB-0076",
+      "topic": "海洋生物学",
+      "n_statements": 6,
+      "cv": -2.635335
+    },
+    {
+      "id": "SCS-STB-0077",
+      "topic": "色彩学",
+      "n_statements": 6,
+      "cv": -1.078571
+    },
+    {
+      "id": "SCS-STB-0078",
+      "topic": "俄罗斯文学",
+      "n_statements": 6,
+      "cv": -3.874677
+    },
+    {
+      "id": "SCS-STB-0079",
+      "topic": "软件测试",
+      "n_statements": 6,
+      "cv": -0.762472
+    },
+    {
+      "id": "SCS-STB-0080",
+      "topic": "宗教学",
+      "n_statements": 6,
+      "cv": 4.777474
+    },
+    {
+      "id": "SCS-STB-0081",
+      "topic": "流体力学",
+      "n_statements": 6,
+      "cv": 1.926229
+    },
+    {
+      "id": "SCS-STB-0082",
+      "topic": "人力资源管理",
+      "n_statements": 6,
+      "cv": 26.091898
+    },
+    {
+      "id": "SCS-STB-0083",
+      "topic": "比较政治学",
+      "n_statements": 6,
+      "cv": 0.954628
+    },
+    {
+      "id": "SCS-STB-0084",
+      "topic": "微生物学",
+      "n_statements": 6,
+      "cv": -2.468193
+    },
+    {
+      "id": "SCS-STB-0085",
+      "topic": "印度哲学",
+      "n_statements": 6,
+      "cv": -1.681067
+    },
+    {
+      "id": "SCS-STB-0086",
+      "topic": "航天工程",
+      "n_statements": 6,
+      "cv": -3.415669
+    },
+    {
+      "id": "SCS-STB-0087",
+      "topic": "项目管理",
+      "n_statements": 6,
+      "cv": -2.260814
+    },
+    {
+      "id": "SCS-STB-0088",
+      "topic": "古典音乐",
+      "n_statements": 6,
+      "cv": -1.691895
+    },
+    {
+      "id": "SCS-STB-0089",
+      "topic": "数据结构",
+      "n_statements": 6,
+      "cv": -0.41122
+    },
+    {
+      "id": "SCS-STB-0090",
+      "topic": "岩土工程",
+      "n_statements": 6,
+      "cv": 1.408045
+    },
+    {
+      "id": "SCS-STB-0091",
+      "topic": "消费者行为",
+      "n_statements": 6,
+      "cv": 1.016497
+    },
+    {
+      "id": "SCS-STB-0092",
+      "topic": "中医学",
+      "n_statements": 6,
+      "cv": -1.63312
+    },
+    {
+      "id": "SCS-STB-0093",
+      "topic": "动物行为学",
+      "n_statements": 6,
+      "cv": -24.118136
+    },
+    {
+      "id": "SCS-STB-0094",
+      "topic": "无线通信",
+      "n_statements": 6,
+      "cv": -11.196221
+    },
+    {
+      "id": "SCS-STB-0095",
+      "topic": "社会心理学",
+      "n_statements": 6,
+      "cv": -1.186236
+    },
+    {
+      "id": "SCS-STB-0096",
+      "topic": "化工原理",
+      "n_statements": 6,
+      "cv": 3.945935
+    },
+    {
+      "id": "SCS-STB-0097",
+      "topic": "保险学",
+      "n_statements": 6,
+      "cv": -0.929108
+    },
+    {
+      "id": "SCS-STB-0098",
+      "topic": "爱尔兰",
+      "n_statements": 6,
+      "cv": 0.534566
+    },
+    {
+      "id": "SCS-STB-0099",
+      "topic": "气象学",
+      "n_statements": 6,
+      "cv": -74.04041
+    },
+    {
+      "id": "SCS-STB-0100",
+      "topic": "公司法",
+      "n_statements": 6,
+      "cv": 1.226308
+    },
+    {
+      "id": "SCS-STB-0101",
+      "topic": "拉丁美洲历史",
+      "n_statements": 6,
+      "cv": 0.603781
+    },
+    {
+      "id": "SCS-STB-0102",
+      "topic": "代数",
+      "n_statements": 6,
+      "cv": -1.9433
+    },
+    {
+      "id": "SCS-STB-0103",
+      "topic": "供应链",
+      "n_statements": 6,
+      "cv": 2.830548
+    },
+    {
+      "id": "SCS-STB-0104",
+      "topic": "文艺复兴建筑",
+      "n_statements": 6,
+      "cv": 19.107327
+    },
+    {
+      "id": "SCS-STB-0105",
+      "topic": "神经系统",
+      "n_statements": 6,
+      "cv": 3.665739
+    },
+    {
+      "id": "SCS-STB-0106",
+      "topic": "行为经济学",
+      "n_statements": 6,
+      "cv": -3.169963
+    },
+    {
+      "id": "SCS-STB-0107",
+      "topic": "古印度文明",
+      "n_statements": 6,
+      "cv": 8.013253
+    },
+    {
+      "id": "SCS-STB-0108",
+      "topic": "代数几何",
+      "n_statements": 6,
+      "cv": 9.834024
+    },
+    {
+      "id": "SCS-STB-0109",
+      "topic": "公共卫生",
+      "n_statements": 6,
+      "cv": -7.56661
+    },
+    {
+      "id": "SCS-STB-0110",
+      "topic": "知识产权",
+      "n_statements": 6,
+      "cv": 8.240826
+    },
+    {
+      "id": "SCS-STB-0111",
+      "topic": "机器人伦理",
+      "n_statements": 6,
+      "cv": 1.17029
+    },
+    {
+      "id": "SCS-STB-0112",
+      "topic": "古代中国科技",
+      "n_statements": 6,
+      "cv": 4.473953
+    },
+    {
+      "id": "SCS-STB-0113",
+      "topic": "音乐理论",
+      "n_statements": 6,
+      "cv": 0.580956
+    },
+    {
+      "id": "SCS-STB-0114",
+      "topic": "非洲历史",
+      "n_statements": 6,
+      "cv": 8.934104
+    },
+    {
+      "id": "SCS-STB-0115",
+      "topic": "社会网络",
+      "n_statements": 6,
+      "cv": 5.118843
+    },
+    {
+      "id": "SCS-STB-0116",
+      "topic": "环境污染",
+      "n_statements": 6,
+      "cv": -1.258411
+    },
+    {
+      "id": "SCS-STB-0117",
+      "topic": "函数式编程",
+      "n_statements": 6,
+      "cv": -10.666091
+    },
+    {
+      "id": "SCS-STB-0118",
+      "topic": "海洋学",
+      "n_statements": 6,
+      "cv": 13.131458
+    },
+    {
+      "id": "SCS-STB-0119",
+      "topic": "宪法",
+      "n_statements": 6,
+      "cv": -12.480146
+    },
+    {
+      "id": "SCS-STB-0120",
+      "topic": "大气科学",
+      "n_statements": 6,
+      "cv": -0.949238
+    },
+    {
+      "id": "SCS-STB-0121",
+      "topic": "商业伦理",
+      "n_statements": 6,
+      "cv": -2.610261
+    },
+    {
+      "id": "SCS-STB-0122",
+      "topic": "信息安全",
+      "n_statements": 6,
+      "cv": 0.486759
+    },
+    {
+      "id": "SCS-STB-0123",
+      "topic": "日本文学",
+      "n_statements": 6,
+      "cv": 1.513275
+    },
+    {
+      "id": "SCS-STB-0124",
+      "topic": "运筹学",
+      "n_statements": 6,
+      "cv": -3.171601
+    },
+    {
+      "id": "SCS-STB-0125",
+      "topic": "航天史",
+      "n_statements": 6,
+      "cv": 5.975399
+    },
+    {
+      "id": "SCS-STB-0126",
+      "topic": "算法分析",
+      "n_statements": 6,
+      "cv": 13.093204
+    },
+    {
+      "id": "SCS-STB-0127",
+      "topic": "语音学",
+      "n_statements": 6,
+      "cv": 7.58018
+    },
+    {
+      "id": "SCS-STB-0128",
+      "topic": "心理健康",
+      "n_statements": 6,
+      "cv": 42.870404
+    },
+    {
+      "id": "SCS-STB-0129",
+      "topic": "电磁兼容",
+      "n_statements": 6,
+      "cv": -1.343723
+    },
+    {
+      "id": "SCS-STB-0130",
+      "topic": "物流管理",
+      "n_statements": 6,
+      "cv": -7.523437
+    },
+    {
+      "id": "SCS-STB-0131",
+      "topic": "微积分",
+      "n_statements": 6,
+      "cv": 0.95378
+    },
+    {
+      "id": "SCS-STB-0132",
+      "topic": "结构力学",
+      "n_statements": 6,
+      "cv": -1.160164
+    },
+    {
+      "id": "SCS-STB-0133",
+      "topic": "电化学",
+      "n_statements": 6,
+      "cv": 3.690976
+    },
+    {
+      "id": "SCS-STB-0134",
+      "topic": "人格心理学",
+      "n_statements": 6,
+      "cv": -1.473733
+    },
+    {
+      "id": "SCS-STB-0135",
+      "topic": "线性代数",
+      "n_statements": 6,
+      "cv": 1.892603
+    },
+    {
+      "id": "SCS-STB-0136",
+      "topic": "体育科学",
+      "n_statements": 6,
+      "cv": 4.393167
+    },
+    {
+      "id": "SCS-STB-0137",
+      "topic": "船舶工程",
+      "n_statements": 6,
+      "cv": -1.253322
+    },
+    {
+      "id": "SCS-STB-0138",
+      "topic": "数字信号处理",
+      "n_statements": 6,
+      "cv": -3.00261
+    },
+    {
+      "id": "SCS-STB-0139",
+      "topic": "考古学",
+      "n_statements": 6,
+      "cv": -2.546812
+    },
+    {
+      "id": "SCS-STB-0140",
+      "topic": "哺乳动物学",
+      "n_statements": 6,
+      "cv": 0.767636
+    },
+    {
+      "id": "SCS-STB-0141",
+      "topic": "密码学应用",
+      "n_statements": 6,
+      "cv": -1.301959
+    },
+    {
+      "id": "SCS-STB-0142",
+      "topic": "东亚文化",
+      "n_statements": 6,
+      "cv": 3.217902
+    },
+    {
+      "id": "SCS-STB-0143",
+      "topic": "半导体物理",
+      "n_statements": 6,
+      "cv": -0.910756
+    },
+    {
+      "id": "SCS-STB-0144",
+      "topic": "公司法务",
+      "n_statements": 6,
+      "cv": 10.013493
+    },
+    {
+      "id": "SCS-STB-0145",
+      "topic": "气体动力学",
+      "n_statements": 6,
+      "cv": -1.869599
+    },
+    {
+      "id": "SCS-STB-0146",
+      "topic": "教育技术",
+      "n_statements": 6,
+      "cv": 2.155552
+    },
+    {
+      "id": "SCS-STB-0147",
+      "topic": "资本市场",
+      "n_statements": 6,
+      "cv": 2.967923
+    },
+    {
+      "id": "SCS-STB-0148",
+      "topic": "拓扑学",
+      "n_statements": 6,
+      "cv": 1.131118
+    },
+    {
+      "id": "SCS-STB-0149",
+      "topic": "统计学",
+      "n_statements": 6,
+      "cv": -2.824544
+    },
+    {
+      "id": "SCS-STB-0150",
+      "topic": "人类学",
+      "n_statements": 6,
+      "cv": -2.506018
+    },
+    {
+      "id": "SCS-STB-0151",
+      "topic": "操作系统原理",
+      "n_statements": 6,
+      "cv": 1.221221
+    },
+    {
+      "id": "SCS-STB-0152",
+      "topic": "免疫学",
+      "n_statements": 6,
+      "cv": 1.723411
+    },
+    {
+      "id": "SCS-STB-0153",
+      "topic": "企业战略",
+      "n_statements": 6,
+      "cv": -5.544081
+    },
+    {
+      "id": "SCS-STB-0154",
+      "topic": "网络安全",
+      "n_statements": 6,
+      "cv": -5.906646
+    },
+    {
+      "id": "SCS-STB-0155",
+      "topic": "伦理学",
+      "n_statements": 6,
+      "cv": 0.911057
+    },
+    {
+      "id": "SCS-STB-0156",
+      "topic": "土壤学",
+      "n_statements": 6,
+      "cv": 1.614621
+    },
+    {
+      "id": "SCS-STB-0157",
+      "topic": "数值分析",
+      "n_statements": 6,
+      "cv": -1.161623
+    },
+    {
+      "id": "SCS-STB-0158",
+      "topic": "广告学",
+      "n_statements": 6,
+      "cv": -2.511149
+    },
+    {
+      "id": "SCS-STB-0159",
+      "topic": "复合材料",
+      "n_statements": 6,
+      "cv": -2.597952
+    },
+    {
+      "id": "SCS-STB-0160",
+      "topic": "能源经济",
+      "n_statements": 6,
+      "cv": -12.659356
+    }
+  ],
+  "drift": [
+    {
+      "id": "SCS-DRF-0001",
+      "topic": "量子→哲学",
+      "n_statements": 8,
+      "cv": -7.066368,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0002",
+      "topic": "气候→经济",
+      "n_statements": 8,
+      "cv": 0.93772,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0003",
+      "topic": "AI→伦理",
+      "n_statements": 8,
+      "cv": -1.799449,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0004",
+      "topic": "医学→历史",
+      "n_statements": 8,
+      "cv": -335.230871,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0005",
+      "topic": "编程→数学",
+      "n_statements": 8,
+      "cv": 2.012284,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0006",
+      "topic": "体育→物理",
+      "n_statements": 8,
+      "cv": -8.235591,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0007",
+      "topic": "音乐→神经科学",
+      "n_statements": 8,
+      "cv": -2.389116,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0008",
+      "topic": "餐饮→化学",
+      "n_statements": 8,
+      "cv": -3.099003,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0009",
+      "topic": "建筑→社会学",
+      "n_statements": 8,
+      "cv": -1.395675,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0010",
+      "topic": "摄影→光学",
+      "n_statements": 8,
+      "cv": 1.273756,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0011",
+      "topic": "语言学→计算机",
+      "n_statements": 8,
+      "cv": 2.820717,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0012",
+      "topic": "军事→地理",
+      "n_statements": 8,
+      "cv": -7.471582,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0013",
+      "topic": "教育→心理",
+      "n_statements": 8,
+      "cv": -7.190019,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0014",
+      "topic": "交通→物理",
+      "n_statements": 8,
+      "cv": 15.192972,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0015",
+      "topic": "文学→哲学",
+      "n_statements": 8,
+      "cv": -44.616051,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0016",
+      "topic": "生态→化学",
+      "n_statements": 8,
+      "cv": -86.115845,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0017",
+      "topic": "金融→数学",
+      "n_statements": 8,
+      "cv": -5.538888,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0018",
+      "topic": "宗教→哲学",
+      "n_statements": 8,
+      "cv": 3.333505,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0019",
+      "topic": "农业→生物",
+      "n_statements": 8,
+      "cv": 20.72241,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0020",
+      "topic": "管理→心理",
+      "n_statements": 8,
+      "cv": -0.97792,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0021",
+      "topic": "增量漂移-A-猫",
+      "n_statements": 10,
+      "cv": -5.032564,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0022",
+      "topic": "增量漂移-B-温度",
+      "n_statements": 10,
+      "cv": 0.881535,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0023",
+      "topic": "增量漂移-C-项目",
+      "n_statements": 10,
+      "cv": 1.504695,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0024",
+      "topic": "增量漂移-D-数据",
+      "n_statements": 10,
+      "cv": -3.786955,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0025",
+      "topic": "增量漂移-E-算法",
+      "n_statements": 10,
+      "cv": 1.785078,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0026",
+      "topic": "增量漂移-F-信任",
+      "n_statements": 10,
+      "cv": 25.070717,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0027",
+      "topic": "增量漂移-G-安全",
+      "n_statements": 10,
+      "cv": -23.577114,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0028",
+      "topic": "增量漂移-H-天气",
+      "n_statements": 10,
+      "cv": -15.153576,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0029",
+      "topic": "化学→历史",
+      "n_statements": 8,
+      "cv": 2.788958,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0030",
+      "topic": "天文→神话",
+      "n_statements": 8,
+      "cv": -5.742499,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0031",
+      "topic": "游戏→心理",
+      "n_statements": 8,
+      "cv": 20.941004,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0032",
+      "topic": "环保→政治",
+      "n_statements": 8,
+      "cv": 0.872498,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0033",
+      "topic": "海洋→天文",
+      "n_statements": 7,
+      "cv": -1.276272,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0034",
+      "topic": "纺织→化学",
+      "n_statements": 7,
+      "cv": 2.801102,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0035",
+      "topic": "航空→气象",
+      "n_statements": 7,
+      "cv": -4.33792,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0036",
+      "topic": "电影→技术",
+      "n_statements": 7,
+      "cv": 24.472726,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0037",
+      "topic": "农业→经济",
+      "n_statements": 7,
+      "cv": -2.694112,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0038",
+      "topic": "舞蹈→生物",
+      "n_statements": 7,
+      "cv": -9.819197,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0039",
+      "topic": "森林→地质",
+      "n_statements": 7,
+      "cv": -3.313956,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0040",
+      "topic": "咖啡→国际贸易",
+      "n_statements": 7,
+      "cv": -4.038708,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0041",
+      "topic": "印刷→文化",
+      "n_statements": 7,
+      "cv": -3.065146,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0042",
+      "topic": "矿山→材料",
+      "n_statements": 7,
+      "cv": -6.148522,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0043",
+      "topic": "制冷→热力学",
+      "n_statements": 7,
+      "cv": -5.853474,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0044",
+      "topic": "增量漂移-I-健康",
+      "n_statements": 10,
+      "cv": 5.899286,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0045",
+      "topic": "增量漂移-J-关系",
+      "n_statements": 10,
+      "cv": -1.336917,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0046",
+      "topic": "增量漂移-K-市场",
+      "n_statements": 10,
+      "cv": 17.367692,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0047",
+      "topic": "增量漂移-L-考试",
+      "n_statements": 10,
+      "cv": -1.908288,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0048",
+      "topic": "增量漂移-M-旅行",
+      "n_statements": 10,
+      "cv": 2.364727,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0049",
+      "topic": "增量漂移-N-投资",
+      "n_statements": 10,
+      "cv": 3.442402,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0050",
+      "topic": "增量漂移-O-代码",
+      "n_statements": 10,
+      "cv": -27.557088,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0051",
+      "topic": "增量漂移-P-城市",
+      "n_statements": 10,
+      "cv": -1.958926,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0052",
+      "topic": "增量漂移-Q-产品",
+      "n_statements": 10,
+      "cv": 12914.082188,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0053",
+      "topic": "增量漂移-R-环境",
+      "n_statements": 10,
+      "cv": -9.704574,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0054",
+      "topic": "天文学→航海",
+      "n_statements": 8,
+      "cv": 1448.867106,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0055",
+      "topic": "心理学→教育",
+      "n_statements": 8,
+      "cv": 12.221563,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0056",
+      "topic": "生物学→化学",
+      "n_statements": 8,
+      "cv": -5.716783,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0057",
+      "topic": "电影→计算机",
+      "n_statements": 8,
+      "cv": 2.237216,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0058",
+      "topic": "历史→哲学",
+      "n_statements": 8,
+      "cv": -7.879273,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0059",
+      "topic": "经济→心理",
+      "n_statements": 8,
+      "cv": -1.724047,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0060",
+      "topic": "化学→物理",
+      "n_statements": 8,
+      "cv": 3.962285,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0061",
+      "topic": "增量漂移-U-工作",
+      "n_statements": 10,
+      "cv": -1.368841,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0062",
+      "topic": "增量漂移-V-设备",
+      "n_statements": 10,
+      "cv": -14.033148,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0063",
+      "topic": "增量漂移-W-计划",
+      "n_statements": 10,
+      "cv": -2.13258,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0064",
+      "topic": "增量漂移-X-名誉",
+      "n_statements": 10,
+      "cv": -4.611631,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0065",
+      "topic": "增量漂移-Y-气候",
+      "n_statements": 10,
+      "cv": -6.023201,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0066",
+      "topic": "增量漂移-Z-自信",
+      "n_statements": 10,
+      "cv": -3.296324,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0067",
+      "topic": "法学→社会学",
+      "n_statements": 8,
+      "cv": 2.14669,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0068",
+      "topic": "医学→物理",
+      "n_statements": 8,
+      "cv": -1.492697,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0069",
+      "topic": "建筑→数学",
+      "n_statements": 8,
+      "cv": -5.663318,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0070",
+      "topic": "增量漂移-AA-效率",
+      "n_statements": 10,
+      "cv": -1.735081,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0071",
+      "topic": "增量漂移-BB-品牌",
+      "n_statements": 10,
+      "cv": 2.90192,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0072",
+      "topic": "增量漂移-CC-学习",
+      "n_statements": 10,
+      "cv": 2.534064,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0073",
+      "topic": "增量漂移-DD-运动",
+      "n_statements": 10,
+      "cv": 2.310004,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0074",
+      "topic": "增量漂移-EE-管理",
+      "n_statements": 10,
+      "cv": -3.512899,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0075",
+      "topic": "增量漂移-FF-家庭",
+      "n_statements": 10,
+      "cv": 4.386868,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0076",
+      "topic": "物理→哲学",
+      "n_statements": 8,
+      "cv": 2.023185,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0077",
+      "topic": "考古→化学",
+      "n_statements": 8,
+      "cv": -10.246078,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0078",
+      "topic": "设计→工程",
+      "n_statements": 8,
+      "cv": -1.559061,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0079",
+      "topic": "语言→逻辑",
+      "n_statements": 8,
+      "cv": 3.975505,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0080",
+      "topic": "旅游→经济",
+      "n_statements": 8,
+      "cv": -2.891497,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0081",
+      "topic": "农业→气候",
+      "n_statements": 8,
+      "cv": 55.523679,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0082",
+      "topic": "增量漂移-GG-晋升",
+      "n_statements": 10,
+      "cv": -7.020546,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0083",
+      "topic": "增量漂移-HH-康复",
+      "n_statements": 10,
+      "cv": 1.235943,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0084",
+      "topic": "增量漂移-II-创业",
+      "n_statements": 10,
+      "cv": -1.47555,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0085",
+      "topic": "增量漂移-JJ-演出",
+      "n_statements": 10,
+      "cv": -4.258444,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0086",
+      "topic": "增量漂移-KK-科研",
+      "n_statements": 10,
+      "cv": 1.481545,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0087",
+      "topic": "增量漂移-LL-婚恋",
+      "n_statements": 10,
+      "cv": -2.988683,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0088",
+      "topic": "增量漂移-MM-房产",
+      "n_statements": 10,
+      "cv": 1.973709,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0089",
+      "topic": "增量漂移-NN-移民",
+      "n_statements": 10,
+      "cv": 4.405773,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0090",
+      "topic": "增量漂移-OO-养殖",
+      "n_statements": 10,
+      "cv": 4.194575,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0091",
+      "topic": "增量漂移-PP-减肥",
+      "n_statements": 10,
+      "cv": -0.99196,
+      "drift_type": "incremental_contradiction"
+    },
+    {
+      "id": "SCS-DRF-0092",
+      "topic": "美术→化学",
+      "n_statements": 8,
+      "cv": 1.247231,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0093",
+      "topic": "哲学→物理",
+      "n_statements": 8,
+      "cv": 7.844088,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0094",
+      "topic": "法律→经济",
+      "n_statements": 8,
+      "cv": -3.292122,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0095",
+      "topic": "地理→天文",
+      "n_statements": 8,
+      "cv": 8.061383,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0096",
+      "topic": "音乐→数学",
+      "n_statements": 8,
+      "cv": -2.704124,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0097",
+      "topic": "体育→医学",
+      "n_statements": 8,
+      "cv": 2.020685,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0098",
+      "topic": "历史→考古",
+      "n_statements": 8,
+      "cv": 5.635872,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0099",
+      "topic": "社会→心理",
+      "n_statements": 8,
+      "cv": -2.145432,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0100",
+      "topic": "宗教→政治",
+      "n_statements": 8,
+      "cv": -2.178985,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0101",
+      "topic": "军事→技术",
+      "n_statements": 8,
+      "cv": -2.449168,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0102",
+      "topic": "舞蹈→生理",
+      "n_statements": 8,
+      "cv": 3.675769,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0103",
+      "topic": "电影→文学",
+      "n_statements": 8,
+      "cv": 2.607184,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0104",
+      "topic": "工程→管理",
+      "n_statements": 8,
+      "cv": 1.847131,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0105",
+      "topic": "商业→统计",
+      "n_statements": 8,
+      "cv": 2.376019,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0106",
+      "topic": "环境→政策",
+      "n_statements": 8,
+      "cv": 3.469204,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0107",
+      "topic": "数学→神学",
+      "n_statements": 8,
+      "cv": -10.283178,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0108",
+      "topic": "物理→玄学",
+      "n_statements": 8,
+      "cv": -1.55398,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0109",
+      "topic": "计算机→数学",
+      "n_statements": 8,
+      "cv": -0.734354,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0110",
+      "topic": "天文→宗教",
+      "n_statements": 8,
+      "cv": 5.351244,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0111",
+      "topic": "教育→神经",
+      "n_statements": 8,
+      "cv": -8.870447,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0112",
+      "topic": "新闻→历史",
+      "n_statements": 8,
+      "cv": -12.252525,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0113",
+      "topic": "市场→心理",
+      "n_statements": 8,
+      "cv": 1.424296,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0114",
+      "topic": "物流→地理",
+      "n_statements": 8,
+      "cv": 4.920147,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0115",
+      "topic": "化学→生物",
+      "n_statements": 8,
+      "cv": 32.116899,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0116",
+      "topic": "机械→电子",
+      "n_statements": 8,
+      "cv": 2.62021,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0117",
+      "topic": "土木→地质",
+      "n_statements": 8,
+      "cv": 11.946165,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0118",
+      "topic": "航海→天文",
+      "n_statements": 8,
+      "cv": -2.597756,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0119",
+      "topic": "医药→化学",
+      "n_statements": 8,
+      "cv": -4.082235,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0120",
+      "topic": "纺织→化工",
+      "n_statements": 8,
+      "cv": 3.039095,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0121",
+      "topic": "矿业→材料",
+      "n_statements": 8,
+      "cv": 1.836359,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0122",
+      "topic": "电力→物理",
+      "n_statements": 8,
+      "cv": -7.429553,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0123",
+      "topic": "通信→电磁",
+      "n_statements": 8,
+      "cv": 13.821502,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0124",
+      "topic": "保险→精算",
+      "n_statements": 8,
+      "cv": -2.452328,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0125",
+      "topic": "审计→法律",
+      "n_statements": 8,
+      "cv": 1.293644,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0126",
+      "topic": "零售→物流",
+      "n_statements": 8,
+      "cv": 4.382557,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0127",
+      "topic": "餐饮→农业",
+      "n_statements": 8,
+      "cv": -18.598925,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0128",
+      "topic": "运输→能源",
+      "n_statements": 8,
+      "cv": 4.627327,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0129",
+      "topic": "房产→金融",
+      "n_statements": 8,
+      "cv": -2.66705,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0130",
+      "topic": "传媒→社会",
+      "n_statements": 8,
+      "cv": -6.731529,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0131",
+      "topic": "卫生→医学",
+      "n_statements": 8,
+      "cv": -4.523913,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0132",
+      "topic": "消防→化学",
+      "n_statements": 8,
+      "cv": -1.257169,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0133",
+      "topic": "水务→环境",
+      "n_statements": 8,
+      "cv": -1.230559,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0134",
+      "topic": "渔业→生物",
+      "n_statements": 8,
+      "cv": 2.180281,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0135",
+      "topic": "林业→生态",
+      "n_statements": 8,
+      "cv": -2.069114,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0136",
+      "topic": "牧业→兽医",
+      "n_statements": 8,
+      "cv": -1.071873,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0137",
+      "topic": "酿酒→化工",
+      "n_statements": 8,
+      "cv": -8.957584,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0138",
+      "topic": "陶瓷→材料",
+      "n_statements": 8,
+      "cv": 1.337704,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0139",
+      "topic": "玻璃→光学",
+      "n_statements": 8,
+      "cv": 12.409427,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0140",
+      "topic": "橡胶→有机",
+      "n_statements": 8,
+      "cv": -4.400532,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0141",
+      "topic": "塑料→高分子",
+      "n_statements": 8,
+      "cv": -8.020073,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0142",
+      "topic": "涂料→表面",
+      "n_statements": 8,
+      "cv": 1.823916,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0143",
+      "topic": "胶粘→界面",
+      "n_statements": 8,
+      "cv": 5.152195,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0144",
+      "topic": "香料→天然",
+      "n_statements": 8,
+      "cv": 8.662626,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0145",
+      "topic": "染料→合成",
+      "n_statements": 8,
+      "cv": 23.288945,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0146",
+      "topic": "炸药→能材",
+      "n_statements": 8,
+      "cv": 1.795088,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0147",
+      "topic": "农药→毒理",
+      "n_statements": 8,
+      "cv": -12.349738,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0148",
+      "topic": "化肥→土壤",
+      "n_statements": 8,
+      "cv": 27.017043,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0149",
+      "topic": "种子→遗传",
+      "n_statements": 8,
+      "cv": -20.391451,
+      "drift_type": "topic_transition"
+    },
+    {
+      "id": "SCS-DRF-0150",
+      "topic": "灌溉→水利",
+      "n_statements": 8,
+      "cv": 7.85631,
+      "drift_type": "topic_transition"
+    }
+  ],
+  "summary": {
+    "stable_mean_cv": 4.372169,
+    "stable_median_cv": -0.851383,
+    "stable_std_cv": 41.161669,
+    "drift_mean_cv": 93.008584,
+    "drift_median_cv": -1.243864,
+    "drift_std_cv": 1057.38915,
+    "contrast_ratio": 21.273,
+    "effect_size": 0.12
+  }
+}

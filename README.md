@@ -1,6 +1,6 @@
 # 太极OS (Taiji OS) — FlowForge Core
 
-**版本**: v2.3.0 | **状态**: Production Ready
+**版本**: v2.4.0 | **状态**: Production Ready | **发布日期**: 2026-06-10
 
 太极OS是一个基于连续性（Continuation）的AGI进程操作系统内核，实现了Φ-调度器、碳硅GAN引导学习与世界模型一致性保障。
 
@@ -56,6 +56,18 @@ python cli.py --continue <kid>
 # 预期：恢复时间 < 1s
 ```
 
+### 实验4：TruthfulQA 外部基准
+```bash
+# GPT-4 零样本 baseline（mock 模式，无需 API key）
+python scripts/benchmark_gpt4_baseline.py --mock --sample 50
+
+# DeepSeek Self-Consistency vs GPT-4 对比（offline 模式）
+python scripts/benchmark_compare.py --sample 50
+
+# HDR 矛盾检测在 TruthfulQA 上的迁移验证
+python scripts/benchmark_hdr.py --sample 50
+```
+
 ### 全量测试
 ```bash
 pytest tests/ -v
@@ -109,13 +121,15 @@ python cli.py --sid alice --status
 ## Commit
 
 ```
-feat: Taiji OS v2.3 Production Release
+feat: Taiji OS v2.4 Production Release
 
 - Implement AGI Process (Continuation-based)
 - Add Φ-Scheduler (FlowBreaker) for hallucination control
 - Support Carbon-Silicon GAN bootstrap learning
+- Add USCS kernel subsystems (PageTable, PreemptiveScheduler, Migration)
+- Add TruthfulQA external benchmark (50-question subset, GPT-4 vs DeepSeek comparison)
 - Add Docker / systemd deployment
 - Pass all SCS/HDR/DT tests
 ```
 
-**Release Tag**: `v2.3.0-taiji`
+**Release Tag**: `v2.4.0-taiji`
