@@ -20,5 +20,55 @@ embedding:
 
 taiji:
   phi_threshold: 0.65
+  phi_mode: static            # "static" | "adaptive"
+  phi_adaptive_window: 50     # adaptive 模式滑动窗口大小
+  phi_alpha: 0.5              # CV 敏感度系数
+  phi_min: 0.45               # adaptive 下限
+  phi_max: 0.85               # adaptive 上限
   max_retry: 3
   snapshot_dir: snapshots
+
+# D-Core 语义矛盾检测配置
+dcore:
+  provider: deepseek          # "deepseek" | "keyword"
+  base_url: https://api.deepseek.com/v1
+  api_key: ${DEEPSEEK_API_KEY}
+  model: deepseek-chat
+
+# 浏览器云脑配置（web 模式）
+browser:
+  mode: text          # "text" | "web"
+  headless: true      # web 模式下浏览器是否无头启动
+  default_engine: baidu   # 默认搜索引擎: baidu | google | bing
+  timeout_ms: 30000   # 页面加载超时（毫秒）
+
+# Walrus Memory 风格共享记忆层
+memory:
+  hub_dir: shared_memory          # MemoryHub 目录
+  auto_register: true             # session 创建时自动注册到 hub
+  proof_chain: true               # 启用 SHA-256 proof 链
+  cross_session_search: true      # 启用跨会话记忆搜索
+
+# MCP 原生支持
+mcp:
+  enabled: true                   # 启用 MCP Bridge
+  transport: stdio                # stdio | http (未来)
+  tools: [taiji.run, taiji.status, taiji.resume, taiji.memory_search, taiji.verify, taiji.list_sessions]
+
+# USCS 内核 — 统一会话计算子系统
+uscs:
+  total_physical_pages: 1048576   # 总物理页数（4096 × 1M = 4 GB）
+  page_size: 4096                 # 页大小（字节）
+  reclaim_policy: lru             # 回收策略：lru | fifo | random
+  swap_dir: swap                  # 交换目录
+
+# 抢占调度器
+scheduler:
+  tick_interval_ms: 100           # 时钟中断间隔（毫秒）
+  default_time_slice: 10          # 默认时间片（时钟滴答数）
+  max_waiting_timeout_ms: 30000   # 等待超时（毫秒）
+
+# 跨节点迁移
+migration:
+  node_id: node-001               # 当前节点 ID
+  # transport 端口由 hal/nic_emu 管理

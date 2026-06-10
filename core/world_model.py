@@ -1,8 +1,11 @@
 import os
 import hashlib
+import logging
 import numpy as np
 import openai
 import yaml
+
+logger = logging.getLogger("taiji.world_model")
 
 
 class WorldModel:
@@ -39,6 +42,10 @@ class WorldModel:
             self._client = None
             self._online = False
 
+        # 错误限频：同类型错误最多警告 N 次
+        self._api_error_counts: dict = {}
+        self._max_error_warnings: int = 3
+
     @staticmethod
     def _load_config(path: str) -> dict:
         if os.path.exists(path):
@@ -68,8 +75,16 @@ class WorldModel:
             if vec.shape[0] != self.dim:
                 vec = self._project(vec, self.dim)
             return vec
-        except Exception:
-            # API 调用失败，静默回退
+        except Exception as e:
+            # API 调用失败，限频警告后静默回退
+            err_type = type(e).__name__
+            count = self._api_error_counts.get(err_type, 0)
+            if count < self._max_error_warnings:
+                logger.warning(
+                    f"WorldModel API encode failed ({err_type}): {e}, "
+                    f"回退到哈希嵌入 (warning {count + 1}/{self._max_error_warnings})"
+                )
+                self._api_error_counts[err_type] = count + 1
             return self._encode_hash(text)
 
     def _encode_hash(self, text: str) -> np.ndarray:

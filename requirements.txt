@@ -7,3 +7,9 @@ openai>=1.30.0
 pyyaml>=6.0
 pytest>=8.0
 httpx>=0.27.0
+
+# 浏览器云脑（可选，没有时自动降级为 Mock 模式）
+# playwright>=1.44.0
+# 安装 playwright 后还需执行: playwright install chromium
+
+# MCP Bridge — Walrus Memory 集成（纯 stdio，零额外依赖）
