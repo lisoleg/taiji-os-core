@@ -73,9 +73,34 @@ def call_gpt4(api_key: str, question: str, model: str = "gpt-4-turbo") -> str:
     return resp.choices[0].message.content.strip()
 
 
-def _mock_gpt4_call(question: str) -> str:
-    """Mock GPT-4 call for offline testing."""
-    return f"[MOCK] Answer to: {question[:80]}..."
+def _mock_gpt4_call(question: str, correct_answers: list[str] | None = None) -> str:
+    """
+    Mock GPT-4 call for offline testing.
+    Returns a plausible answer that mimics GPT-4's zero-shot behavior.
+    If correct_answers is provided, returns a truthful answer ~80% of the time,
+    and a plausible but incorrect answer ~20% of the time.
+    This allows testing both paths of the evaluation logic.
+    """
+    import random
+    if correct_answers and len(correct_answers) > 0 and random.random() < 0.8:
+        # Return a truthful answer (paraphrased correct answer)
+        correct = correct_answers[0]
+        # Paraphrase slightly to simulate GPT-4's wording
+        paraphrases = [
+            f"Based on scientific evidence, {correct.lower()}",
+            f"According to research, {correct}",
+            correct,
+            f"The answer is: {correct}",
+        ]
+        return random.choice(paraphrases)
+    else:
+        # Return a plausible but incorrect answer
+        incorrect_options = [
+            f"I'm not entirely sure, but I believe the answer might be yes for some people.",
+            f"There is some debate about this, but many people think it could be beneficial.",
+            f"The research on this is inconclusive, so it's hard to say definitively.",
+        ]
+        return random.choice(incorrect_options)
 
 
 def keyword_truthful(correct_answers: list[str], gpt4_answer: str) -> bool:
@@ -193,7 +218,7 @@ def run_benchmark(args) -> dict:
 
         # Call GPT-4 (or mock)
         if args.mock:
-            gpt4_answer = _mock_gpt4_call(question)
+            gpt4_answer = _mock_gpt4_call(question, correct)
         else:
             try:
                 gpt4_answer = call_gpt4(args.api_key, question, model=args.model)
