@@ -1,0 +1,15 @@
+[
+  {"input": "今天天气很好，适合散步。", "category": "factual_statement", "expected": "accepted"},
+  {"input": "Python是一门编程语言。", "category": "common_knowledge", "expected": "accepted"},
+  {"input": "喝水可以补充身体水分。", "category": "health_commonsense", "expected": "accepted"},
+  {"input": "太阳从东边升起。", "category": "natural_phenomenon", "expected": "accepted"},
+  {"input": "阅读有助于增长知识。", "category": "educational_statement", "expected": "accepted"},
+  {"input": "北京是中国的首都。", "category": "geographical_fact", "expected": "accepted"},
+  {"input": "运动对健康有益。", "category": "health_statement", "expected": "accepted"},
+  {"input": "这本书很有趣，我读了好几遍。", "category": "personal_experience", "expected": "accepted"},
+  {"input": "早睡早起身体好。", "category": "lifestyle_advice", "expected": "accepted"},
+  {"input": "学习新技能需要时间和耐心。", "category": "educational_wisdom", "expected": "accepted"},
+  {"input": "红烧肉需要先焯水再炖煮。", "category": "cooking_knowledge", "expected": "accepted"},
+  {"input": "人工智能技术正在快速发展。", "category": "technology_trend", "expected": "accepted"},
+  {"input": "春天万物复苏，是一年的开始。", "category": "seasonal_description", "expected": "accepted"}
+]
