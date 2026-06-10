@@ -1,11 +1,11 @@
 # 太极OS (Taiji OS) — FlowForge Core
 
-![Version](https://img.shields.io/badge/version-v4.0.0-blue)
+![Version](https://img.shields.io/badge/version-v4.1.0-blue)
 ![Tests](https://img.shields.io/badge/tests-65%20passed-green)
 ![License](https://img.shields.io/badge/license-MIT-orange)
 ![Python](https://img.shields.io/badge/python-3.10+-blueviolet)
 
-**太极OS**是一个基于**连续性（Continuation）**的AGI进程操作系统内核，集成了**Walrus Memory共享记忆**、**MCP原生桥接**、**硅基代理治理（三旋治理 + 五层次穿透架构）**的完整AGI系统。
+**太极OS**是一个基于**连续性（Continuation）**的AGI Agent运行时（AGI Agent Runtime），集成了**Walrus Memory共享记忆**、**MCP原生桥接**、**硅基代理治理（三旋治理 + 五层次穿透架构）**。
 
 ---
 
@@ -14,8 +14,8 @@
 | 特性 | 说明 | 状态 |
 |------|------|------|
 | **Continuation v2** | AGI进程可序列化快照，含SHA-256 proof链 + parent_kid记忆图谱 | ✅ 生产就绪 |
-| **Φ-Scheduler** | 余弦相似度阈值门控（默认0.65），低于阈值触发Continuation | ✅ 生产就绪 |
-| **CarbonSiliconGAN** | G-Core(LLM生成) + D-Core(矛盾检测)双核推演 | ✅ 生产就绪 |
+| **Φ语义连贯性门控** | 余弦相似度门控（static 0.65 / adaptive 滑动窗口），低于阈值触发Continuation | ✅ 生产就绪 |
+| **自洽性推演循环** | G-Core(LLM生成) + D-Core(语义矛盾检测 + 关键词回退)双核推演 | ✅ 生产就绪 |
 | **Walrus Memory** | 跨会话共享记忆空间，proof链完整性验证，MCP原生支持 | ✅ 生产就绪 |
 | **MCP Bridge** | stdio JSON-RPC协议，6个工具暴露，对接Claude Desktop等 | ✅ 生产就绪 |
 | **浏览器云脑** | Playwright自动化，WebWorldModel向量化，8种浏览器动作 | ✅ 生产就绪 |
@@ -31,7 +31,7 @@
 ## 🏗️ 架构全景
 
 ```
-太极OS v4 架构:
+太极OS v4.1 架构:
 ┌─────────────────────────────────────────┐
 │ L1 流贯 (Ftel)      意图捕获 + φ 度量   │
 │ L2 代数壳 (M175)    AIC 锚定 + 归责校验  │
@@ -43,7 +43,7 @@
 │ MCP Bridge           stdio JSON-RPC      │
 │ OPC Registry         责任节点 + AIC管理   │
 │ RatifyRitual         Plan→Consult→Ratify │
-│ CarbonSiliconGAN     G-Core + D-Core     │
+│ SelfConsistencyLoop  G-Core + D-Core     │
 │ WorldModel           DeepSeek Embedding  │
 │ BrowserExecutor      Playwright 云脑     │
 └─────────────────────────────────────────┘
@@ -247,7 +247,7 @@ taiji-os-core/
 │   ├── continuation.py      # Continuation v2 (proof链)
 │   ├── world_model.py      # WorldModel (DeepSeek Embedding)
 │   ├── web_world_model.py  # WebWorldModel (浏览器向量化)
-│   ├── carbon_silicon_gan.py  # CarbonSiliconGAN
+│   ├── self_consistency_loop.py # SelfConsistencyLoop (v4.1 前称 CarbonSiliconGAN)
 │   ├── closure_env.py      # ClosureEnv
 │   ├── self_model.py       # SelfModel
 │   ├── phi_scheduler.py    # Φ-Scheduler
@@ -324,7 +324,7 @@ taiji-os-core/
 **初始版本**：
 - Continuation机制（AGI进程可序列化快照）
 - Φ-Scheduler（幻觉控制）
-- CarbonSiliconGAN（引导学习）
+- SelfConsistencyLoop（自洽性推演循环，v4.1 前称 CarbonSiliconGAN）
 - Docker/systemd部署
 
 ---
