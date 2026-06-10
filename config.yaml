@@ -20,6 +20,11 @@ embedding:
 
 taiji:
   phi_threshold: 0.65
+  phi_mode: static             # static | adaptive
+  phi_adaptive_window: 20     # adaptive滑动窗口
+  phi_adaptive_alpha: 0.3     # adaptive灵敏度系数
+  phi_adaptive_min: 0.5       # adaptive阈值下限
+  phi_adaptive_max: 0.9       # adaptive阈值上限
   max_retry: 3
   snapshot_dir: snapshots
 
