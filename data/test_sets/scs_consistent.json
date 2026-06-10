@@ -1,0 +1,14 @@
+[
+  {"input": "深度学习是机器学习的一个子领域。", "category": "ai_overview", "expected": "stable"},
+  {"input": "神经网络通过反向传播算法来优化参数。", "category": "ai_method", "expected": "stable"},
+  {"input": "卷积神经网络在图像识别任务中表现优异。", "category": "ai_application", "expected": "stable"},
+  {"input": "循环神经网络适合处理序列数据。", "category": "ai_architecture", "expected": "stable"},
+  {"input": "Transformer架构引入了自注意力机制。", "category": "ai_innovation", "expected": "stable"},
+  {"input": "预训练语言模型通过大规模语料学习语言表示。", "category": "ai_pretraining", "expected": "stable"},
+  {"input": "微调是将预训练模型适配到特定任务的过程。", "category": "ai_finetuning", "expected": "stable"},
+  {"input": "注意力权重反映了输入序列各位置的重要性。", "category": "ai_mechanism", "expected": "stable"},
+  {"input": "损失函数衡量模型预测与真实标签之间的差距。", "category": "ai_training", "expected": "stable"},
+  {"input": "正则化技术可以防止模型过拟合训练数据。", "category": "ai_regularization", "expected": "stable"},
+  {"input": "批量归一化有助于加速深层网络的训练收敛。", "category": "ai_optimization", "expected": "stable"},
+  {"input": "迁移学习允许将一个领域的知识应用到另一个领域。", "category": "ai_transfer", "expected": "stable"}
+]
