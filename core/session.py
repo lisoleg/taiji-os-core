@@ -1,8 +1,12 @@
-"""core/session.py — TaijiSession v4: AGI 进程主控 + Walrus Memory + 硅基代理治理
+"""core/session.py — TaijiSession v4.1: AGI 进程主控 + Walrus Memory + 硅基代理治理 + 结构化输出
 
 三种工作模式：
   - "text"   : 原始文本推演（默认）
   - "web"    : 浏览器云脑（WebWorldModel + WebPlanner + PlaywrightExecutor）
+
+v4.1 新增:
+  - run_structured() : 返回 StepResult dataclass（替代裸 str）
+  - run()            : 保持返回 str，向后兼容（内部调用 run_structured）
 
 Walrus Memory 集成：
   - memory_hub       : MemoryHub 实例（可选），跨会话共享记忆
@@ -23,9 +27,11 @@ from typing import Optional
 
 from core.world_model import WorldModel
 from core.carbon_silicon_gan import CarbonSiliconGAN
+from core.self_consistency_loop import SelfConsistencyLoop
 from core.continuation import Continuation
 from core.closure_env import ClosureEnv
 from core.self_model import SelfModel
+from core.step_result import StepResult
 
 
 class TaijiSession:
@@ -131,32 +137,48 @@ class TaijiSession:
     # ------------------------------------------------------------------
 
     def run(self, user_input: str) -> str:
-        """执行一轮推演，返回输出或 Continuation ID。
+        """向后兼容的推演入口，返回 str。
 
         tri-spin 模式下自动穿越五层次贯穿架构：
           L1 流贯 → L2 代数壳 → L3 拓扑流贯(GCD) → L4 裁决 → L5 交付
+        """
+        return self.run_structured(user_input).to_legacy_str()
+
+    def run_structured(self, user_input: str) -> StepResult:
+        """结构化推演入口，返回 StepResult（v4.1 新增）。
+
+        推荐新代码使用此方法，可以获取 phi_value、proof 等
+        结构化元数据。旧代码继续使用 run() 获得 str 兼容输出。
         """
         self.env.push("user", user_input)
 
         # 三旋治理: 情治校验
         if self.tri_spin and not self.tri_spin.consensus_verify():
             if self.ritual and not self.ritual.verify_ratification():
-                return (
-                    "Governance BLOCKED: 确权仪式未完成\n"
-                    f"  状态: {self.ritual.status()['phase']}\n"
-                    "  请先完成 RatifyRitual (Plan → Consult → Ratify)"
+                return StepResult(
+                    output=(
+                        "Governance BLOCKED: 确权仪式未完成\n"
+                        f"  状态: {self.ritual.status()['phase']}\n"
+                        "  请先完成 RatifyRitual (Plan → Consult → Ratify)"
+                    ),
+                    accepted=False,
+                    phi_value=0.0,
+                    reason="确权仪式未完成",
+                    world_version=self.w.version,
+                    session_id=self.sid,
+                    mode="governed",
                 )
 
         # 五层次管道 (tri-spin 模式)
         if self.pipeline:
-            return self._run_governed(user_input)
+            return self._run_governed_structured(user_input)
 
         if self.mode == "web":
-            return self._run_web(user_input)
-        return self._run_text(user_input)
+            return self._run_web_structured(user_input)
+        return self._run_text_structured(user_input)
 
-    def _run_governed(self, user_input: str) -> str:
-        """三旋治理模式 — 五层次贯穿推演。"""
+    def _run_governed_structured(self, user_input: str) -> StepResult:
+        """三旋治理模式 — 五层次贯穿推演（返回 StepResult）。"""
         from core.five_layer_architecture import PipelineResult
 
         # L1-L5 贯穿
@@ -169,10 +191,20 @@ class TaijiSession:
 
         # 如果 L3 GCD 阻断，返回阻断信息
         if result.layers and result.layers[-1].status == "blocked":
-            return f"GCD BLOCKED: {result.final_output}"
+            return StepResult(
+                output=f"GCD BLOCKED: {result.final_output}",
+                accepted=False,
+                phi_value=0.0,
+                reason=f"GCD L3 blocked: {result.final_output}",
+                world_version=self.w.version,
+                session_id=self.sid,
+                mode="governed",
+            )
 
         # GAN 推演（L3 通过后进行）
         gan_result, reason = self.gan.step(self.env.to_dict(), user_input)
+        phi_val = self.gan.phi.get_threshold()  # 当前生效阈值
+
         if gan_result:
             # L4 裁决（模拟验收）
             if self.tri_spin:
@@ -180,20 +212,63 @@ class TaijiSession:
                     self.tri_spin.aic.owner_did if self.tri_spin.aic else ""
                 )
             self.env.push("assistant", gan_result)
-            return f"{gan_result}\n\n[Governance]\n{result.summary()}"
+            return StepResult(
+                output=gan_result,
+                accepted=True,
+                phi_value=phi_val,
+                reason="Accepted",
+                world_version=self.w.version,
+                session_id=self.sid,
+                mode="governed",
+                extra=result.summary(),
+            )
         else:
-            return self._save_continuation(reason)
+            # 保存 Continuation 并返回 StepResult
+            kid, proof = self._persist_continuation(reason)
+            return StepResult(
+                output=f"Continuation Saved: {kid} | reason: {reason}",
+                accepted=False,
+                phi_value=phi_val,
+                reason=reason,
+                world_version=self.w.version,
+                session_id=self.sid,
+                continuation_kid=kid,
+                continuation_proof=proof,
+                mode="governed",
+            )
 
-    def _run_text(self, user_input: str) -> str:
-        """原始文本模式推演。"""
+    def _run_text_structured(self, user_input: str) -> StepResult:
+        """原始文本模式推演（返回 StepResult）。"""
         result, reason = self.gan.step(self.env.to_dict(), user_input)
+        phi_val = self.gan.phi.get_threshold()
+
         if result:
             self.env.push("assistant", result)
-            return result
-        return self._save_continuation(reason)
+            return StepResult(
+                output=result,
+                accepted=True,
+                phi_value=phi_val,
+                reason="Accepted",
+                world_version=self.w.version,
+                session_id=self.sid,
+                mode="text",
+            )
+        else:
+            kid, proof = self._persist_continuation(reason)
+            return StepResult(
+                output=f"Continuation Saved: {kid} | reason: {reason}",
+                accepted=False,
+                phi_value=phi_val,
+                reason=reason,
+                world_version=self.w.version,
+                session_id=self.sid,
+                continuation_kid=kid,
+                continuation_proof=proof,
+                mode="text",
+            )
 
-    def _run_web(self, user_input: str) -> str:
-        """浏览器云脑模式。"""
+    def _run_web_structured(self, user_input: str) -> StepResult:
+        """浏览器云脑模式（返回 StepResult）。"""
         steps = self._planner.plan(
             user_input,
             context=self.env.to_dict(),
@@ -209,26 +284,54 @@ class TaijiSession:
         candidate_text = respond_outputs[-1] if respond_outputs else str(exec_results)
 
         result, reason = self.gan.step(self.env.to_dict(), candidate_text)
+        phi_val = self.gan.phi.get_threshold()
 
         if result:
             self.env.push("assistant", result)
             summary = self._exec_summary(exec_results)
-            return f"{result}\n\n[执行摘要]\n{summary}"
+            return StepResult(
+                output=result,
+                accepted=True,
+                phi_value=phi_val,
+                reason="Accepted",
+                world_version=self.w.version,
+                session_id=self.sid,
+                mode="web",
+                extra=summary,
+            )
         else:
             env_dict = self.env.to_dict()
             if hasattr(self.w, "page_snapshot"):
                 env_dict["__page_snapshot__"] = self.w.page_snapshot()
-            return self._save_continuation(reason, extra_env=env_dict)
+            kid, proof = self._persist_continuation(reason, extra_env=env_dict)
+            return StepResult(
+                output=f"Continuation Saved: {kid} | reason: {reason}",
+                accepted=False,
+                phi_value=phi_val,
+                reason=reason,
+                world_version=self.w.version,
+                session_id=self.sid,
+                continuation_kid=kid,
+                continuation_proof=proof,
+                mode="web",
+            )
 
     # ------------------------------------------------------------------
-    # Continuation 保存（v2 + MemoryHub）
+    # Continuation 保存（v4.1: 返回 (kid, proof) 元组）
     # ------------------------------------------------------------------
 
     def _save_continuation(self, reason: str, extra_env: dict = None) -> str:
-        """
-        保存 Continuation v2，并同步到 MemoryHub。
+        """向后兼容的 Continuation 保存（返回格式化 str）。"""
+        kid, proof = self._persist_continuation(reason, extra_env)
+        return f"Continuation Saved: {kid} | reason: {reason} [proof: {proof[:12]}...]"
 
-        返回格式: "Continuation Saved: <kid> | reason: <reason> [proof: <hash>]"
+    def _persist_continuation(
+        self, reason: str, extra_env: dict = None
+    ) -> tuple:
+        """持久化 Continuation v2 到磁盘和 MemoryHub。
+
+        返回:
+            (kid: str, proof: str) — Continuation ID 和 SHA-256 证明
         """
         env_dict = extra_env if extra_env is not None else self.env.to_dict()
 
@@ -253,10 +356,7 @@ class TaijiSession:
                 "env_summary": str(env_dict)[:200],
             })
 
-        return (
-            f"Continuation Saved: {k.kid}"
-            f" | reason: {reason} [proof: {k.proof[:12]}...]"
-        )
+        return k.kid, k.proof
 
     @staticmethod
     def _exec_summary(results: list) -> str:
