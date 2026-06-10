@@ -1,0 +1,33 @@
+name: Weekly Benchmark
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # 每周日 UTC 00:00
+  workflow_dispatch:       # 允许手动触发
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install numpy openai pyyaml
+
+      - name: Run HDR Benchmark (offline)
+        run: python scripts/benchmark_hdr.py --output benchmark_results/
+
+      - name: Run SCS Benchmark (offline)
+        run: python scripts/benchmark_scs.py --output benchmark_results/
+
+      - name: Upload benchmark results
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-results
+          path: benchmark_results/
