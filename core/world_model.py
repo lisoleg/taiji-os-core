@@ -1,8 +1,11 @@
 import os
 import hashlib
+import logging
 import numpy as np
 import openai
 import yaml
+
+logger = logging.getLogger(__name__)
 
 
 class WorldModel:
@@ -38,6 +41,8 @@ class WorldModel:
             self.api_key = ""
             self._client = None
             self._online = False
+        # API 错误计数器（按错误类型限频，单 session 同类型最多 3 次 warning）
+        self._api_error_count: dict = {}
 
     @staticmethod
     def _load_config(path: str) -> dict:
@@ -68,8 +73,18 @@ class WorldModel:
             if vec.shape[0] != self.dim:
                 vec = self._project(vec, self.dim)
             return vec
-        except Exception:
-            # API 调用失败，静默回退
+        except Exception as e:
+            # API 调用失败，记录 warning（同类型错误不超过 3 次）
+            error_key = type(e).__name__
+            self._api_error_count[error_key] = (
+                self._api_error_count.get(error_key, 0) + 1
+            )
+            if self._api_error_count[error_key] <= 3:
+                logger.warning(
+                    "WorldModel API fallback: %s (%s), "
+                    "using hash embedding (occurrence #%d)",
+                    error_key, str(e)[:120], self._api_error_count[error_key]
+                )
             return self._encode_hash(text)
 
     def _encode_hash(self, text: str) -> np.ndarray:
