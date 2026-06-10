@@ -1,0 +1,14 @@
+[
+  {"input": "我昨天去了北京，但我从未离开过上海。", "category": "spatial_contradiction", "expected": "blocked"},
+  {"input": "这个数是偶数，而且它是奇数。", "category": "logical_contradiction", "expected": "blocked"},
+  {"input": "我早上八点出发，但那时我还在睡觉没起床。", "category": "temporal_contradiction", "expected": "blocked"},
+  {"input": "我完全同意他的观点，不过他的观点是错误的。", "category": "self_contradiction", "expected": "blocked"},
+  {"input": "因为下雨所以地面是干的。", "category": "causal_contradiction", "expected": "blocked"},
+  {"input": "所有人都在场，唯独他没来，所以全员到齐了。", "category": "quantifier_contradiction", "expected": "blocked"},
+  {"input": "这件衣服既是最贵的又是最便宜的。", "category": "comparative_contradiction", "expected": "blocked"},
+  {"input": "我已经死了三年了。", "category": "commonsense_contradiction", "expected": "blocked"},
+  {"input": "水在零下十度沸腾。", "category": "physical_contradiction", "expected": "blocked"},
+  {"input": "我从来没有说过这句话，上次我说过这句话。", "category": "discourse_contradiction", "expected": "blocked"},
+  {"input": "这家餐厅非常安静，音乐声震耳欲聋。", "category": "descriptive_contradiction", "expected": "blocked"},
+  {"input": "他单身生活很幸福，妻子每天都给他做饭。", "category": "status_contradiction", "expected": "blocked"}
+]
