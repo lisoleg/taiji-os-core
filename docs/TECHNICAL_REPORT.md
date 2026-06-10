@@ -20,20 +20,20 @@
 
 ## 1. 摘要
 
-太极OS (Taiji OS) 是一个基于**连续性（Continuation）**的AGI进程操作系统内核，实现了：
+太极OS (Taiji OS) 是一个基于**连续性（Continuation）**的AGI Agent运行时（AGI Agent Runtime），实现了：
 
 1. **Continuation v2**：AGI进程可序列化快照，含SHA-256 proof链 + parent_kid记忆图谱
-2. **Φ-Scheduler**：余弦相似度阈值门控，低于阈值触发Continuation
-3. **CarbonSiliconGAN**：G-Core(LLM生成) + D-Core(矛盾检测)双核推演
+2. **Φ语义连贯性门控**：余弦相似度门控（支持 static/adaptive 双模式），低于阈值触发Continuation
+3. **自洽性推演循环**：G-Core(LLM生成) + D-Core(语义矛盾检测 + 关键词回退)双核推演
 4. **Walrus Memory**：跨会话共享记忆空间，proof链完整性验证，MCP原生支持
 5. **MCP Bridge**：stdio JSON-RPC协议，6个工具暴露，对接Claude Desktop等
 6. **硅基代理治理**：三旋治理(情治/理治/法治) + 五层次穿透架构(L1-L5)
 
-**关键技术指标**：
-- 测试通过率：65/67 (96.9%)
-- 幻觉拦截率 (HDR)：92.4%
-- 世界一致性 (SCS)：余弦相似度 > 0.998
-- 迁移时间 (DT)：< 1s
+**工程交付状态（v4.1）**：
+- 测试通过率：65/67 (97.0%)，v4.1 新增 benchmark 标准化脚本
+- 幻觉拦截率 (HDR)：[待标准 benchmark 复现，见 scripts/benchmark_hdr.py]
+- 世界一致性 (SCS)：[待标准 benchmark 复现，见 scripts/benchmark_scs.py]
+- 迁移机制：设计讨论阶段（Continuation v2 已支持快照序列化，分布式迁移为计划功能）
 
 ---
 
