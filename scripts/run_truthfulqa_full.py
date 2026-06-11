@@ -31,7 +31,7 @@ from pathlib import Path
 API_KEY = os.environ.get("DEEPSEEK_API_KEY", "sk-d83e23fe6b05480c804117964f2a1080")
 DATA_DIR = Path("C:/Users/1/WorkBuddy/2026-05-28-task-12/taiji-os-core/data/test_sets")
 OUT_DIR  = Path("C:/Users/1/WorkBuddy/2026-05-28-task-12/taiji-os-core/results")
- logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s %(message)s")
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s %(message)s")
 logger = logging.getLogger("truthfulqa_full")
 
 
