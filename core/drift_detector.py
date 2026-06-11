@@ -9,12 +9,20 @@ Drift detection is the trigger for δ-mem S-update damping:
   - Drift detected → reduce D-Core S beta to 0.2× (dampen noisy ingest)
   - Drift subsides → restore full S learning rate
 
+v1.4 (2026-06-11): Adaptive decay — three-stage decay auto-tuning.
+  Decay factor γ is automatically adjusted based on the current SCL stage:
+    STABLE   γ=0.70  (slow forgetting, steady state)
+    DRIFTING  γ=0.35  (fast forgetting, quick adaptation)
+    RECOVERY  γ=0.55  (balanced, recover from drift)
+  Stage transitions are tracked internally; no external API changes needed
+  when adaptive=True.
+
 v1.3 (2026-06-11): Exponential decay weighting for CV computation.
   Recovery from drift is now faster because old low-Φ values decay
   exponentially, letting recent high-Φ values dominate the CV.
 
 Author: Taiji OS Team
-Version: v1.3 — exponential decay CV (2026-06-11)
+Version: v1.4 — adaptive decay auto-tuning (2026-06-11)
 """
 
 from __future__ import annotations
@@ -27,12 +35,17 @@ import numpy as np
 
 @dataclass
 class DriftDetector:
-    """Sliding-window ψ drift detector using Φ-value CV with exponential decay.
+    """Sliding-window ψ drift detector using Φ-value CV with decay weighting.
 
     Tracks a moving window of Φ (consistency) scores and computes the
-    weighted coefficient of variation (std/mean) with exponential decay
-    weighting. Recent Φ values receive higher weight, allowing faster
-    recovery from drift when Φ values return to normal.
+    weighted coefficient of variation (std/mean) with decay weighting.
+    Recent Φ values receive higher weight, allowing faster recovery
+    from drift when Φ values return to normal.
+
+    v1.4 (2026-06-11): Adaptive decay auto-tuning.
+        When adaptive=True, the decay factor is automatically adjusted
+        based on the current SCL stage — no manual tuning needed.
+        Stage transitions: STABLE ↔ DRIFTING → RECOVERY → STABLE.
 
     v1.3 (2026-06-11): Exponential decay weighting for CV computation.
         Old low-Φ values from a drift episode decay exponentially,
@@ -41,9 +54,11 @@ class DriftDetector:
     Attributes:
         window_size: Number of recent Φ values to track (default 20).
         cv_threshold: CV above which drift is flagged (default 0.30).
-        decay: Exponential decay factor for CV weighting (default 0.80).
-            Weight for sample i (0=oldest, n-1=newest) = decay^(n-1-i).
-            Lower values = faster forgetting of old samples.
+        decay: Base exponential decay factor (default 0.55).
+            When adaptive=False, this is the fixed decay used.
+            When adaptive=True, this serves as the RECOVERY-stage decay.
+        adaptive: Enable three-stage adaptive decay (default False).
+            STABLE=0.70, DRIFTING=0.35, RECOVERY=decay (0.55).
         min_samples_before_detect: Minimum samples before drift detection
             is allowed (default 5). Prevents false positives from
             early-stage CV instability.
@@ -57,7 +72,8 @@ class DriftDetector:
 
     window_size: int = 20
     cv_threshold: float = 0.30
-    decay: float = 0.55                     # exponential decay factor
+    decay: float = 0.55                     # base decay (RECOVERY when adaptive)
+    adaptive: bool = False                   # enable three-stage adaptive decay
     min_samples_before_detect: int = 5
     hysteresis_rounds: int = 2
     phi_history: np.ndarray = field(init=False)
@@ -65,9 +81,58 @@ class DriftDetector:
     count: int = 0
     _drifting_streak: int = 0          # consecutive above-threshold rounds
     _currently_drifting: bool = False   # confirmed drift state (latched)
+    _stage: str = "STABLE"             # STABLE | DRIFTING | RECOVERY
+    _was_drifting: bool = False        # tracks prior drift for RECOVERY detection
+    _recovery_streak: int = 0          # consecutive CV < 0.15 rounds in RECOVERY
 
     def __post_init__(self):
         self.phi_history = np.zeros(self.window_size, dtype=np.float64)
+
+    # ── Adaptive decay (v1.4) ──────────────────────────────────────────
+
+    def _get_decay(self) -> float:
+        """Return the effective decay factor.
+
+        In adaptive mode, decay depends on the current stage.
+        In fixed mode, returns the configured decay value.
+        """
+        if not self.adaptive:
+            return self.decay
+        if self._stage == "DRIFTING":
+            return 0.35
+        elif self._stage == "RECOVERY":
+            return self.decay  # use base decay (0.55)
+        else:  # STABLE
+            return 0.70
+
+    def _update_stage(self) -> None:
+        """Update the adaptive stage based on drift detection state.
+
+        Stage transitions:
+          STABLE → DRIFTING: when drift is confirmed (hysteresis satisfied)
+          DRIFTING → RECOVERY: when CV drops below threshold (immediate exit)
+          RECOVERY → STABLE: when CV < 0.15 for 2 consecutive rounds
+            (RECOVERY exit hysteresis prevents premature return)
+        """
+        if not self.adaptive:
+            return
+        if self._currently_drifting:
+            self._was_drifting = True
+            self._stage = "DRIFTING"
+            self._recovery_streak = 0
+        elif self._was_drifting:
+            self._stage = "RECOVERY"
+            if self.current_cv < 0.15:
+                self._recovery_streak += 1
+            else:
+                self._recovery_streak = 0
+            if self._recovery_streak >= 2:
+                self._was_drifting = False
+                self._stage = "STABLE"
+                self._recovery_streak = 0
+        else:
+            self._stage = "STABLE"
+            self._recovery_streak = 0
 
     # ── Push new observation ───────────────────────────────────────────
 
@@ -110,8 +175,9 @@ class DriftDetector:
             window = self.phi_history[indices]  # chronological: [oldest, ..., newest]
 
         # Build weights: [decay^(n-1), decay^(n-2), ..., decay^1, decay^0]
+        effective_decay = self._get_decay()
         exponents = np.arange(n - 1, -1, -1, dtype=np.float64)
-        raw_weights = np.power(self.decay, exponents)
+        raw_weights = np.power(effective_decay, exponents)
         weights = raw_weights / raw_weights.sum()
 
         weighted_mean = float(np.average(window, weights=weights))
@@ -166,6 +232,7 @@ class DriftDetector:
             self._drifting_streak = 0
             self._currently_drifting = False
 
+        self._update_stage()
         return self._currently_drifting
 
     # ── Statistics ─────────────────────────────────────────────────────
@@ -202,7 +269,9 @@ class DriftDetector:
             "cv_threshold": self.cv_threshold,
             "drifting_streak": self._drifting_streak,
             "min_samples_before_detect": self.min_samples_before_detect,
-            "decay": self.decay,
+            "decay": self._get_decay(),
+            "adaptive": self.adaptive,
+            "stage": self._stage,
         }
 
     # ── Reset ──────────────────────────────────────────────────────────
@@ -214,6 +283,9 @@ class DriftDetector:
         self.count = 0
         self._drifting_streak = 0
         self._currently_drifting = False
+        self._stage = "STABLE"
+        self._was_drifting = False
+        self._recovery_streak = 0
 
 
 # ────────────────────────────────────────────────────────────────────────────

@@ -1,6 +1,6 @@
 """core/self_consistency_loop.py — 自洽性推演循环
 
-v4.7.0: 指数衰减 CV → 漂移恢复加速 (DriftDetector v1.3)
+v4.8.0: 自适应三态衰减 CV → DriftDetector v1.4 (STABLE/DRIFT/RECOVERY)
 
 G-Core 由 LLM 生成候选，D-Core 做语义矛盾检测，
 经 PhiScheduler 门控过滤后更新世界模型。
@@ -9,7 +9,7 @@ G-Core 由 LLM 生成候选，D-Core 做语义矛盾检测，
   - 每次 LLM 调用前从 S 矩阵读取残差注入 prompt
   - G-Core S 更新始终允许（保留学习能力）
   - D-Core S 更新在 ψ 漂移时降低 β（保留学习但阻尼噪音）
-  - ψ 漂移检测：指数衰减 CV (decay=0.80) → 恢复加速
+  - ψ 漂移检测：自适应指数衰减 CV (STABLE=0.70/DRIFT=0.35/RECOVERY=0.55)
 
 D-Core 双模式：
   - "semantic" (默认): 调用 DeepSeek API 做零样本矛盾检测
@@ -89,10 +89,11 @@ class SelfConsistencyLoop:
         # ── δ-mem L1/L2 融合 (v4.2) ──
         self.delta_fusion = delta_fusion
 
-        # ── ψ 漂移检测器 (v4.2) ──
+        # ── ψ 漂移检测器 (v4.8: 自适应三态衰减) ──
         self.drift_detector = DriftDetector(
             window_size=20, cv_threshold=0.30,
             min_samples_before_detect=5, hysteresis_rounds=2,
+            adaptive=True,  # v4.8: 三态自适应 decay
         )
 
     # ------------------------------------------------------------------
