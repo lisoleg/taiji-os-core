@@ -16,6 +16,7 @@ v2 新增（Walrus Memory 概念映射）：
   - ts        : 时间戳
   - proof     : SHA-256 完整性证明（链式）
   - parent_kid: 父 Continuation ID（记忆图谱）
+  - delta_s   : δ-mem S 矩阵快照（v4.3.2 新增，可选）
 """
 
 import hashlib
@@ -46,6 +47,7 @@ class Continuation:
         reason: str,
         snapshot_dir: str = "snapshots",
         parent_kid: Optional[str] = None,
+        delta_s: Optional[dict] = None,
     ):
         self.kid = str(uuid.uuid4())[:8]
         self.sid = sid
@@ -55,6 +57,7 @@ class Continuation:
         self.ts = datetime.now(timezone.utc).isoformat()
         self.snapshot_dir = snapshot_dir
         self.parent_kid = parent_kid
+        self.delta_s = delta_s         # δ-mem S matrix snapshot (v4.3.2)
 
         # 计算 proof：SHA-256(prev_proof + data)
         prev_proof = ""
@@ -87,6 +90,7 @@ class Continuation:
             "ts": self.ts,
             "proof": self.proof,
             "parent_kid": self.parent_kid,
+            "delta_s": self.delta_s,
         }
         with open(path, "w", encoding="utf-8") as f:
             json.dump(payload, f, ensure_ascii=False, indent=2)
@@ -156,6 +160,7 @@ class Continuation:
         obj.snapshot_dir = snapshot_dir
         obj.proof = data.get("proof", "")
         obj.parent_kid = data.get("parent_kid")
+        obj.delta_s = data.get("delta_s")        # δ-mem S snapshot (v4.3.2)
         return obj
 
     @classmethod

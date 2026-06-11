@@ -14,6 +14,12 @@ Walrus Memory 集成：
   - search_memory()  : 代理到 MemoryHub.search()
   - verify_integrity(): 代理到 MemoryHub.verify_all()
 
+δ-mem L1/L2 融合集成（v4.3.2 新增）:
+  - delta_fusion     : DeltaFusion 实例（可选），L1 热缓存 + L2 冷存储桥接
+  - S 矩阵随 Continuation 序列化/反序列化
+  - Φ-Gate 控制 S flush 到 Episodic Memory
+  - resume 时 Re-anchor S 矩阵
+
 硅基代理治理集成（v4 新增）:
   - tri_spin         : TriSpinGovernor 三旋治理引擎
   - pipeline         : FiveLayerPipeline 五层次穿透架构
@@ -32,6 +38,7 @@ from core.continuation import Continuation
 from core.closure_env import ClosureEnv
 from core.self_model import SelfModel
 from core.step_result import StepResult
+from core.delta_fusion import DeltaFusion, create_fusion_from_config
 
 
 class TaijiSession:
@@ -65,6 +72,7 @@ class TaijiSession:
         agent_spec: str = "",
         owner_did: str = "",
         escrow_tokens: float = 0.0,
+        delta_fusion: "DeltaFusion" = None,
     ):
         self.sid = sid
         self.snapshot_dir = snapshot_dir
@@ -72,6 +80,7 @@ class TaijiSession:
         self.memory_hub = memory_hub
         self.governance_mode = governance
         self._last_kid: Optional[str] = None  # 用于记忆链
+        self.delta_fusion = delta_fusion       # δ-mem L1/L2 融合桥 (v4.3.2)
 
         # 三旋治理 初始化
         self.tri_spin = None
@@ -131,6 +140,12 @@ class TaijiSession:
         # 自动注册到 MemoryHub
         if self.memory_hub is not None:
             self.memory_hub.register(sid)
+
+        # δ-mem L1/L2 融合: 绑定 WorldModel 和 MemoryHub
+        if self.delta_fusion is not None:
+            self.delta_fusion.bind_world_model(self.w)
+            if self.memory_hub is not None:
+                self.delta_fusion.bind_memory_hub(self.memory_hub)
 
     # ------------------------------------------------------------------
     # 主执行入口
@@ -335,6 +350,11 @@ class TaijiSession:
         """
         env_dict = extra_env if extra_env is not None else self.env.to_dict()
 
+        # δ-mem S 状态随 Continuation 序列化
+        delta_s = None
+        if self.delta_fusion is not None:
+            delta_s = self.delta_fusion.serialize_s()
+
         k = Continuation(
             self.sid,
             self.w.psi.copy(),
@@ -342,6 +362,7 @@ class TaijiSession:
             reason,
             snapshot_dir=self.snapshot_dir,
             parent_kid=self._last_kid,
+            delta_s=delta_s,
         )
 
         self._last_kid = k.kid
@@ -374,7 +395,7 @@ class TaijiSession:
     # ------------------------------------------------------------------
 
     def resume(self, kid: str) -> "TaijiSession":
-        """从 Continuation 快照恢复会话状态。"""
+        """从 Continuation 快照恢复会话状态（含 δ-mem S 矩阵 Re-anchor）。"""
         k = Continuation.load(kid, snapshot_dir=self.snapshot_dir)
         self.w.psi = k.psi
         env_dict = k.env
@@ -382,6 +403,12 @@ class TaijiSession:
             self.w.restore_snapshot(env_dict.pop("__page_snapshot__"))
         self.env = ClosureEnv.from_dict(env_dict)
         self._last_kid = kid
+
+        # δ-mem S 矩阵恢复 + Re-anchor
+        if self.delta_fusion is not None and hasattr(k, "delta_s") and k.delta_s:
+            self.delta_fusion.deserialize_s(k.delta_s)
+            self.delta_fusion.re_anchor(k.psi)
+
         return self
 
     # ------------------------------------------------------------------
@@ -446,6 +473,19 @@ class TaijiSession:
             }
         if self.ritual:
             s["ratify_status"] = self.ritual.status()
+
+        # δ-mem L1/L2 融合状态 (v4.3.2)
+        if self.delta_fusion is not None:
+            s["delta_mem"] = {
+                "s_matrix_shape": list(self.delta_fusion.delta_layer.smatrix.S.shape),
+                "step": self.delta_fusion.delta_layer.smatrix.step,
+                "proof": self.delta_fusion.delta_layer.smatrix.proof,
+                "flushed_count": self.delta_fusion.delta_layer.flushed_count,
+                "total_updates": self.delta_fusion.delta_layer.total_updates,
+                "episodic_entries": len(self.delta_fusion.episodic_entries),
+                "flush_threshold": self.delta_fusion.flush_threshold,
+            }
+
         return s
 
     # ------------------------------------------------------------------

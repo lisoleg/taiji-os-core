@@ -41,6 +41,22 @@ memory:
   store_dir: memory_store    # 记忆文件存储目录
   auto_register: true        # 自动注册 session 到 MemoryHub
 
+# ==========================================================================
+# δ-mem L1/L2 融合 (Delta Memory Fusion) — v4.3.2 新增
+# ==========================================================================
+# δ-mem 是低秩在线联想记忆 (S ∈ R^(8×8))，作为 WorldModel 的 L1 热缓存；
+# 太极OS 的 ψ + Episodic Memory 作为 L2 冷存储；Φ-Gate 控制 S 归档时机。
+# 参考: Wu, Zhang, et al. "δ-mem" arXiv:2605.12357 (2026)
+# ==========================================================================
+delta_mem:
+  enabled: true                  # 启用 δ-mem L1/L2 融合
+  rank: 8                        # S 矩阵秩 (r=8, 64 floats)
+  lambda_decay: 0.95             # 时间衰减 λ: S_t = λ·S_{t-1} + β·(v-Sk)·k^T
+  beta_update: 0.1               # 更新强度 β
+  flush_enabled: true            # 启用 Φ-Gate 控制 flush 到 Episodic Memory
+  flush_threshold: 0.85          # Φ > 此值 → flush S 到 L2 冷存储
+  max_episodic_entries: 1000     # Episodic Memory 最大条目数
+
 # MCP Bridge — AI 生态桥接
 mcp:
   enabled: true
