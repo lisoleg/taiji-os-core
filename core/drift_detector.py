@@ -57,7 +57,7 @@ class DriftDetector:
 
     window_size: int = 20
     cv_threshold: float = 0.30
-    decay: float = 0.65                     # exponential decay factor
+    decay: float = 0.55                     # exponential decay factor
     min_samples_before_detect: int = 5
     hysteresis_rounds: int = 2
     phi_history: np.ndarray = field(init=False)
