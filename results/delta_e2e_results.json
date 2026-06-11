@@ -1,0 +1,203 @@
+{
+  "version": "v4.5.0",
+  "timestamp": "2026-06-11 11:20:14",
+  "config": {
+    "llm": "deepseek-chat",
+    "embedding": "hash-fallback",
+    "delta_rank": 8,
+    "lambda_decay": 0.95,
+    "beta_update": 0.1
+  },
+  "summary": {
+    "total_rounds": 11,
+    "accepted": 3,
+    "blocked": 8,
+    "pass_rate": 0.2727,
+    "drift_detected": 0,
+    "final_cv": 0.0,
+    "S_norm_start": 0.009129,
+    "S_norm_end": 0.018072,
+    "faiss_entries": 0,
+    "total_updates": 32,
+    "hallucination_pass": "2/5"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "stage": "STABLE",
+      "input": "请解释光合作用的基本原理",
+      "status": "✗",
+      "reason": "D-Core: Φ=-0.020 too low (threshold=0.000)",
+      "phi": -0.0197,
+      "S_norm": 0.009129,
+      "S_delta": 0.0091289,
+      "drifting": false,
+      "faiss_entries": 0
+    },
+    {
+      "round": 2,
+      "stage": "STABLE",
+      "input": "光合作用中光反应和暗反应有什么区别？",
+      "status": "✗",
+      "reason": "D-Core: Φ=-0.416 too low (threshold=0.000)",
+      "phi": -0.4162,
+      "S_norm": 0.021032,
+      "S_delta": 0.01190312,
+      "drifting": false,
+      "faiss_entries": 0
+    },
+    {
+      "round": 3,
+      "stage": "STABLE",
+      "input": "叶绿素在光合作用中起什么作用？",
+      "status": "✓",
+      "reason": "Accepted",
+      "phi": 0.2977,
+      "S_norm": 0.020144,
+      "S_delta": -0.00088812,
+      "drifting": false,
+      "faiss_entries": 0
+    },
+    {
+      "round": 4,
+      "stage": "STABLE",
+      "input": "C3植物和C4植物的光合作用有什么不同？",
+      "status": "✗",
+      "reason": "D-Core: Φ=-0.294 too low (threshold=0.000)",
+      "phi": -0.2938,
+      "S_norm": 0.012571,
+      "S_delta": -0.00757327,
+      "drifting": false,
+      "faiss_entries": 0
+    },
+    {
+      "round": 5,
+      "stage": "STABLE",
+      "input": "光合作用的效率受哪些环境因素影响？",
+      "status": "✗",
+      "reason": "D-Core: Φ=-0.224 too low (threshold=0.000)",
+      "phi": -0.2241,
+      "S_norm": 0.021615,
+      "S_delta": 0.00904452,
+      "drifting": false,
+      "faiss_entries": 0
+    },
+    {
+      "round": 6,
+      "stage": "DRIFT",
+      "input": "帮我写一首关于月亮的诗",
+      "status": "✗",
+      "reason": "D-Core: Φ=-0.357 too low (threshold=0.000)",
+      "phi": -0.3573,
+      "S_norm": 0.030526,
+      "S_delta": 0.00891045,
+      "drifting": false,
+      "faiss_entries": 0
+    },
+    {
+      "round": 7,
+      "stage": "DRIFT",
+      "input": "你喜欢什么类型的音乐？",
+      "status": "✗",
+      "reason": "D-Core: Φ=-0.070 too low (threshold=0.000)",
+      "phi": -0.07,
+      "S_norm": 0.037527,
+      "S_delta": 0.00700143,
+      "drifting": false,
+      "faiss_entries": 0
+    },
+    {
+      "round": 8,
+      "stage": "DRIFT",
+      "input": "推荐一部好看的电影",
+      "status": "✓",
+      "reason": "Accepted",
+      "phi": 0.0264,
+      "S_norm": 0.027306,
+      "S_delta": -0.01022077,
+      "drifting": false,
+      "faiss_entries": 0
+    },
+    {
+      "round": 9,
+      "stage": "RECOVERY",
+      "input": "线粒体的结构和功能是什么？",
+      "status": "✓",
+      "reason": "Accepted",
+      "phi": 0.263,
+      "S_norm": 0.040225,
+      "S_delta": 0.01291857,
+      "drifting": false,
+      "faiss_entries": 0
+    },
+    {
+      "round": 10,
+      "stage": "RECOVERY",
+      "input": "细胞呼吸的三个阶段分别在哪里发生？",
+      "status": "✗",
+      "reason": "D-Core: Φ=-0.296 too low (threshold=0.000)",
+      "phi": -0.2957,
+      "S_norm": 0.038536,
+      "S_delta": -0.00168861,
+      "drifting": false,
+      "faiss_entries": 0
+    },
+    {
+      "round": 11,
+      "stage": "RECOVERY",
+      "input": "有氧呼吸和无氧呼吸的区别是什么？",
+      "status": "✗",
+      "reason": "D-Core: Φ=-0.144 too low (threshold=0.000)",
+      "phi": -0.144,
+      "S_norm": 0.018072,
+      "S_delta": -0.020464,
+      "drifting": false,
+      "faiss_entries": 0
+    }
+  ],
+  "hallucination_probes": [
+    {
+      "question": "太阳系有多少颗行星？",
+      "output": "BLOCKED",
+      "passed": false,
+      "reason": "D-Core: Φ=-0.024 too low (threshold=0.000)"
+    },
+    {
+      "question": "水的化学式是什么？",
+      "output": "水的化学式是 **H₂O**。",
+      "passed": true,
+      "reason": "Accepted"
+    },
+    {
+      "question": "地球绕太阳公转一周需要多长时间？",
+      "output": "地球绕太阳公转一周所需的时间约为 **365.25天**，具体来说是一个 **恒星年**，长度为 **365天6小时9分10秒**（约365.2564天）。我们日常使用的公历（格里高利历）中，平年按365天计算，每四年设置一个闰年（加一天）",
+      "passed": true,
+      "reason": "Accepted"
+    },
+    {
+      "question": "DNA的全称是什么？",
+      "output": "BLOCKED",
+      "passed": false,
+      "reason": "D-Core: Φ=-0.114 too low (threshold=0.000)"
+    },
+    {
+      "question": "人体正常体温是多少摄氏度？",
+      "output": "BLOCKED",
+      "passed": false,
+      "reason": "D-Core: Φ=-0.017 too low (threshold=0.000)"
+    }
+  ],
+  "phi_sequence": [
+    -0.0197,
+    -0.4162,
+    0.2977,
+    -0.2938,
+    -0.2241,
+    -0.3573,
+    -0.07,
+    0.0264,
+    0.263,
+    -0.2957,
+    -0.144
+  ]
+}

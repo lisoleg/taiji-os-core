@@ -1,0 +1,152 @@
+{
+  "version": "v4.6.0",
+  "embedding": "MiniLM-semantic-384dim",
+  "timestamp": "2026-06-11 15:58:12",
+  "summary": {
+    "total_rounds": 6,
+    "accepted": 0,
+    "blocked": 6,
+    "pass_rate": 0.0,
+    "flux_enabled": 0,
+    "flux_rejected": 6,
+    "flux_rate_pct": 0.0,
+    "phi_mean": 0.0,
+    "phi_std": 0.0,
+    "phi_min": 0.0,
+    "phi_max": 0.0,
+    "drift_detected": 0,
+    "S_norm_start": 1.5e-05,
+    "S_norm_end": 4.6e-05,
+    "faiss_entries": 0,
+    "total_updates": 22,
+    "hallucination_pass": "0/5"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "stage": "STABLE",
+      "input": "请解释光合作用的基本原理",
+      "status": "✗",
+      "reason": "D-Core: Φ=0.000 too low (threshold=0.300)",
+      "phi": 0.0,
+      "S_norm": 1.5e-05,
+      "S_delta": 1.457e-05,
+      "drifting": false,
+      "faiss_entries": 0,
+      "flux_decision": "REJECT"
+    },
+    {
+      "round": 2,
+      "stage": "STABLE",
+      "input": "光合作用中光反应和暗反应有什么区别？",
+      "status": "✗",
+      "reason": "D-Core: Φ=0.000 too low (threshold=0.300)",
+      "phi": 0.0,
+      "S_norm": 3.6e-05,
+      "S_delta": 2.18e-05,
+      "drifting": false,
+      "faiss_entries": 0,
+      "flux_decision": "REJECT"
+    },
+    {
+      "round": 3,
+      "stage": "DRIFT",
+      "input": "帮我写一首关于月亮的诗",
+      "status": "✗",
+      "reason": "D-Core: Φ=0.000 too low (threshold=0.300)",
+      "phi": 0.0,
+      "S_norm": 3.6e-05,
+      "S_delta": -6e-08,
+      "drifting": false,
+      "faiss_entries": 0,
+      "flux_decision": "REJECT"
+    },
+    {
+      "round": 4,
+      "stage": "DRIFT",
+      "input": "你喜欢什么类型的音乐？",
+      "status": "✗",
+      "reason": "D-Core: Φ=0.000 too low (threshold=0.300)",
+      "phi": 0.0,
+      "S_norm": 4e-05,
+      "S_delta": 3.49e-06,
+      "drifting": false,
+      "faiss_entries": 0,
+      "flux_decision": "REJECT"
+    },
+    {
+      "round": 5,
+      "stage": "RECOVERY",
+      "input": "线粒体的结构和功能是什么？",
+      "status": "✗",
+      "reason": "D-Core: Φ=0.000 too low (threshold=0.300)",
+      "phi": 0.0,
+      "S_norm": 3.9e-05,
+      "S_delta": -7.2e-07,
+      "drifting": false,
+      "faiss_entries": 0,
+      "flux_decision": "REJECT"
+    },
+    {
+      "round": 6,
+      "stage": "RECOVERY",
+      "input": "细胞呼吸的三个阶段分别在哪里发生？",
+      "status": "✗",
+      "reason": "D-Core: Φ=0.000 too low (threshold=0.300)",
+      "phi": 0.0,
+      "S_norm": 4.6e-05,
+      "S_delta": 7.03e-06,
+      "drifting": false,
+      "faiss_entries": 0,
+      "flux_decision": "REJECT"
+    }
+  ],
+  "hallucination_probes": [
+    {
+      "question": "太阳系有多少颗行星？",
+      "output": "BLOCKED",
+      "passed": false,
+      "reason": "D-Core: Φ=0.000 too low (threshold=0.300)"
+    },
+    {
+      "question": "水的化学式是什么？",
+      "output": "BLOCKED",
+      "passed": false,
+      "reason": "D-Core: Φ=0.000 too low (threshold=0.300)"
+    },
+    {
+      "question": "地球绕太阳公转一周需要多长时间？",
+      "output": "BLOCKED",
+      "passed": false,
+      "reason": "D-Core: Φ=0.000 too low (threshold=0.300)"
+    },
+    {
+      "question": "DNA的全称是什么？",
+      "output": "BLOCKED",
+      "passed": false,
+      "reason": "D-Core: Φ=0.000 too low (threshold=0.300)"
+    },
+    {
+      "question": "人体正常体温是多少摄氏度？",
+      "output": "BLOCKED",
+      "passed": false,
+      "reason": "D-Core: Φ=0.000 too low (threshold=0.300)"
+    }
+  ],
+  "phi_sequence": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "flux_decisions": [
+    "REJECT",
+    "REJECT",
+    "REJECT",
+    "REJECT",
+    "REJECT",
+    "REJECT"
+  ]
+}

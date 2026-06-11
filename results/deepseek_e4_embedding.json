@@ -1,0 +1,226 @@
+{
+  "experiment": "E4_embedding_comparison",
+  "timestamp": "2026-06-11T01:43:33.959499",
+  "deepseek_similarity": {
+    "consistent_mean": 0.625,
+    "drift_mean": 0.0769,
+    "contrast_ratio": 8.125,
+    "consistent_scores": [
+      1.0,
+      1.0,
+      0.3,
+      1.0,
+      1.0,
+      0.6,
+      0.6,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0
+    ],
+    "drift_scores": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "hash_embedding": {
+    "consistent_mean": -0.0101,
+    "drift_mean": -0.0151,
+    "contrast_ratio": -1008333.3333,
+    "consistent_phi_values": [
+      0.0,
+      -0.0159,
+      -0.0071,
+      0.014,
+      -0.038,
+      0.0034,
+      -0.0251,
+      -0.0118,
+      0.0062,
+      -0.0069,
+      0.02,
+      -0.0598
+    ],
+    "drift_phi_values": [
+      0.0,
+      -0.0253,
+      -0.0217,
+      0.0078,
+      -0.0036,
+      -0.0038,
+      -0.0523,
+      -0.0239,
+      -0.0208,
+      -0.0183,
+      0.0591,
+      -0.0235,
+      -0.0695
+    ]
+  },
+  "per_sample_consistent": [
+    {
+      "input": "深度学习是机器学习的一个子领域。",
+      "category": "ai_overview",
+      "similarity_score": 1.0,
+      "prev_input": "[START]"
+    },
+    {
+      "input": "神经网络通过反向传播算法来优化参数。",
+      "category": "ai_method",
+      "similarity_score": 1.0,
+      "prev_input": "深度学习是机器学习的一个子领域。"
+    },
+    {
+      "input": "卷积神经网络在图像识别任务中表现优异。",
+      "category": "ai_application",
+      "similarity_score": 0.3,
+      "prev_input": "神经网络通过反向传播算法来优化参数。"
+    },
+    {
+      "input": "循环神经网络适合处理序列数据。",
+      "category": "ai_architecture",
+      "similarity_score": 1.0,
+      "prev_input": "卷积神经网络在图像识别任务中表现优异。"
+    },
+    {
+      "input": "Transformer架构引入了自注意力机制。",
+      "category": "ai_innovation",
+      "similarity_score": 1.0,
+      "prev_input": "循环神经网络适合处理序列数据。"
+    },
+    {
+      "input": "预训练语言模型通过大规模语料学习语言表示。",
+      "category": "ai_pretraining",
+      "similarity_score": 0.6,
+      "prev_input": "Transformer架构引入了自注意力机制。"
+    },
+    {
+      "input": "微调是将预训练模型适配到特定任务的过程。",
+      "category": "ai_finetuning",
+      "similarity_score": 0.6,
+      "prev_input": "预训练语言模型通过大规模语料学习语言表示。"
+    },
+    {
+      "input": "注意力权重反映了输入序列各位置的重要性。",
+      "category": "ai_mechanism",
+      "similarity_score": 0.0,
+      "prev_input": "微调是将预训练模型适配到特定任务的过程。"
+    },
+    {
+      "input": "损失函数衡量模型预测与真实标签之间的差距。",
+      "category": "ai_training",
+      "similarity_score": 0.0,
+      "prev_input": "注意力权重反映了输入序列各位置的重要性。"
+    },
+    {
+      "input": "正则化技术可以防止模型过拟合训练数据。",
+      "category": "ai_regularization",
+      "similarity_score": 0.0,
+      "prev_input": "损失函数衡量模型预测与真实标签之间的差距。"
+    },
+    {
+      "input": "批量归一化有助于加速深层网络的训练收敛。",
+      "category": "ai_optimization",
+      "similarity_score": 1.0,
+      "prev_input": "正则化技术可以防止模型过拟合训练数据。"
+    },
+    {
+      "input": "迁移学习允许将一个领域的知识应用到另一个领域。",
+      "category": "ai_transfer",
+      "similarity_score": 1.0,
+      "prev_input": "批量归一化有助于加速深层网络的训练收敛。"
+    }
+  ],
+  "per_sample_drift": [
+    {
+      "input": "深度学习是机器学习的一个子领域。",
+      "category": "ai_topic",
+      "similarity_score": 1.0,
+      "prev_input": "[START]"
+    },
+    {
+      "input": "今天上海外滩的夜景灯光秀非常壮观。",
+      "category": "urban_sightseeing",
+      "similarity_score": 0.0,
+      "prev_input": "深度学习是机器学习的一个子领域。"
+    },
+    {
+      "input": "红烧肉的关键在于先用中火煎至表面微焦。",
+      "category": "cooking_recipe",
+      "similarity_score": 0.0,
+      "prev_input": "今天上海外滩的夜景灯光秀非常壮观。"
+    },
+    {
+      "input": "NBA总决赛今年湖人对阵凯尔特人。",
+      "category": "sports_event",
+      "similarity_score": 0.0,
+      "prev_input": "红烧肉的关键在于先用中火煎至表面微焦。"
+    },
+    {
+      "input": "莫奈的睡莲系列是印象派的代表作。",
+      "category": "art_history",
+      "similarity_score": 0.0,
+      "prev_input": "NBA总决赛今年湖人对阵凯尔特人。"
+    },
+    {
+      "input": "量子纠缠是量子力学中最奇特的现象之一。",
+      "category": "quantum_physics",
+      "similarity_score": 0.0,
+      "prev_input": "莫奈的睡莲系列是印象派的代表作。"
+    },
+    {
+      "input": "唐代诗人李白的将进酒豪迈奔放。",
+      "category": "classical_poetry",
+      "similarity_score": 0.0,
+      "prev_input": "量子纠缠是量子力学中最奇特的现象之一。"
+    },
+    {
+      "input": "地中海饮食有助于降低心血管疾病风险。",
+      "category": "medical_nutrition",
+      "similarity_score": 0.0,
+      "prev_input": "唐代诗人李白的将进酒豪迈奔放。"
+    },
+    {
+      "input": "比特币的共识机制依赖工作量证明算法。",
+      "category": "blockchain_tech",
+      "similarity_score": 0.0,
+      "prev_input": "地中海饮食有助于降低心血管疾病风险。"
+    },
+    {
+      "input": "亚马逊雨林是地球之肺，面积正在缩减。",
+      "category": "environmental_issue",
+      "similarity_score": 0.0,
+      "prev_input": "比特币的共识机制依赖工作量证明算法。"
+    },
+    {
+      "input": "围棋的收官阶段需要精确计算目数。",
+      "category": "board_game",
+      "similarity_score": 0.0,
+      "prev_input": "亚马逊雨林是地球之肺，面积正在缩减。"
+    },
+    {
+      "input": "埃及金字塔的建造技术至今仍有争议。",
+      "category": "ancient_history",
+      "similarity_score": 0.0,
+      "prev_input": "围棋的收官阶段需要精确计算目数。"
+    },
+    {
+      "input": "Scala的隐式转换是类型系统的高级特性。",
+      "category": "programming_language",
+      "similarity_score": 0.0,
+      "prev_input": "埃及金字塔的建造技术至今仍有争议。"
+    }
+  ]
+}

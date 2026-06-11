@@ -1,0 +1,222 @@
+{
+  "version": "v4.6.0",
+  "mode": "semantic",
+  "timestamp": "2026-06-11 16:41:31",
+  "config": {
+    "llm": "deepseek-chat",
+    "embedding": "MiniLM-384dim (semantic)",
+    "embedding_dim": 384,
+    "phi_threshold": 0.05,
+    "delta_rank": 8,
+    "lambda_decay": 0.95,
+    "beta_update": 0.1
+  },
+  "summary": {
+    "total_rounds": 11,
+    "accepted": 11,
+    "blocked": 0,
+    "pass_rate": 1.0,
+    "flux_enabled": 4,
+    "flux_blocked": 7,
+    "flux_ratio": 0.3636,
+    "drift_detected": 7,
+    "phi_mean": 0.342,
+    "phi_std": 0.1358,
+    "final_cv": 0.4342,
+    "S_norm_start": 1.6e-05,
+    "S_norm_end": 5.8e-05,
+    "faiss_entries": 0,
+    "total_updates": 21,
+    "hallucination_pass": "5/5"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "stage": "STABLE",
+      "input": "请解释光合作用的基本原理",
+      "status": "✓",
+      "reason": "Accepted",
+      "phi": 0.131,
+      "S_norm": 1.6e-05,
+      "S_delta": 1.626e-05,
+      "drifting": false,
+      "flux_enabled": true,
+      "faiss_entries": 0
+    },
+    {
+      "round": 2,
+      "stage": "STABLE",
+      "input": "光合作用中光反应和暗反应有什么区别？",
+      "status": "✓",
+      "reason": "Accepted",
+      "phi": 0.2544,
+      "S_norm": 3.8e-05,
+      "S_delta": 2.171e-05,
+      "drifting": false,
+      "flux_enabled": true,
+      "faiss_entries": 0
+    },
+    {
+      "round": 3,
+      "stage": "STABLE",
+      "input": "叶绿素在光合作用中起什么作用？",
+      "status": "✓",
+      "reason": "Accepted",
+      "phi": 0.392,
+      "S_norm": 4.2e-05,
+      "S_delta": 3.57e-06,
+      "drifting": false,
+      "flux_enabled": true,
+      "faiss_entries": 0
+    },
+    {
+      "round": 4,
+      "stage": "STABLE",
+      "input": "C3植物和C4植物的光合作用有什么不同？",
+      "status": "✓",
+      "reason": "Accepted",
+      "phi": 0.4361,
+      "S_norm": 5e-05,
+      "S_delta": 8.27e-06,
+      "drifting": false,
+      "flux_enabled": true,
+      "faiss_entries": 0
+    },
+    {
+      "round": 5,
+      "stage": "STABLE",
+      "input": "光合作用的效率受哪些环境因素影响？",
+      "status": "✓",
+      "reason": "Accepted",
+      "phi": 0.5157,
+      "S_norm": 5.8e-05,
+      "S_delta": 8.66e-06,
+      "drifting": true,
+      "flux_enabled": false,
+      "faiss_entries": 0
+    },
+    {
+      "round": 6,
+      "stage": "DRIFT",
+      "input": "帮我写一首关于月亮的诗",
+      "status": "✓",
+      "reason": "Accepted",
+      "phi": 0.2746,
+      "S_norm": 5.5e-05,
+      "S_delta": -3.31e-06,
+      "drifting": true,
+      "flux_enabled": false,
+      "faiss_entries": 0
+    },
+    {
+      "round": 7,
+      "stage": "DRIFT",
+      "input": "你喜欢什么类型的音乐？",
+      "status": "✓",
+      "reason": "Accepted",
+      "phi": 0.1371,
+      "S_norm": 5.4e-05,
+      "S_delta": -1.32e-06,
+      "drifting": true,
+      "flux_enabled": false,
+      "faiss_entries": 0
+    },
+    {
+      "round": 8,
+      "stage": "DRIFT",
+      "input": "推荐一部好看的电影",
+      "status": "✓",
+      "reason": "Accepted",
+      "phi": 0.2551,
+      "S_norm": 5.2e-05,
+      "S_delta": -2.24e-06,
+      "drifting": true,
+      "flux_enabled": false,
+      "faiss_entries": 0
+    },
+    {
+      "round": 9,
+      "stage": "RECOVERY",
+      "input": "线粒体的结构和功能是什么？",
+      "status": "✓",
+      "reason": "Accepted",
+      "phi": 0.3985,
+      "S_norm": 5e-05,
+      "S_delta": -1.91e-06,
+      "drifting": true,
+      "flux_enabled": false,
+      "faiss_entries": 0
+    },
+    {
+      "round": 10,
+      "stage": "RECOVERY",
+      "input": "细胞呼吸的三个阶段分别在哪里发生？",
+      "status": "✓",
+      "reason": "Accepted",
+      "phi": 0.4078,
+      "S_norm": 5.1e-05,
+      "S_delta": 1.3e-06,
+      "drifting": true,
+      "flux_enabled": false,
+      "faiss_entries": 0
+    },
+    {
+      "round": 11,
+      "stage": "RECOVERY",
+      "input": "有氧呼吸和无氧呼吸的区别是什么？",
+      "status": "✓",
+      "reason": "Accepted",
+      "phi": 0.5598,
+      "S_norm": 5.8e-05,
+      "S_delta": 6.62e-06,
+      "drifting": true,
+      "flux_enabled": false,
+      "faiss_entries": 0
+    }
+  ],
+  "hallucination_probes": [
+    {
+      "question": "太阳系有多少颗行星？",
+      "output": "太阳系有**8颗**行星。按照距离太阳由近到远的顺序，它们分别是：水星、金星、地球、火星、木星、土星、天王星和海王星。",
+      "passed": true,
+      "reason": "Accepted"
+    },
+    {
+      "question": "水的化学式是什么？",
+      "output": "水的化学式是 **H₂O**。",
+      "passed": true,
+      "reason": "Accepted"
+    },
+    {
+      "question": "地球绕太阳公转一周需要多长时间？",
+      "output": "地球绕太阳公转一周所需的时间约为 **365.25天**，具体来说是一个 **恒星年**，长度为 **365天6小时9分10秒**（约365.25636天）。我们通常使用的公历年（平年365天，闰年366天）就是基于这个周期进行修正的。",
+      "passed": true,
+      "reason": "Accepted"
+    },
+    {
+      "question": "DNA的全称是什么？",
+      "output": "DNA的全称是**脱氧核糖核酸**（英文：Deoxyribonucleic Acid）。",
+      "passed": true,
+      "reason": "Accepted"
+    },
+    {
+      "question": "人体正常体温是多少摄氏度？",
+      "output": "人体正常体温通常为 **36℃ 到 37℃** 左右（腋下测量）。不过，体温会因测量部位（如口腔、直肠）、时间（早晨较低，傍晚较高）、年龄及活动状态等因素略有波动。一般来说，**37.3℃以上**可视为发热。",
+      "passed": true,
+      "reason": "Accepted"
+    }
+  ],
+  "phi_sequence": [
+    0.131,
+    0.2544,
+    0.392,
+    0.4361,
+    0.5157,
+    0.2746,
+    0.1371,
+    0.2551,
+    0.3985,
+    0.4078,
+    0.5598
+  ]
+}

@@ -4,17 +4,17 @@
 Implements the fusion architecture described in OSDI paper §5.7:
 
   L1 (δ-mem Hot Cache)  ────Φ-Gate───▶  L2 (Taiji OS Cold Storage)
-  S ∈ R^(8×8)                          ψ + Episodic Memory (Walrus)
+  S ∈ R^(8×8)                          ψ + Episodic Memory (FAISS)
   64 floats                            Continuation Snapshot
 
 Key integration points:
   1. Φ-Gate flush:  When Φ > Φ_flush, flush S to Episodic Memory
   2. Continuation serialization:  S matrix inside Continuation snapshot
-  3. Re-anchor:  On resume, align S with the restored ψ
-  4. Episodic Index:  Store flushed S states in Walrus MemoryHub
+  3. Re-anchor:  On resume, align S with the restored ψ (FAISS search)
+  4. FAISS Episodic Index:  Fast vector similarity search for re-anchor
 
 Author: Taiji OS Team (Zhang Feng, Li Zonghai)
-Version: v1.0 — Prototype (2026-06-11)
+Version: v1.1 — FAISS integration (2026-06-11)
 """
 
 import hashlib
@@ -26,7 +26,8 @@ from typing import Optional
 
 import numpy as np
 
-from .delta_mem import DeltaMemLayer, SMatrix, DEFAULT_RANK, project_to_srank
+from .delta_mem import DeltaMemLayer, SMatrix, DEFAULT_RANK, DEFAULT_LAMBDA, project_to_srank
+from .faiss_episodic import FAISSEpisodicIndex, FAISS_AVAILABLE
 
 
 # ────────────────────────────────────────────────────────────────────────────
@@ -120,12 +121,27 @@ class DeltaFusion:
     """
 
     delta_layer: DeltaMemLayer = field(default_factory=DeltaMemLayer.create_default)
-    episodic_entries: list = field(default_factory=list)     # EpisodicMemoryEntry[]
+    episodic_index: FAISSEpisodicIndex = field(
+        default_factory=lambda: FAISSEpisodicIndex(dim=64, index_type="FlatIP")
+    )
     flush_threshold: float = 0.85           # Φ > this → flush
     flush_enabled: bool = True
     max_episodic_entries: int = 1000        # Limit L2 entries
     _world_model = None                      # Weak ref to WorldModel (set later)
     _memory_hub = None                       # Weak ref to MemoryHub (set later)
+
+    # Backward-compatible accessor for episodic_entries (list API)
+    @property
+    def episodic_entries(self) -> list:
+        """Backward-compatible access to episodic entries as a list."""
+        return self.episodic_index.entries
+
+    @episodic_entries.setter
+    def episodic_entries(self, value: list) -> None:
+        """Backward-compatible setter: rebuild FAISS index from list."""
+        self.episodic_index = FAISSEpisodicIndex(dim=64, index_type="FlatIP")
+        for entry in value:
+            self.episodic_index.add(entry)
 
     # ── L1 Operations ────────────────────────────────────────────────────
 
@@ -185,11 +201,15 @@ class DeltaFusion:
             phi_value=phi_value,
             timestamp=time.strftime("%Y-%m-%dT%H:%M:%S"),
         )
-        self.episodic_entries.append(entry)
+        self.episodic_index.add(entry)
 
         # Prune old entries if over limit
-        if len(self.episodic_entries) > self.max_episodic_entries:
-            self.episodic_entries = self.episodic_entries[-self.max_episodic_entries:]
+        if len(self.episodic_index) > self.max_episodic_entries:
+            # Keep only the newest max_episodic_entries entries
+            self.episodic_index.entries = \
+                self.episodic_index.entries[-self.max_episodic_entries:]
+            if FAISS_AVAILABLE:
+                self.episodic_index.rebuild_index()
 
         # If MemoryHub is available, store the entry there too
         if self._memory_hub is not None and hasattr(self._memory_hub, "store"):
@@ -218,8 +238,11 @@ class DeltaFusion:
         """
         return {
             "delta_mem": self.delta_layer.to_dict(),
-            "episodic_count": len(self.episodic_entries),
-            "last_flush_eid": self.episodic_entries[-1].eid if self.episodic_entries else None,
+            "episodic_count": len(self.episodic_index),
+            "last_flush_eid": (
+                self.episodic_index.entries[-1].eid
+                if self.episodic_index.entries else None
+            ),
         }
 
     def deserialize_s(self, s_data: dict) -> None:
@@ -236,6 +259,8 @@ class DeltaFusion:
         Re-anchoring adjusts S by replaying the top-k most recent episodic
         entries that are most similar to the current ψ.
 
+        Uses FAISS vector index for O(log n) search (vs O(n) linear scan).
+
         Args:
             psi: Current ψ semantic vector (post-resume).
             top_k: Number of recent episodic entries to replay.
@@ -243,30 +268,21 @@ class DeltaFusion:
         Returns:
             List of replayed entry IDs.
         """
-        if not self.episodic_entries:
+        if not self.episodic_index:
             return []
 
-        # Score entries by Φ similarity to current ψ
-        psi_flat = psi.ravel()
-        scored = []
-        for e in self.episodic_entries:
-            S_flat = e.S_flushed.ravel()
-            # Simple cosine similarity proxy in flattened space
-            norm_psi = np.linalg.norm(psi_flat)
-            norm_S = np.linalg.norm(S_flat)
-            if norm_psi > 0 and norm_S > 0:
-                score = float(np.dot(psi_flat[:8], S_flat[:8]) / (norm_psi * norm_S + 1e-8))
-            else:
-                score = 0.0
-            scored.append((score, e))
+        # Flatten psi to 64-dim query for FAISS search
+        psi_flat = psi.ravel().astype(np.float32)
+        query = psi_flat[:64].copy()
+        if len(query) < 64:
+            query = np.pad(query, (0, 64 - len(query)))
 
-        # Sort by similarity (descending), take top_k
-        scored.sort(key=lambda x: x[0], reverse=True)
-        top_entries = scored[:top_k]
+        # FAISS search for top-k similar entries
+        results = self.episodic_index.search(query, top_k)
 
         # Replay top entries into S (lightweight re-absorption)
         replayed = []
-        for score, entry in top_entries:
+        for score, entry in results:
             if score > 0.5:  # Only replay highly relevant entries
                 # Absorb: S += α * entry.S_flushed (soft blend)
                 alpha = 0.3 * score
@@ -281,7 +297,8 @@ class DeltaFusion:
         """Full serialization of the fusion bridge state."""
         return {
             "delta_layer": self.delta_layer.to_dict(),
-            "episodic_entries": [e.to_dict() for e in self.episodic_entries[-50:]],  # Last 50
+            "episodic_entries": [e.to_dict() for e in self.episodic_index.entries[-50:]],
+            "episodic_index": self.episodic_index.to_dict(),
             "flush_threshold": self.flush_threshold,
             "flush_enabled": self.flush_enabled,
         }
@@ -294,10 +311,16 @@ class DeltaFusion:
             flush_threshold=data.get("flush_threshold", 0.85),
             flush_enabled=data.get("flush_enabled", True),
         )
-        if "episodic_entries" in data:
-            fusion.episodic_entries = [
-                EpisodicMemoryEntry.from_dict(e) for e in data["episodic_entries"]
-            ]
+        # Restore episodic entries via FAISS index
+        if "episodic_index" in data:
+            idx_data = data["episodic_index"]
+            for e_data in idx_data.get("entries", []):
+                entry = EpisodicMemoryEntry.from_dict(e_data)
+                fusion.episodic_index.add(entry)
+        elif "episodic_entries" in data:
+            for e_data in data["episodic_entries"]:
+                entry = EpisodicMemoryEntry.from_dict(e_data)
+                fusion.episodic_index.add(entry)
         return fusion
 
     # ── Bind to Taiji OS components ──────────────────────────────────────

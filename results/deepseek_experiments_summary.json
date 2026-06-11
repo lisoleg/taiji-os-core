@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-06-11T01:46:55.187830",
+  "sample_size": null,
+  "experiments": {
+    "e1": {
+      "keyword_f1": 0.4,
+      "deepseek_f1": 1.0,
+      "delta_f1": 0.6
+    },
+    "e4": {
+      "deepseek_contrast_ratio": 8.125,
+      "hash_contrast_ratio": -1008333.3333,
+      "deepseek_consistent_mean": 0.625,
+      "deepseek_drift_mean": 0.0769
+    },
+    "e7": {
+      "contradiction_detection_rate": 0.94,
+      "deepseek_truth_rate": 0.96
+    }
+  }
+}

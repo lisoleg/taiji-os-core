@@ -482,7 +482,7 @@ class TaijiSession:
                 "proof": self.delta_fusion.delta_layer.smatrix.proof,
                 "flushed_count": self.delta_fusion.delta_layer.flushed_count,
                 "total_updates": self.delta_fusion.delta_layer.total_updates,
-                "episodic_entries": len(self.delta_fusion.episodic_entries),
+                "episodic_entries": len(self.delta_fusion.episodic_index),
                 "flush_threshold": self.delta_fusion.flush_threshold,
             }
 
