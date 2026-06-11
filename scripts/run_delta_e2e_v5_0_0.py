@@ -129,7 +129,7 @@ def run_e2e() -> dict:
     print("[1] 初始化组件...")
     embedder = get_semantic_embedder()
     wm = WorldModel(dim=embedder.dim)
-    router = LLMRouter(api_key=API_KEY, api_base=API_BASE, model=MODEL)
+    router = LLMRouter()  # uses global API_KEY / BASE_URL
 
     # DeltaFusion with δ-mem
     config = {
@@ -167,7 +167,7 @@ def run_e2e() -> dict:
 
         output, reason = loop.step(env, user_input)
 
-        phi = loop.phi.current_phi
+        phi = loop.phi.history[-1] if loop.phi.history else 0.0
         stats = loop.drift_detector.stats()
         flux_enabled = output is not None
 
@@ -205,7 +205,7 @@ def run_e2e() -> dict:
 
         output, reason = loop.step(env, user_input)
 
-        phi = loop.phi.current_phi
+        phi = loop.phi.history[-1] if loop.phi.history else 0.0
         stats = loop.drift_detector.stats()
         flux_enabled = output is not None
 
@@ -244,7 +244,7 @@ def run_e2e() -> dict:
 
         output, reason = loop.step(env, user_input)
 
-        phi = loop.phi.current_phi
+        phi = loop.phi.history[-1] if loop.phi.history else 0.0
         stats = loop.drift_detector.stats()
         flux_enabled = output is not None
 
