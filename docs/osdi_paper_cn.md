@@ -776,6 +776,24 @@ TruthfulQA (Lin et al., 2022) 和 HaluEval (Li et al., 2023) 是幻觉检测的�
 - **Reflexion (2023)**：通过自我反思改进 Agent 性能，但不涉及状态持久化。
 - **Quest (2024)**：LLM 推理的查询级调度，与太极OS 的 Φ 门控有相似之处，但聚焦查询级而非语义级。
 
+### 5.7 参数化在线记忆与 δ-mem
+
+δ-mem（Wu et al., 2026）提出了一种在线联想记忆状态 $S \in \mathbb{R}^{r\times r}\ (r=8)$，通过 Delta Rule $S_t = \lambda S_{t-1} + \beta(v - Sk)k^\top$ 逐 token 更新，以 O(r²) 的计算代价为 Frozen Transformer 的 Attention 查询和输出提供低秩动态修正。仅增加 0.12% 的参数量，δ-mem 在 MemoryAgentBench 上实现 +31% 增益，在 LoCoMo 时序推理上近乎翻倍。然而，**δ-mem 工作在单一 backbone 权重实例内部，缺乏进程级生命周期管理**（无挂起/恢复/迁移概念），且其 S 矩阵绑定于特定 Transformer 实例——无法跨模型或跨会话携载。
+
+太极OS 与 δ-mem 是**正交互补**的两个系统：
+
+| 层次 | δ-mem | 太极OS |
+|------|-------|--------|
+| 记忆载体 | 低秩在线矩阵 S（8×8, 64 floats） | 结构化 World Model $\mathcal{W}=(\psi,\mathcal{E})$ + Episodic Memory |
+| 更新粒度 | O(r²) per token | Φ-Gate 筛选 → Episodic Index 写入 |
+| 幻觉控制 | 隐式（改善注意力分布） | 显式：FlowBreaker $\Phi<\Phi_{th}$ 挂起进程 |
+| 跨模型/跨会话 | ❌ 绑定单一 backbone | ✅ Continuation 可在 Claude/GPT/Local 间迁移 |
+| 可中断/可恢复 | ❌ | ✅ suspend()/resume(k) 一等公民 |
+
+**融合架构**：在太极OS 的框架内，δ-mem 的 S 矩阵可被视为 World Model 的**热缓存（L1）**——编码最近 N 轮的残差记忆；$\psi$ 和 Episodic Memory 则作为**冷存储（L2）**。太极OS 的 Φ-Gate 决定何时将 δ-mem S flush 入 Episodic Memory（高 Φ 锚点时归档），Continuation Snapshot 显式序列化 S 进 $\mathcal{C}$，迁移协议 Re-anchor 天然支持 S 跨节点携载。
+
+> **一句话**：δ-mem 让一个模型记得更清楚，太极OS 让一个智能体作为一个活的生命体持续存在、可打断、可迁移、可问责。
+
 ---
 
 ## 6. 讨论与未来工作
@@ -790,10 +808,9 @@ TruthfulQA (Lin et al., 2022) 和 HaluEval (Li et al., 2023) 是幻觉检测的�
 
 ### 6.2 Φ 严格验证路线图
 
-1. **本文已完成（v4.2.1）**：1176 条标准化数据集（HDR 664 + 202，SCS 310）+ 消融实验框架（E1-E6）+ TruthfulQA 50 题外部基准评测框架 + 3 张论文图表（mock 数据）
-2. **v4.3 进行中**：接入 DeepSeek API 运行 E1-E6 真实语义嵌入对照实验；运行 E7 TruthfulQA 全量对比（GPT-4 vs DeepSeek Self-Consistency）；替换图表为真实实验数据
-3. **v4.4 规划中**：扩展到 TruthfulQA 完整 817 题；SWE-bench + GAIA 外部基准；与 vLLM/Strata 集成（USCS 页式管理原型）
-4. **长期**：与 vLLM/Strata 集成，在真实 LLM 推理引擎中验证 USCS 抽象
+1. **已完成（v4.3.1）**：300 条成对矛盾数据集（120 矛盾对 + 100 一致对 + 40 SCS 序列）+ E1-E7 全部真实 API 消融实验（D-Core F1=0.979, 语义嵌入 F1=1.000, TruthfulQA Acc=100%）+ 4 张论文图表（真实数据）+ δ-mem 融合分析
+2. **v4.4 规划中**：扩展到 TruthfulQA 完整 817 题；SWE-bench + GAIA 外部基准；与 vLLM/Strata 集成（USCS 页式管理原型）；δ-mem 与太极OS WorldModel 热缓存融合原型
+3. **长期**：与 vLLM/Strata 集成，在真实 LLM 推理引擎中验证 USCS 抽象；δ-mem S 矩阵生命周期的内核级管理
 
 ### 6.3 论文发表策略
 
@@ -818,7 +835,7 @@ TruthfulQA (Lin et al., 2022) 和 HaluEval (Li et al., 2023) 是幻觉检测的�
 2. **ψ 向量对语义漂移敏感，但需要真实嵌入才能获得信号**（E4）
 3. **关键词方法完全不足以检测语义矛盾**（E1, E5）
 
-USCS 抽象的完整系统实现仍是开放挑战，但本文的洞察和原型表明，将 Agent 状态纳入 OS 级管理是一个有前景的方向。我们希望通过本文激发更多关于"Agent OS"的研究，最终实现一个真正的、支持抢占/迁移/恢复的 Agent 运行时。
+其中，(4) 与 δ-mem (Wu et al., 2026) 构成正交互补——δ-mem 工作在 Transformer 内部做在线记忆压缩，太极OS 管理其生命周期与跨模型可移植性。USCS 抽象的完整系统实现仍是开放挑战，但本文的洞察和原型表明，将 Agent 状态纳入 OS 级管理是一个有前景的方向。
 
 ---
 
@@ -863,6 +880,8 @@ USCS 抽象的完整系统实现仍是开放挑战，但本文的洞察和原型
 [19] Kwiatkowski, T., et al. "Natural Questions: a Benchmark for Question Answering Research." TACL 2019.
 
 [20] Gupta, A., et al. "QuEST: Query-Aware Semantic Topology for LLM Serving." OSDI 2024.
+
+[21] Wu, S., Zhang, R., et al. "δ-mem: Efficient Online Memory for Large Language Models." arXiv:2605.12357, 2026.
 
 ---
 
