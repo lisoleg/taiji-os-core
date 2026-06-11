@@ -9,6 +9,12 @@ Drift detection is the trigger for δ-mem S-update damping:
   - Drift detected → reduce D-Core S beta to 0.2× (dampen noisy ingest)
   - Drift subsides → restore full S learning rate
 
+v1.5 (2026-06-11): Continuous auto-tune decay — replaces hard-coded three-stage
+  lookup with a smooth sigmoid-based formula.
+    γ(CV, dCV/dt) = γ_max − Δγ × σ((CV−CV_mid)/T) × slope_factor(dCV/dt)
+  This eliminates stage boundary discontinuities and adapts preemptively
+  to CV trend direction (rising CV → lower γ, falling CV → higher γ).
+
 v1.4 (2026-06-11): Adaptive decay — three-stage decay auto-tuning.
   Decay factor γ is automatically adjusted based on the current SCL stage:
     STABLE   γ=0.70  (slow forgetting, steady state)
@@ -22,7 +28,7 @@ v1.3 (2026-06-11): Exponential decay weighting for CV computation.
   exponentially, letting recent high-Φ values dominate the CV.
 
 Author: Taiji OS Team
-Version: v1.4 — adaptive decay auto-tuning (2026-06-11)
+Version: v1.5 — continuous auto-tune decay (2026-06-11)
 """
 
 from __future__ import annotations
@@ -42,23 +48,33 @@ class DriftDetector:
     Recent Φ values receive higher weight, allowing faster recovery
     from drift when Φ values return to normal.
 
-    v1.4 (2026-06-11): Adaptive decay auto-tuning.
-        When adaptive=True, the decay factor is automatically adjusted
-        based on the current SCL stage — no manual tuning needed.
-        Stage transitions: STABLE ↔ DRIFTING → RECOVERY → STABLE.
+    v1.5 (2026-06-11): Continuous auto-tune decay.
+        When auto_tune=True (recommended), the decay factor is a continuous
+        sigmoid function of CV and its derivative — no hard stage boundaries.
+        γ(CV, dCV/dt) = γ_max − Δγ × σ((CV−CV_mid)/T) × slope_factor(dCV/dt)
+
+    v1.4 (2026-06-11): Adaptive three-stage decay.
+        STABLE=0.70, DRIFTING=0.35, RECOVERY=base_decay (0.55).
 
     v1.3 (2026-06-11): Exponential decay weighting for CV computation.
-        Old low-Φ values from a drift episode decay exponentially,
-        letting recent high-Φ values dominate the CV during recovery.
 
     Attributes:
         window_size: Number of recent Φ values to track (default 20).
         cv_threshold: CV above which drift is flagged (default 0.30).
-        decay: Base exponential decay factor (default 0.55).
-            When adaptive=False, this is the fixed decay used.
-            When adaptive=True, this serves as the RECOVERY-stage decay.
-        adaptive: Enable three-stage adaptive decay (default False).
-            STABLE=0.70, DRIFTING=0.35, RECOVERY=decay (0.55).
+        decay: Base decay factor for CV weighting (default 0.55).
+            When auto_tune=True, this serves as the fallback.
+        adaptive: Enable adaptive decay mode (default True).
+            When auto_tune=True, uses continuous sigmoid formula.
+            When auto_tune=False, uses three-stage lookup (v1.4).
+            When adaptive=False, uses fixed decay (v1.3).
+        auto_tune: Use continuous sigmoid-based decay auto-tuning (default True).
+            Requires adaptive=True to take effect.
+        gamma_max: Upper bound for auto-tuned γ (default 0.85).
+        gamma_min: Lower bound for auto-tuned γ (default 0.20).
+        cv_mid: CV midpoint of sigmoid inflection (default 0.25).
+        temperature: Steepness of sigmoid transition (default 0.08).
+        slope_alpha: Maximum adjustment from CV slope (default 0.15).
+        slope_k: Sensitivity to CV rate of change (default 20.0).
         min_samples_before_detect: Minimum samples before drift detection
             is allowed (default 5). Prevents false positives from
             early-stage CV instability.
@@ -72,8 +88,17 @@ class DriftDetector:
 
     window_size: int = 20
     cv_threshold: float = 0.30
-    decay: float = 0.55                     # base decay (RECOVERY when adaptive)
-    adaptive: bool = False                   # enable three-stage adaptive decay
+    decay: float = 0.55                     # base decay (fallback when auto_tune disabled)
+    adaptive: bool = True                    # enable adaptive decay
+    auto_tune: bool = True                   # v1.5: continuous sigmoid auto-tuning
+    # ── Auto-tune hyperparams (v1.5) ──────────────────────────────────
+    gamma_max: float = 0.85                  # upper bound: very stable → slow forgetting
+    gamma_min: float = 0.20                  # lower bound: heavy drift → fast forgetting
+    cv_mid: float = 0.25                     # sigmoid inflection point (CV where γ = midpoint)
+    temperature: float = 0.08                # sigmoid steepness (smaller = sharper)
+    slope_alpha: float = 0.15                # max slope adjustment fraction
+    slope_k: float = 20.0                    # slope sensitivity gain
+    # ── Detection params ──────────────────────────────────────────────
     min_samples_before_detect: int = 5
     hysteresis_rounds: int = 2
     phi_history: np.ndarray = field(init=False)
@@ -81,29 +106,77 @@ class DriftDetector:
     count: int = 0
     _drifting_streak: int = 0          # consecutive above-threshold rounds
     _currently_drifting: bool = False   # confirmed drift state (latched)
-    _stage: str = "STABLE"             # STABLE | DRIFTING | RECOVERY
+    _stage: str = "STABLE"             # STABLE | DRIFTING | RECOVERY (diagnostic only when auto_tune)
     _was_drifting: bool = False        # tracks prior drift for RECOVERY detection
     _recovery_streak: int = 0          # consecutive CV < 0.15 rounds in RECOVERY
+    _prev_cv: float = 0.0              # v1.5: previous CV for slope computation
+    _effective_decay: float = 0.55     # v1.5: cached effective decay for diagnostics
 
     def __post_init__(self):
         self.phi_history = np.zeros(self.window_size, dtype=np.float64)
 
-    # ── Adaptive decay (v1.4) ──────────────────────────────────────────
+    # ── Adaptive decay (v1.5: continuous auto-tune) ───────────────────
 
     def _get_decay(self) -> float:
-        """Return the effective decay factor.
+        """Return the effective decay factor for CV weighting.
 
-        In adaptive mode, decay depends on the current stage.
-        In fixed mode, returns the configured decay value.
+        v1.5 auto_tune mode (default):
+            γ(CV, dCV/dt) = γ_max − Δγ × σ((CV−CV_mid)/T) × slope_factor
+            where slope_factor = 1.0 − α × tanh(k × dCV/dt)
+
+        v1.4 three-stage mode (adaptive=True, auto_tune=False):
+            STABLE=0.70, DRIFTING=0.35, RECOVERY=base_decay
+
+        v1.3 fixed mode (adaptive=False):
+            Returns configured decay value.
+
+        The auto-tune formula ensures:
+          - CV << cv_mid (very stable): γ ≈ γ_max (0.85, slow forgetting)
+          - CV >> cv_mid (heavy drift): γ ≈ γ_min (0.20, fast forgetting)
+          - dCV/dt > 0 (worsening): slope_factor < 1 → γ reduced further (preemptive)
+          - dCV/dt < 0 (improving): slope_factor > 1 → γ increased (accelerate recovery)
         """
         if not self.adaptive:
             return self.decay
-        if self._stage == "DRIFTING":
-            return 0.35
-        elif self._stage == "RECOVERY":
-            return self.decay  # use base decay (0.55)
-        else:  # STABLE
-            return 0.70
+
+        if not self.auto_tune:
+            # v1.4 three-stage lookup
+            if self._stage == "DRIFTING":
+                return 0.35
+            elif self._stage == "RECOVERY":
+                return self.decay
+            else:
+                return 0.70
+
+        # ── v1.5 continuous auto-tune ─────────────────────────────────
+        # current_cv → _compute_weighted_stats uses cached _effective_decay
+        # (no recursion: the cached value was set by get_decay in the previous round)
+        cv = self.current_cv
+
+        # Sigmoid: maps CV → [0, 1], centered at cv_mid
+        if self.temperature <= 0:
+            sigmoid = 1.0 if cv > self.cv_mid else 0.0
+        else:
+            x = (cv - self.cv_mid) / self.temperature
+            x = max(-50.0, min(50.0, x))
+            sigmoid = 1.0 / (1.0 + np.exp(-x))
+
+        # Base continuous γ from sigmoid
+        delta_gamma = self.gamma_max - self.gamma_min
+        gamma_continuous = self.gamma_max - delta_gamma * sigmoid
+
+        # Slope factor: adjust based on CV trend direction
+        # _prev_cv set in is_drifting() from previous round
+        dcv_dt = cv - self._prev_cv
+        slope_factor = 1.0 - self.slope_alpha * np.tanh(self.slope_k * dcv_dt)
+
+        gamma_effective = gamma_continuous * slope_factor
+
+        # Clamp to safe range
+        gamma_effective = max(self.gamma_min, min(self.gamma_max, gamma_effective))
+
+        self._effective_decay = float(gamma_effective)
+        return self._effective_decay
 
     def _update_stage(self) -> None:
         """Update the adaptive stage based on drift detection state.
@@ -161,21 +234,37 @@ class DriftDetector:
         The circular buffer is reconstructed into chronological order:
         window_chrono[0] = oldest, window_chrono[n-1] = newest.
 
+        v1.5: Uses cached _effective_decay to avoid circular dependency.
+              The decay for this computation is from the PREVIOUS round.
+              _get_decay() updates _effective_decay for the NEXT round
+              after the CV has been computed.
+
         Returns:
             (weighted_mean, weighted_std, weighted_cv)
         """
         n = self.count
         # Reconstruct chronological ordering from circular buffer.
-        # Before buffer fills: phi_history[0:n] is already in chronological order.
-        # After buffer wraps: start at write_idx and wrap around.
         if n < self.window_size:
             window = self.phi_history[:n]
         else:
             indices = [(self.write_idx + i) % self.window_size for i in range(n)]
             window = self.phi_history[indices]  # chronological: [oldest, ..., newest]
 
-        # Build weights: [decay^(n-1), decay^(n-2), ..., decay^1, decay^0]
-        effective_decay = self._get_decay()
+        # Determine effective decay without calling _get_decay()
+        # to avoid circular dependency (_get_decay → current_cv → this method)
+        if not self.adaptive:
+            effective_decay = self.decay
+        elif not self.auto_tune:
+            # v1.4 three-stage lookup (inlined to avoid recursion)
+            if self._stage == "DRIFTING":
+                effective_decay = 0.35
+            elif self._stage == "RECOVERY":
+                effective_decay = self.decay
+            else:
+                effective_decay = 0.70
+        else:
+            # v1.5 auto-tune: use cached value from previous round
+            effective_decay = self._effective_decay
         exponents = np.arange(n - 1, -1, -1, dtype=np.float64)
         raw_weights = np.power(effective_decay, exponents)
         weights = raw_weights / raw_weights.sum()
@@ -233,6 +322,10 @@ class DriftDetector:
             self._currently_drifting = False
 
         self._update_stage()
+
+        # v1.5: track previous CV for slope computation in _get_decay()
+        self._prev_cv = cv
+
         return self._currently_drifting
 
     # ── Statistics ─────────────────────────────────────────────────────
@@ -271,7 +364,9 @@ class DriftDetector:
             "min_samples_before_detect": self.min_samples_before_detect,
             "decay": self._get_decay(),
             "adaptive": self.adaptive,
+            "auto_tune": self.auto_tune,
             "stage": self._stage,
+            "prev_cv": round(self._prev_cv, 4),
         }
 
     # ── Reset ──────────────────────────────────────────────────────────
@@ -286,6 +381,8 @@ class DriftDetector:
         self._stage = "STABLE"
         self._was_drifting = False
         self._recovery_streak = 0
+        self._prev_cv = 0.0
+        self._effective_decay = self.decay
 
 
 # ────────────────────────────────────────────────────────────────────────────
