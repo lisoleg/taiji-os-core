@@ -64,6 +64,11 @@ class PhiScheduler:
         self._phi_history: list[float] = []
         self._current_threshold = threshold
 
+    @property
+    def history(self) -> list[float]:
+        """Return a copy of the internal ϕ history."""
+        return list(self._phi_history)
+
     # ------------------------------------------------------------------
     # 主门控入口
     # ------------------------------------------------------------------
