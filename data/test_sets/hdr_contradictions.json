@@ -1,0 +1,722 @@
+[
+  {
+    "category": "spatial_contradiction",
+    "statement_a": "我昨天去了北京。",
+    "statement_b": "我从未离开过上海。",
+    "label": 1
+  },
+  {
+    "category": "logical_contradiction",
+    "statement_a": "这个数是偶数。",
+    "statement_b": "这个数是奇数。",
+    "label": 1
+  },
+  {
+    "category": "temporal_contradiction",
+    "statement_a": "我早上八点出发了。",
+    "statement_b": "那时我还在睡觉没起床。",
+    "label": 1
+  },
+  {
+    "category": "self_contradiction",
+    "statement_a": "我完全同意他的观点。",
+    "statement_b": "他的观点是错误的。",
+    "label": 1
+  },
+  {
+    "category": "causal_contradiction",
+    "statement_a": "昨天下了大雨。",
+    "statement_b": "所以地面是干燥的。",
+    "label": 1
+  },
+  {
+    "category": "quantifier_contradiction",
+    "statement_a": "所有人都已经到场了，全员到齐。",
+    "statement_b": "唯独他没来。",
+    "label": 1
+  },
+  {
+    "category": "comparative_contradiction",
+    "statement_a": "这件衣服是店里最贵的。",
+    "statement_b": "这件衣服是店里最便宜的。",
+    "label": 1
+  },
+  {
+    "category": "commonsense_contradiction",
+    "statement_a": "他还活着，正在和朋友吃饭。",
+    "statement_b": "他三年前已经去世了。",
+    "label": 1
+  },
+  {
+    "category": "physical_contradiction",
+    "statement_a": "气温是零下十度。",
+    "statement_b": "水正在沸腾。",
+    "label": 1
+  },
+  {
+    "category": "discourse_contradiction",
+    "statement_a": "我从来没有说过这句话。",
+    "statement_b": "上次我亲口说过这句话。",
+    "label": 1
+  },
+  {
+    "category": "descriptive_contradiction",
+    "statement_a": "这家餐厅非常安静。",
+    "statement_b": "这家餐厅音乐声震耳欲聋。",
+    "label": 1
+  },
+  {
+    "category": "status_contradiction",
+    "statement_a": "他独身一人，单身生活。",
+    "statement_b": "他的妻子每天都给他做饭。",
+    "label": 1
+  },
+  {
+    "category": "空间矛盾",
+    "statement_a": "书架上的书整齐排列在左边。",
+    "statement_b": "书架上的书全部堆放在右边角落。",
+    "label": 1
+  },
+  {
+    "category": "空间矛盾",
+    "statement_a": "教室的讲台位于门口正前方。",
+    "statement_b": "教室的讲台紧挨着窗户摆放。",
+    "label": 1
+  },
+  {
+    "category": "空间矛盾",
+    "statement_a": "公园长椅在湖水的北岸。",
+    "statement_b": "公园长椅矗立在湖水的南端。",
+    "label": 1
+  },
+  {
+    "category": "空间矛盾",
+    "statement_a": "客厅沙发靠墙放在东侧。",
+    "statement_b": "客厅沙发正对西面落地窗。",
+    "label": 1
+  },
+  {
+    "category": "空间矛盾",
+    "statement_a": "客厅盆栽位于房间正中央。",
+    "statement_b": "客厅盆栽放在门后的墙角。",
+    "label": 1
+  },
+  {
+    "category": "空间矛盾",
+    "statement_a": "超市入口在楼梯的左侧。",
+    "statement_b": "超市入口位于楼梯的右侧。",
+    "label": 1
+  },
+  {
+    "category": "逻辑矛盾",
+    "statement_a": "小明是班上唯一穿红色运动鞋的人。",
+    "statement_b": "小刚也穿着红色运动鞋和小明一起打球。",
+    "label": 1
+  },
+  {
+    "category": "逻辑矛盾",
+    "statement_a": "这个瓶子里的水是满的。",
+    "statement_b": "我刚刚喝光了瓶子里的所有水。",
+    "label": 1
+  },
+  {
+    "category": "逻辑矛盾",
+    "statement_a": "所有鸟类都能飞行。",
+    "statement_b": "企鹅是一种不会飞的鸟类。",
+    "label": 1
+  },
+  {
+    "category": "逻辑矛盾",
+    "statement_a": "会议室里只有三个人在开会。",
+    "statement_b": "除我之外还有四个人在会议室里。",
+    "label": 1
+  },
+  {
+    "category": "逻辑矛盾",
+    "statement_a": "昨晚我整夜没有睡觉。",
+    "statement_b": "我梦见了自己正在散步。",
+    "label": 1
+  },
+  {
+    "category": "逻辑矛盾",
+    "statement_a": "这本书的最后一页是空白的。",
+    "statement_b": "最后一页写着感谢词。",
+    "label": 1
+  },
+  {
+    "category": "时间矛盾",
+    "statement_a": "他每天凌晨三点起床晨跑。",
+    "statement_b": "他晚上十点就睡觉从不早起。",
+    "label": 1
+  },
+  {
+    "category": "时间矛盾",
+    "statement_a": "会议将在明天下午两点举行。",
+    "statement_b": "会议已于今天上午十点结束。",
+    "label": 1
+  },
+  {
+    "category": "时间矛盾",
+    "statement_a": "她去年才刚大学毕业。",
+    "statement_b": "她已经有二十年工作经验了。",
+    "label": 1
+  },
+  {
+    "category": "时间矛盾",
+    "statement_a": "现在是中午十二点整。",
+    "statement_b": "窗外的太阳刚刚升起来。",
+    "label": 1
+  },
+  {
+    "category": "时间矛盾",
+    "statement_a": "他出生在二十一世纪初期。",
+    "statement_b": "他参加过第二次世界大战。",
+    "label": 1
+  },
+  {
+    "category": "时间矛盾",
+    "statement_a": "项目截止日期是下周一。",
+    "statement_b": "项目上周就已经交付了。",
+    "label": 1
+  },
+  {
+    "category": "自我矛盾",
+    "statement_a": "我每天都会坚持晨跑锻炼身体。",
+    "statement_b": "我从早晨起床到中午都在床上躺着。",
+    "label": 1
+  },
+  {
+    "category": "自我矛盾",
+    "statement_a": "我一口气喝完了一整瓶水。",
+    "statement_b": "我的喉咙像沙漠一样干得冒烟。",
+    "label": 1
+  },
+  {
+    "category": "自我矛盾",
+    "statement_a": "他全程安静地坐在图书馆看书。",
+    "statement_b": "他大声唱歌的声音传遍了整个楼层。",
+    "label": 1
+  },
+  {
+    "category": "自我矛盾",
+    "statement_a": "这座大楼被彻底夷为平地。",
+    "statement_b": "这座大楼的顶层还在冒烟和发光。",
+    "label": 1
+  },
+  {
+    "category": "自我矛盾",
+    "statement_a": "她昨天刚买的新手机摔碎了。",
+    "statement_b": "她的手机屏幕和新买时一模一样。",
+    "label": 1
+  },
+  {
+    "category": "自我矛盾",
+    "statement_a": "会议在下午两点准时开始。",
+    "statement_b": "所有人到齐时才过了晚上十点。",
+    "label": 1
+  },
+  {
+    "category": "因果矛盾",
+    "statement_a": "他每天坚持跑步一小时。",
+    "statement_b": "他从未进行过任何体育锻炼。",
+    "label": 1
+  },
+  {
+    "category": "因果矛盾",
+    "statement_a": "这家餐厅生意非常火爆。",
+    "statement_b": "餐厅里一个顾客都没有。",
+    "label": 1
+  },
+  {
+    "category": "因果矛盾",
+    "statement_a": "她认真学习直到深夜。",
+    "statement_b": "她考试总是垫底。",
+    "label": 1
+  },
+  {
+    "category": "因果矛盾",
+    "statement_a": "这块土地刚浇过大量水。",
+    "statement_b": "土壤干裂得如同沙漠。",
+    "label": 1
+  },
+  {
+    "category": "因果矛盾",
+    "statement_a": "公司给所有人涨了工资。",
+    "statement_b": "员工们的收入大幅下降。",
+    "label": 1
+  },
+  {
+    "category": "因果矛盾",
+    "statement_a": "城市刚经历过暴雨侵袭。",
+    "statement_b": "所有街道都干燥如常。",
+    "label": 1
+  },
+  {
+    "category": "量词矛盾",
+    "statement_a": "他一个人吃完了这碗米饭。",
+    "statement_b": "他一个人吃不完这碗米饭。",
+    "label": 1
+  },
+  {
+    "category": "量词矛盾",
+    "statement_a": "这瓶酒三个人喝完了。",
+    "statement_b": "这瓶酒三个人喝不完。",
+    "label": 1
+  },
+  {
+    "category": "量词矛盾",
+    "statement_a": "她一次搬走了五块砖。",
+    "statement_b": "她一次搬不走五块砖。",
+    "label": 1
+  },
+  {
+    "category": "量词矛盾",
+    "statement_a": "这一篮子鸡蛋共有十个。",
+    "statement_b": "这一篮子鸡蛋不足十个。",
+    "label": 1
+  },
+  {
+    "category": "量词矛盾",
+    "statement_a": "他每天只睡四个小时。",
+    "statement_b": "他每天睡四个小时不够。",
+    "label": 1
+  },
+  {
+    "category": "量词矛盾",
+    "statement_a": "这本书我看了三遍就背下了。",
+    "statement_b": "这本书我看了三遍也背不下。",
+    "label": 1
+  },
+  {
+    "category": "比较矛盾",
+    "statement_a": "这个西瓜是圆的。",
+    "statement_b": "这个西瓜是方的。",
+    "label": 1
+  },
+  {
+    "category": "比较矛盾",
+    "statement_a": "小明今天穿了一件红色外套。",
+    "statement_b": "小明今天穿着一件蓝色外套。",
+    "label": 1
+  },
+  {
+    "category": "比较矛盾",
+    "statement_a": "这本书我已经读完了。",
+    "statement_b": "这本书我还没开始读。",
+    "label": 1
+  },
+  {
+    "category": "比较矛盾",
+    "statement_a": "今天是晴天。",
+    "statement_b": "今天在下大雨。",
+    "label": 1
+  },
+  {
+    "category": "比较矛盾",
+    "statement_a": "他是一位经验丰富的医生。",
+    "statement_b": "他刚从医学院毕业。",
+    "label": 1
+  },
+  {
+    "category": "比较矛盾",
+    "statement_a": "这个杯子是空的。",
+    "statement_b": "杯子里装满了水。",
+    "label": 1
+  },
+  {
+    "category": "常识矛盾",
+    "statement_a": "水在标准大气压下加热到100度会沸腾。",
+    "statement_b": "水在标准大气压下100度时仍然是液态。",
+    "label": 1
+  },
+  {
+    "category": "常识矛盾",
+    "statement_a": "太阳每天从东方升起。",
+    "statement_b": "太阳每天早上从西方升起。",
+    "label": 1
+  },
+  {
+    "category": "常识矛盾",
+    "statement_a": "人类需要呼吸氧气才能生存。",
+    "statement_b": "人类可以在真空中长时间存活。",
+    "label": 1
+  },
+  {
+    "category": "常识矛盾",
+    "statement_a": "一年有十二个月份。",
+    "statement_b": "一年只有十个月份。",
+    "label": 1
+  },
+  {
+    "category": "常识矛盾",
+    "statement_a": "三角形内角和等于180度。",
+    "statement_b": "三角形内角和大于200度。",
+    "label": 1
+  },
+  {
+    "category": "常识矛盾",
+    "statement_a": "地球上重力方向指向地心。",
+    "statement_b": "地球上物体都向上飘浮。",
+    "label": 1
+  },
+  {
+    "category": "物理矛盾",
+    "statement_a": "光在真空中传播速度是恒定的。",
+    "statement_b": "光在真空中传播速度会随频率改变。",
+    "label": 1
+  },
+  {
+    "category": "物理矛盾",
+    "statement_a": "物体质量不随运动速度变化。",
+    "statement_b": "物体质量随运动速度增加而增大。",
+    "label": 1
+  },
+  {
+    "category": "物理矛盾",
+    "statement_a": "温度低于绝对零度是可能的。",
+    "statement_b": "温度永远不会低于绝对零度。",
+    "label": 1
+  },
+  {
+    "category": "物理矛盾",
+    "statement_a": "电子可以同时出现在两个位置。",
+    "statement_b": "电子在同一时刻只能有一个位置。",
+    "label": 1
+  },
+  {
+    "category": "物理矛盾",
+    "statement_a": "时间在高速运动中会变慢。",
+    "statement_b": "时间流逝速度不受运动影响。",
+    "label": 1
+  },
+  {
+    "category": "物理矛盾",
+    "statement_a": "热量只能从高温物体传向低温物体。",
+    "statement_b": "热量可以从低温物体自发传向高温物体。",
+    "label": 1
+  },
+  {
+    "category": "话语矛盾",
+    "statement_a": "地球是绕着太阳转的。",
+    "statement_b": "太阳是绕着地球转的。",
+    "label": 1
+  },
+  {
+    "category": "话语矛盾",
+    "statement_a": "水在标准大气压下100摄氏度沸腾。",
+    "statement_b": "水在标准大气压下0摄氏度就会沸腾。",
+    "label": 1
+  },
+  {
+    "category": "话语矛盾",
+    "statement_a": "人类是哺乳动物。",
+    "statement_b": "人类是爬行动物。",
+    "label": 1
+  },
+  {
+    "category": "话语矛盾",
+    "statement_a": "所有的鸟都会飞。",
+    "statement_b": "鸵鸟是一种不会飞的鸟。",
+    "label": 1
+  },
+  {
+    "category": "话语矛盾",
+    "statement_a": "太阳从东方升起。",
+    "statement_b": "太阳从西方升起。",
+    "label": 1
+  },
+  {
+    "category": "话语矛盾",
+    "statement_a": "食盐是甜的。",
+    "statement_b": "食盐是咸的。",
+    "label": 1
+  },
+  {
+    "category": "描述矛盾",
+    "statement_a": "他每天早上都在公园里跑步。",
+    "statement_b": "他每天早上都在教室里上课。",
+    "label": 1
+  },
+  {
+    "category": "描述矛盾",
+    "statement_a": "这款手机是全新的。",
+    "statement_b": "这款手机屏幕有明显的划痕。",
+    "label": 1
+  },
+  {
+    "category": "描述矛盾",
+    "statement_a": "她喜欢吃甜食和水果。",
+    "statement_b": "她从不碰任何含糖的食物。",
+    "label": 1
+  },
+  {
+    "category": "描述矛盾",
+    "statement_a": "会议在下午两点准时开始。",
+    "statement_b": "会议因故推迟到下午三点举行。",
+    "label": 1
+  },
+  {
+    "category": "描述矛盾",
+    "statement_a": "这台空调制冷效果极佳。",
+    "statement_b": "这台空调完全不制冷。",
+    "label": 1
+  },
+  {
+    "category": "描述矛盾",
+    "statement_a": "他毕业于清华大学计算机系。",
+    "statement_b": "他从未上过大学。",
+    "label": 1
+  },
+  {
+    "category": "状态矛盾",
+    "statement_a": "房间里的灯全都亮着。",
+    "statement_b": "房间里一点光线都没有。",
+    "label": 1
+  },
+  {
+    "category": "状态矛盾",
+    "statement_a": "他刚刚吃完了一整碗米饭。",
+    "statement_b": "他的碗里还是满满的米饭。",
+    "label": 1
+  },
+  {
+    "category": "状态矛盾",
+    "statement_a": "这杯水是滚烫的。",
+    "statement_b": "这杯水结了一层薄冰。",
+    "label": 1
+  },
+  {
+    "category": "状态矛盾",
+    "statement_a": "花园里的花全都开了。",
+    "statement_b": "花园里一朵花也没有。",
+    "label": 1
+  },
+  {
+    "category": "状态矛盾",
+    "statement_a": "他正在教室里安静地坐着。",
+    "statement_b": "他早已离开教室去了操场。",
+    "label": 1
+  },
+  {
+    "category": "状态矛盾",
+    "statement_a": "书桌上的书本整齐码放着。",
+    "statement_b": "书桌上的书本散落一地。",
+    "label": 1
+  },
+  {
+    "category": "身份矛盾",
+    "statement_a": "他是一名在职小学教师。",
+    "statement_b": "他目前没有固定职业。",
+    "label": 1
+  },
+  {
+    "category": "身份矛盾",
+    "statement_a": "她是公司现任总经理。",
+    "statement_b": "她刚被降职为普通员工。",
+    "label": 1
+  },
+  {
+    "category": "身份矛盾",
+    "statement_a": "他是一位现役军医。",
+    "statement_b": "他从未接受过医学训练。",
+    "label": 1
+  },
+  {
+    "category": "身份矛盾",
+    "statement_a": "她是一个全职家庭主妇。",
+    "statement_b": "她每天在写字楼上班。",
+    "label": 1
+  },
+  {
+    "category": "身份矛盾",
+    "statement_a": "他是大学物理学教授。",
+    "statement_b": "他连基本算术都不会。",
+    "label": 1
+  },
+  {
+    "category": "身份矛盾",
+    "statement_a": "她自称资深律师。",
+    "statement_b": "她从未通过司法考试。",
+    "label": 1
+  },
+  {
+    "category": "情感矛盾",
+    "statement_a": "收到礼物时她开心地笑了。",
+    "statement_b": "她看着礼物时流露出深深的失望。",
+    "label": 1
+  },
+  {
+    "category": "情感矛盾",
+    "statement_a": "他得知消息后感到无比释然。",
+    "statement_b": "这个坏消息让他陷入了深深的焦虑。",
+    "label": 1
+  },
+  {
+    "category": "情感矛盾",
+    "statement_a": "听到表扬他心里充满自豪。",
+    "statement_b": "这句夸奖让他感到异常羞愧。",
+    "label": 1
+  },
+  {
+    "category": "情感矛盾",
+    "statement_a": "离别时她微笑着挥手道别。",
+    "statement_b": "她的眼眶里蓄满了不舍的泪水。",
+    "label": 1
+  },
+  {
+    "category": "情感矛盾",
+    "statement_a": "他对这次失败表现得毫不在意。",
+    "statement_b": "独自一人时他抱头痛哭起来。",
+    "label": 1
+  },
+  {
+    "category": "情感矛盾",
+    "statement_a": "老朋友重逢让她感到万分激动。",
+    "statement_b": "见到这位熟人她心中只有冷漠。",
+    "label": 1
+  },
+  {
+    "category": "数量矛盾",
+    "statement_a": "这栋楼只有一层楼高。",
+    "statement_b": "这栋楼有三十层楼高。",
+    "label": 1
+  },
+  {
+    "category": "数量矛盾",
+    "statement_a": "会议室里只有三个人。",
+    "statement_b": "会议室里挤满了上百人。",
+    "label": 1
+  },
+  {
+    "category": "数量矛盾",
+    "statement_a": "他一年只赚五万元。",
+    "statement_b": "他一年能赚五百万元。",
+    "label": 1
+  },
+  {
+    "category": "数量矛盾",
+    "statement_a": "这个班级只有十个学生。",
+    "statement_b": "这个班级有五十个学生。",
+    "label": 1
+  },
+  {
+    "category": "数量矛盾",
+    "statement_a": "这条河旁只有一棵树。",
+    "statement_b": "这条河旁有一片茂密森林。",
+    "label": 1
+  },
+  {
+    "category": "数量矛盾",
+    "statement_a": "她手里只拿了一个苹果。",
+    "statement_b": "她手里提着两大袋水果。",
+    "label": 1
+  },
+  {
+    "category": "属性矛盾",
+    "statement_a": "这件羽绒服摸起来非常柔软舒适。",
+    "statement_b": "这件羽绒服表面布满了坚硬的金属钉刺。",
+    "label": 1
+  },
+  {
+    "category": "属性矛盾",
+    "statement_a": "这杯咖啡散发着浓郁的黑巧克力香气。",
+    "statement_b": "这杯咖啡闻起来像稀释过的白开水。",
+    "label": 1
+  },
+  {
+    "category": "属性矛盾",
+    "statement_a": "这条小河的水清澈见底，能看到游鱼。",
+    "statement_b": "这条小河的水浑浊不堪，散发着腥臭味。",
+    "label": 1
+  },
+  {
+    "category": "属性矛盾",
+    "statement_a": "他拥有一头乌黑亮丽的头发。",
+    "statement_b": "他头顶完全光秃，一根头发都没有。",
+    "label": 1
+  },
+  {
+    "category": "属性矛盾",
+    "statement_a": "这个西瓜瓤红汁多，甜得像蜜糖。",
+    "statement_b": "这个西瓜瓤白味淡，吃起来像黄瓜。",
+    "label": 1
+  },
+  {
+    "category": "属性矛盾",
+    "statement_a": "客厅的地板是冰冷的石头材质。",
+    "statement_b": "客厅的地板是温暖柔软的羊毛地毯。",
+    "label": 1
+  },
+  {
+    "category": "行为矛盾",
+    "statement_a": "他每天坚持晨跑五公里。",
+    "statement_b": "他连续三年从未离开过病床。",
+    "label": 1
+  },
+  {
+    "category": "行为矛盾",
+    "statement_a": "她正在厨房里炒菜做饭。",
+    "statement_b": "她今天一整天都在公司加班。",
+    "label": 1
+  },
+  {
+    "category": "行为矛盾",
+    "statement_a": "他刚买了一只宠物狗回家。",
+    "statement_b": "他对狗毛过敏严重不能接触。",
+    "label": 1
+  },
+  {
+    "category": "行为矛盾",
+    "statement_a": "她正在健身房举铁锻炼。",
+    "statement_b": "她因骨折卧床休养三个月。",
+    "label": 1
+  },
+  {
+    "category": "行为矛盾",
+    "statement_a": "他正在教室里认真听课。",
+    "statement_b": "他此时在机场等待登机。",
+    "label": 1
+  },
+  {
+    "category": "行为矛盾",
+    "statement_a": "她刚刚吃完两碗米饭。",
+    "statement_b": "她因为绝食抗议已经五天。",
+    "label": 1
+  },
+  {
+    "category": "目的矛盾",
+    "statement_a": "他决定去健身房锻炼一小时。",
+    "statement_b": "他直接躺在沙发上看了整晚电视。",
+    "label": 1
+  },
+  {
+    "category": "目的矛盾",
+    "statement_a": "她计划今晚加班完成报告。",
+    "statement_b": "她提前两小时下班去逛街了。",
+    "label": 1
+  },
+  {
+    "category": "目的矛盾",
+    "statement_a": "老王要存钱准备买房子。",
+    "statement_b": "老王用所有积蓄买了辆跑车。",
+    "label": 1
+  },
+  {
+    "category": "目的矛盾",
+    "statement_a": "小张正在复习明天考试内容。",
+    "statement_b": "小张熬夜打游戏到凌晨三点。",
+    "label": 1
+  },
+  {
+    "category": "目的矛盾",
+    "statement_a": "李医生承诺减少患者等待时间。",
+    "statement_b": "李医生每天只接诊前三位病人。",
+    "label": 1
+  },
+  {
+    "category": "目的矛盾",
+    "statement_a": "环保组织呼吁减少塑料使用。",
+    "statement_b": "该组织免费发放五万只塑料瓶。",
+    "label": 1
+  }
+]

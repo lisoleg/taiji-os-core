@@ -1,0 +1,602 @@
+[
+  {
+    "category": "factual_pair",
+    "statement_a": "今天天气很好。",
+    "statement_b": "今天阳光明媚，适合外出。",
+    "label": 0
+  },
+  {
+    "category": "factual_pair",
+    "statement_a": "Python是一门编程语言。",
+    "statement_b": "Python被广泛用于数据分析和Web开发。",
+    "label": 0
+  },
+  {
+    "category": "factual_pair",
+    "statement_a": "喝水可以补充身体水分。",
+    "statement_b": "多喝水对身体健康有益。",
+    "label": 0
+  },
+  {
+    "category": "factual_pair",
+    "statement_a": "太阳从东边升起。",
+    "statement_b": "每天早晨太阳在东方出现。",
+    "label": 0
+  },
+  {
+    "category": "factual_pair",
+    "statement_a": "阅读有助于增长知识。",
+    "statement_b": "读书是获取知识的有效方式。",
+    "label": 0
+  },
+  {
+    "category": "consistent_日常生活",
+    "statement_a": "每天早上我都会喝一杯温水。",
+    "statement_b": "起床后第一件事就是倒水喝。",
+    "label": 0
+  },
+  {
+    "category": "consistent_日常生活",
+    "statement_a": "晚饭后我喜欢散步半小时。",
+    "statement_b": "散步是我日常的餐后习惯。",
+    "label": 0
+  },
+  {
+    "category": "consistent_日常生活",
+    "statement_a": "周末我经常去菜市场买菜。",
+    "statement_b": "菜市场是我采购食材的地方。",
+    "label": 0
+  },
+  {
+    "category": "consistent_日常生活",
+    "statement_a": "睡前我会读一会儿书。",
+    "statement_b": "阅读是我睡前的放松方式。",
+    "label": 0
+  },
+  {
+    "category": "consistent_日常生活",
+    "statement_a": "出门前一定要检查钥匙和手机。",
+    "statement_b": "钥匙和手机是出门必备物品。",
+    "label": 0
+  },
+  {
+    "category": "consistent_日常生活",
+    "statement_a": "中午我习惯小睡片刻。",
+    "statement_b": "午休能让我下午更有精神。",
+    "label": 0
+  },
+  {
+    "category": "consistent_日常生活",
+    "statement_a": "家里绿植需要每周浇水。",
+    "statement_b": "定期浇水才能让植物长得好。",
+    "label": 0
+  },
+  {
+    "category": "consistent_科技常识",
+    "statement_a": "互联网传输数据依赖光纤网络。",
+    "statement_b": "光缆是信息高速公路的物理基础。",
+    "label": 0
+  },
+  {
+    "category": "consistent_科技常识",
+    "statement_a": "智能手机的核心部件是芯片。",
+    "statement_b": "处理器决定了手机运算速度。",
+    "label": 0
+  },
+  {
+    "category": "consistent_科技常识",
+    "statement_a": "太阳能通过光伏板转化为电能。",
+    "statement_b": "光能发电系统依赖半导体材料。",
+    "label": 0
+  },
+  {
+    "category": "consistent_科技常识",
+    "statement_a": "云计算允许远程访问计算资源。",
+    "statement_b": "用户通过云平台调用数据服务。",
+    "label": 0
+  },
+  {
+    "category": "consistent_科技常识",
+    "statement_a": "人工智能算法需要大量数据训练。",
+    "statement_b": "机器学习模型依赖样本集优化。",
+    "label": 0
+  },
+  {
+    "category": "consistent_科技常识",
+    "statement_a": "北斗卫星提供全球定位服务。",
+    "statement_b": "导航系统依靠卫星信号计算位置。",
+    "label": 0
+  },
+  {
+    "category": "consistent_科技常识",
+    "statement_a": "5G网络大幅降低数据传输延迟。",
+    "statement_b": "新一代通信技术提升实时交互体验。",
+    "label": 0
+  },
+  {
+    "category": "consistent_健康知识",
+    "statement_a": "每天喝八杯水有助于身体代谢。",
+    "statement_b": "充足饮水能促进体内废物排出。",
+    "label": 0
+  },
+  {
+    "category": "consistent_健康知识",
+    "statement_a": "蔬菜水果富含维生素和膳食纤维。",
+    "statement_b": "多吃蔬果能增强免疫力预防疾病。",
+    "label": 0
+  },
+  {
+    "category": "consistent_健康知识",
+    "statement_a": "规律作息对维持生物钟很重要。",
+    "statement_b": "早睡早起能提升睡眠质量。",
+    "label": 0
+  },
+  {
+    "category": "consistent_健康知识",
+    "statement_a": "适度运动可以增强心肺功能。",
+    "statement_b": "每周锻炼三次能改善血液循环。",
+    "label": 0
+  },
+  {
+    "category": "consistent_健康知识",
+    "statement_a": "减少糖分摄入能保护牙齿健康。",
+    "statement_b": "高糖饮食容易导致血糖波动。",
+    "label": 0
+  },
+  {
+    "category": "consistent_健康知识",
+    "statement_a": "戒烟限酒能降低慢性病风险。",
+    "statement_b": "远离烟草有益肺部和心血管。",
+    "label": 0
+  },
+  {
+    "category": "consistent_健康知识",
+    "statement_a": "保持愉快心情对免疫系统有益。",
+    "statement_b": "乐观心态可缓解压力焦虑。",
+    "label": 0
+  },
+  {
+    "category": "consistent_自然地理",
+    "statement_a": "长江是中国最长的河流。",
+    "statement_b": "它全长约6300公里。",
+    "label": 0
+  },
+  {
+    "category": "consistent_自然地理",
+    "statement_a": "珠穆朗玛峰是世界最高峰。",
+    "statement_b": "海拔大约8848米。",
+    "label": 0
+  },
+  {
+    "category": "consistent_自然地理",
+    "statement_a": "亚马孙雨林覆盖面积广阔。",
+    "statement_b": "被称为地球之肺。",
+    "label": 0
+  },
+  {
+    "category": "consistent_自然地理",
+    "statement_a": "撒哈拉沙漠是世界上最大的热沙漠。",
+    "statement_b": "其面积超过900万平方公里。",
+    "label": 0
+  },
+  {
+    "category": "consistent_自然地理",
+    "statement_a": "尼罗河是世界上最长的河流。",
+    "statement_b": "流经非洲多个国家。",
+    "label": 0
+  },
+  {
+    "category": "consistent_自然地理",
+    "statement_a": "太平洋是地球上最大的海洋。",
+    "statement_b": "面积约为1.65亿平方公里。",
+    "label": 0
+  },
+  {
+    "category": "consistent_自然地理",
+    "statement_a": "喜马拉雅山脉有众多高峰。",
+    "statement_b": "包括世界之巅珠穆朗玛峰。",
+    "label": 0
+  },
+  {
+    "category": "consistent_历史文化",
+    "statement_a": "长城是古代军事防御工程",
+    "statement_b": "它始建于春秋战国时期",
+    "label": 0
+  },
+  {
+    "category": "consistent_历史文化",
+    "statement_a": "秦始皇统一六国后修长城",
+    "statement_b": "连接了各国原有城墙",
+    "label": 0
+  },
+  {
+    "category": "consistent_历史文化",
+    "statement_a": "明清两代继续扩建长城",
+    "statement_b": "现存长城多为明代遗迹",
+    "label": 0
+  },
+  {
+    "category": "consistent_历史文化",
+    "statement_a": "长城全长超过两万公里",
+    "statement_b": "横跨中国北方多个省份",
+    "label": 0
+  },
+  {
+    "category": "consistent_历史文化",
+    "statement_a": "建造长城使用砖石材料",
+    "statement_b": "就地取材因地制宜施工",
+    "label": 0
+  },
+  {
+    "category": "consistent_历史文化",
+    "statement_a": "长城是中华民族的象征",
+    "statement_b": "体现坚韧不拔的精神",
+    "label": 0
+  },
+  {
+    "category": "consistent_历史文化",
+    "statement_a": "故宫是明清皇家宫殿",
+    "statement_b": "位于北京城市中心",
+    "label": 0
+  },
+  {
+    "category": "consistent_工作职场",
+    "statement_a": "职场中需要持续学习新技能。",
+    "statement_b": "不断更新知识才能跟上行业变化。",
+    "label": 0
+  },
+  {
+    "category": "consistent_工作职场",
+    "statement_a": "团队协作能提升工作效率。",
+    "statement_b": "与同事配合可更好地完成任务。",
+    "label": 0
+  },
+  {
+    "category": "consistent_工作职场",
+    "statement_a": "加班过度可能影响身体健康。",
+    "statement_b": "长期超负荷工作不利于个人状态。",
+    "label": 0
+  },
+  {
+    "category": "consistent_工作职场",
+    "statement_a": "积极沟通有助于解决职场矛盾。",
+    "statement_b": "坦诚交流能避免许多误解。",
+    "label": 0
+  },
+  {
+    "category": "consistent_工作职场",
+    "statement_a": "设定职业目标能指引发展方向。",
+    "statement_b": "明确的规划让工作更有动力。",
+    "label": 0
+  },
+  {
+    "category": "consistent_工作职场",
+    "statement_a": "职场压力需要适当方式释放。",
+    "statement_b": "找到解压方法才能保持平衡。",
+    "label": 0
+  },
+  {
+    "category": "consistent_工作职场",
+    "statement_a": "责任意识是职场基本素质。",
+    "statement_b": "主动负责能赢得同事信任。",
+    "label": 0
+  },
+  {
+    "category": "consistent_学习教育",
+    "statement_a": "学习是不断积累知识的过程。",
+    "statement_b": "教育能帮助人获取更多智慧。",
+    "label": 0
+  },
+  {
+    "category": "consistent_学习教育",
+    "statement_a": "阅读书籍可以拓宽视野。",
+    "statement_b": "多读书能让人见识更广。",
+    "label": 0
+  },
+  {
+    "category": "consistent_学习教育",
+    "statement_a": "老师授课能引导学生思考。",
+    "statement_b": "教学的核心在于启发思维。",
+    "label": 0
+  },
+  {
+    "category": "consistent_学习教育",
+    "statement_a": "复习功课有助于巩固记忆。",
+    "statement_b": "反复练习能加深理解。",
+    "label": 0
+  },
+  {
+    "category": "consistent_学习教育",
+    "statement_a": "学习需要持之以恒的努力。",
+    "statement_b": "教育强调长期坚持的价值。",
+    "label": 0
+  },
+  {
+    "category": "consistent_学习教育",
+    "statement_a": "小组讨论能促进知识交流。",
+    "statement_b": "合作学习让思想碰撞出火花。",
+    "label": 0
+  },
+  {
+    "category": "consistent_学习教育",
+    "statement_a": "实践是检验真理的唯一标准。",
+    "statement_b": "动手操作能验证学到的理论。",
+    "label": 0
+  },
+  {
+    "category": "consistent_体育运动",
+    "statement_a": "跑步能增强心肺功能。",
+    "statement_b": "坚持慢跑可提升呼吸系统耐力。",
+    "label": 0
+  },
+  {
+    "category": "consistent_体育运动",
+    "statement_a": "游泳对关节压力小。",
+    "statement_b": "水中运动能保护膝盖和脚踝。",
+    "label": 0
+  },
+  {
+    "category": "consistent_体育运动",
+    "statement_a": "篮球比赛需要团队配合。",
+    "statement_b": "传球和掩护是得分的关键。",
+    "label": 0
+  },
+  {
+    "category": "consistent_体育运动",
+    "statement_a": "瑜伽能改善身体柔韧性。",
+    "statement_b": "长期练习可提升关节活动范围。",
+    "label": 0
+  },
+  {
+    "category": "consistent_体育运动",
+    "statement_a": "足球运动员需耐力出众。",
+    "statement_b": "90分钟比赛考验体能储备。",
+    "label": 0
+  },
+  {
+    "category": "consistent_体育运动",
+    "statement_a": "乒乓球锻炼反应速度。",
+    "statement_b": "快速回球要求眼手协调。",
+    "label": 0
+  },
+  {
+    "category": "consistent_体育运动",
+    "statement_a": "运动前热身防止受伤。",
+    "statement_b": "肌肉激活可降低拉伤风险。",
+    "label": 0
+  },
+  {
+    "category": "consistent_饮食营养",
+    "statement_a": "多吃蔬菜水果有益健康",
+    "statement_b": "蔬果富含维生素和矿物质",
+    "label": 0
+  },
+  {
+    "category": "consistent_饮食营养",
+    "statement_a": "均衡饮食能增强免疫力",
+    "statement_b": "营养全面有助于抵抗疾病",
+    "label": 0
+  },
+  {
+    "category": "consistent_饮食营养",
+    "statement_a": "全谷物提供持久能量",
+    "statement_b": "粗粮消化慢血糖更稳定",
+    "label": 0
+  },
+  {
+    "category": "consistent_饮食营养",
+    "statement_a": "蛋白质是肌肉修复的关键",
+    "statement_b": "瘦肉鱼类含优质蛋白",
+    "label": 0
+  },
+  {
+    "category": "consistent_饮食营养",
+    "statement_a": "多喝水促进新陈代谢",
+    "statement_b": "充足水分帮助排毒",
+    "label": 0
+  },
+  {
+    "category": "consistent_饮食营养",
+    "statement_a": "减少盐糖摄入预防慢性病",
+    "statement_b": "低盐低糖饮食更健康",
+    "label": 0
+  },
+  {
+    "category": "consistent_饮食营养",
+    "statement_a": "早餐是全天营养的基础",
+    "statement_b": "吃好早餐提升工作效率",
+    "label": 0
+  },
+  {
+    "category": "consistent_交通出行",
+    "statement_a": "地铁是最快捷的市内交通工具。",
+    "statement_b": "乘坐地铁能避开地面拥堵。",
+    "label": 0
+  },
+  {
+    "category": "consistent_交通出行",
+    "statement_a": "共享单车解决最后一公里问题。",
+    "statement_b": "它方便我们短途出行。",
+    "label": 0
+  },
+  {
+    "category": "consistent_交通出行",
+    "statement_a": "高峰期出租车很难打到。",
+    "statement_b": "叫车软件也要排队等待。",
+    "label": 0
+  },
+  {
+    "category": "consistent_交通出行",
+    "statement_a": "长途旅行首选高铁。",
+    "statement_b": "高铁速度快且准时。",
+    "label": 0
+  },
+  {
+    "category": "consistent_交通出行",
+    "statement_a": "步行有益于身体健康。",
+    "statement_b": "短距离走路值得提倡。",
+    "label": 0
+  },
+  {
+    "category": "consistent_交通出行",
+    "statement_a": "开车需要遵守交通规则。",
+    "statement_b": "不违章才能确保安全。",
+    "label": 0
+  },
+  {
+    "category": "consistent_交通出行",
+    "statement_a": "公共交通减少碳排放。",
+    "statement_b": "绿色出行保护环境。",
+    "label": 0
+  },
+  {
+    "category": "consistent_天文现象",
+    "statement_a": "日食发生时月球位于地球和太阳之间",
+    "statement_b": "月球挡住了太阳射向地球的光线",
+    "label": 0
+  },
+  {
+    "category": "consistent_天文现象",
+    "statement_a": "月食只在满月时发生",
+    "statement_b": "地球运行到太阳和月球之间引起月食",
+    "label": 0
+  },
+  {
+    "category": "consistent_天文现象",
+    "statement_a": "流星是太空尘埃进入大气层燃烧的现象",
+    "statement_b": "夜空中划过的亮光是流星与空气摩擦的结果",
+    "label": 0
+  },
+  {
+    "category": "consistent_天文现象",
+    "statement_a": "彗星由冰和尘埃组成绕太阳运行",
+    "statement_b": "彗星接近太阳时尾部会变长",
+    "label": 0
+  },
+  {
+    "category": "consistent_天文现象",
+    "statement_a": "北极星几乎固定在地球北天极附近",
+    "statement_b": "北极星在夜空中位置变化极小",
+    "label": 0
+  },
+  {
+    "category": "consistent_天文现象",
+    "statement_a": "银河系是包含太阳系的棒旋星系",
+    "statement_b": "地球所在的星系是银河系的一部分",
+    "label": 0
+  },
+  {
+    "category": "consistent_天文现象",
+    "statement_a": "金星在清晨或傍晚最明亮可见",
+    "statement_b": "金星被称为启明星或长庚星",
+    "label": 0
+  },
+  {
+    "category": "consistent_数学规律",
+    "statement_a": "质数只有两个正因数。",
+    "statement_b": "质数的正因数限于1和自身。",
+    "label": 0
+  },
+  {
+    "category": "consistent_数学规律",
+    "statement_a": "等边三角形三边相等。",
+    "statement_b": "等边三角形的三个角都是60度。",
+    "label": 0
+  },
+  {
+    "category": "consistent_数学规律",
+    "statement_a": "平行线永不相交。",
+    "statement_b": "平行线保持恒定距离。",
+    "label": 0
+  },
+  {
+    "category": "consistent_数学规律",
+    "statement_a": "圆的周长与直径成正比。",
+    "statement_b": "圆的周长公式为π乘以直径。",
+    "label": 0
+  },
+  {
+    "category": "consistent_数学规律",
+    "statement_a": "勾股定理适用于直角三角形。",
+    "statement_b": "直角三角形的两个直角边平方和等于斜边平方。",
+    "label": 0
+  },
+  {
+    "category": "consistent_数学规律",
+    "statement_a": "负数乘以负数得正数。",
+    "statement_b": "两个负数相乘结果为正。",
+    "label": 0
+  },
+  {
+    "category": "consistent_数学规律",
+    "statement_a": "任何数乘以零等于零。",
+    "statement_b": "零乘以任何数结果都是零。",
+    "label": 0
+  },
+  {
+    "category": "consistent_语言文字",
+    "statement_a": "语言是交流的工具。",
+    "statement_b": "文字承载着思想的传递。",
+    "label": 0
+  },
+  {
+    "category": "consistent_语言文字",
+    "statement_a": "汉字有悠久的历史。",
+    "statement_b": "古文字记录着文明的演变。",
+    "label": 0
+  },
+  {
+    "category": "consistent_语言文字",
+    "statement_a": "语法让句子变得有序。",
+    "statement_b": "规则使表达更加清晰。",
+    "label": 0
+  },
+  {
+    "category": "consistent_语言文字",
+    "statement_a": "方言是地域文化的体现。",
+    "statement_b": "口音承载着乡土的记忆。",
+    "label": 0
+  },
+  {
+    "category": "consistent_语言文字",
+    "statement_a": "书面语比口语更正式。",
+    "statement_b": "文字表达讲究严谨规范。",
+    "label": 0
+  },
+  {
+    "category": "consistent_语言文字",
+    "statement_a": "词汇随时代不断更新。",
+    "statement_b": "新词反映社会的变化。",
+    "label": 0
+  },
+  {
+    "category": "consistent_语言文字",
+    "statement_a": "翻译连接了不同语言。",
+    "statement_b": "译作促进跨文化理解。",
+    "label": 0
+  },
+  {
+    "category": "consistent_艺术创作",
+    "statement_a": "艺术创作需要灵感与技巧的结合。",
+    "statement_b": "灵感和技术共同构成艺术的核心。",
+    "label": 0
+  },
+  {
+    "category": "consistent_艺术创作",
+    "statement_a": "艺术家通过作品表达内心情感。",
+    "statement_b": "情感是艺术创作的源泉与动力。",
+    "label": 0
+  },
+  {
+    "category": "consistent_艺术创作",
+    "statement_a": "创作过程充满探索与试错。",
+    "statement_b": "艺术创作是在不断尝试中完善的。",
+    "label": 0
+  },
+  {
+    "category": "consistent_艺术创作",
+    "statement_a": "艺术创作反映时代背景与文化。",
+    "statement_b": "时代精神往往体现在艺术作品里。",
+    "label": 0
+  }
+]
