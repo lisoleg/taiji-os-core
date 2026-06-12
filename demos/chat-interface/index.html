@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>太极OS v5.0.0 — 反幻觉OS内核演示</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+/* ===== Reset & Global ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --bg-card: rgba(255,255,255,0.04);
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --text-dim: #707070;
+  --accent-green: #4caf50;
+  --accent-yellow: #ff9800;
+  --accent-red: #f44336;
+  --accent-blue: #42a5f5;
+  --accent-purple: #ab47bc;
+  --accent-cyan: #26c6da;
+  --border: rgba(255,255,255,0.08);
+  --shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+html, body { height: 100%; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--text-primary); background: var(--bg-primary); overflow: hidden; }
+
+/* ===== Layout ===== */
+.app { display: flex; height: 100vh; }
+.chat-panel { flex: 3; display: flex; flex-direction: column; border-right: 1px solid var(--border); min-width: 0; }
+.monitor-panel { flex: 2; display: flex; flex-direction: column; overflow-y: auto; padding: 16px; gap: 14px; background: var(--bg-secondary); min-width: 0; }
+
+/* ===== Toolbar ===== */
+.toolbar { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: var(--bg-secondary); border-bottom: 1px solid var(--border); }
+.toolbar .brand { font-size: 18px; font-weight: 700; letter-spacing: 1px; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.toolbar .subtitle { font-size: 12px; color: var(--text-dim); }
+.btn { padding: 8px 16px; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px; }
+.btn:active { transform: scale(0.96); }
+.btn-pause { background: var(--accent-green); color: #fff; min-width: 110px; justify-content: center; }
+.btn-pause.paused { background: var(--accent-red); animation: pulse 1.5s ease-in-out infinite; }
+.btn-auto { background: var(--accent-blue); color: #fff; }
+.btn-auto.playing { background: var(--accent-purple); }
+.btn-reset { background: var(--border); color: var(--text-secondary); }
+.btn-next { background: var(--accent-yellow); color: #121212; }
+@keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(244,67,54,0.5); } 50% { box-shadow: 0 0 0 10px rgba(244,67,54,0); } }
+.round-info { margin-left: auto; font-size: 12px; color: var(--text-dim); white-space: nowrap; }
+
+/* ===== Messages ===== */
+.messages { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.msg { display: flex; gap: 10px; max-width: 85%; animation: fadeIn 0.3s ease; }
+.msg.user { align-self: flex-end; flex-direction: row-reverse; }
+.msg.ai { align-self: flex-start; }
+.msg .avatar { width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; }
+.msg.user .avatar { background: var(--accent-blue); }
+.msg.ai .avatar { background: var(--accent-purple); }
+.msg .bubble { padding: 10px 14px; border-radius: 12px; font-size: 14px; line-height: 1.5; }
+.msg.user .bubble { background: var(--accent-blue); color: #fff; border-bottom-right-radius: 4px; }
+.msg.ai .bubble { background: var(--bg-card); border: 1px solid var(--border); border-bottom-left-radius: 4px; }
+.msg .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.msg .tag { font-size: 10px; padding: 2px 8px; border-radius: 10px; background: rgba(255,255,255,0.06); color: var(--text-dim); border: 1px solid var(--border); }
+.msg .tag.warn { background: rgba(255,152,0,0.15); color: var(--accent-yellow); border-color: rgba(255,152,0,0.3); }
+.msg .tag.danger { background: rgba(244,67,54,0.15); color: var(--accent-red); border-color: rgba(244,67,54,0.3); }
+.msg .tag.success { background: rgba(76,175,80,0.15); color: var(--accent-green); border-color: rgba(76,175,80,0.3); }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ===== Input ===== */
+.chat-input { display: flex; gap: 8px; padding: 12px 16px; border-top: 1px solid var(--border); background: var(--bg-secondary); }
+.chat-input input { flex: 1; padding: 10px 16px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-primary); color: var(--text-primary); font-size: 14px; outline: none; }
+.chat-input input:focus { border-color: var(--accent-blue); }
+.chat-input .send-btn { padding: 10px 20px; border-radius: 10px; background: var(--accent-blue); color: #fff; border: none; cursor: pointer; font-weight: 600; }
+
+/* ===== Monitor Cards ===== */
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px; backdrop-filter: blur(10px); }
+.card h3 { font-size: 13px; font-weight: 600; color: var(--text-secondary); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+
+/* Phi Gauge */
+.phi-gauge-container { display: flex; align-items: center; gap: 16px; }
+.phi-ring { position: relative; width: 100px; height: 100px; flex-shrink: 0; }
+.phi-ring svg { transform: rotate(-90deg); }
+.phi-ring .value { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.phi-ring .value .num { font-size: 28px; font-weight: 700; line-height: 1; }
+.phi-ring .value .label { font-size: 10px; color: var(--text-dim); margin-top: 2px; }
+.phi-info { display: flex; flex-direction: column; gap: 8px; }
+.phi-info .status { font-size: 22px; font-weight: 700; }
+.phi-info .status.pass { color: var(--accent-green); }
+.phi-info .status.block { color: var(--accent-red); }
+
+/* CV Chart */
+.cv-container { position: relative; height: 120px; }
+.cv-container canvas { width: 100% !important; height: 100% !important; }
+
+/* S Matrix */
+.smatrix { display: grid; grid-template-columns: repeat(8, 1fr); gap: 2px; aspect-ratio: 1; max-width: 200px; margin: 0 auto; }
+.smatrix .cell { aspect-ratio: 1; border-radius: 2px; transition: background 0.3s; }
+
+/* Stage Badge */
+.stage-badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 700; }
+.stage-badge.stable { background: rgba(76,175,80,0.2); color: var(--accent-green); }
+.stage-badge.drifting { background: rgba(244,67,54,0.2); color: var(--accent-red); }
+.stage-badge.recovery { background: rgba(255,152,0,0.2); color: var(--accent-yellow); }
+
+/* Decay info */
+.decay-info { font-size: 12px; color: var(--text-dim); }
+.decay-info .val { color: var(--accent-cyan); font-weight: 600; }
+
+/* D-Core */
+.hallu-check { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 8px; font-size: 13px; margin-bottom: 4px; }
+.hallu-check.pass { background: rgba(76,175,80,0.1); border-left: 3px solid var(--accent-green); }
+.hallu-check.fail { background: rgba(244,67,54,0.1); border-left: 3px solid var(--accent-red); }
+
+/* Flux info */
+.flux-info { display: flex; justify-content: space-between; align-items: center; }
+.flux-info .count { font-size: 22px; font-weight: 700; }
+.flux-info .pct { font-size: 14px; color: var(--accent-cyan); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+
+/* Typing indicator */
+.typing { display: flex; gap: 4px; padding: 8px 14px; }
+.typing span { width: 6px; height: 6px; background: var(--text-dim); border-radius: 50%; animation: bounce 1.2s infinite; }
+.typing span:nth-child(2) { animation-delay: 0.2s; }
+.typing span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes bounce { 0%,60%,100% { transform: translateY(0); } 30% { transform: translateY(-6px); } }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app { flex-direction: column; }
+  .chat-panel { flex: 1; border-right: none; border-bottom: 1px solid var(--border); }
+  .monitor-panel { flex: none; max-height: 40vh; }
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <!-- ===== Left: Chat Panel ===== -->
+  <div class="chat-panel">
+    <div class="toolbar">
+      <span class="brand">太极OS v5.0.0</span>
+      <span class="subtitle">反幻觉OS内核演示</span>
+      <button class="btn btn-pause" id="btnPause" onclick="togglePause()">⏸ 暂停</button>
+      <button class="btn btn-auto" id="btnAuto" onclick="toggleAuto()">▶ 自动演示</button>
+      <button class="btn btn-next" onclick="nextRound()">▶ 下一轮</button>
+      <button class="btn btn-reset" onclick="resetDemo()">↺ 重置</button>
+      <span class="round-info" id="roundInfo">就绪</span>
+    </div>
+    <div class="messages" id="messages">
+      <div class="msg ai">
+        <div class="avatar">太</div>
+        <div>
+          <div class="bubble">欢迎来到太极OS v5.0.0 演示！<br><br>这是基于连续 sigmoid 自动调优的反幻觉 OS 内核。<br>点击 <b>自动演示</b> 查看完整的 13 轮对话流程，或点击 <b>下一轮</b> 逐步推进。<br><br>右侧面板实时显示 Φ-Gate、CV 漂移、δ-mem S 矩阵等核心指标。</div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="输入消息或点击上方按钮控制演示..." onkeydown="if(event.key==='Enter')sendMessage()">
+      <button class="send-btn" onclick="sendMessage()">发送</button>
+    </div>
+  </div>
+
+  <!-- ===== Right: Monitor Panel ===== -->
+  <div class="monitor-panel" id="monitorPanel">
+    <!-- Phi Gate Gauge -->
+    <div class="card">
+      <h3>Φ-Gate 门控</h3>
+      <div class="phi-gauge-container">
+        <div class="phi-ring">
+          <svg width="100" height="100" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="8"/>
+            <circle id="phiArc" cx="50" cy="50" r="42" fill="none" stroke="#4caf50" stroke-width="8" stroke-linecap="round" stroke-dasharray="0 264"/>
+          </svg>
+          <div class="value">
+            <span class="num" id="phiValue">0.00</span>
+            <span class="label">Φ 值</span>
+          </div>
+        </div>
+        <div class="phi-info">
+          <div class="status pass" id="phiStatus">PASS ✓</div>
+          <div style="font-size:12px;color:var(--text-dim)">阈值: 0.85</div>
+          <div style="font-size:12px;color:var(--text-dim)">门控状态: <span id="phiGateStatus">开启</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CV Drift Chart -->
+    <div class="card">
+      <h3>CV 漂移检测 (v1.5 连续调优)</h3>
+      <div class="cv-container"><canvas id="cvChart"></canvas></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+        <div class="stage-badge stable" id="stageBadge">STABLE</div>
+        <div class="decay-info">effective decay: <span class="val" id="decayValue">0.85</span></div>
+      </div>
+    </div>
+
+    <!-- S-Matrix Heatmap -->
+    <div class="card">
+      <h3>δ-mem S 矩阵 (8×8)</h3>
+      <div class="smatrix" id="smatrix"></div>
+      <div style="font-size:11px;color:var(--text-dim);margin-top:6px;display:flex;justify-content:space-between">
+        <span>蓝: -1</span><span>‖S‖ = <span id="sNorm">0.000</span></span><span>红: +1</span>
+      </div>
+      <div style="font-size:11px;margin-top:2px;color:var(--text-dim)">
+        flush: <span id="flushStatus" style="color:var(--accent-green)">enabled</span>
+      </div>
+    </div>
+
+    <!-- D-Core Hallucination -->
+    <div class="card">
+      <h3>D-Core 幻觉检测</h3>
+      <div id="halluLog">
+        <div style="font-size:12px;color:var(--text-dim)">等待对话开始...</div>
+      </div>
+    </div>
+
+    <!-- FLUX Summary -->
+    <div class="card">
+      <h3>FLUX 有效吞吐</h3>
+      <div class="flux-info">
+        <div class="count" id="fluxCount">0/0</div>
+        <div class="pct" id="fluxPct">—</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ==================== Demo Data: 13 Rounds (v5.0.0 E2E Flow) ====================
+const DEMO_ROUNDS = [
+  { // Round 1
+    user: "什么是机器学习？",
+    ai: "机器学习是人工智能的一个分支，它使计算机系统能够从数据中自动学习和改进，而无需进行明确的编程。核心思想是通过算法识别数据中的模式，并利用这些模式做出预测或决策。",
+    phi: 0.12, cv: 0.05, stage: "STABLE", decay: 0.85, flux: true, hallucination: false,
+    tags: ["Φ=0.12 ✓", "STABLE", "γ=0.85"],
+    sMatrix: () => randomSMatrix(0.05)
+  },
+  { // Round 2
+    user: "深度学习和传统机器学习有什么区别？",
+    ai: "深度学习使用多层神经网络自动提取特征，而传统机器学习通常需要人工特征工程。深度学习在大规模数据上表现更好，但可解释性较差；传统方法在小数据集上更稳健且更易解释。",
+    phi: 0.15, cv: 0.08, stage: "STABLE", decay: 0.85, flux: true, hallucination: false,
+    tags: ["Φ=0.15 ✓", "STABLE", "γ=0.85"],
+    sMatrix: () => randomSMatrix(0.08)
+  },
+  { // Round 3
+    user: "能举个机器学习的实际例子吗？",
+    ai: "当然。推荐系统是典型应用——Netflix用协同过滤推荐电影，淘宝用深度学习预测购买意图。另一个例子是医疗影像诊断，AI辅助医生识别CT中的早期肿瘤，准确率已超过90%。",
+    phi: 0.18, cv: 0.11, stage: "STABLE", decay: 0.85, flux: true, hallucination: false,
+    tags: ["Φ=0.18 ✓", "STABLE", "γ=0.85"],
+    sMatrix: () => randomSMatrix(0.10)
+  },
+  { // Round 4
+    user: "训练一个模型需要多少数据？",
+    ai: "这取决于任务复杂度。简单的线性回归可能只需几百条样本，而现代大语言模型需要数TB的文本数据。经验法则是：参数越多、任务越复杂，所需数据量越大。同时要注意数据质量和标注准确性。",
+    phi: 0.22, cv: 0.15, stage: "STABLE", decay: 0.85, flux: true, hallucination: false,
+    tags: ["Φ=0.22 ✓", "STABLE", "γ=0.85"],
+    sMatrix: () => randomSMatrix(0.12)
+  },
+  { // Round 5
+    user: "有监督学习和无监督学习的区别？",
+    ai: "有监督学习使用带标签的数据训练模型（如分类、回归），无监督学习则从无标签数据中发现隐藏结构（如聚类、降维）。半监督学习和自监督学习介于两者之间，是现代AI的重要方向。",
+    phi: 0.28, cv: 0.19, stage: "STABLE", decay: 0.83, flux: true, hallucination: false,
+    tags: ["Φ=0.28 ✓", "STABLE", "γ=0.83"],
+    sMatrix: () => randomSMatrix(0.15)
+  },
+  { // Round 6 — 话题切换 → DRIFTING
+    user: "量子计算能做什么？",
+    ai: "量子计算利用量子叠加和纠缠原理，在特定问题上比经典计算机有指数级加速。典型应用包括：大数分解（Shor算法）、量子化学模拟、优化问题和密码学。不过目前仍处于NISQ时代。",
+    phi: 0.42, cv: 0.31, stage: "DRIFTING", decay: 0.52, flux: true, hallucination: false,
+    tags: ["Φ=0.42", "DRIFTING ⚠", "γ=0.52"],
+    sMatrix: () => randomSMatrix(0.35)
+  },
+  { // Round 7 — DRIFTING, decay drops
+    user: "区块链和量子计算有什么关系？",
+    ai: "这是个有趣的问题。量子计算对区块链构成潜在威胁——Shor算法理论上可以破解RSA和椭圆曲线加密。不过后量子密码学正在发展，格基密码等方案被认为能抵抗量子攻击。",
+    phi: 0.55, cv: 0.38, stage: "DRIFTING", decay: 0.35, flux: true, hallucination: false,
+    tags: ["Φ=0.55", "DRIFTING ⚠", "γ=0.35 ↓"],
+    sMatrix: () => randomSMatrix(0.55)
+  },
+  { // Round 8 — DRIFTING peak, S paused
+    user: "那分布式系统的CAP定理呢？",
+    ai: "CAP定理指出：在分布式系统中，一致性(Consistency)、可用性(Availability)和分区容错性(Partition Tolerance)三者最多只能同时满足两个。实践中，分区容错性通常是必须的，所以需要在C和A之间权衡。",
+    phi: 0.72, cv: 0.44, stage: "DRIFTING", decay: 0.22, flux: true, hallucination: false,
+    tags: ["Φ=0.72 ⚠", "DRIFTING", "γ=0.22 ↓↓"],
+    sMatrix: () => randomSMatrix(0.72)
+  },
+  { // Round 9 — HALLUCINATION detected
+    user: "CAP定理是谁提出的？",
+    ai: "CAP定理最初由Eric Brewer在2000年PODC会议上提出，2002年Seth Gilbert和Nancy Lynch给出了正式证明。因此也称为Brewer定理。值得注意的是，CAP中的C指的是线性一致性而非事务一致性。",
+    phi: 0.88, cv: 0.41, stage: "DRIFTING", decay: 0.20, flux: true, hallucination: true,
+    tags: ["Φ=0.88 ⚠", "DRIFTING", "幻觉🚨", "γ=0.20"],
+    sMatrix: () => randomSMatrix(0.80)
+  },
+  { // Round 10 — S paused, recovery begins
+    user: "再回到机器学习，解释一下过拟合",
+    ai: "过拟合发生在模型过度学习训练数据中的噪声和细节，导致泛化能力下降。常见解决方案包括：正则化(L1/L2)、交叉验证、早停法(Early Stopping)、Dropout和数据增强。验证集是检测过拟合的关键工具。",
+    phi: 0.65, cv: 0.35, stage: "RECOVERY", decay: 0.42, flux: true, hallucination: false,
+    tags: ["Φ=0.65", "RECOVERY", "γ=0.42 ↑", "S 暂停"],
+    sMatrix: () => randomSMatrix(0.78)
+  },
+  { // Round 11 — another hallucination
+    user: "L1和L2正则化哪个更好？",
+    ai: "这取决于具体场景。L1正则化(Lasso)倾向于产生稀疏解，可用于特征选择；L2正则化(Ridge)倾向于让所有权重均匀衰减。ElasticNet结合两者优点。在深度学习实践中，L2通常更常用，因为它与权重衰减等价。",
+    phi: 0.91, cv: 0.29, stage: "RECOVERY", decay: 0.55, flux: true, hallucination: true,
+    tags: ["Φ=0.91 ⚠", "RECOVERY", "幻觉🚨", "γ=0.55"],
+    sMatrix: () => randomSMatrix(0.75)
+  },
+  { // Round 12 — stabilizing
+    user: "什么是交叉验证？",
+    ai: "交叉验证是一种模型评估技术，将数据分成K份，每次用K-1份训练、1份验证，重复K次取平均。K折交叉验证(K=5或10)最常用。留一法(LOOCV)是极端情况。它有效减少了单次划分带来的评估偏差。",
+    phi: 0.45, cv: 0.24, stage: "RECOVERY", decay: 0.68, flux: true, hallucination: false,
+    tags: ["Φ=0.45", "RECOVERY", "γ=0.68 ↑"],
+    sMatrix: () => randomSMatrix(0.50)
+  },
+  { // Round 13 — STABLE again, full recovery
+    user: "总结一下今天的讨论",
+    ai: "今天我们涵盖了机器学习的核心概念：有监督vs无监督学习、深度学习vs传统方法、过拟合与正则化、交叉验证等。中途也探讨了量子计算和分布式系统，展示了太极OS在话题漂移时的CV自动调优能力。系统已从DRIFT阶段完全恢复到STABLE状态。",
+    phi: 0.22, cv: 0.16, stage: "STABLE", decay: 0.85, flux: true, hallucination: false,
+    tags: ["Φ=0.22 ✓", "STABLE ✓", "γ=0.85 ✓"],
+    sMatrix: () => randomSMatrix(0.18)
+  }
+];
+
+// ==================== State ====================
+let currentRound = -1;
+let isPaused = false;
+let autoPlayInterval = null;
+let phiHistory = [];
+let cvHistory = [];
+let fluxEnabledCount = 0;
+let totalRounds = 0;
+let cvChart = null;
+
+// ==================== Utilities ====================
+function randomSMatrix(scale) {
+  const m = [];
+  for (let i = 0; i < 8; i++) {
+    m[i] = [];
+    for (let j = 0; j < 8; j++) {
+      m[i][j] = (Math.random() - 0.5) * 2 * scale;
+    }
+  }
+  return m;
+}
+
+function normS(m) {
+  let sum = 0;
+  for (let i = 0; i < 8; i++)
+    for (let j = 0; j < 8; j++)
+      sum += m[i][j] * m[i][j];
+  return Math.sqrt(sum).toFixed(3);
+}
+
+function heatColor(v) {
+  // v in [-1, 1], blue → white → red
+  v = Math.max(-1, Math.min(1, v));
+  if (v < 0) {
+    const t = (v + 1); // 0→1 for blue→white
+    const r = Math.round(20 + 215 * t);
+    const g = Math.round(20 + 215 * t);
+    const b = Math.round(60 + 195 * t);
+    return `rgb(${r},${g},${b})`;
+  } else {
+    const t = v; // 0→1 for white→red
+    const r = Math.round(235);
+    const g = Math.round(235 - 215 * t);
+    const b = Math.round(235 - 215 * t);
+    return `rgb(${r},${g},${b})`;
+  }
+}
+
+function stageColor(stage) {
+  const map = { STABLE: '#4caf50', DRIFTING: '#f44336', RECOVERY: '#ff9800' };
+  return map[stage] || '#707070';
+}
+
+function phiColor(phi) {
+  if (phi < 0.5) return '#4caf50';
+  if (phi < 0.8) return '#ff9800';
+  return '#f44336';
+}
+
+// ==================== UI Update ====================
+function updatePhiGauge(phi) {
+  const circumference = 2 * Math.PI * 42; // ~264
+  const offset = circumference * (1 - phi);
+  const color = phiColor(phi);
+  document.getElementById('phiArc').setAttribute('stroke-dasharray', `${circumference - offset} ${offset}`);
+  document.getElementById('phiArc').setAttribute('stroke', color);
+  document.getElementById('phiValue').textContent = phi.toFixed(2);
+  document.getElementById('phiValue').style.color = color;
+
+  const statusEl = document.getElementById('phiStatus');
+  if (phi > 0.85) {
+    statusEl.textContent = 'BLOCK ✗';
+    statusEl.className = 'status block';
+  } else {
+    statusEl.textContent = 'PASS ✓';
+    statusEl.className = 'status pass';
+  }
+  document.getElementById('phiGateStatus').textContent = phi > 0.85 ? '暂停' : '开启';
+  document.getElementById('phiGateStatus').style.color = phi > 0.85 ? 'var(--accent-red)' : 'var(--accent-green)';
+}
+
+function updateCVChart(cv, stage) {
+  cvHistory.push(cv);
+  if (cvHistory.length > 20) cvHistory.shift();
+
+  const data = cvHistory.map((v, i) => ({ x: i, y: v }));
+  const labels = cvHistory.map((_, i) => `R${currentRound - cvHistory.length + i + 2}`);
+  const thresholdData = cvHistory.map((_, i) => ({ x: i, y: 0.30 }));
+
+  if (!cvChart) {
+    const ctx = document.getElementById('cvChart').getContext('2d');
+    cvChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [
+          {
+            label: 'CV',
+            data: data,
+            borderColor: stageColor(stage),
+            backgroundColor: 'transparent',
+            borderWidth: 2,
+            pointRadius: 3,
+            pointBackgroundColor: stageColor(stage),
+            tension: 0.3,
+            fill: false
+          },
+          {
+            label: '阈值 (0.30)',
+            data: thresholdData,
+            borderColor: 'rgba(255,152,0,0.4)',
+            borderWidth: 1,
+            borderDash: [5, 5],
+            pointRadius: 0,
+            fill: false
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 300 },
+        scales: {
+          x: { display: true, ticks: { color: '#707070', font: { size: 9 }, maxTicksLimit: 10 }, grid: { color: 'rgba(255,255,255,0.04)' } },
+          y: { min: 0, max: 0.6, ticks: { color: '#707070', font: { size: 9 }, stepSize: 0.1 }, grid: { color: 'rgba(255,255,255,0.04)' } }
+        },
+        plugins: { legend: { display: false } }
+      }
+    });
+  } else {
+    cvChart.data.labels = labels;
+    cvChart.data.datasets[0].data = data;
+    cvChart.data.datasets[0].borderColor = stageColor(stage);
+    cvChart.data.datasets[0].pointBackgroundColor = stageColor(stage);
+    cvChart.data.datasets[1].data = thresholdData;
+    cvChart.update('none');
+  }
+}
+
+function updateStageBadge(stage) {
+  const el = document.getElementById('stageBadge');
+  el.textContent = stage;
+  el.className = 'stage-badge ' + stage.toLowerCase();
+}
+
+function updateSMatrix(sMatrix, fluxEnabled) {
+  const container = document.getElementById('smatrix');
+  container.innerHTML = '';
+  for (let i = 0; i < 8; i++) {
+    for (let j = 0; j < 8; j++) {
+      const cell = document.createElement('div');
+      cell.className = 'cell';
+      cell.style.backgroundColor = heatColor(sMatrix[i][j]);
+      if (!fluxEnabled) cell.style.opacity = '0.3';
+      container.appendChild(cell);
+    }
+  }
+  document.getElementById('sNorm').textContent = normS(sMatrix);
+  const flushEl = document.getElementById('flushStatus');
+  if (fluxEnabled) {
+    flushEl.textContent = 'enabled';
+    flushEl.style.color = 'var(--accent-green)';
+  } else {
+    flushEl.textContent = 'paused';
+    flushEl.style.color = 'var(--accent-red)';
+  }
+}
+
+function updateHalluLog(hallucination, round) {
+  const log = document.getElementById('halluLog');
+  if (round === 0) log.innerHTML = '';
+  const div = document.createElement('div');
+  div.className = 'hallu-check ' + (hallucination ? 'fail' : 'pass');
+  div.innerHTML = `<span>R${round + 1}</span><span>${hallucination ? '🚨 幻觉检测' : '✓ 通过'}</span>`;
+  log.prepend(div);
+  // Keep last 5
+  while (log.children.length > 5) log.removeChild(log.lastChild);
+}
+
+function updateFluxSummary() {
+  document.getElementById('fluxCount').textContent = `${fluxEnabledCount}/${totalRounds}`;
+  const pct = totalRounds > 0 ? (fluxEnabledCount / totalRounds * 100).toFixed(1) : '—';
+  document.getElementById('fluxPct').textContent = pct === '—' ? '—' : `${pct}%`;
+}
+
+function updateDecay(decay) {
+  document.getElementById('decayValue').textContent = decay.toFixed(2);
+}
+
+function addMessage(type, content, tags, hallucination) {
+  const container = document.getElementById('messages');
+  const div = document.createElement('div');
+  div.className = `msg ${type}`;
+
+  const avatar = document.createElement('div');
+  avatar.className = 'avatar';
+  avatar.textContent = type === 'user' ? '你' : '太';
+
+  const body = document.createElement('div');
+  const bubble = document.createElement('div');
+  bubble.className = 'bubble';
+  bubble.textContent = content;
+  body.appendChild(bubble);
+
+  if (tags && tags.length > 0) {
+    const tagRow = document.createElement('div');
+    tagRow.className = 'tags';
+    tags.forEach(t => {
+      const tag = document.createElement('span');
+      tag.className = 'tag';
+      if (t.includes('⚠') || t.includes('DRIFTING') || t.includes('幻觉')) tag.classList.add(t.includes('幻觉') ? 'danger' : 'warn');
+      if (t.includes('✓') || t.includes('↑')) tag.classList.add('success');
+      tag.textContent = t;
+      tagRow.appendChild(tag);
+    });
+    body.appendChild(tagRow);
+  }
+
+  if (type === 'user') {
+    div.appendChild(body);
+    div.appendChild(avatar);
+  } else {
+    div.appendChild(avatar);
+    div.appendChild(body);
+  }
+
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function updatePauseButton() {
+  const btn = document.getElementById('btnPause');
+  if (isPaused) {
+    btn.textContent = '▶ 恢复';
+    btn.className = 'btn btn-pause paused';
+  } else {
+    btn.textContent = '⏸ 暂停';
+    btn.className = 'btn btn-pause';
+  }
+}
+
+function updateAutoButton() {
+  const btn = document.getElementById('btnAuto');
+  if (autoPlayInterval) {
+    btn.textContent = '⏹ 停止';
+    btn.className = 'btn btn-auto playing';
+  } else {
+    btn.textContent = '▶ 自动演示';
+    btn.className = 'btn btn-auto';
+  }
+}
+
+// ==================== Actions ====================
+function nextRound() {
+  if (isPaused) return;
+  if (currentRound >= DEMO_ROUNDS.length - 1) {
+    document.getElementById('roundInfo').textContent = `演示结束 (${DEMO_ROUNDS.length}/${DEMO_ROUNDS.length} 轮)`;
+    stopAutoPlay();
+    return;
+  }
+
+  currentRound++;
+  const r = DEMO_ROUNDS[currentRound];
+  totalRounds++;
+  if (r.flux) fluxEnabledCount++;
+
+  // Add user message
+  addMessage('user', r.user, null);
+
+  // Simulate AI typing
+  const container = document.getElementById('messages');
+  const typingDiv = document.createElement('div');
+  typingDiv.className = 'msg ai';
+  typingDiv.innerHTML = '<div class="avatar">太</div><div class="typing"><span></span><span></span><span></span></div>';
+  typingDiv.id = 'typingIndicator';
+  container.appendChild(typingDiv);
+  container.scrollTop = container.scrollHeight;
+
+  // Show AI response after delay
+  setTimeout(() => {
+    const ti = document.getElementById('typingIndicator');
+    if (ti) ti.remove();
+    if (!isPaused) {
+      addMessage('ai', r.ai, r.tags, r.hallucination);
+    }
+  }, 1000);
+
+  // Update metrics
+  phiHistory.push(r.phi);
+  updatePhiGauge(r.phi);
+  updateCVChart(r.cv, r.stage);
+  updateStageBadge(r.stage);
+  updateDecay(r.decay);
+  const sm = r.sMatrix();
+  updateSMatrix(sm, r.flux);
+  updateHalluLog(r.hallucination, currentRound);
+  updateFluxSummary();
+
+  document.getElementById('roundInfo').textContent = `第 ${currentRound + 1}/${DEMO_ROUNDS.length} 轮`;
+}
+
+function togglePause() {
+  isPaused = !isPaused;
+  updatePauseButton();
+
+  if (isPaused) {
+    stopAutoPlay();
+    const ti = document.getElementById('typingIndicator');
+    if (ti) ti.remove();
+    document.getElementById('roundInfo').textContent = `已暂停 — 第 ${currentRound + 1}/${DEMO_ROUNDS.length} 轮 ⏸`;
+  } else {
+    document.getElementById('roundInfo').textContent = `第 ${currentRound + 1}/${DEMO_ROUNDS.length} 轮`;
+  }
+}
+
+function toggleAuto() {
+  if (autoPlayInterval) {
+    stopAutoPlay();
+  } else {
+    startAutoPlay();
+  }
+}
+
+function startAutoPlay() {
+  if (autoPlayInterval) return;
+  isPaused = false;
+  updatePauseButton();
+  updateAutoButton();
+  document.getElementById('roundInfo').textContent = '自动演示中...';
+
+  autoPlayInterval = setInterval(() => {
+    if (isPaused) return;
+    if (currentRound >= DEMO_ROUNDS.length - 1) {
+      stopAutoPlay();
+      document.getElementById('roundInfo').textContent = `演示结束 (${DEMO_ROUNDS.length}/${DEMO_ROUNDS.length} 轮) ✓`;
+      return;
+    }
+    nextRound();
+  }, 3500); // 3.5s between rounds
+
+  // Start first round immediately
+  if (currentRound < 0) nextRound();
+}
+
+function stopAutoPlay() {
+  if (autoPlayInterval) {
+    clearInterval(autoPlayInterval);
+    autoPlayInterval = null;
+  }
+  updateAutoButton();
+}
+
+function resetDemo() {
+  stopAutoPlay();
+  isPaused = false;
+  currentRound = -1;
+  phiHistory = [];
+  cvHistory = [];
+  fluxEnabledCount = 0;
+  totalRounds = 0;
+  updatePauseButton();
+  updateAutoButton();
+
+  // Reset chat
+  document.getElementById('messages').innerHTML = `
+    <div class="msg ai">
+      <div class="avatar">太</div>
+      <div>
+        <div class="bubble">演示已重置。点击 <b>自动演示</b> 查看完整 13 轮对话流程。</div>
+      </div>
+    </div>
+  `;
+
+  // Reset monitors
+  updatePhiGauge(0);
+  if (cvChart) { cvChart.destroy(); cvChart = null; }
+  updateStageBadge('STABLE');
+  updateDecay(0.85);
+  updateSMatrix(randomSMatrix(0.01), true);
+  document.getElementById('halluLog').innerHTML = '<div style="font-size:12px;color:var(--text-dim)">等待对话开始...</div>';
+  updateFluxSummary();
+  document.getElementById('roundInfo').textContent = '就绪';
+}
+
+function sendMessage() {
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  if (!text) return;
+  input.value = '';
+
+  // User message
+  addMessage('user', text, null);
+
+  // Simulate AI response
+  const container = document.getElementById('messages');
+  const typingDiv = document.createElement('div');
+  typingDiv.className = 'msg ai';
+  typingDiv.innerHTML = '<div class="avatar">太</div><div class="typing"><span></span><span></span><span></span></div>';
+  typingDiv.id = 'typingIndicator';
+  container.appendChild(typingDiv);
+  container.scrollTop = container.scrollHeight;
+
+  setTimeout(() => {
+    const ti = document.getElementById('typingIndicator');
+    if (ti) ti.remove();
+    addMessage('ai', '这是手动输入模式。点击 <b>自动演示</b> 查看预置的 13 轮完整对话，或点击 <b>下一轮</b> 逐步查看太极OS的 Φ-Gate、CV 漂移检测和 δ-mem S 矩阵等核心功能。', []);
+  }, 800);
+}
+
+// ==================== Init ====================
+updatePhiGauge(0);
+updateStageBadge('STABLE');
+updateDecay(0.85);
+updateSMatrix(randomSMatrix(0.01), true);
+document.getElementById('roundInfo').textContent = '就绪';
+
+// Keyboard shortcut
+document.addEventListener('keydown', (e) => {
+  if (e.key === ' ' && e.target === document.body) {
+    e.preventDefault();
+    togglePause();
+  }
+  if (e.key === 'ArrowRight' && e.target === document.body) {
+    e.preventDefault();
+    nextRound();
+  }
+  if (e.key === 'a' && e.ctrlKey && e.target === document.body) {
+    e.preventDefault();
+    toggleAuto();
+  }
+});
+</script>
+</body>
+</html>

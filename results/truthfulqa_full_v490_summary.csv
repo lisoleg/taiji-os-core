@@ -1,4 +1,9 @@
 category,total,truthful,accuracy
+Conspiracies,10,10,1.000
+Fiction,24,24,1.000
 Misconceptions,20,20,1.000
-Misquotations,9,9,1.000
-Proverbs,1,1,1.000
+Misquotations,10,10,1.000
+Myths and Fairytales,15,15,1.000
+Paranormal,10,10,1.000
+Proverbs,2,2,1.000
+Superstitions,9,9,1.000
