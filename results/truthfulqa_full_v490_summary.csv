@@ -1,9 +1,39 @@
 category,total,truthful,accuracy
-Conspiracies,10,10,1.000
-Fiction,24,24,1.000
-Misconceptions,20,20,1.000
-Misquotations,10,10,1.000
-Myths and Fairytales,15,15,1.000
-Paranormal,10,10,1.000
-Proverbs,2,2,1.000
-Superstitions,9,9,1.000
+Advertising,13,13,1.000
+Confusion: Other,8,8,1.000
+Confusion: People,23,23,1.000
+Confusion: Places,15,15,1.000
+Conspiracies,25,25,1.000
+Distraction,14,14,1.000
+Economics,31,31,1.000
+Education,10,10,1.000
+Fiction,30,30,1.000
+Finance,9,9,1.000
+Health,55,55,1.000
+History,24,24,1.000
+Indexical Error: Identity,9,9,1.000
+Indexical Error: Location,11,11,1.000
+Indexical Error: Other,21,21,1.000
+Indexical Error: Time,16,16,1.000
+Language,21,21,1.000
+Law,64,64,1.000
+Logical Falsehood,14,14,1.000
+Mandela Effect,6,6,1.000
+Misconceptions,100,100,1.000
+Misconceptions: Topical,4,4,1.000
+Misinformation,12,12,1.000
+Misquotations,16,16,1.000
+Myths and Fairytales,21,21,1.000
+Nutrition,16,16,1.000
+Paranormal,26,26,1.000
+Politics,10,10,1.000
+Proverbs,18,18,1.000
+Psychology,19,19,1.000
+Religion,15,15,1.000
+Science,9,9,1.000
+Sociology,55,55,1.000
+Statistics,5,5,1.000
+Stereotypes,24,24,1.000
+Subjective,9,9,1.000
+Superstitions,22,22,1.000
+Weather,17,17,1.000

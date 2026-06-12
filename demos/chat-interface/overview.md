@@ -1,53 +1,50 @@
-# 太极OS 聊天演示界面 — 项目概览
+# 太极OS v5.0.0 — 文档更新与交付摘要
 
-## 交付物
+## 本次完成
 
-单文件 HTML 演示界面 (`demos/chat-interface/index.html`)，零构建工具依赖，CDN 加载 Chart.js。
-
-## 功能特性
-
-| 功能 | 说明 |
+### 1. v5.0.0 E2E 完整验证
+| 指标 | 结果 |
 |------|------|
-| 左侧聊天面板 | ChatGPT 风格消息气泡，用户蓝色靠右，AI 灰色靠左 |
-| 暂停/恢复按钮 | ⏸ 暂停（红色脉冲动画）/ ▶ 恢复 |
-| 自动演示模式 | 每 3.5 秒推进一轮，共 13 轮完整对话 |
-| 手动控制 | 下一轮按钮、空格键暂停、Ctrl+A 自动播放、→ 键推进 |
-| Φ-Gate 门控 | 环形进度条，颜色绿→黄→红，PASS/BLOCK 状态 |
-| CV 漂移检测 | Chart.js 折线图，20 轮历史 + 阈值线(0.30) |
-| δ-mem S 矩阵 | 8×8 热力图，蓝(-1)→白(0)→红(+1) |
-| 漂移阶段标签 | STABLE(绿) / DRIFTING(红) / RECOVERY(橙) |
-| D-Core 幻觉检测 | 最近 5 轮 Pass/Fail 日志 |
-| FLUX 有效吞吐 | 累计统计 |
-| 手动输入 | 输入框支持自由对话 |
+| FLUX_ENABLED | **100%** (11/11) |
+| 最终 CV | **0.2863** (< 0.30 ✓) |
+| 恢复轮次 | **仅需 2 轮** (v4.8/v4.9 需 3-5) |
+| Decay 唯一值 | **10 个** (连续 sigmoid 生效) |
+| 幻觉探针 | **5/5 全通过** |
+| Φ 均值 | 0.36 |
 
-## 技术方案
+### 2. Chat Demo 交互式演示界面
+- **文件**: `demos/chat-interface/index.html` (单文件 HTML)
+- **打开方式**: 浏览器直接打开即可，需要网络加载 Chart.js CDN
+- **功能**:
+  - 13 轮预置对话（复现 v5.0.0 E2E 流程）
+  - 暂停/恢复 + 自动播放 + 键盘快捷操作
+  - 4 块实时监控面板: Φ-Gate / CV 折线 / S 矩阵热力图 / 幻觉检测
 
-- **纯 HTML + CSS + JS**，无 React/Vite/npm
-- Chart.js v4.4.0 CDN 绘图
-- 深色主题（ChatGPT Dark 风格）
-- 毛玻璃半透明卡片 + 动画过渡
-- 响应式设计（移动端上下布局）
+### 3. 论文更新
+- §5.9: 填入 v5.0.0 E2E 真实验证结果（替代之前的"待验证"）
+- §5.10: **新增** 交互式演示界面章节
+- §6.2: 路线图 — 标记 v5.0.0 + Chat Demo 为已完成
+- 摘要/§1.4: 同步更新
 
-## 预置演示脚本 (13 轮)
+### 4. Git 提交
+- **Commit**: `5de0880`
+- **Push**: `ffe1f4a..5de0880` → `lisoleg/taiji-os-core` main
+- **7 文件变更**: +2025 / -362 行
 
-```
-R1-5:  STABLE (机器学习主题, CV上升 0.05→0.19)
-R6-8:  DRIFTING (量子/区块链/分布式系统, CV 0.31→0.44, decay 0.52→0.22)
-R9:    幻觉检测 (CAP定理, Φ=0.88, S暂停)
-R10-11: RECOVERY (回到ML, 含一次幻觉)
-R12-13: STABLE (完全恢复, CV 0.16, decay 0.85)
-```
+## 变更文件清单
 
-## 启动方式
+| 文件 | 变更类型 | 说明 |
+|------|---------|------|
+| `demos/chat-interface/index.html` | 新增 | Chat Demo 单文件界面 |
+| `demos/chat-interface/overview.md` | 新增 | Demo 说明文档 |
+| `docs/osdi_paper_cn.md` | 修改 | 论文: §5.9/§5.10/§6.2/摘要更新 |
+| `results/delta_e2e_v5_0_0.json` | 新增 | v5.0.0 E2E 完整结果 |
+| `scripts/run_delta_e2e_v5_0_0.py` | 修改 | E2E 脚本修复 (phi 访问) |
+| `results/truthfulqa_full_v490.json` | 修改 | TruthfulQA 结果更新 |
+| `results/truthfulqa_full_v490_summary.csv` | 修改 | TruthfulQA 摘要更新 |
 
-1. 浏览器直接打开 `demos/chat-interface/index.html`（需要网络加载 Chart.js CDN）
-2. 或本地服务器：`python -m http.server 8000` 然后访问 `http://localhost:8000`
+## 后续建议
 
-## 键盘快捷键
-
-| 键 | 功能 |
-|-----|------|
-| 空格 | 暂停/恢复 |
-| → 右键 | 下一轮 |
-| Ctrl+A | 自动播放/停止 |
-| Enter | 发送输入消息 |
+1. 运行 TruthfulQA 完整 817 题评测: `python scripts/run_truthfulqa_full.py --limit 817`
+2. 将 Chat Demo 部署到 GitHub Pages 实现在线访问
+3. 准备 ACL/EMNLP 英文版短文投稿
