@@ -5,9 +5,12 @@ swebench_eval.py — SWE-bench Lite 基准评测脚本 (v5.1)
 数据来自 HuggingFace `princeton-nlp/SWE-bench_Lite`。
 评测方式：API 生成 patch → 与标准答案做模糊匹配（prompt-based）。
 
+集成 δ-mem 管道：G-Core 生成 → D-Core 模糊匹配 → S 矩阵更新 → HyperParamAdapter 自适应
+
 用法:
     python scripts/swebench_eval.py --limit 50          # 评测前 50 题
     python scripts/swebench_eval.py --limit 0           # 全部 300 题
+    python scripts/swebench_eval.py --no-delta          # 禁用 δ-mem
     python scripts/swebench_eval.py --repo django/django # 仅某仓库
 
 Author: Taiji OS Team
@@ -33,6 +36,13 @@ import numpy as np
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
+
+# ── 导入 δ-mem 管道 ─────────────────────────────────────────────────────
+from core.world_model import WorldModel
+from core.self_consistency_loop import SelfConsistencyLoop
+from core.delta_fusion import DeltaFusion
+from core.embedding_adapter import auto_detect_dim
+from core.drift_detector import DriftDetector, HyperParamAdapter
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("swebench_eval")
@@ -145,10 +155,10 @@ def compute_patch_similarity(predicted_patch: str, gold_patch: str) -> float:
 # ── 主评测 ──────────────────────────────────────────────────────────────
 
 def load_swebench_data(limit: int = 0, repo_filter: str = None) -> list[dict]:
-    """从 HuggingFace 加载 SWE-bench Lite 数据集。"""
+    """从 HuggingFace 加载 SWE-bench Lite 数据集（streaming 模式避免 Windows 环境变量限制）。"""
     try:
         from datasets import load_dataset
-        ds = load_dataset("princeton-nlp/SWE-bench_Lite", split="test")
+        ds = load_dataset("princeton-nlp/SWE-bench_Lite", split="test", streaming=True)
         questions = []
         for item in ds:
             if repo_filter and repo_filter not in str(item["repo"]):
@@ -173,8 +183,14 @@ def load_swebench_data(limit: int = 0, repo_filter: str = None) -> list[dict]:
         raise
 
 
-def run_swebench_evaluation(questions: list[dict]) -> dict:
+def run_swebench_evaluation(questions: list[dict], use_delta: bool = True) -> dict:
     """运行 SWE-bench Lite 评测。
+
+    集成 δ-mem 管道：G-Core 生成 → D-Core 模糊匹配 → S 矩阵更新。
+
+    Args:
+        questions: SWE-bench Lite 实例列表。
+        use_delta: 是否启用 δ-mem L1/L2 融合管道。
 
     Returns:
         评测报告字典。
@@ -182,6 +198,26 @@ def run_swebench_evaluation(questions: list[dict]) -> dict:
     results = []
     repo_stats = defaultdict(lambda: {"total": 0, "resolved": 0, "similarities": []})
     total_time = 0.0
+
+    # ── δ-mem 管道初始化 ─────────────────────────────────────────────
+    fusion = None
+    sc_loop = None
+    phi_vals = []
+    cv_vals = []
+    if use_delta:
+        wm = WorldModel(dim=1536, config_path=str(PROJECT_ROOT / "config.yaml"))
+        auto_detect_dim(wm)
+        fusion = DeltaFusion()
+        sc_loop = SelfConsistencyLoop(
+            lambda prompt: call_deepseek(prompt),  # 轻量包装：绕过 LLMRouter
+            wm,
+            dcore_mode="keyword",  # 不需要额外的 API 检测，用关键词回退
+            delta_fusion=fusion,
+        )
+        sc_loop.phi.base_threshold = 0.05
+        sc_loop.phi._current_threshold = 0.05
+        sc_loop.drift_detector.adapter = HyperParamAdapter()
+        logger.info(f"δ-mem 管道已初始化 (rank={fusion.delta_layer.smatrix.r}, HyperParamAdapter: ON)")
 
     for i, q in enumerate(questions):
         instance_id = q["instance_id"]
@@ -199,6 +235,28 @@ def run_swebench_evaluation(questions: list[dict]) -> dict:
 
         response = call_deepseek(prompt)
         predicted_patch = extract_patch(response)
+
+        # ── δ-mem: 推演一步 ────────────────────────────────────────
+        delta_info = {}
+        if fusion is not None and sc_loop is not None:
+            try:
+                env = {"intent": f"repo={repo}", "instance_id": instance_id}
+                _, reason = sc_loop.step(env, q["problem_statement"][:500])
+                dd = sc_loop.drift_detector
+                cv = float(dd.current_cv) if dd.count >= 3 else 0.0
+                phi = float(wm.current_phi) if hasattr(wm, "current_phi") else 0.0
+                s_norm = float(np.linalg.norm(fusion.delta_layer.smatrix.S, "fro"))
+                phi_vals.append(phi)
+                cv_vals.append(cv)
+                delta_info = {
+                    "phi": round(phi, 4),
+                    "cv": round(cv, 4),
+                    "S_fro_norm": round(s_norm, 4),
+                    "drift": bool(dd.is_drifting()),
+                }
+            except Exception as e:
+                logger.warning(f"  δ-mem step 错误: {e}")
+                delta_info = {"error": str(e)}
 
         elapsed = time.time() - t0
         total_time += elapsed
@@ -219,12 +277,14 @@ def run_swebench_evaluation(questions: list[dict]) -> dict:
             "resolved": resolved,
             "patch_length": len(predicted_patch),
             "time_s": round(elapsed, 2),
+            "delta_info": delta_info,
         })
 
         resolved_count = sum(1 for r in results if r["resolved"])
+        extra = f" Φ={delta_info.get('phi', 0)} CV={delta_info.get('cv', 0)}" if delta_info else ""
         logger.info(
             f"  sim={similarity:.3f} {'✓' if resolved else '✗'} "
-            f"(累计: {resolved_count}/{i+1}, {elapsed:.1f}s)"
+            f"(累计: {resolved_count}/{i+1}, {elapsed:.1f}s){extra}"
         )
 
         time.sleep(1.2)
@@ -237,6 +297,12 @@ def run_swebench_evaluation(questions: list[dict]) -> dict:
     report = {
         "experiment": "E8_SWEbench_Lite_v510",
         "model": "deepseek-chat",
+        "delta_mem_enabled": use_delta,
+        "delta_mem_stats": {
+            "phi_mean": round(float(np.mean(phi_vals)), 4) if phi_vals else 0.0,
+            "cv_mean": round(float(np.mean(cv_vals)), 4) if cv_vals else 0.0,
+            "cv_max": round(float(np.max(cv_vals)), 4) if cv_vals else 0.0,
+        },
         "n_instances": total,
         "n_resolved": n_resolved,
         "n_unresolved": total - n_resolved,
@@ -272,11 +338,14 @@ def main():
                         help="最大实例数 (0=全部, 默认 10)")
     parser.add_argument("--repo", type=str, default=None,
                         help="过滤仓库 (如 django/django)")
+    parser.add_argument("--no-delta", action="store_true",
+                        help="禁用 δ-mem L1/L2 融合管道 (默认启用)")
     args = parser.parse_args()
 
     logger.info("=" * 60)
     logger.info("SWE-bench Lite 基准评测 v5.1.0")
     logger.info(f"  limit={args.limit}, repo={args.repo or '全部'}")
+    logger.info(f"  delta-mem: {'DISABLED' if args.no_delta else 'ENABLED'}")
     logger.info("=" * 60)
 
     questions = load_swebench_data(
@@ -288,7 +357,7 @@ def main():
         logger.error("没有加载到任何题目！")
         return
 
-    report = run_swebench_evaluation(questions)
+    report = run_swebench_evaluation(questions, use_delta=not args.no_delta)
 
     print("\n" + "=" * 60)
     print("SWE-bench Lite 评测结果摘要")

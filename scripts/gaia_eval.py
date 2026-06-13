@@ -82,21 +82,27 @@ def load_gaia(limit: Optional[int] = None) -> list[dict]:
     """
     from datasets import load_dataset
 
-    logger.info("Loading GAIA 2023_all validation from HuggingFace ...")
+    logger.info("Loading GAIA 2023_all validation from HuggingFace (streaming) ...")
     try:
-        ds = load_dataset("gaia-benchmark/GAIA", "2023_all", split="validation")
+        ds = load_dataset("gaia-benchmark/GAIA", "2023_all", split="validation", streaming=True)
     except Exception as e:
         logger.error(f"Failed to load GAIA: {e}")
         raise
 
     instances = []
-    n = len(ds) if limit is None else min(limit, len(ds))
-    logger.info(f"  dataset size: {len(ds)}, using first {n} instances")
+    # Streaming mode: iterate to collect items
+    collected = []
+    for item in ds:
+        collected.append(item)
+        if limit and len(collected) >= limit:
+            break
+    n = len(collected)
+    logger.info(f"  dataset size: {n}, using first {n} instances")
 
     # GAIA HF schema (v1+): task_id, question, level, answer, file_name, file_path
     # Annotator Metadata is the legacy name; current HF dataset may use annotator_meta
     for i in range(n):
-        row = ds[i]
+        row = collected[i]
         # 兼容字段大小写
         task_id = (
             row.get("task_id")

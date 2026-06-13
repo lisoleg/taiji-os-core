@@ -1,0 +1,213 @@
+{
+  "experiment": "E8_SWEbench_Lite_v510",
+  "model": "deepseek-chat",
+  "delta_mem_enabled": false,
+  "delta_mem_stats": {
+    "phi_mean": 0.0,
+    "cv_mean": 0.0,
+    "cv_max": 0.0
+  },
+  "n_instances": 20,
+  "n_resolved": 2,
+  "n_unresolved": 18,
+  "resolve_rate": 0.1,
+  "avg_similarity": 0.3528,
+  "total_time_min": 1.9,
+  "resolve_threshold": 0.6,
+  "repo_stats": {
+    "astropy/astropy": {
+      "total": 6,
+      "resolved": 1,
+      "resolve_rate": 0.1667,
+      "avg_similarity": 0.3253
+    },
+    "django/django": {
+      "total": 14,
+      "resolved": 1,
+      "resolve_rate": 0.0714,
+      "avg_similarity": 0.3645
+    }
+  },
+  "results": [
+    {
+      "instance_id": "astropy__astropy-12907",
+      "repo": "astropy/astropy",
+      "similarity": 0.3141,
+      "resolved": false,
+      "patch_length": 1730,
+      "time_s": 7.93,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "astropy__astropy-14182",
+      "repo": "astropy/astropy",
+      "similarity": 0.2979,
+      "resolved": false,
+      "patch_length": 2167,
+      "time_s": 7.5,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "astropy__astropy-14365",
+      "repo": "astropy/astropy",
+      "similarity": 0.2203,
+      "resolved": false,
+      "patch_length": 3262,
+      "time_s": 6.72,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "astropy__astropy-14995",
+      "repo": "astropy/astropy",
+      "similarity": 0.1494,
+      "resolved": false,
+      "patch_length": 496,
+      "time_s": 8.52,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "astropy__astropy-6938",
+      "repo": "astropy/astropy",
+      "similarity": 0.6857,
+      "resolved": true,
+      "patch_length": 499,
+      "time_s": 5.74,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "astropy__astropy-7746",
+      "repo": "astropy/astropy",
+      "similarity": 0.2846,
+      "resolved": false,
+      "patch_length": 519,
+      "time_s": 2.6,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-10914",
+      "repo": "django/django",
+      "similarity": 0.2253,
+      "resolved": false,
+      "patch_length": 3888,
+      "time_s": 10.45,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-10924",
+      "repo": "django/django",
+      "similarity": 0.2546,
+      "resolved": false,
+      "patch_length": 1457,
+      "time_s": 4.82,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11001",
+      "repo": "django/django",
+      "similarity": 0.3545,
+      "resolved": false,
+      "patch_length": 768,
+      "time_s": 3.46,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11019",
+      "repo": "django/django",
+      "similarity": 0.1828,
+      "resolved": false,
+      "patch_length": 1549,
+      "time_s": 4.15,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11039",
+      "repo": "django/django",
+      "similarity": 0.5747,
+      "resolved": false,
+      "patch_length": 786,
+      "time_s": 3.6,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11049",
+      "repo": "django/django",
+      "similarity": 0.3164,
+      "resolved": false,
+      "patch_length": 1010,
+      "time_s": 4.76,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11099",
+      "repo": "django/django",
+      "similarity": 0.916,
+      "resolved": true,
+      "patch_length": 914,
+      "time_s": 2.79,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11133",
+      "repo": "django/django",
+      "similarity": 0.3973,
+      "resolved": false,
+      "patch_length": 606,
+      "time_s": 2.52,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11179",
+      "repo": "django/django",
+      "similarity": 0.3252,
+      "resolved": false,
+      "patch_length": 783,
+      "time_s": 3.25,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11283",
+      "repo": "django/django",
+      "similarity": 0.3318,
+      "resolved": false,
+      "patch_length": 2283,
+      "time_s": 5.92,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11422",
+      "repo": "django/django",
+      "similarity": 0.4499,
+      "resolved": false,
+      "patch_length": 736,
+      "time_s": 3.48,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11564",
+      "repo": "django/django",
+      "similarity": 0.0918,
+      "resolved": false,
+      "patch_length": 3043,
+      "time_s": 7.71,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11583",
+      "repo": "django/django",
+      "similarity": 0.2283,
+      "resolved": false,
+      "patch_length": 8339,
+      "time_s": 11.81,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11620",
+      "repo": "django/django",
+      "similarity": 0.4551,
+      "resolved": false,
+      "patch_length": 1110,
+      "time_s": 6.42,
+      "delta_info": {}
+    }
+  ]
+}
