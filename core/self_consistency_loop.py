@@ -1,6 +1,6 @@
 """core/self_consistency_loop.py — 自洽性推演循环
 
-v5.0.0: 连续衰减自动调优 — DriftDetector v1.5 (sigmoid + slope_factor)
+v5.1.0: HyperParamAdapter 自动超参适配 — 基于多轮 CV 统计调整 γ_max/γ_min/cv_mid
 
 G-Core 由 LLM 生成候选，D-Core 做语义矛盾检测，
 经 PhiScheduler 门控过滤后更新世界模型。
@@ -10,6 +10,7 @@ G-Core 由 LLM 生成候选，D-Core 做语义矛盾检测，
   - G-Core S 更新始终允许（保留学习能力）
   - D-Core S 更新在 ψ 漂移时降低 β（保留学习但阻尼噪音）
   - ψ 漂移检测：连续 sigmoid 自动调优 γ(CV, dCV/dt) (v5.0)
+  - 超参自适应：HyperParamAdapter 每 20 轮调整 sigmoid 超参 (v5.1)
 
 D-Core 双模式：
   - "semantic" (默认): 调用 DeepSeek API 做零样本矛盾检测
@@ -72,14 +73,16 @@ class SelfConsistencyLoop:
     def __init__(
         self, llm_router, world_model, dcore_mode: str = "semantic",
         delta_fusion=None,
+        hyper_adapter: bool = False,  # v5.1: HyperParamAdapter 自动超参适配
     ):
-        """初始化推演循环（v4.2: δ-mem 集成 + 漂移检测）。
+        """初始化推演循环（v5.1: δ-mem 集成 + 漂移检测 + 超参自适应）。
 
         参数:
             llm_router:   LLMRouter 实例，用于 G-Core 生成和 D-Core 检测
             world_model:  WorldModel 实例，用于 ψ 更新和 Φ 计算
             dcore_mode:   "semantic"（DeepSeek API 语义检测）或 "keyword"（关键词回退）
             delta_fusion: DeltaFusion 实例（可选），启用 δ-mem L1/L2 融合
+            hyper_adapter: 启用 HyperParamAdapter 自动超参适配 (v5.1)
         """
         self.llm = llm_router
         self.w = world_model
@@ -96,6 +99,12 @@ class SelfConsistencyLoop:
             adaptive=True,   # v4.8: 三态自适应 decay
             auto_tune=True,  # v5.0: 连续 sigmoid 自动调优
         )
+
+        # ── v5.1: HyperParamAdapter 自动超参适配 ──
+        if hyper_adapter:
+            from core.drift_detector import HyperParamAdapter
+            self.drift_detector.adapter = HyperParamAdapter()
+            logger.info("HyperParamAdapter 已启用 (v5.1 超参自适应)")
 
     # ------------------------------------------------------------------
     # 主推演入口（v4.2: δ-mem 注入 + 漂移检测）

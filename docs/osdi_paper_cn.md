@@ -1035,6 +1035,55 @@ $$\gamma(\text{CV}, d\text{CV}/dt) = \gamma_{\max} - \Delta\gamma \cdot \sigma\l
 
 ---
 
+### 5.11 超参自适应 (v5.1.0)
+
+v5.0.0 的连续 sigmoid 自动调优虽然消除了三态硬编码的边界跳变，但其核心超参（γ_max=0.85, γ_min=0.20, cv_mid=0.25）依然是 **静态预设值**，不随运行环境变化而调整。v5.1.0 引入 **HyperParamAdapter** 模块，基于多轮 CV 历史统计自动调整这三个关键超参。
+
+**适配策略**：
+
+| 超参 | 初始值 | 适配方法 | 安全边界 |
+|------|--------|---------|---------|
+| γ_max | 0.85 | 基于稳定度比例（CV<0.15 的比例）→ 0.70 + 0.25 × stable_ratio | [0.70, 0.95] |
+| γ_min | 0.20 | 基于最近 20 轮最差 CV → 分三档：0.40 以上→0.10，0.30-0.40→0.15，<0.30→0.20 | [0.10, 0.35] |
+| cv_mid | 0.25 | CV 分布的滚动 60 分位数 | [0.15, 0.40] |
+
+**工作机制**：
+- 维护最近 200 轮 CV 历史缓冲区
+- 每 20 轮触发一次适配（adaptation_interval=20），计算统计量并更新 detector 超参
+- 统计窗口取最近 100 个 CV 值（min(100, history_len)），确保统计稳定性
+- 适配逻辑内置于 `DriftDetector.push()` 调用链中，对上层 SCL 透明
+
+**实现位置**：`core/drift_detector.py` 中新增 `HyperParamAdapter` dataclass（~100 行），`DriftDetector` 新增 `adapter: Optional[HyperParamAdapter]` 属性。
+
+**预期效果**：
+- 长时稳定场景：γ_max 自动上升至 ~0.90，减少不必要的遗忘
+- 高频漂移场景：γ_min 自动下降至 ~0.10，加速适应剧烈变化
+- cv_mid 自动对齐实际 CV 分布中心，提升 sigmoid 过渡的灵敏度
+
+---
+
+### 5.12 SWE-bench + GAIA 外部基准 (v5.1.0)
+
+为进一步验证太极OS δ-mem 管道在统一 API 调用范式下对标准第三方基准的适应能力，v5.1.0 实现了 **SWE-bench Lite** 和 **GAIA** 两个外部基准评测脚本。
+
+**SWE-bench Lite**：
+- **数据集**：HuggingFace `princeton-nlp/SWE-bench_Lite`，300 实例，来自 11 个 Python 仓库（django, flask, matplotlib, requests 等）
+- **任务**：给定 GitHub issue 描述，生成修复 patch
+- **评测方式**：模型生成 patch → 与标准答案 patch 做模糊匹配（SequenceMatcher + 行级匹配 + 关键符号匹配），resolve threshold = 0.60
+- **输�**：`results/swebench_lite_v510.json`，含 resolve_rate、avg_similarity、repo 级统计
+- **脚本**：`scripts/swebench_eval.py`，支持 `--limit N`、`--repo` 过滤、`--no-delta`
+
+**GAIA (General AI Assistant)**：
+- **数据集**：HuggingFace `gaia-benchmark/GAIA` validation split，165 题，按 Level 1-3 分级
+- **任务**：多步推理问答，需要事实查询、数学计算、逻辑推理
+- **评测方式**：模型回答 → 规范化后与标准答案比对（精确匹配 + 子串 + 数值近似 + 模糊匹配）
+- **输出**：`results/gaia_v510.json`，含 accuracy、level 级统计
+- **脚本**：`scripts/gaia_eval.py`，支持 `--limit N`、`--category Level=N`、`--no-delta`
+
+**δ-mem 集成**：两个脚本均支持 `--no-delta` 参数——启用时为 G-Core→D-Core→S 矩阵全管道，禁用时退化为直接 API 调用。HyperParamAdapter 在 delta 模式下自动激活，运行期间动态调整漂移检测超参。
+
+---
+
 ## 6. 讨论与未来工作
 
 ### 6.1 从 Agent Runtime → 统一页式管理系统
@@ -1051,7 +1100,7 @@ $$\gamma(\text{CV}, d\text{CV}/dt) = \gamma_{\max} - \Delta\gamma \cdot \sigma\l
 2. **已完成（v4.9.0）**：FLUX 语义放宽至 100% 覆盖（11/11 轮全 FLUX）+ TruthfulQA 扩展到 817 题完整数据集
 3. **已完成（v5.0.0）**：连续 sigmoid + 斜率因子自动调优 + 52/52 测试 + E2E 验证 FLUX 100%、CV 0.2863、仅需 2 轮恢复、10 个唯一衰减值
 4. **已完成（Chat Demo）**：交互式演示界面（单文件 HTML + Chart.js），完整复现 v5.0.0 E2E 流程，含 Φ-Gate/CV 曲线/S 矩阵/幻觉检测四块实时面板
-5. **v5.1 规划中**：SWE-bench + GAIA 外部基准；超参自适应（多轮统计自动调整 γ_max/γ_min/cv_mid）
+5. **已完成（v5.1.0）**：SWE-bench Lite + GAIA 外部基准评测脚本；HyperParamAdapter 超参自适应（多轮统计自动调整 γ_max/γ_min/cv_mid）
 6. **长期**：与 vLLM/Strata 集成，在真实 LLM 推理引擎中验证 USCS 抽象；δ-mem S 矩阵生命周期的内核级管理
 
 ### 6.3 论文发表策略

@@ -9,6 +9,11 @@ Drift detection is the trigger for δ-mem S-update damping:
   - Drift detected → reduce D-Core S beta to 0.2× (dampen noisy ingest)
   - Drift subsides → restore full S learning rate
 
+v1.6 (2026-06-13): HyperParamAdapter — automatic adaptation of γ_max, γ_min, cv_mid
+  based on multi-round CV history statistics. Tracks CV distribution over 200 rounds,
+  adapts every 20 rounds using percentile-based heuristics. Eliminates need for
+  manual tuning of the sigmoid hyperparameters.
+
 v1.5 (2026-06-11): Continuous auto-tune decay — replaces hard-coded three-stage
   lookup with a smooth sigmoid-based formula.
     γ(CV, dCV/dt) = γ_max − Δγ × σ((CV−CV_mid)/T) × slope_factor(dCV/dt)
@@ -28,7 +33,7 @@ v1.3 (2026-06-11): Exponential decay weighting for CV computation.
   exponentially, letting recent high-Φ values dominate the CV.
 
 Author: Taiji OS Team
-Version: v1.5 — continuous auto-tune decay (2026-06-11)
+Version: v1.6 — hyperparameter auto-adaptation (2026-06-13)
 """
 
 from __future__ import annotations
@@ -111,6 +116,7 @@ class DriftDetector:
     _recovery_streak: int = 0          # consecutive CV < 0.15 rounds in RECOVERY
     _prev_cv: float = 0.0              # v1.5: previous CV for slope computation
     _effective_decay: float = 0.55     # v1.5: cached effective decay for diagnostics
+    adapter: Optional["HyperParamAdapter"] = None  # v1.6: auto-adapts gamma_max/min/cv_mid
 
     def __post_init__(self):
         self.phi_history = np.zeros(self.window_size, dtype=np.float64)
@@ -213,6 +219,7 @@ class DriftDetector:
         """Record a new Φ value into the sliding window.
 
         Called after each Ψ-check in the consistency loop.
+        v1.6: After pushing, triggers HyperParamAdapter.adapt() if configured.
 
         Args:
             phi_value: The Φ (cosine similarity) score from the latest step.
@@ -221,6 +228,12 @@ class DriftDetector:
         self.write_idx = (self.write_idx + 1) % self.window_size
         if self.count < self.window_size:
             self.count += 1
+
+        # v1.6: trigger hyperparameter auto-adaptation after CV update
+        if self.adapter is not None and self.count >= 3:
+            cv = self.current_cv
+            self.adapter.push(cv)
+            self.adapter.adapt(self)
 
     # ── Weighted statistics (v1.3: exponential decay) ─────────────────
 
@@ -367,6 +380,11 @@ class DriftDetector:
             "auto_tune": self.auto_tune,
             "stage": self._stage,
             "prev_cv": round(self._prev_cv, 4),
+            # v1.6: hyperparameter adapter state
+            "adapter_enabled": self.adapter is not None,
+            "gamma_max": self.gamma_max,
+            "gamma_min": self.gamma_min,
+            "cv_mid": self.cv_mid,
         }
 
     # ── Reset ──────────────────────────────────────────────────────────
@@ -383,6 +401,147 @@ class DriftDetector:
         self._recovery_streak = 0
         self._prev_cv = 0.0
         self._effective_decay = self.decay
+
+
+# ────────────────────────────────────────────────────────────────────────────
+# v1.6 HyperParamAdapter — 自动调整 γ_max/γ_min/cv_mid
+# ────────────────────────────────────────────────────────────────────────────
+
+
+@dataclass
+class HyperParamAdapter:
+    """自动适配 DriftDetector 超参数的统计模块。
+
+    v5.1 (2026-06-13): 基于多轮 CV 历史统计自动调整 sigmoid 公式的
+    γ_max, γ_min, cv_mid 三个关键超参，消除手动调参需求。
+
+    适配策略:
+      - cv_mid: 设为 CV 分布的滚动分位数（默认 60 分位）
+      - gamma_max: 基于稳定度比例自适应（越稳定 → 越高, 慢遗忘）
+      - gamma_min: 基于最差 CV 自适应（越差 → 越低, 快遗忘）
+
+    Attributes:
+        history_size: CV 历史记录上限（默认 200）。
+        adaptation_interval: 两次适配之间的最小轮数（默认 20）。
+        cv_mid_quantile: 用于 cv_mid 的分位数（默认 0.60）。
+        rounds_since_adapt: 距上次适配的轮数。
+        cv_history: CV 历史值列表（最近 history_size 个）。
+        cv_mid_bounds: cv_mid 的安全边界 (min, max)。
+        gamma_max_bounds: gamma_max 的安全边界 (min, max)。
+        gamma_min_bounds: gamma_min 的安全边界 (min, max)。
+        _last_adapted: 最近一次适配的参数字典（诊断用）。
+    """
+
+    history_size: int = 200
+    adaptation_interval: int = 20
+    cv_mid_quantile: float = 0.60
+    rounds_since_adapt: int = 0
+    cv_history: list = field(default_factory=list)
+    cv_mid_bounds: tuple = (0.15, 0.40)
+    gamma_max_bounds: tuple = (0.70, 0.95)
+    gamma_min_bounds: tuple = (0.10, 0.35)
+    _last_adapted: dict = field(default_factory=dict)
+
+    def push(self, cv: float) -> None:
+        """记录一个新的 CV 值到历史缓冲区。
+
+        Args:
+            cv: 当前加权 CV 值。
+        """
+        self.cv_history.append(float(cv))
+        if len(self.cv_history) > self.history_size:
+            self.cv_history.pop(0)
+        self.rounds_since_adapt += 1
+
+    def should_adapt(self) -> bool:
+        """检查是否满足适配条件。
+
+        Returns:
+            True 如果距上次适配 ≥ adaptation_interval 且历史 ≥ 20 条。
+        """
+        return (
+            self.rounds_since_adapt >= self.adaptation_interval
+            and len(self.cv_history) >= 20
+        )
+
+    def adapt(self, detector: "DriftDetector") -> dict:
+        """计算适配后的超参并应用到 detector。
+
+        使用最近 100 个 CV 值（不超过历史长度）计算统计量，
+        根据稳定性指标调整三个关键超参。
+
+        Args:
+            detector: 要更新的 DriftDetector 实例。
+
+        Returns:
+            适配结果字典，包含 adapted 标志和新参数值。
+        """
+        if not self.should_adapt():
+            return {"adapted": False}
+
+        import numpy as np
+
+        # 取最近最多 100 个 CV 做统计
+        window_size = min(100, len(self.cv_history))
+        cvs = np.array(self.cv_history[-window_size:])
+
+        # ── cv_mid: 滚动分位数 ──────────────────────────────────────
+        new_cv_mid = float(np.quantile(cvs, self.cv_mid_quantile))
+        new_cv_mid = max(self.cv_mid_bounds[0], min(self.cv_mid_bounds[1], new_cv_mid))
+
+        # ── gamma_max: 稳定度比例驱动 ─────────────────────────────
+        stability_ratio = float(np.mean(cvs < 0.15))
+        new_gamma_max = 0.70 + 0.25 * stability_ratio
+        new_gamma_max = max(
+            self.gamma_max_bounds[0], min(self.gamma_max_bounds[1], new_gamma_max)
+        )
+
+        # ── gamma_min: 最差 CV 驱动 ────────────────────────────────
+        worst_cv = float(np.max(cvs[-20:]))
+        if worst_cv > 0.40:
+            new_gamma_min = 0.10
+        elif worst_cv > 0.30:
+            new_gamma_min = 0.15
+        else:
+            new_gamma_min = 0.20
+        new_gamma_min = max(
+            self.gamma_min_bounds[0], min(self.gamma_min_bounds[1], new_gamma_min)
+        )
+
+        # 应用到 detector
+        detector.cv_mid = new_cv_mid
+        detector.gamma_max = new_gamma_max
+        detector.gamma_min = new_gamma_min
+
+        self.rounds_since_adapt = 0
+        self._last_adapted = {
+            "adapted": True,
+            "cv_mid": round(new_cv_mid, 4),
+            "gamma_max": round(new_gamma_max, 4),
+            "gamma_min": round(new_gamma_min, 4),
+            "stability_ratio": round(stability_ratio, 4),
+            "worst_cv": round(worst_cv, 4),
+            "window_size": window_size,
+        }
+        return self._last_adapted
+
+    def reset(self) -> None:
+        """重置适配器到初始状态。"""
+        self.cv_history.clear()
+        self.rounds_since_adapt = 0
+        self._last_adapted = {}
+
+    def stats(self) -> dict:
+        """返回适配器诊断统计。
+
+        Returns:
+            包含历史长度、最近适配参数等的字典。
+        """
+        return {
+            "history_len": len(self.cv_history),
+            "rounds_since_adapt": self.rounds_since_adapt,
+            "last_adapted": self._last_adapted,
+        }
 
 
 # ────────────────────────────────────────────────────────────────────────────
