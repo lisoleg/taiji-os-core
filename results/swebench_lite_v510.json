@@ -7,62 +7,122 @@
     "cv_mean": 0.0,
     "cv_max": 0.0
   },
-  "n_instances": 20,
-  "n_resolved": 2,
-  "n_unresolved": 18,
-  "resolve_rate": 0.1,
-  "avg_similarity": 0.3528,
-  "total_time_min": 1.9,
+  "n_instances": 300,
+  "n_resolved": 43,
+  "n_unresolved": 257,
+  "resolve_rate": 0.1433,
+  "avg_similarity": 0.3566,
+  "total_time_min": 38.7,
   "resolve_threshold": 0.6,
   "repo_stats": {
     "astropy/astropy": {
       "total": 6,
       "resolved": 1,
       "resolve_rate": 0.1667,
-      "avg_similarity": 0.3253
+      "avg_similarity": 0.3342
     },
     "django/django": {
-      "total": 14,
+      "total": 114,
+      "resolved": 23,
+      "resolve_rate": 0.2018,
+      "avg_similarity": 0.411
+    },
+    "matplotlib/matplotlib": {
+      "total": 23,
+      "resolved": 2,
+      "resolve_rate": 0.087,
+      "avg_similarity": 0.321
+    },
+    "mwaskom/seaborn": {
+      "total": 4,
+      "resolved": 0,
+      "resolve_rate": 0.0,
+      "avg_similarity": 0.2341
+    },
+    "pallets/flask": {
+      "total": 3,
+      "resolved": 0,
+      "resolve_rate": 0.0,
+      "avg_similarity": 0.3183
+    },
+    "psf/requests": {
+      "total": 6,
       "resolved": 1,
-      "resolve_rate": 0.0714,
-      "avg_similarity": 0.3645
+      "resolve_rate": 0.1667,
+      "avg_similarity": 0.3353
+    },
+    "pydata/xarray": {
+      "total": 5,
+      "resolved": 0,
+      "resolve_rate": 0.0,
+      "avg_similarity": 0.3297
+    },
+    "pylint-dev/pylint": {
+      "total": 6,
+      "resolved": 1,
+      "resolve_rate": 0.1667,
+      "avg_similarity": 0.1954
+    },
+    "pytest-dev/pytest": {
+      "total": 17,
+      "resolved": 1,
+      "resolve_rate": 0.0588,
+      "avg_similarity": 0.2319
+    },
+    "scikit-learn/scikit-learn": {
+      "total": 23,
+      "resolved": 1,
+      "resolve_rate": 0.0435,
+      "avg_similarity": 0.3133
+    },
+    "sphinx-doc/sphinx": {
+      "total": 16,
+      "resolved": 2,
+      "resolve_rate": 0.125,
+      "avg_similarity": 0.2633
+    },
+    "sympy/sympy": {
+      "total": 77,
+      "resolved": 11,
+      "resolve_rate": 0.1429,
+      "avg_similarity": 0.3722
     }
   },
   "results": [
     {
       "instance_id": "astropy__astropy-12907",
       "repo": "astropy/astropy",
-      "similarity": 0.3141,
+      "similarity": 0.3687,
       "resolved": false,
-      "patch_length": 1730,
-      "time_s": 7.93,
+      "patch_length": 1215,
+      "time_s": 7.77,
       "delta_info": {}
     },
     {
       "instance_id": "astropy__astropy-14182",
       "repo": "astropy/astropy",
-      "similarity": 0.2979,
+      "similarity": 0.2621,
       "resolved": false,
-      "patch_length": 2167,
-      "time_s": 7.5,
+      "patch_length": 3046,
+      "time_s": 10.65,
       "delta_info": {}
     },
     {
       "instance_id": "astropy__astropy-14365",
       "repo": "astropy/astropy",
-      "similarity": 0.2203,
+      "similarity": 0.185,
       "resolved": false,
-      "patch_length": 3262,
-      "time_s": 6.72,
+      "patch_length": 6675,
+      "time_s": 16.57,
       "delta_info": {}
     },
     {
       "instance_id": "astropy__astropy-14995",
       "repo": "astropy/astropy",
-      "similarity": 0.1494,
+      "similarity": 0.1478,
       "resolved": false,
-      "patch_length": 496,
-      "time_s": 8.52,
+      "patch_length": 481,
+      "time_s": 2.89,
       "delta_info": {}
     },
     {
@@ -71,43 +131,43 @@
       "similarity": 0.6857,
       "resolved": true,
       "patch_length": 499,
-      "time_s": 5.74,
+      "time_s": 2.15,
       "delta_info": {}
     },
     {
       "instance_id": "astropy__astropy-7746",
       "repo": "astropy/astropy",
-      "similarity": 0.2846,
+      "similarity": 0.3561,
       "resolved": false,
-      "patch_length": 519,
-      "time_s": 2.6,
+      "patch_length": 613,
+      "time_s": 3.72,
       "delta_info": {}
     },
     {
       "instance_id": "django__django-10914",
       "repo": "django/django",
-      "similarity": 0.2253,
+      "similarity": 0.2223,
       "resolved": false,
-      "patch_length": 3888,
-      "time_s": 10.45,
+      "patch_length": 5047,
+      "time_s": 15.86,
       "delta_info": {}
     },
     {
       "instance_id": "django__django-10924",
       "repo": "django/django",
-      "similarity": 0.2546,
+      "similarity": 0.1883,
       "resolved": false,
-      "patch_length": 1457,
-      "time_s": 4.82,
+      "patch_length": 4851,
+      "time_s": 16.85,
       "delta_info": {}
     },
     {
       "instance_id": "django__django-11001",
       "repo": "django/django",
-      "similarity": 0.3545,
+      "similarity": 0.3095,
       "resolved": false,
-      "patch_length": 768,
-      "time_s": 3.46,
+      "patch_length": 1204,
+      "time_s": 4.29,
       "delta_info": {}
     },
     {
@@ -116,97 +176,2617 @@
       "similarity": 0.1828,
       "resolved": false,
       "patch_length": 1549,
-      "time_s": 4.15,
+      "time_s": 4.85,
       "delta_info": {}
     },
     {
       "instance_id": "django__django-11039",
       "repo": "django/django",
-      "similarity": 0.5747,
+      "similarity": 0.3133,
       "resolved": false,
-      "patch_length": 786,
-      "time_s": 3.6,
+      "patch_length": 2302,
+      "time_s": 7.01,
       "delta_info": {}
     },
     {
       "instance_id": "django__django-11049",
       "repo": "django/django",
-      "similarity": 0.3164,
+      "similarity": 0.4153,
       "resolved": false,
-      "patch_length": 1010,
-      "time_s": 4.76,
+      "patch_length": 515,
+      "time_s": 4.15,
       "delta_info": {}
     },
     {
       "instance_id": "django__django-11099",
       "repo": "django/django",
-      "similarity": 0.916,
+      "similarity": 0.9098,
       "resolved": true,
       "patch_length": 914,
-      "time_s": 2.79,
+      "time_s": 3.37,
       "delta_info": {}
     },
     {
       "instance_id": "django__django-11133",
       "repo": "django/django",
-      "similarity": 0.3973,
+      "similarity": 0.3753,
       "resolved": false,
-      "patch_length": 606,
-      "time_s": 2.52,
+      "patch_length": 730,
+      "time_s": 3.51,
       "delta_info": {}
     },
     {
       "instance_id": "django__django-11179",
       "repo": "django/django",
-      "similarity": 0.3252,
+      "similarity": 0.3974,
       "resolved": false,
-      "patch_length": 783,
-      "time_s": 3.25,
+      "patch_length": 834,
+      "time_s": 4.44,
       "delta_info": {}
     },
     {
       "instance_id": "django__django-11283",
       "repo": "django/django",
-      "similarity": 0.3318,
+      "similarity": 0.4386,
       "resolved": false,
-      "patch_length": 2283,
-      "time_s": 5.92,
+      "patch_length": 1894,
+      "time_s": 6.63,
       "delta_info": {}
     },
     {
       "instance_id": "django__django-11422",
       "repo": "django/django",
-      "similarity": 0.4499,
+      "similarity": 0.4386,
       "resolved": false,
-      "patch_length": 736,
-      "time_s": 3.48,
+      "patch_length": 919,
+      "time_s": 4.39,
       "delta_info": {}
     },
     {
       "instance_id": "django__django-11564",
       "repo": "django/django",
-      "similarity": 0.0918,
+      "similarity": 0.0415,
       "resolved": false,
-      "patch_length": 3043,
-      "time_s": 7.71,
+      "patch_length": 7894,
+      "time_s": 17.05,
       "delta_info": {}
     },
     {
       "instance_id": "django__django-11583",
       "repo": "django/django",
-      "similarity": 0.2283,
+      "similarity": 0.4199,
       "resolved": false,
-      "patch_length": 8339,
-      "time_s": 11.81,
+      "patch_length": 625,
+      "time_s": 3.22,
       "delta_info": {}
     },
     {
       "instance_id": "django__django-11620",
       "repo": "django/django",
-      "similarity": 0.4551,
+      "similarity": 0.4887,
       "resolved": false,
-      "patch_length": 1110,
+      "patch_length": 517,
+      "time_s": 3.41,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11630",
+      "repo": "django/django",
+      "similarity": 0.2998,
+      "resolved": false,
+      "patch_length": 1198,
+      "time_s": 4.89,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11742",
+      "repo": "django/django",
+      "similarity": 0.0668,
+      "resolved": false,
+      "patch_length": 2694,
+      "time_s": 14.78,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11797",
+      "repo": "django/django",
+      "similarity": 0.4433,
+      "resolved": false,
+      "patch_length": 672,
+      "time_s": 4.62,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11815",
+      "repo": "django/django",
+      "similarity": 0.8238,
+      "resolved": true,
+      "patch_length": 741,
+      "time_s": 3.78,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11848",
+      "repo": "django/django",
+      "similarity": 0.4476,
+      "resolved": false,
+      "patch_length": 1704,
+      "time_s": 5.53,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11905",
+      "repo": "django/django",
+      "similarity": 0.8242,
+      "resolved": true,
+      "patch_length": 1192,
+      "time_s": 5.53,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11910",
+      "repo": "django/django",
+      "similarity": 0.1417,
+      "resolved": false,
+      "patch_length": 1116,
+      "time_s": 5.13,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11964",
+      "repo": "django/django",
+      "similarity": 0.1657,
+      "resolved": false,
+      "patch_length": 911,
+      "time_s": 6.64,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-11999",
+      "repo": "django/django",
+      "similarity": 0.4256,
+      "resolved": false,
+      "patch_length": 948,
+      "time_s": 3.64,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-12113",
+      "repo": "django/django",
+      "similarity": 0.3441,
+      "resolved": false,
+      "patch_length": 6799,
+      "time_s": 14.83,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-12125",
+      "repo": "django/django",
+      "similarity": 0.4377,
+      "resolved": false,
+      "patch_length": 980,
+      "time_s": 3.59,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-12184",
+      "repo": "django/django",
+      "similarity": 0.358,
+      "resolved": false,
+      "patch_length": 692,
+      "time_s": 5.26,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-12284",
+      "repo": "django/django",
+      "similarity": 0.6236,
+      "resolved": true,
+      "patch_length": 568,
+      "time_s": 3.62,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-12286",
+      "repo": "django/django",
+      "similarity": 0.4577,
+      "resolved": false,
+      "patch_length": 775,
+      "time_s": 3.92,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-12308",
+      "repo": "django/django",
+      "similarity": 0.3771,
+      "resolved": false,
+      "patch_length": 1379,
+      "time_s": 5.96,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-12453",
+      "repo": "django/django",
+      "similarity": 0.4634,
+      "resolved": false,
+      "patch_length": 1038,
+      "time_s": 3.76,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-12470",
+      "repo": "django/django",
+      "similarity": 0.3315,
+      "resolved": false,
+      "patch_length": 987,
+      "time_s": 18.25,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-12497",
+      "repo": "django/django",
+      "similarity": 0.5086,
+      "resolved": false,
+      "patch_length": 728,
+      "time_s": 3.68,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-12589",
+      "repo": "django/django",
+      "similarity": 0.3134,
+      "resolved": false,
+      "patch_length": 1354,
+      "time_s": 5.77,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-12700",
+      "repo": "django/django",
+      "similarity": 0.4569,
+      "resolved": false,
+      "patch_length": 1285,
+      "time_s": 6.63,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-12708",
+      "repo": "django/django",
+      "similarity": 0.3351,
+      "resolved": false,
+      "patch_length": 1205,
+      "time_s": 4.26,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-12747",
+      "repo": "django/django",
+      "similarity": 0.1825,
+      "resolved": false,
+      "patch_length": 894,
+      "time_s": 4.21,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-12856",
+      "repo": "django/django",
+      "similarity": 0.0393,
+      "resolved": false,
+      "patch_length": 7689,
+      "time_s": 15.6,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-12908",
+      "repo": "django/django",
+      "similarity": 0.3491,
+      "resolved": false,
+      "patch_length": 1033,
+      "time_s": 5.28,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-12915",
+      "repo": "django/django",
+      "similarity": 0.4751,
+      "resolved": false,
+      "patch_length": 673,
+      "time_s": 2.84,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-12983",
+      "repo": "django/django",
+      "similarity": 0.4547,
+      "resolved": false,
+      "patch_length": 872,
+      "time_s": 4.2,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13028",
+      "repo": "django/django",
+      "similarity": 0.8417,
+      "resolved": true,
+      "patch_length": 662,
+      "time_s": 3.06,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13033",
+      "repo": "django/django",
+      "similarity": 0.8108,
+      "resolved": true,
+      "patch_length": 884,
+      "time_s": 4.97,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13158",
+      "repo": "django/django",
+      "similarity": 0.168,
+      "resolved": false,
+      "patch_length": 659,
+      "time_s": 4.8,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13220",
+      "repo": "django/django",
+      "similarity": 0.2422,
+      "resolved": false,
+      "patch_length": 2447,
+      "time_s": 7.98,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13230",
+      "repo": "django/django",
+      "similarity": 0.3327,
+      "resolved": false,
+      "patch_length": 1614,
+      "time_s": 6.08,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13265",
+      "repo": "django/django",
+      "similarity": 0.2769,
+      "resolved": false,
+      "patch_length": 2175,
+      "time_s": 7.29,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13315",
+      "repo": "django/django",
+      "similarity": 0.2309,
+      "resolved": false,
+      "patch_length": 1300,
+      "time_s": 6.74,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13321",
+      "repo": "django/django",
+      "similarity": 0.4271,
+      "resolved": false,
+      "patch_length": 1117,
+      "time_s": 4.47,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13401",
+      "repo": "django/django",
+      "similarity": 0.2604,
+      "resolved": false,
+      "patch_length": 1094,
+      "time_s": 5.76,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13447",
+      "repo": "django/django",
+      "similarity": 0.4472,
+      "resolved": false,
+      "patch_length": 1351,
+      "time_s": 4.59,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13448",
+      "repo": "django/django",
+      "similarity": 0.5588,
+      "resolved": false,
+      "patch_length": 1098,
+      "time_s": 4.31,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13551",
+      "repo": "django/django",
+      "similarity": 0.2212,
+      "resolved": false,
+      "patch_length": 1239,
+      "time_s": 5.3,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13590",
+      "repo": "django/django",
+      "similarity": 0.3552,
+      "resolved": false,
+      "patch_length": 560,
+      "time_s": 3.22,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13658",
+      "repo": "django/django",
+      "similarity": 0.2485,
+      "resolved": false,
+      "patch_length": 2663,
+      "time_s": 7.45,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13660",
+      "repo": "django/django",
+      "similarity": 0.5999,
+      "resolved": false,
+      "patch_length": 510,
+      "time_s": 2.32,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13710",
+      "repo": "django/django",
+      "similarity": 0.4362,
+      "resolved": false,
+      "patch_length": 698,
+      "time_s": 4.26,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13757",
+      "repo": "django/django",
+      "similarity": 0.3353,
+      "resolved": false,
+      "patch_length": 1493,
+      "time_s": 5.56,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13768",
+      "repo": "django/django",
+      "similarity": 0.5255,
+      "resolved": false,
+      "patch_length": 829,
+      "time_s": 3.3,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13925",
+      "repo": "django/django",
+      "similarity": 0.0964,
+      "resolved": false,
+      "patch_length": 1111,
+      "time_s": 5.85,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13933",
+      "repo": "django/django",
+      "similarity": 0.6031,
+      "resolved": true,
+      "patch_length": 666,
+      "time_s": 3.31,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-13964",
+      "repo": "django/django",
+      "similarity": 0.8176,
+      "resolved": true,
+      "patch_length": 661,
+      "time_s": 3.34,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-14016",
+      "repo": "django/django",
+      "similarity": 0.4097,
+      "resolved": false,
+      "patch_length": 1750,
+      "time_s": 6.2,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-14017",
+      "repo": "django/django",
+      "similarity": 0.5888,
+      "resolved": false,
+      "patch_length": 479,
+      "time_s": 3.75,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-14155",
+      "repo": "django/django",
+      "similarity": 0.3133,
+      "resolved": false,
+      "patch_length": 934,
+      "time_s": 4.1,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-14238",
+      "repo": "django/django",
+      "similarity": 0.3166,
+      "resolved": false,
+      "patch_length": 1190,
+      "time_s": 4.06,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-14382",
+      "repo": "django/django",
+      "similarity": 0.4484,
+      "resolved": false,
+      "patch_length": 757,
+      "time_s": 2.94,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-14411",
+      "repo": "django/django",
+      "similarity": 0.1799,
+      "resolved": false,
+      "patch_length": 737,
+      "time_s": 23.7,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-14534",
+      "repo": "django/django",
+      "similarity": 0.3162,
+      "resolved": false,
+      "patch_length": 1895,
       "time_s": 6.42,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-14580",
+      "repo": "django/django",
+      "similarity": 0.8777,
+      "resolved": true,
+      "patch_length": 598,
+      "time_s": 2.57,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-14608",
+      "repo": "django/django",
+      "similarity": 0.2599,
+      "resolved": false,
+      "patch_length": 6107,
+      "time_s": 15.32,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-14667",
+      "repo": "django/django",
+      "similarity": 0.1666,
+      "resolved": false,
+      "patch_length": 719,
+      "time_s": 3.92,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-14672",
+      "repo": "django/django",
+      "similarity": 0.4956,
+      "resolved": false,
+      "patch_length": 676,
+      "time_s": 2.95,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-14730",
+      "repo": "django/django",
+      "similarity": 0.0466,
+      "resolved": false,
+      "patch_length": 3454,
+      "time_s": 9.07,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-14752",
+      "repo": "django/django",
+      "similarity": 0.6131,
+      "resolved": true,
+      "patch_length": 1478,
+      "time_s": 4.24,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-14787",
+      "repo": "django/django",
+      "similarity": 0.4308,
+      "resolved": false,
+      "patch_length": 1000,
+      "time_s": 14.14,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-14855",
+      "repo": "django/django",
+      "similarity": 0.0039,
+      "resolved": false,
+      "patch_length": 69,
+      "time_s": 128.47,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-14915",
+      "repo": "django/django",
+      "similarity": 0.5142,
+      "resolved": false,
+      "patch_length": 367,
+      "time_s": 2.36,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-14997",
+      "repo": "django/django",
+      "similarity": 0.2845,
+      "resolved": false,
+      "patch_length": 805,
+      "time_s": 3.56,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-14999",
+      "repo": "django/django",
+      "similarity": 0.4263,
+      "resolved": false,
+      "patch_length": 1341,
+      "time_s": 4.25,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15061",
+      "repo": "django/django",
+      "similarity": 0.6716,
+      "resolved": true,
+      "patch_length": 505,
+      "time_s": 2.3,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15202",
+      "repo": "django/django",
+      "similarity": 0.3259,
+      "resolved": false,
+      "patch_length": 753,
+      "time_s": 3.09,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15213",
+      "repo": "django/django",
+      "similarity": 0.0884,
+      "resolved": false,
+      "patch_length": 1386,
+      "time_s": 5.61,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15252",
+      "repo": "django/django",
+      "similarity": 0.1055,
+      "resolved": false,
+      "patch_length": 2305,
+      "time_s": 5.89,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15320",
+      "repo": "django/django",
+      "similarity": 0.7039,
+      "resolved": true,
+      "patch_length": 572,
+      "time_s": 2.74,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15347",
+      "repo": "django/django",
+      "similarity": 0.3187,
+      "resolved": false,
+      "patch_length": 843,
+      "time_s": 3.25,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15388",
+      "repo": "django/django",
+      "similarity": 0.2501,
+      "resolved": false,
+      "patch_length": 765,
+      "time_s": 4.39,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15400",
+      "repo": "django/django",
+      "similarity": 0.421,
+      "resolved": false,
+      "patch_length": 556,
+      "time_s": 1.93,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15498",
+      "repo": "django/django",
+      "similarity": 0.0857,
+      "resolved": false,
+      "patch_length": 524,
+      "time_s": 2.98,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15695",
+      "repo": "django/django",
+      "similarity": 0.3673,
+      "resolved": false,
+      "patch_length": 1503,
+      "time_s": 5.33,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15738",
+      "repo": "django/django",
+      "similarity": 0.258,
+      "resolved": false,
+      "patch_length": 2412,
+      "time_s": 6.0,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15781",
+      "repo": "django/django",
+      "similarity": 0.3606,
+      "resolved": false,
+      "patch_length": 873,
+      "time_s": 2.33,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15789",
+      "repo": "django/django",
+      "similarity": 0.3273,
+      "resolved": false,
+      "patch_length": 3363,
+      "time_s": 11.19,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15790",
+      "repo": "django/django",
+      "similarity": 0.405,
+      "resolved": false,
+      "patch_length": 1336,
+      "time_s": 5.78,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15814",
+      "repo": "django/django",
+      "similarity": 0.2361,
+      "resolved": false,
+      "patch_length": 445,
+      "time_s": 4.86,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15819",
+      "repo": "django/django",
+      "similarity": 0.3249,
+      "resolved": false,
+      "patch_length": 1910,
+      "time_s": 6.67,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15851",
+      "repo": "django/django",
+      "similarity": 0.6,
+      "resolved": false,
+      "patch_length": 705,
+      "time_s": 3.29,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15902",
+      "repo": "django/django",
+      "similarity": 0.8472,
+      "resolved": true,
+      "patch_length": 494,
+      "time_s": 2.82,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-15996",
+      "repo": "django/django",
+      "similarity": 0.4483,
+      "resolved": false,
+      "patch_length": 1238,
+      "time_s": 4.28,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-16041",
+      "repo": "django/django",
+      "similarity": 0.7597,
+      "resolved": true,
+      "patch_length": 1111,
+      "time_s": 4.97,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-16046",
+      "repo": "django/django",
+      "similarity": 0.3613,
+      "resolved": false,
+      "patch_length": 672,
+      "time_s": 4.82,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-16139",
+      "repo": "django/django",
+      "similarity": 0.6321,
+      "resolved": true,
+      "patch_length": 575,
+      "time_s": 1.88,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-16229",
+      "repo": "django/django",
+      "similarity": 0.1247,
+      "resolved": false,
+      "patch_length": 839,
+      "time_s": 5.09,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-16255",
+      "repo": "django/django",
+      "similarity": 0.6688,
+      "resolved": true,
+      "patch_length": 517,
+      "time_s": 1.56,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-16379",
+      "repo": "django/django",
+      "similarity": 0.7614,
+      "resolved": true,
+      "patch_length": 622,
+      "time_s": 2.3,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-16400",
+      "repo": "django/django",
+      "similarity": 0.9803,
+      "resolved": true,
+      "patch_length": 996,
+      "time_s": 3.16,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-16408",
+      "repo": "django/django",
+      "similarity": 0.603,
+      "resolved": true,
+      "patch_length": 936,
+      "time_s": 2.97,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-16527",
+      "repo": "django/django",
+      "similarity": 0.7378,
+      "resolved": true,
+      "patch_length": 550,
+      "time_s": 2.94,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-16595",
+      "repo": "django/django",
+      "similarity": 0.1307,
+      "resolved": false,
+      "patch_length": 1085,
+      "time_s": 17.87,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-16816",
+      "repo": "django/django",
+      "similarity": 0.3142,
+      "resolved": false,
+      "patch_length": 919,
+      "time_s": 3.43,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-16820",
+      "repo": "django/django",
+      "similarity": 0.0938,
+      "resolved": false,
+      "patch_length": 2557,
+      "time_s": 7.19,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-16873",
+      "repo": "django/django",
+      "similarity": 0.8152,
+      "resolved": true,
+      "patch_length": 429,
+      "time_s": 3.17,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-16910",
+      "repo": "django/django",
+      "similarity": 0.3556,
+      "resolved": false,
+      "patch_length": 908,
+      "time_s": 4.06,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-17051",
+      "repo": "django/django",
+      "similarity": 0.7082,
+      "resolved": true,
+      "patch_length": 659,
+      "time_s": 2.37,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "django__django-17087",
+      "repo": "django/django",
+      "similarity": 0.849,
+      "resolved": true,
+      "patch_length": 615,
+      "time_s": 2.4,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-18869",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.1312,
+      "resolved": false,
+      "patch_length": 1154,
+      "time_s": 5.76,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-22711",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.2095,
+      "resolved": false,
+      "patch_length": 944,
+      "time_s": 5.99,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-22835",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.374,
+      "resolved": false,
+      "patch_length": 1341,
+      "time_s": 8.08,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23299",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.1737,
+      "resolved": false,
+      "patch_length": 815,
+      "time_s": 4.92,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23314",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.4601,
+      "resolved": false,
+      "patch_length": 396,
+      "time_s": 4.29,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23476",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.3957,
+      "resolved": false,
+      "patch_length": 1117,
+      "time_s": 7.34,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23562",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.2794,
+      "resolved": false,
+      "patch_length": 1254,
+      "time_s": 6.32,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23563",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.4641,
+      "resolved": false,
+      "patch_length": 483,
+      "time_s": 7.64,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23913",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.1844,
+      "resolved": false,
+      "patch_length": 2794,
+      "time_s": 7.14,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23964",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.358,
+      "resolved": false,
+      "patch_length": 411,
+      "time_s": 3.07,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23987",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.3927,
+      "resolved": false,
+      "patch_length": 633,
+      "time_s": 17.45,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-24149",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.8639,
+      "resolved": true,
+      "patch_length": 987,
+      "time_s": 3.04,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-24265",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.0927,
+      "resolved": false,
+      "patch_length": 318,
+      "time_s": 3.77,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-24334",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.3827,
+      "resolved": false,
+      "patch_length": 604,
+      "time_s": 4.25,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-24970",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.2769,
+      "resolved": false,
+      "patch_length": 599,
+      "time_s": 5.66,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25079",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.1081,
+      "resolved": false,
+      "patch_length": 1026,
+      "time_s": 10.4,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25311",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.3307,
+      "resolved": false,
+      "patch_length": 627,
+      "time_s": 3.57,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25332",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.1724,
+      "resolved": false,
+      "patch_length": 1576,
+      "time_s": 5.66,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25433",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.0684,
+      "resolved": false,
+      "patch_length": 1531,
+      "time_s": 8.0,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25442",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.1661,
+      "resolved": false,
+      "patch_length": 359,
+      "time_s": 2.12,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25498",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.3526,
+      "resolved": false,
+      "patch_length": 778,
+      "time_s": 4.16,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-26011",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.1667,
+      "resolved": false,
+      "patch_length": 1579,
+      "time_s": 5.46,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-26020",
+      "repo": "matplotlib/matplotlib",
+      "similarity": 0.9784,
+      "resolved": true,
+      "patch_length": 1207,
+      "time_s": 4.23,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "mwaskom__seaborn-2848",
+      "repo": "mwaskom/seaborn",
+      "similarity": 0.0433,
+      "resolved": false,
+      "patch_length": 2793,
+      "time_s": 8.18,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3010",
+      "repo": "mwaskom/seaborn",
+      "similarity": 0.3747,
+      "resolved": false,
+      "patch_length": 1134,
+      "time_s": 12.0,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3190",
+      "repo": "mwaskom/seaborn",
+      "similarity": 0.5112,
+      "resolved": false,
+      "patch_length": 365,
+      "time_s": 2.12,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3407",
+      "repo": "mwaskom/seaborn",
+      "similarity": 0.007,
+      "resolved": false,
+      "patch_length": 4302,
+      "time_s": 17.42,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pallets__flask-4045",
+      "repo": "pallets/flask",
+      "similarity": 0.2248,
+      "resolved": false,
+      "patch_length": 1089,
+      "time_s": 3.79,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pallets__flask-4992",
+      "repo": "pallets/flask",
+      "similarity": 0.437,
+      "resolved": false,
+      "patch_length": 1474,
+      "time_s": 4.73,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pallets__flask-5063",
+      "repo": "pallets/flask",
+      "similarity": 0.293,
+      "resolved": false,
+      "patch_length": 1942,
+      "time_s": 5.99,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "psf__requests-1963",
+      "repo": "psf/requests",
+      "similarity": 0.3611,
+      "resolved": false,
+      "patch_length": 497,
+      "time_s": 3.61,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "psf__requests-2148",
+      "repo": "psf/requests",
+      "similarity": 0.2975,
+      "resolved": false,
+      "patch_length": 815,
+      "time_s": 4.53,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "psf__requests-2317",
+      "repo": "psf/requests",
+      "similarity": 0.7071,
+      "resolved": true,
+      "patch_length": 679,
+      "time_s": 3.94,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "psf__requests-2674",
+      "repo": "psf/requests",
+      "similarity": 0.3128,
+      "resolved": false,
+      "patch_length": 2566,
+      "time_s": 8.93,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "psf__requests-3362",
+      "repo": "psf/requests",
+      "similarity": 0.0754,
+      "resolved": false,
+      "patch_length": 550,
+      "time_s": 3.57,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "psf__requests-863",
+      "repo": "psf/requests",
+      "similarity": 0.2577,
+      "resolved": false,
+      "patch_length": 789,
+      "time_s": 3.21,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pydata__xarray-3364",
+      "repo": "pydata/xarray",
+      "similarity": 0.3433,
+      "resolved": false,
+      "patch_length": 4088,
+      "time_s": 11.18,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pydata__xarray-4094",
+      "repo": "pydata/xarray",
+      "similarity": 0.4309,
+      "resolved": false,
+      "patch_length": 543,
+      "time_s": 4.07,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pydata__xarray-4248",
+      "repo": "pydata/xarray",
+      "similarity": 0.1267,
+      "resolved": false,
+      "patch_length": 7772,
+      "time_s": 15.48,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pydata__xarray-4493",
+      "repo": "pydata/xarray",
+      "similarity": 0.432,
+      "resolved": false,
+      "patch_length": 499,
+      "time_s": 3.14,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pydata__xarray-5131",
+      "repo": "pydata/xarray",
+      "similarity": 0.3158,
+      "resolved": false,
+      "patch_length": 1345,
+      "time_s": 5.25,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pylint-dev__pylint-5859",
+      "repo": "pylint-dev/pylint",
+      "similarity": 0.2795,
+      "resolved": false,
+      "patch_length": 941,
+      "time_s": 4.25,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pylint-dev__pylint-6506",
+      "repo": "pylint-dev/pylint",
+      "similarity": 0.6626,
+      "resolved": true,
+      "patch_length": 739,
+      "time_s": 2.45,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pylint-dev__pylint-7080",
+      "repo": "pylint-dev/pylint",
+      "similarity": 0.1229,
+      "resolved": false,
+      "patch_length": 605,
+      "time_s": 15.25,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pylint-dev__pylint-7114",
+      "repo": "pylint-dev/pylint",
+      "similarity": 0.0057,
+      "resolved": false,
+      "patch_length": 55,
+      "time_s": 11.19,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pylint-dev__pylint-7228",
+      "repo": "pylint-dev/pylint",
+      "similarity": 0.0971,
+      "resolved": false,
+      "patch_length": 1342,
+      "time_s": 38.05,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pylint-dev__pylint-7993",
+      "repo": "pylint-dev/pylint",
+      "similarity": 0.0044,
+      "resolved": false,
+      "patch_length": 69,
+      "time_s": 120.03,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pytest-dev__pytest-11143",
+      "repo": "pytest-dev/pytest",
+      "similarity": 0.3666,
+      "resolved": false,
+      "patch_length": 598,
+      "time_s": 12.44,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pytest-dev__pytest-11148",
+      "repo": "pytest-dev/pytest",
+      "similarity": 0.0488,
+      "resolved": false,
+      "patch_length": 904,
+      "time_s": 28.09,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pytest-dev__pytest-5103",
+      "repo": "pytest-dev/pytest",
+      "similarity": 0.0064,
+      "resolved": false,
+      "patch_length": 57,
+      "time_s": 59.72,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pytest-dev__pytest-5221",
+      "repo": "pytest-dev/pytest",
+      "similarity": 0.1163,
+      "resolved": false,
+      "patch_length": 685,
+      "time_s": 44.25,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pytest-dev__pytest-5227",
+      "repo": "pytest-dev/pytest",
+      "similarity": 0.0175,
+      "resolved": false,
+      "patch_length": 55,
+      "time_s": 12.06,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pytest-dev__pytest-5413",
+      "repo": "pytest-dev/pytest",
+      "similarity": 0.0186,
+      "resolved": false,
+      "patch_length": 55,
+      "time_s": 12.07,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pytest-dev__pytest-5495",
+      "repo": "pytest-dev/pytest",
+      "similarity": 0.3559,
+      "resolved": false,
+      "patch_length": 1024,
+      "time_s": 41.28,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pytest-dev__pytest-5692",
+      "repo": "pytest-dev/pytest",
+      "similarity": 0.3075,
+      "resolved": false,
+      "patch_length": 1057,
+      "time_s": 8.34,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pytest-dev__pytest-6116",
+      "repo": "pytest-dev/pytest",
+      "similarity": 0.023,
+      "resolved": false,
+      "patch_length": 7374,
+      "time_s": 12.1,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7168",
+      "repo": "pytest-dev/pytest",
+      "similarity": 0.6006,
+      "resolved": true,
+      "patch_length": 558,
+      "time_s": 3.22,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7220",
+      "repo": "pytest-dev/pytest",
+      "similarity": 0.1167,
+      "resolved": false,
+      "patch_length": 7665,
+      "time_s": 13.19,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7373",
+      "repo": "pytest-dev/pytest",
+      "similarity": 0.4884,
+      "resolved": false,
+      "patch_length": 1578,
+      "time_s": 5.52,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7432",
+      "repo": "pytest-dev/pytest",
+      "similarity": 0.5954,
+      "resolved": false,
+      "patch_length": 692,
+      "time_s": 3.69,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7490",
+      "repo": "pytest-dev/pytest",
+      "similarity": 0.2064,
+      "resolved": false,
+      "patch_length": 604,
+      "time_s": 3.57,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pytest-dev__pytest-8365",
+      "repo": "pytest-dev/pytest",
+      "similarity": 0.4232,
+      "resolved": false,
+      "patch_length": 1154,
+      "time_s": 6.07,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pytest-dev__pytest-8906",
+      "repo": "pytest-dev/pytest",
+      "similarity": 0.1785,
+      "resolved": false,
+      "patch_length": 1583,
+      "time_s": 6.48,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "pytest-dev__pytest-9359",
+      "repo": "pytest-dev/pytest",
+      "similarity": 0.0726,
+      "resolved": false,
+      "patch_length": 687,
+      "time_s": 3.97,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-10297",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.2068,
+      "resolved": false,
+      "patch_length": 1553,
+      "time_s": 4.23,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-10508",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.326,
+      "resolved": false,
+      "patch_length": 572,
+      "time_s": 3.41,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-10949",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.43,
+      "resolved": false,
+      "patch_length": 1948,
+      "time_s": 10.77,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-11040",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.1196,
+      "resolved": false,
+      "patch_length": 8551,
+      "time_s": 19.8,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-11281",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.1445,
+      "resolved": false,
+      "patch_length": 5587,
+      "time_s": 13.12,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-12471",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.2087,
+      "resolved": false,
+      "patch_length": 8188,
+      "time_s": 15.71,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13142",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.0947,
+      "resolved": false,
+      "patch_length": 1282,
+      "time_s": 5.73,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13241",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.4006,
+      "resolved": false,
+      "patch_length": 1097,
+      "time_s": 4.16,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13439",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.4965,
+      "resolved": false,
+      "patch_length": 399,
+      "time_s": 3.16,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13496",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.2922,
+      "resolved": false,
+      "patch_length": 4515,
+      "time_s": 12.72,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13497",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.2416,
+      "resolved": false,
+      "patch_length": 751,
+      "time_s": 4.65,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13584",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.3788,
+      "resolved": false,
+      "patch_length": 809,
+      "time_s": 4.23,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13779",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.3016,
+      "resolved": false,
+      "patch_length": 2170,
+      "time_s": 14.37,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-14087",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.1982,
+      "resolved": false,
+      "patch_length": 1079,
+      "time_s": 4.31,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-14092",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.4422,
+      "resolved": false,
+      "patch_length": 1340,
+      "time_s": 3.97,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-14894",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.2852,
+      "resolved": false,
+      "patch_length": 561,
+      "time_s": 3.21,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-14983",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.3926,
+      "resolved": false,
+      "patch_length": 2317,
+      "time_s": 7.04,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-15512",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.2933,
+      "resolved": false,
+      "patch_length": 879,
+      "time_s": 3.55,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-15535",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.7003,
+      "resolved": true,
+      "patch_length": 690,
+      "time_s": 5.98,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-25500",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.227,
+      "resolved": false,
+      "patch_length": 1899,
+      "time_s": 9.15,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-25570",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.4405,
+      "resolved": false,
+      "patch_length": 868,
+      "time_s": 4.19,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-25638",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.1907,
+      "resolved": false,
+      "patch_length": 1081,
+      "time_s": 6.7,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-25747",
+      "repo": "scikit-learn/scikit-learn",
+      "similarity": 0.394,
+      "resolved": false,
+      "patch_length": 772,
+      "time_s": 3.19,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-10325",
+      "repo": "sphinx-doc/sphinx",
+      "similarity": 0.1519,
+      "resolved": false,
+      "patch_length": 8649,
+      "time_s": 16.41,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-10451",
+      "repo": "sphinx-doc/sphinx",
+      "similarity": 0.2322,
+      "resolved": false,
+      "patch_length": 2619,
+      "time_s": 8.46,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-11445",
+      "repo": "sphinx-doc/sphinx",
+      "similarity": 0.383,
+      "resolved": false,
+      "patch_length": 478,
+      "time_s": 3.04,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7686",
+      "repo": "sphinx-doc/sphinx",
+      "similarity": 0.107,
+      "resolved": false,
+      "patch_length": 1253,
+      "time_s": 4.1,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7738",
+      "repo": "sphinx-doc/sphinx",
+      "similarity": 0.6256,
+      "resolved": true,
+      "patch_length": 371,
+      "time_s": 14.12,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7975",
+      "repo": "sphinx-doc/sphinx",
+      "similarity": 0.237,
+      "resolved": false,
+      "patch_length": 790,
+      "time_s": 4.85,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8273",
+      "repo": "sphinx-doc/sphinx",
+      "similarity": 0.1796,
+      "resolved": false,
+      "patch_length": 7532,
+      "time_s": 17.17,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8282",
+      "repo": "sphinx-doc/sphinx",
+      "similarity": 0.1976,
+      "resolved": false,
+      "patch_length": 1177,
+      "time_s": 5.15,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8435",
+      "repo": "sphinx-doc/sphinx",
+      "similarity": 0.2291,
+      "resolved": false,
+      "patch_length": 7889,
+      "time_s": 13.56,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8474",
+      "repo": "sphinx-doc/sphinx",
+      "similarity": 0.1357,
+      "resolved": false,
+      "patch_length": 872,
+      "time_s": 8.66,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8506",
+      "repo": "sphinx-doc/sphinx",
+      "similarity": 0.293,
+      "resolved": false,
+      "patch_length": 1508,
+      "time_s": 7.3,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8595",
+      "repo": "sphinx-doc/sphinx",
+      "similarity": 0.3069,
+      "resolved": false,
+      "patch_length": 599,
+      "time_s": 5.32,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8627",
+      "repo": "sphinx-doc/sphinx",
+      "similarity": 0.0711,
+      "resolved": false,
+      "patch_length": 1094,
+      "time_s": 6.3,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8713",
+      "repo": "sphinx-doc/sphinx",
+      "similarity": 0.6229,
+      "resolved": true,
+      "patch_length": 737,
+      "time_s": 2.93,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8721",
+      "repo": "sphinx-doc/sphinx",
+      "similarity": 0.3845,
+      "resolved": false,
+      "patch_length": 450,
+      "time_s": 14.47,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8801",
+      "repo": "sphinx-doc/sphinx",
+      "similarity": 0.055,
+      "resolved": false,
+      "patch_length": 627,
+      "time_s": 5.68,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-11400",
+      "repo": "sympy/sympy",
+      "similarity": 0.3086,
+      "resolved": false,
+      "patch_length": 828,
+      "time_s": 4.16,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-11870",
+      "repo": "sympy/sympy",
+      "similarity": 0.0742,
+      "resolved": false,
+      "patch_length": 1940,
+      "time_s": 8.31,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-11897",
+      "repo": "sympy/sympy",
+      "similarity": 0.2399,
+      "resolved": false,
+      "patch_length": 6468,
+      "time_s": 15.17,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-12171",
+      "repo": "sympy/sympy",
+      "similarity": 0.3174,
+      "resolved": false,
+      "patch_length": 721,
+      "time_s": 3.01,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-12236",
+      "repo": "sympy/sympy",
+      "similarity": 0.0669,
+      "resolved": false,
+      "patch_length": 695,
+      "time_s": 5.37,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-12419",
+      "repo": "sympy/sympy",
+      "similarity": 0.268,
+      "resolved": false,
+      "patch_length": 716,
+      "time_s": 2.94,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-12454",
+      "repo": "sympy/sympy",
+      "similarity": 0.6128,
+      "resolved": true,
+      "patch_length": 789,
+      "time_s": 3.1,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-12481",
+      "repo": "sympy/sympy",
+      "similarity": 0.5228,
+      "resolved": false,
+      "patch_length": 777,
+      "time_s": 3.47,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-13031",
+      "repo": "sympy/sympy",
+      "similarity": 0.3856,
+      "resolved": false,
+      "patch_length": 2098,
+      "time_s": 6.38,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-13043",
+      "repo": "sympy/sympy",
+      "similarity": 0.2264,
+      "resolved": false,
+      "patch_length": 745,
+      "time_s": 3.05,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-13146",
+      "repo": "sympy/sympy",
+      "similarity": 0.1071,
+      "resolved": false,
+      "patch_length": 1016,
+      "time_s": 4.47,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-13177",
+      "repo": "sympy/sympy",
+      "similarity": 0.4031,
+      "resolved": false,
+      "patch_length": 660,
+      "time_s": 3.73,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-13437",
+      "repo": "sympy/sympy",
+      "similarity": 0.3436,
+      "resolved": false,
+      "patch_length": 1160,
+      "time_s": 10.74,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-13471",
+      "repo": "sympy/sympy",
+      "similarity": 0.6001,
+      "resolved": true,
+      "patch_length": 539,
+      "time_s": 2.98,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-13480",
+      "repo": "sympy/sympy",
+      "similarity": 0.6437,
+      "resolved": true,
+      "patch_length": 474,
+      "time_s": 1.74,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-13647",
+      "repo": "sympy/sympy",
+      "similarity": 0.4506,
+      "resolved": false,
+      "patch_length": 506,
+      "time_s": 15.79,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-13773",
+      "repo": "sympy/sympy",
+      "similarity": 0.312,
+      "resolved": false,
+      "patch_length": 1182,
+      "time_s": 4.05,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-13895",
+      "repo": "sympy/sympy",
+      "similarity": 0.2087,
+      "resolved": false,
+      "patch_length": 627,
+      "time_s": 4.3,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-13915",
+      "repo": "sympy/sympy",
+      "similarity": 0.4695,
+      "resolved": false,
+      "patch_length": 988,
+      "time_s": 5.79,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-13971",
+      "repo": "sympy/sympy",
+      "similarity": 0.1057,
+      "resolved": false,
+      "patch_length": 402,
+      "time_s": 3.71,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-14024",
+      "repo": "sympy/sympy",
+      "similarity": 0.0811,
+      "resolved": false,
+      "patch_length": 967,
+      "time_s": 23.23,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-14308",
+      "repo": "sympy/sympy",
+      "similarity": 0.0352,
+      "resolved": false,
+      "patch_length": 2020,
+      "time_s": 16.96,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-14317",
+      "repo": "sympy/sympy",
+      "similarity": 0.2771,
+      "resolved": false,
+      "patch_length": 1019,
+      "time_s": 11.75,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-14396",
+      "repo": "sympy/sympy",
+      "similarity": 0.4457,
+      "resolved": false,
+      "patch_length": 660,
+      "time_s": 3.69,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-14774",
+      "repo": "sympy/sympy",
+      "similarity": 0.544,
+      "resolved": false,
+      "patch_length": 579,
+      "time_s": 3.54,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-14817",
+      "repo": "sympy/sympy",
+      "similarity": 0.5759,
+      "resolved": false,
+      "patch_length": 777,
+      "time_s": 4.07,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-15011",
+      "repo": "sympy/sympy",
+      "similarity": 0.2194,
+      "resolved": false,
+      "patch_length": 552,
+      "time_s": 3.77,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-15308",
+      "repo": "sympy/sympy",
+      "similarity": 0.4461,
+      "resolved": false,
+      "patch_length": 914,
+      "time_s": 4.96,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-15345",
+      "repo": "sympy/sympy",
+      "similarity": 0.2335,
+      "resolved": false,
+      "patch_length": 1135,
+      "time_s": 5.04,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-15346",
+      "repo": "sympy/sympy",
+      "similarity": 0.3846,
+      "resolved": false,
+      "patch_length": 927,
+      "time_s": 4.97,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-15609",
+      "repo": "sympy/sympy",
+      "similarity": 0.4307,
+      "resolved": false,
+      "patch_length": 500,
+      "time_s": 3.07,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-15678",
+      "repo": "sympy/sympy",
+      "similarity": 0.3726,
+      "resolved": false,
+      "patch_length": 1408,
+      "time_s": 5.5,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-16106",
+      "repo": "sympy/sympy",
+      "similarity": 0.3512,
+      "resolved": false,
+      "patch_length": 1545,
+      "time_s": 4.95,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-16281",
+      "repo": "sympy/sympy",
+      "similarity": 0.3107,
+      "resolved": false,
+      "patch_length": 7288,
+      "time_s": 15.13,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-16503",
+      "repo": "sympy/sympy",
+      "similarity": 0.4584,
+      "resolved": false,
+      "patch_length": 552,
+      "time_s": 2.91,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-16792",
+      "repo": "sympy/sympy",
+      "similarity": 0.0981,
+      "resolved": false,
+      "patch_length": 1020,
+      "time_s": 14.92,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-16988",
+      "repo": "sympy/sympy",
+      "similarity": 0.3666,
+      "resolved": false,
+      "patch_length": 489,
+      "time_s": 3.45,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-17022",
+      "repo": "sympy/sympy",
+      "similarity": 0.1191,
+      "resolved": false,
+      "patch_length": 2124,
+      "time_s": 7.44,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-17139",
+      "repo": "sympy/sympy",
+      "similarity": 0.5981,
+      "resolved": false,
+      "patch_length": 365,
+      "time_s": 2.23,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-17630",
+      "repo": "sympy/sympy",
+      "similarity": 0.1133,
+      "resolved": false,
+      "patch_length": 822,
+      "time_s": 3.67,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-17655",
+      "repo": "sympy/sympy",
+      "similarity": 0.5343,
+      "resolved": false,
+      "patch_length": 683,
+      "time_s": 3.03,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-18057",
+      "repo": "sympy/sympy",
+      "similarity": 0.0917,
+      "resolved": false,
+      "patch_length": 834,
+      "time_s": 14.26,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-18087",
+      "repo": "sympy/sympy",
+      "similarity": 0.3708,
+      "resolved": false,
+      "patch_length": 569,
+      "time_s": 3.78,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-18189",
+      "repo": "sympy/sympy",
+      "similarity": 0.982,
+      "resolved": true,
+      "patch_length": 650,
+      "time_s": 2.19,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-18199",
+      "repo": "sympy/sympy",
+      "similarity": 0.1597,
+      "resolved": false,
+      "patch_length": 421,
+      "time_s": 2.55,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-18532",
+      "repo": "sympy/sympy",
+      "similarity": 0.3505,
+      "resolved": false,
+      "patch_length": 2361,
+      "time_s": 8.09,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-18621",
+      "repo": "sympy/sympy",
+      "similarity": 0.9762,
+      "resolved": true,
+      "patch_length": 593,
+      "time_s": 2.7,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-18698",
+      "repo": "sympy/sympy",
+      "similarity": 0.2309,
+      "resolved": false,
+      "patch_length": 4528,
+      "time_s": 16.21,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-18835",
+      "repo": "sympy/sympy",
+      "similarity": 0.2396,
+      "resolved": false,
+      "patch_length": 1850,
+      "time_s": 6.59,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-19007",
+      "repo": "sympy/sympy",
+      "similarity": 0.2903,
+      "resolved": false,
+      "patch_length": 2776,
+      "time_s": 7.63,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-19254",
+      "repo": "sympy/sympy",
+      "similarity": 0.3227,
+      "resolved": false,
+      "patch_length": 1594,
+      "time_s": 8.99,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-19487",
+      "repo": "sympy/sympy",
+      "similarity": 0.5025,
+      "resolved": false,
+      "patch_length": 1489,
+      "time_s": 7.33,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-20049",
+      "repo": "sympy/sympy",
+      "similarity": 0.4758,
+      "resolved": false,
+      "patch_length": 1413,
+      "time_s": 6.5,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-20154",
+      "repo": "sympy/sympy",
+      "similarity": 0.358,
+      "resolved": false,
+      "patch_length": 510,
+      "time_s": 2.65,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-20212",
+      "repo": "sympy/sympy",
+      "similarity": 0.4497,
+      "resolved": false,
+      "patch_length": 898,
+      "time_s": 3.74,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-20322",
+      "repo": "sympy/sympy",
+      "similarity": 0.043,
+      "resolved": false,
+      "patch_length": 654,
+      "time_s": 2.7,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-20442",
+      "repo": "sympy/sympy",
+      "similarity": 0.359,
+      "resolved": false,
+      "patch_length": 1384,
+      "time_s": 5.91,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-20590",
+      "repo": "sympy/sympy",
+      "similarity": 0.1878,
+      "resolved": false,
+      "patch_length": 367,
+      "time_s": 2.05,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-20639",
+      "repo": "sympy/sympy",
+      "similarity": 0.2521,
+      "resolved": false,
+      "patch_length": 751,
+      "time_s": 4.8,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-21055",
+      "repo": "sympy/sympy",
+      "similarity": 0.0872,
+      "resolved": false,
+      "patch_length": 1116,
+      "time_s": 5.83,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-21171",
+      "repo": "sympy/sympy",
+      "similarity": 0.4635,
+      "resolved": false,
+      "patch_length": 992,
+      "time_s": 5.85,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-21379",
+      "repo": "sympy/sympy",
+      "similarity": 0.9749,
+      "resolved": true,
+      "patch_length": 940,
+      "time_s": 2.94,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-21612",
+      "repo": "sympy/sympy",
+      "similarity": 0.7417,
+      "resolved": true,
+      "patch_length": 1126,
+      "time_s": 3.56,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-21614",
+      "repo": "sympy/sympy",
+      "similarity": 0.2706,
+      "resolved": false,
+      "patch_length": 850,
+      "time_s": 5.67,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-21627",
+      "repo": "sympy/sympy",
+      "similarity": 0.6496,
+      "resolved": true,
+      "patch_length": 517,
+      "time_s": 2.96,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-21847",
+      "repo": "sympy/sympy",
+      "similarity": 0.9861,
+      "resolved": true,
+      "patch_length": 1050,
+      "time_s": 3.35,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-22005",
+      "repo": "sympy/sympy",
+      "similarity": 0.5626,
+      "resolved": false,
+      "patch_length": 1157,
+      "time_s": 3.9,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-22714",
+      "repo": "sympy/sympy",
+      "similarity": 0.5195,
+      "resolved": false,
+      "patch_length": 519,
+      "time_s": 5.85,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-22840",
+      "repo": "sympy/sympy",
+      "similarity": 0.4194,
+      "resolved": false,
+      "patch_length": 875,
+      "time_s": 5.43,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-23117",
+      "repo": "sympy/sympy",
+      "similarity": 0.1885,
+      "resolved": false,
+      "patch_length": 600,
+      "time_s": 3.47,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-23191",
+      "repo": "sympy/sympy",
+      "similarity": 0.023,
+      "resolved": false,
+      "patch_length": 7248,
+      "time_s": 18.05,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-23262",
+      "repo": "sympy/sympy",
+      "similarity": 0.0674,
+      "resolved": false,
+      "patch_length": 804,
+      "time_s": 5.3,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-24066",
+      "repo": "sympy/sympy",
+      "similarity": 0.2226,
+      "resolved": false,
+      "patch_length": 1230,
+      "time_s": 6.21,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-24102",
+      "repo": "sympy/sympy",
+      "similarity": 0.2503,
+      "resolved": false,
+      "patch_length": 2359,
+      "time_s": 20.88,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-24152",
+      "repo": "sympy/sympy",
+      "similarity": 0.7686,
+      "resolved": true,
+      "patch_length": 810,
+      "time_s": 4.31,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-24213",
+      "repo": "sympy/sympy",
+      "similarity": 0.7716,
+      "resolved": true,
+      "patch_length": 721,
+      "time_s": 2.87,
+      "delta_info": {}
+    },
+    {
+      "instance_id": "sympy__sympy-24909",
+      "repo": "sympy/sympy",
+      "similarity": 0.386,
+      "resolved": false,
+      "patch_length": 1043,
+      "time_s": 5.34,
       "delta_info": {}
     }
   ]

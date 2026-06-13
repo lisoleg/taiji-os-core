@@ -183,7 +183,7 @@ def load_swebench_data(limit: int = 0, repo_filter: str = None) -> list[dict]:
         raise
 
 
-def run_swebench_evaluation(questions: list[dict], use_delta: bool = True) -> dict:
+def run_swebench_evaluation(questions: list[dict], use_delta: bool = True, output_path: str | None = None) -> dict:
     """运行 SWE-bench Lite 评测。
 
     集成 δ-mem 管道：G-Core 生成 → D-Core 模糊匹配 → S 矩阵更新。
@@ -208,8 +208,17 @@ def run_swebench_evaluation(questions: list[dict], use_delta: bool = True) -> di
         wm = WorldModel(dim=1536, config_path=str(PROJECT_ROOT / "config.yaml"))
         auto_detect_dim(wm)
         fusion = DeltaFusion()
+
+        # ── LLM 路由器适配层：将 call_deepseek 包装为 .complete() 接口 ──
+        class _LLMAdapter:
+            """将 call_deepseek(prompt) 包装为 .complete(prompt) 接口。"""
+            def __init__(self, fn):
+                self._fn = fn
+            def complete(self, prompt: str) -> str:
+                return self._fn(prompt)
+
         sc_loop = SelfConsistencyLoop(
-            lambda prompt: call_deepseek(prompt),  # 轻量包装：绕过 LLMRouter
+            _LLMAdapter(call_deepseek),  # 适配: call_deepseek → .complete()
             wm,
             dcore_mode="keyword",  # 不需要额外的 API 检测，用关键词回退
             delta_fusion=fusion,
@@ -322,7 +331,7 @@ def run_swebench_evaluation(questions: list[dict], use_delta: bool = True) -> di
         "results": results,
     }
 
-    out_path = RESULTS_DIR / "swebench_lite_v510.json"
+    out_path = RESULTS_DIR / (output_path if output_path else "swebench_lite_v510.json")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
     logger.info(f"结果已保存: {out_path}")
@@ -340,6 +349,8 @@ def main():
                         help="过滤仓库 (如 django/django)")
     parser.add_argument("--no-delta", action="store_true",
                         help="禁用 δ-mem L1/L2 融合管道 (默认启用)")
+    parser.add_argument("--output", type=str, default=None,
+                        help="自定义输出 JSON 路径 (默认 results/swebench_lite_v510.json)")
     args = parser.parse_args()
 
     logger.info("=" * 60)
@@ -357,7 +368,7 @@ def main():
         logger.error("没有加载到任何题目！")
         return
 
-    report = run_swebench_evaluation(questions, use_delta=not args.no_delta)
+    report = run_swebench_evaluation(questions, use_delta=not args.no_delta, output_path=args.output)
 
     print("\n" + "=" * 60)
     print("SWE-bench Lite 评测结果摘要")
