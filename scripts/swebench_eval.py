@@ -1,5 +1,5 @@
 """
-swebench_eval.py — SWE-bench Lite 基准评测脚本 (v5.1)
+swebench_eval.py — SWE-bench Lite 基准评测脚本 (v5.3)
 
 使用 DeepSeek API 对 SWE-bench Lite（300 题，11 个 Python 仓库）进行评测。
 数据来自 HuggingFace `princeton-nlp/SWE-bench_Lite`。
@@ -7,14 +7,16 @@ swebench_eval.py — SWE-bench Lite 基准评测脚本 (v5.1)
 
 集成 δ-mem 管道：G-Core 生成 → D-Core 模糊匹配 → S 矩阵更新 → HyperParamAdapter 自适应
 
+输出：results/swebench_lite_v510_{delta,nodelta}.json（按 δ-mem 模式自动命名）
+
 用法:
     python scripts/swebench_eval.py --limit 50          # 评测前 50 题
     python scripts/swebench_eval.py --limit 0           # 全部 300 题
-    python scripts/swebench_eval.py --no-delta          # 禁用 δ-mem
+    python scripts/swebench_eval.py --no-delta          # 禁用 δ-mem（对照组）
     python scripts/swebench_eval.py --repo django/django # 仅某仓库
 
 Author: Taiji OS Team
-Version: v5.1.0 (2026-06-13)
+Version: v5.3.0 (2026-06-16)
 """
 
 from __future__ import annotations
@@ -47,7 +49,7 @@ from core.drift_detector import DriftDetector, HyperParamAdapter
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("swebench_eval")
 
-API_KEY = os.environ.get("DEEPSEEK_API_KEY", "sk-d83e23fe6b05480c804117964f2a1080")
+API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
 BASE_URL = "https://api.deepseek.com/v1/chat/completions"
 RESULTS_DIR = PROJECT_ROOT / "results"
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -331,7 +333,9 @@ def run_swebench_evaluation(questions: list[dict], use_delta: bool = True, outpu
         "results": results,
     }
 
-    out_path = RESULTS_DIR / (output_path if output_path else "swebench_lite_v510.json")
+    suffix = "nodelta" if not use_delta else "delta"
+    default_name = f"swebench_lite_v510_{suffix}.json"
+    out_path = RESULTS_DIR / (output_path if output_path else default_name)
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
     logger.info(f"结果已保存: {out_path}")

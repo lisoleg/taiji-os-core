@@ -19,6 +19,8 @@
 #include <linux/string.h>
 #include <linux/crypto.h>
 #include <crypto/hash.h>
+#include <crypto/sha.h>       /* SHA256_DIGEST_SIZE */
+#include <linux/version.h>    /* KERNEL_VERSION for class_create compat */
 #include <asm/fpu/api.h>   /* kernel_fpu_begin/end (x86_64) */
 
 #include "taiji_os_ioctl.h"
@@ -28,7 +30,7 @@
  * taiji_expf — 简单 e^x 近似（Taylor 级数，|x| < 5）
  * 在内核态使用，不依赖 libm
  */
-static inline float taiji_taiji_expf(float x)
+static inline float taiji_expf(float x)
 {
     if (x > 5.0f)  return 148.4132f;
     if (x < -5.0f) return 0.0f;
@@ -42,16 +44,16 @@ static inline float taiji_taiji_expf(float x)
 /**
  * taiji_tanhf — 双曲正切近似
  */
-static inline float taiji_taiji_tanhf(float x)
+static inline float taiji_tanhf(float x)
 {
-    float e2x = taiji_taiji_expf(2.0f * x);
+    float e2x = taiji_expf(2.0f * x);
     return (e2x - 1.0f) / (e2x + 1.0f);
 }
 
 /**
  * taiji_sqrtf — 牛顿法开平方
  */
-static inline float taiji_taiji_sqrtf(float x)
+static inline float taiji_sqrtf(float x)
 {
     float guess = x * 0.5f + 0.5f;
     int i;
@@ -64,7 +66,7 @@ static inline float taiji_taiji_sqrtf(float x)
 /**
  * taiji_fabsf — 浮点绝对值
  */
-static inline float taiji_taiji_fabsf(float x)
+static inline float taiji_fabsf(float x)
 {
     return (x < 0.0f) ? -x : x;
 }
@@ -452,6 +454,7 @@ struct taiji_session {
     uint64_t total_updates;
     uint64_t total_queries;
     uint64_t drift_events;
+    uint32_t flush_count;     /* 累计 S 矩阵刷新次数 */
 
     struct mutex lock;       /* 并发保护 */
     struct list_head list;    /* 全局链表 */

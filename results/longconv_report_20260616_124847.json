@@ -1,0 +1,96 @@
+{
+  "config": {
+    "turns": 100,
+    "scenarios": [
+      "MIXED"
+    ],
+    "rank": 8,
+    "seed": 42,
+    "timestamp": "20260616_124847"
+  },
+  "metrics": [
+    {
+      "turns": 100,
+      "phi_mean": 0.680867,
+      "phi_std": 0.142944,
+      "phi_min": 0.389937,
+      "phi_max": 0.92,
+      "cv_mean": 0.149305,
+      "cv_std": 0.036776,
+      "cv_max": 0.236537,
+      "drift_detection_latency": 54,
+      "drift_count": 8,
+      "drift_ratio": 0.08,
+      "S_fro_initial": 0.1,
+      "S_fro_final": 0.315225,
+      "S_fro_growth": 0.215225,
+      "S_fro_mean": 0.279337,
+      "scenario": "MIXED",
+      "delta_on": true
+    },
+    {
+      "turns": 100,
+      "phi_mean": 0.681238,
+      "phi_std": 0.138565,
+      "phi_min": 0.395904,
+      "phi_max": 0.92,
+      "cv_mean": 0.191715,
+      "cv_std": 0.045939,
+      "cv_max": 0.276549,
+      "drift_detection_latency": 100,
+      "drift_count": 0,
+      "drift_ratio": 0.0,
+      "S_fro_initial": 0.0,
+      "S_fro_final": 0.0,
+      "S_fro_growth": 0.0,
+      "S_fro_mean": 0.0,
+      "scenario": "MIXED",
+      "delta_on": false
+    }
+  ],
+  "comparison": {
+    "MIXED": {
+      "delta_on": {
+        "turns": 100,
+        "phi_mean": 0.680867,
+        "phi_std": 0.142944,
+        "phi_min": 0.389937,
+        "phi_max": 0.92,
+        "cv_mean": 0.149305,
+        "cv_std": 0.036776,
+        "cv_max": 0.236537,
+        "drift_detection_latency": 54,
+        "drift_count": 8,
+        "drift_ratio": 0.08,
+        "S_fro_initial": 0.1,
+        "S_fro_final": 0.315225,
+        "S_fro_growth": 0.215225,
+        "S_fro_mean": 0.279337,
+        "scenario": "MIXED",
+        "delta_on": true
+      },
+      "delta_off": {
+        "turns": 100,
+        "phi_mean": 0.681238,
+        "phi_std": 0.138565,
+        "phi_min": 0.395904,
+        "phi_max": 0.92,
+        "cv_mean": 0.191715,
+        "cv_std": 0.045939,
+        "cv_max": 0.276549,
+        "drift_detection_latency": 100,
+        "drift_count": 0,
+        "drift_ratio": 0.0,
+        "S_fro_initial": 0.0,
+        "S_fro_final": 0.0,
+        "S_fro_growth": 0.0,
+        "S_fro_mean": 0.0,
+        "scenario": "MIXED",
+        "delta_on": false
+      },
+      "cv_stability_gain": 0.009163,
+      "drift_latency_delta": 54,
+      "s_matrix_growth": 0.215225
+    }
+  }
+}

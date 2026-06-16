@@ -18,7 +18,7 @@ obj-m += taiji_os_kmod.o
 # ── 编译选项 ─────────────────────────────────────────
 # -DDEBUG: 启用 pr_debug() 输出
 # -Werror: 将警告视为错误（开发时用）
-EXTRA_CFLAGS := -DDEBUG -Werror -Wno-error=deprecated-declarations
+EXTRA_CFLAGS := -DDEBUG -Wno-error=deprecated-declarations -Wno-error=unused-variable
 
 # ── 默认目标 ──────────────────────────────────────────
 

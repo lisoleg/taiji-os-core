@@ -10,8 +10,14 @@
 #ifndef TAJI_OS_IOCTL_H
 #define TAJI_OS_IOCTL_H
 
+#ifdef __KERNEL__
 #include <linux/types.h>   /* 内核态 */
+#else
 #include <stdint.h>        /* 用户态 */
+typedef uint32_t __u32;
+typedef uint64_t __u64;
+typedef uint8_t  __u8;
+#endif
 
 /* ── 幻数 & ioctl 命令 ─────────────────────────────── */
 

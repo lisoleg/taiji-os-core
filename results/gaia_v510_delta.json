@@ -1,0 +1,3994 @@
+{
+  "experiment": "GAIA_v5.1.0",
+  "model": "deepseek-chat (via LLMRouter)",
+  "n_questions": 165,
+  "n_passed": 41,
+  "accuracy": 0.2485,
+  "elapsed_sec": 17847.27,
+  "level_accuracy": {
+    "1": {
+      "total": 53,
+      "passed": 18,
+      "accuracy": 0.3396
+    },
+    "2": {
+      "total": 86,
+      "passed": 20,
+      "accuracy": 0.2326
+    },
+    "3": {
+      "total": 26,
+      "passed": 3,
+      "accuracy": 0.1154
+    }
+  },
+  "delta_mem_enabled": true,
+  "delta_mem_stats": {
+    "phi_mean": 0.0241,
+    "cv_mean": 0.3902,
+    "cv_max": 1.1495,
+    "drift_rounds": 148
+  },
+  "results": [
+    {
+      "task_id": "c61d22de-5f6c-4958-a7f6-5e9707bd3466",
+      "level": "2",
+      "question": "A paper about AI regulation that was originally submitted to arXiv.org in June 2022 shows a figure with three axes, where each axis has a label word at both ends. Which of these words is used to descr",
+      "gold_answer": "egalitarian",
+      "predicted_answer": "Industrial",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.4762,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0476,
+        "cv": 0.0,
+        "is_drifting": false,
+        "output_len": 12,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "17b5a6a3-bc87-42e8-b0fb-6ab0781ef2cc",
+      "level": "2",
+      "question": "I’m researching species that became invasive after people who kept them as pets released them. There’s a certain species of fish that was popularized as a pet by being the main character of the movie ",
+      "gold_answer": "34689",
+      "predicted_answer": "33040",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.4,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0436,
+        "cv": 0.0,
+        "is_drifting": false,
+        "output_len": 5,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "04a04a9b-226c-43fd-b319-d5e89743676f",
+      "level": "2",
+      "question": "If we assume all articles published by Nature in 2020 (articles, only, not book reviews/columns, etc) relied on statistical significance to justify their findings and they on average came to a p-value",
+      "gold_answer": "41",
+      "predicted_answer": "1",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.6667,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0436,
+        "cv": 0.0,
+        "is_drifting": false,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: AI将平均p值0.04直接解释为每篇论文的错误概率（即4%），并以此计算错误论文数量，但p值并不等同于错误率；在统计显著性检验中，只有在原假设为真且显著性水平为0.05时，错误率才由p值分布决定，而平均p值为0.04并不直接对应错误比例，因此推理存在逻辑矛盾。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "14569e28-c88c-43e4-8c32-097d35b9a67d",
+      "level": "2",
+      "question": "In Unlambda, what exact charcter or text needs to be added to correct the following code to output \"For penguins\"? If what is needed is a character, answer with the name of the character. If there are",
+      "gold_answer": "backtick",
+      "predicted_answer": "backtick",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0403,
+        "cv": 0.2655,
+        "is_drifting": false,
+        "output_len": 193,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "e1fc63a2-da7a-432f-be78-7c4a95598703",
+      "level": "1",
+      "question": "If Eliud Kipchoge could maintain his record-making marathon pace indefinitely, how many thousand hours would it take him to run the distance between the Earth and the Moon its closest approach? Please",
+      "gold_answer": "17",
+      "predicted_answer": "17000",
+      "judge": {
+        "exact": false,
+        "contains": true,
+        "fuzzy": false,
+        "fuzzy_score": 0.5714,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0375,
+        "cv": 0.1871,
+        "is_drifting": false,
+        "output_len": 5,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "32102e3e-d12a-4209-9163-7b3a104efe5d",
+      "level": "2",
+      "question": "The attached spreadsheet shows the inventory for a movie and video game rental store in Seattle, Washington. What is the title of the oldest Blu-Ray recorded in this spreadsheet? Return it as appearin",
+      "gold_answer": "Time-Parking 2: Parallel Universe",
+      "predicted_answer": "Unable to access file.",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.1509,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0375,
+        "cv": 1.1495,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: Φ=-0.013 too low (threshold=0.050)",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "8e867cd7-cff9-4e6c-867a-ff5ddc2550be",
+      "level": "1",
+      "question": "How many studio albums were published by Mercedes Sosa between 2000 and 2009 (included)? You can use the latest 2022 version of english wikipedia.",
+      "gold_answer": "3",
+      "predicted_answer": "5",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.036,
+        "cv": 0.7722,
+        "is_drifting": true,
+        "output_len": 1,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "3627a8be-a77f-41bb-b807-7e1bd4c0ebdf",
+      "level": "2",
+      "question": "The object in the British Museum's collection with a museum number of 2012,5015.17 is the shell of a particular mollusk species. According to the abstract of a research article published in Science Ad",
+      "gold_answer": "142",
+      "predicted_answer": "120",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.6667,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.036,
+        "cv": 0.7722,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: 问题询问贝壳珠子至少有多少千年历史，AI回答142（即14.2万年），远超人类使用贝壳珠子的合理历史（通常为几万年以内），与常识矛盾。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "7619a514-5fa8-43ef-9143-83b66a43d7a4",
+      "level": "2",
+      "question": "According to github, when was Regression added to the oldest closed numpy.polynomial issue that has the Regression label in MM/DD/YY?",
+      "gold_answer": "04/15/18",
+      "predicted_answer": "08/22/18",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.625,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0342,
+        "cv": 0.5217,
+        "is_drifting": true,
+        "output_len": 164,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "ec09fa32-d03f-4bf8-84b0-1f16922c3ae4",
+      "level": "1",
+      "question": "Here's a fun riddle that I think you'll enjoy.\n\nYou have been selected to play the final round of the hit new game show \"Pick That Ping-Pong\". In this round, you will be competing for a large cash pri",
+      "gold_answer": "3",
+      "predicted_answer": "100",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0342,
+        "cv": 0.5217,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: AI声称球100永远不会被释放（即不被选中），但又说选它保证获胜，这自相矛盾。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "676e5e31-a554-4acc-9286-b60d90a92d26",
+      "level": "3",
+      "question": "In July 2, 1959 United States standards for grades of processed fruits, vegetables, and certain other products listed as dehydrated, consider the items in the \"dried and dehydrated section\" specifical",
+      "gold_answer": "86",
+      "predicted_answer": "100%",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.032,
+        "cv": 0.5306,
+        "is_drifting": true,
+        "output_len": 166,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "7dd30055-0198-452e-8c25-f73dbe27dcb8",
+      "level": "2",
+      "question": "Using the Biopython library in Python, parse the PDB file of the protein identified by the PDB ID 5wb7 from the RCSB Protein Data Bank. Calculate the distance between the first and second atoms as the",
+      "gold_answer": "1.456",
+      "predicted_answer": "1.458",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": true,
+        "fuzzy_score": 0.8,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.032,
+        "cv": 0.5306,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: AI给出的距离1.458 Å未正确四舍五入到最近的皮米（1.458 Å = 145.8 pm，应四舍五入为146 pm即1.46 Å），与用户要求不一致。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "2a649bb1-795f-4a01-b3be-9a01868dae73",
+      "level": "2",
+      "question": "What are the EC numbers of the two most commonly used chemicals for the virus testing method in the paper about SPFMV and SPCSV in the Pearl Of Africa from 2016? Return the semicolon-separated numbers",
+      "gold_answer": "3.1.3.1; 1.11.1.7",
+      "predicted_answer": "2.7.7.7;2.7.7.49",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.125,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.032,
+        "cv": 0.5306,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: AI响应给出的EC编号顺序与用户要求按化学品字母顺序排列不一致（应先将DNA聚合酶对应的2.7.7.7排在前面，再将逆转录酶对应的2.7.7.49排在后面）。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "87c610df-bef7-4932-b950-1d83ef4e282b",
+      "level": "2",
+      "question": "In April of 1977, who was the Prime Minister of the first place mentioned by name in the Book of Esther (in the New International Version)?",
+      "gold_answer": "Morarji Desai",
+      "predicted_answer": "Morarji Desai",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.032,
+        "cv": 0.5306,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: 用户询问的是《以斯帖记》中第一个被提及的地点（书珊城，位于伊朗）在1977年4月的领导人，而AI回答的Morarji Desai是印度总理，与伊朗无关，存在常识性矛盾。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "624cbf11-6a41-4692-af9c-36b3e5ca3130",
+      "level": "2",
+      "question": "What's the last line of the rhyme under the flavor name on the headstone visible in the background of the photo of the oldest flavor's headstone in the Ben & Jerry's online flavor graveyard as of the ",
+      "gold_answer": "So we had to let it die.",
+      "predicted_answer": "but now you're obsolete",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.3913,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0302,
+        "cv": 0.398,
+        "is_drifting": true,
+        "output_len": 23,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "dd3c7503-f62a-4bd0-9f67-1b63b94194cc",
+      "level": "2",
+      "question": "Use density measures from the chemistry materials licensed by Marisa Alviar-Agnew & Henry Agnew under the CK-12 license in LibreText's Introductory Chemistry materials as compiled 08/21/2023.\n\nI have ",
+      "gold_answer": "6",
+      "predicted_answer": "6",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0283,
+        "cv": 0.434,
+        "is_drifting": true,
+        "output_len": 1152,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "5d0080cb-90d7-4712-bc33-848150e917d3",
+      "level": "1",
+      "question": "What was the volume in m^3 of the fish bag that was calculated in the University of Leicester paper \"Can Hiccup Supply Enough Fish to Maintain a Dragon’s Diet?\"",
+      "gold_answer": "0.1777",
+      "predicted_answer": "0.2",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.4444,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0268,
+        "cv": 0.3229,
+        "is_drifting": true,
+        "output_len": 151,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "bec74516-02fc-48dc-b202-55e78d0e17cf",
+      "level": "3",
+      "question": "What is the average number of pre-2020 works on the open researcher and contributor identification pages of the people whose identification is in this file?",
+      "gold_answer": "26.4",
+      "predicted_answer": "N/A",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0255,
+        "cv": 0.2343,
+        "is_drifting": false,
+        "output_len": 361,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "a1e91b78-d3d8-4675-bb8d-62741b4b68a6",
+      "level": "1",
+      "question": "In the video https://www.youtube.com/watch?v=L1vXCYZAYYM, what is the highest number of bird species to be on camera simultaneously?",
+      "gold_answer": "3",
+      "predicted_answer": "6",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0248,
+        "cv": 0.25,
+        "is_drifting": false,
+        "output_len": 78,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "46719c30-f4c3-4cad-be07-d5cb21eee6bb",
+      "level": "1",
+      "question": "Of the authors (First M. Last) that worked on the paper \"Pie Menus or Linear Menus, Which Is Better?\" in 2015, what was the title of the first paper authored by the one that had authored prior papers?",
+      "gold_answer": "Mapping Human Oriented Information to Software Agents for Online Systems Usage",
+      "predicted_answer": "The Pie Menu: A Practical Technique for Selecting from Large Sets",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.2676,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0246,
+        "cv": 0.2881,
+        "is_drifting": false,
+        "output_len": 64,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "df6561b2-7ee5-4540-baab-5095f742716a",
+      "level": "2",
+      "question": "When you take the average of the standard population deviation of the red numbers and the standard sample deviation of the green numbers in this image using the statistics module in Python 3.11, what ",
+      "gold_answer": "17.056",
+      "predicted_answer": "0.000",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.3636,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0239,
+        "cv": 0.2263,
+        "is_drifting": false,
+        "output_len": 345,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "00d579ea-0889-4fd9-a771-2c8d79835c8d",
+      "level": "3",
+      "question": "Assuming scientists in the famous youtube video The Thinking Machine (Artificial Intelligence in the 1960s) were interviewed the same year, what is the name of the scientist predicting the sooner thin",
+      "gold_answer": "Claude Shannon",
+      "predicted_answer": "Herbert Simon",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.3704,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0229,
+        "cv": 0.3186,
+        "is_drifting": true,
+        "output_len": 13,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "4b6bb5f7-f634-410e-815d-e673ab7f8632",
+      "level": "1",
+      "question": "In Series 9, Episode 11 of Doctor Who, the Doctor is trapped inside an ever-shifting maze. What is this location called in the official script for the episode? Give the setting exactly as it appears i",
+      "gold_answer": "THE CASTLE",
+      "predicted_answer": "THE CONFESSION DIAL",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.4138,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0229,
+        "cv": 0.3186,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: 官方剧本中该场景标题为\"INT. THE CASTLE - DAY\"，缺少定冠词\"THE\"与用户要求的精确匹配不符。",
+        "S_fro_norm": 0.0001
+      }
+    },
+    {
+      "task_id": "f0f46385-fc03-4599-b5d3-f56496c3e69f",
+      "level": "2",
+      "question": "In terms of geographical distance between capital cities, which 2 countries are the furthest from each other within the ASEAN bloc according to wikipedia? Answer using a comma separated list, ordering",
+      "gold_answer": "Indonesia, Myanmar",
+      "predicted_answer": "Indonesia, Myanmar",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0224,
+        "cv": 0.2311,
+        "is_drifting": false,
+        "output_len": 18,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "384d0dd8-e8a4-4cfe-963c-d37f256e7662",
+      "level": "3",
+      "question": "In the NCATS PubChem compound database for Food Additive Status classification, find the compound that has a molecular weight of 100 g/mol or less, 6 heavy atoms, 1 or fewer hydrogen bond acceptors, a",
+      "gold_answer": "4192",
+      "predicted_answer": "942",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.5714,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0224,
+        "cv": 0.2311,
+        "is_drifting": false,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: AI响应未回答用户要求的“共享基因-化学共现中按分子量最重的PubChem CID”，而是仅提及辅因子NAD⁺，未给出具体CID，且响应不完整，与用户意图矛盾。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "e4e91f1c-1dcd-439e-9fdd-cb976f5293fd",
+      "level": "2",
+      "question": "I need to fact-check a citation. This is the citation from the bibliography:\n\nGreetham, David. \"Uncoupled: OR, How I Lost My Author(s).\" Textual Cultures: Texts, Contexts, Interpretation, vol. 3 no. 1",
+      "gold_answer": "cloak",
+      "predicted_answer": "Yes",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0226,
+        "cv": 0.2836,
+        "is_drifting": false,
+        "output_len": 3,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0001
+      }
+    },
+    {
+      "task_id": "56137764-b4e0-45b8-9c52-1866420c3df5",
+      "level": "2",
+      "question": "Which contributor to the version of OpenCV where support was added for the Mask-RCNN model has the same name as a former Chinese head of government when the names are transliterated to the Latin alpha",
+      "gold_answer": "Li Peng",
+      "predicted_answer": "Li Peng",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0231,
+        "cv": 0.2706,
+        "is_drifting": false,
+        "output_len": 7,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0001
+      }
+    },
+    {
+      "task_id": "de9887f5-ead8-4727-876f-5a4078f8598c",
+      "level": "3",
+      "question": "What integer-rounded percentage of the total length of the harlequin shrimp recorded in Omar Valencfia-Mendez 2017 paper was the sea star fed to the same type of shrimp in G. Curt Fiedler's 2002 paper",
+      "gold_answer": "22",
+      "predicted_answer": "50",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0232,
+        "cv": 0.2047,
+        "is_drifting": false,
+        "output_len": 307,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0001
+      }
+    },
+    {
+      "task_id": "cffe0e32-c9a6-4c52-9877-78ceb4aaa9fb",
+      "level": "1",
+      "question": "An office held a Secret Santa gift exchange where each of its twelve employees was assigned one other employee in the group to present with a gift. Each employee filled out a profile including three l",
+      "gold_answer": "Fred",
+      "predicted_answer": "Unknown",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.022,
+        "cv": 0.5951,
+        "is_drifting": true,
+        "output_len": 197,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0001
+      }
+    },
+    {
+      "task_id": "8b3379c0-0981-4f5b-8407-6444610cb212",
+      "level": "2",
+      "question": "What is the maximum length in meters of #9 in the first National Geographic short on YouTube that was ever released according to the Monterey Bay Aquarium website? Just give the number.",
+      "gold_answer": "1.8",
+      "predicted_answer": "12",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.4,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0228,
+        "cv": 0.4842,
+        "is_drifting": true,
+        "output_len": 3,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0001
+      }
+    },
+    {
+      "task_id": "0ff53813-3367-4f43-bcbd-3fd725c1bf4b",
+      "level": "2",
+      "question": "What two-word type of model did Manash Pratim Kashyap's and PS Fader's studies in customer retention studies published during 2018-2019 have in common (no punctuation)?",
+      "gold_answer": "beta geometric",
+      "predicted_answer": "stochastic model",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.3333,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0233,
+        "cv": 0.3424,
+        "is_drifting": true,
+        "output_len": 18,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0001
+      }
+    },
+    {
+      "task_id": "983bba7c-c092-455f-b6c9-7857003d48fc",
+      "level": "3",
+      "question": "What animals that were mentioned in both Ilias Lagkouvardos's and Olga Tapia's papers on the alvei species of the genus named for Copenhagen outside the bibliographies were also present in the 2021 ar",
+      "gold_answer": "mice",
+      "predicted_answer": "humans",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.2,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0231,
+        "cv": 0.3008,
+        "is_drifting": true,
+        "output_len": 338,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0001
+      }
+    },
+    {
+      "task_id": "a7feb290-76bb-4cb7-8800-7edaf7954f2f",
+      "level": "2",
+      "question": "How many High Energy Physics - Lattice articles listed in January 2020 on Arxiv had ps versions available?",
+      "gold_answer": "31",
+      "predicted_answer": "0",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0242,
+        "cv": 0.2893,
+        "is_drifting": true,
+        "output_len": 2,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "b4cc024b-3f5e-480e-b96a-6656493255b5",
+      "level": "2",
+      "question": "The photograph in the Whitney Museum of American Art's collection with accession number 2022.128 shows a person holding a book. Which military unit did the author of this book join in 1813? Answer wit",
+      "gold_answer": "Russian-German Legion",
+      "predicted_answer": "7th U.S. Infantry",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.3243,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0228,
+        "cv": 0.7281,
+        "is_drifting": true,
+        "output_len": 28,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "2d83110e-a098-4ebb-9987-066c06fa42d0",
+      "level": "1",
+      "question": ".rewsna eht sa \"tfel\" drow eht fo etisoppo eht etirw ,ecnetnes siht dnatsrednu uoy fI",
+      "gold_answer": "Right",
+      "predicted_answer": "right",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0237,
+        "cv": 0.4941,
+        "is_drifting": true,
+        "output_len": 5,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "33d8ea3b-6c6b-4ff1-803d-7e270dea8a57",
+      "level": "2",
+      "question": "What is the minimum number of page links a person must click on to go from the english Wikipedia page on The Lord of the Rings (the book) to the english Wikipedia page on A Song of Ice and Fire (the b",
+      "gold_answer": "2",
+      "predicted_answer": "2",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0237,
+        "cv": 0.4941,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: 常识上，从《魔戒》维基百科页面直接点击到《冰与火之歌》页面的可能性极低，两者通常没有直接链接，至少需要两次点击（例如通过奇幻小说列表页面）。因此AI响应“1”与常识矛盾。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "5cfb274c-0207-4aa7-9575-6ac0bd95d9b2",
+      "level": "1",
+      "question": "Each cell in the attached spreadsheet represents a plot of land. The color of the cell indicates who owns that plot. Green cells are plots owned by Earl Smith. Can Earl walk through every plot he owns",
+      "gold_answer": "No",
+      "predicted_answer": "No",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.023,
+        "cv": 0.5137,
+        "is_drifting": true,
+        "output_len": 786,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "9b54f9d9-35ee-4a14-b62f-d130ea00317f",
+      "level": "3",
+      "question": "Which of the text elements under CATEGORIES in the XML would contain the one food in the spreadsheet that does not appear a second time under a different name?",
+      "gold_answer": "Soups and Stews",
+      "predicted_answer": "Unknown",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.2727,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0223,
+        "cv": 0.5074,
+        "is_drifting": true,
+        "output_len": 207,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "e8cb5b03-41e0-4086-99e5-f6806cd97211",
+      "level": "2",
+      "question": "I went to Virtue restaurant & bar in Chicago for my birthday on March 22, 2021 and the main course I had was delicious!  Unfortunately, when I went back about a month later on April 21, it was no long",
+      "gold_answer": "shrimp",
+      "predicted_answer": "short rib",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.5333,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0224,
+        "cv": 0.358,
+        "is_drifting": true,
+        "output_len": 6,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "27d5d136-8563-469e-92bf-fd103c28b57c",
+      "level": "1",
+      "question": "¬(A ∧ B) ↔ (¬A ∨ ¬B)\n¬(A ∨ B) ↔ (¬A ∧ ¬B)\n(A → B) ↔ (¬B → ¬A)\n(A → B) ↔ (¬A ∨ B)\n(¬A → B) ↔ (A ∨ ¬B)\n¬(A → B) ↔ (A ∧ ¬B)\n\nWhich of the above is not logically equivalent to the rest? Provide the full s",
+      "gold_answer": "(¬A → B) ↔ (A ∨ ¬B)",
+      "predicted_answer": "",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0226,
+        "cv": 0.2604,
+        "is_drifting": true,
+        "output_len": 83,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "dc28cf18-6431-458b-83ef-64b3ce566c10",
+      "level": "1",
+      "question": "My family reunion is this week, and I was assigned the mashed potatoes to bring. The attendees include my married mother and father, my twin brother and his family, my aunt and her family, my grandma ",
+      "gold_answer": "2",
+      "predicted_answer": "2",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0242,
+        "cv": 0.3811,
+        "is_drifting": true,
+        "output_len": 1,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "b816bfce-3d80-4913-a07d-69b752ce6377",
+      "level": "1",
+      "question": "In Emily Midkiff's June 2014 article in a journal named for the one of Hreidmar's sons that guarded his house, what word was quoted from two different authors in distaste for the nature of dragon depi",
+      "gold_answer": "fluffy",
+      "predicted_answer": "cuddly",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.3333,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0246,
+        "cv": 0.2963,
+        "is_drifting": true,
+        "output_len": 6,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "f46b4380-207e-4434-820b-f32ce04ae2a4",
+      "level": "2",
+      "question": "It is 1999. Before you party like it is 1999, please assist me in settling a bet.\n\nFiona Apple and Paula Cole released albums prior to 1999. Of these albums, which didn't receive a letter grade from R",
+      "gold_answer": "Harbinger, Tidal",
+      "predicted_answer": "Harbinger",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": true,
+        "fuzzy_score": 0.75,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0255,
+        "cv": 0.2204,
+        "is_drifting": true,
+        "output_len": 9,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "72e110e7-464c-453c-a309-90a95aed6538",
+      "level": "1",
+      "question": "Under DDC 633 on Bielefeld University Library's BASE, as of 2020, from what country was the unknown language article with a flag unique from the others?",
+      "gold_answer": "Guatemala",
+      "predicted_answer": "Germany",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.5,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0251,
+        "cv": 0.2912,
+        "is_drifting": true,
+        "output_len": 4,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "05407167-39ec-4d3a-a234-73a9120c325d",
+      "level": "2",
+      "question": "In the 2018 VSCode blog post on replit.com, what was the command they clicked on in the last video to remove extra lines?",
+      "gold_answer": "Format Document",
+      "predicted_answer": "Remove Empty Lines",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.1818,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0234,
+        "cv": 0.8056,
+        "is_drifting": true,
+        "output_len": 64,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "b9763138-c053-4832-9f55-86200cb1f99c",
+      "level": "2",
+      "question": "Compute the check digit the Tropicos ID for the Order Helotiales would have if it were an ISBN-10 number.",
+      "gold_answer": "3",
+      "predicted_answer": "4",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0235,
+        "cv": 0.5281,
+        "is_drifting": true,
+        "output_len": 422,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "16d825ff-1623-4176-a5b5-42e0f5c2b0ac",
+      "level": "2",
+      "question": "What time was the Tri-Rail train that carried the most passengers on May 27, 2019 scheduled to arrive in Pompano Beach? Express your answer in the 12-hour digital clock format without leading zero if ",
+      "gold_answer": "6:41 PM",
+      "predicted_answer": "6:30 PM",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.7143,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0237,
+        "cv": 0.3723,
+        "is_drifting": true,
+        "output_len": 7,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "2b3ef98c-cc05-450b-a719-711aee40ac65",
+      "level": "2",
+      "question": "Could you help me out with this assignment? Our professor sprung it on us at the end of class Friday, and I'm still trying to figure it out. The question he asked us was about an anagram. I've attache",
+      "gold_answer": "To be or not to be that is the question whether tis nobler in the mind to suffer the slings and arrows of outrageous fortune",
+      "predicted_answer": "silent",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0923,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0237,
+        "cv": 0.274,
+        "is_drifting": true,
+        "output_len": 11,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "bfcd99e1-0690-4b53-a85c-0174a8629083",
+      "level": "2",
+      "question": "How many applicants for the job in the PDF are only missing a single qualification?",
+      "gold_answer": "17",
+      "predicted_answer": "Unknown",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0225,
+        "cv": 0.5974,
+        "is_drifting": true,
+        "output_len": 246,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "544b7f0c-173a-4377-8d56-57b36eb26ddf",
+      "level": "2",
+      "question": "In Valentina Re’s contribution to the 2017 book “World Building: Transmedia, Fans, Industries”, what horror movie does the author cite as having popularized metalepsis between a dream world and realit",
+      "gold_answer": "A Nightmare on Elm Street",
+      "predicted_answer": "A Nightmare on Elm Street",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0225,
+        "cv": 0.4116,
+        "is_drifting": true,
+        "output_len": 25,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "42576abe-0deb-4869-8c63-225c2d75a95a",
+      "level": "1",
+      "question": "In the fictional language of Tizin, basic sentences are arranged with the Verb first, followed by the direct object, followed by the subject of the sentence. I want to express my love for apples to my",
+      "gold_answer": "Maktay mato apple",
+      "predicted_answer": "Maktay Mato Apple",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0225,
+        "cv": 0.4116,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: 根据Tizin语法，句子顺序应为动词-直接宾语-主语。主语应用主格\"Pa\"，直接宾语应为\"Apple\"（名词原形）。AI使用了宾格\"Mato\"（指“我”的宾格）放在动词之后，但实际需要的是主格主语\"Pa\"在末尾，且\"Apple\"作为直接宾语应出现在动词后、主语前。因此存在格的使用错误和语序矛盾。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "6b078778-0b90-464d-83f6-59511c811b01",
+      "level": "2",
+      "question": "The Metropolitan Museum of Art has a portrait in its collection with an accession number of 29.100.5. Of the consecrators and co-consecrators of this portrait's subject as a bishop, what is the name o",
+      "gold_answer": "Alfonso Visconti",
+      "predicted_answer": "Ottavio Paravicini",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.2941,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0218,
+        "cv": 0.4304,
+        "is_drifting": true,
+        "output_len": 453,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "b415aba4-4b68-4fc6-9b89-2c812e55a3e1",
+      "level": "1",
+      "question": "In Nature journal's Scientific Reports conference proceedings from 2012, in the article that did not mention plasmons or plasmonics, what nano-compound is studied? Don't use the prefix nano in your an",
+      "gold_answer": "diamond",
+      "predicted_answer": "Titanium dioxide",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.3478,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.021,
+        "cv": 0.4381,
+        "is_drifting": true,
+        "output_len": 16,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "076c8171-9b3b-49b9-a477-244d2a532826",
+      "level": "2",
+      "question": "The attached file contains a list of vendors in the Liminal Springs mall, along with each vendor’s monthly revenue and the rent they pay the mall. I want you to find the vendor that makes the least mo",
+      "gold_answer": "Finance",
+      "predicted_answer": "Cannot determine.",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.2609,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0201,
+        "cv": 0.4762,
+        "is_drifting": true,
+        "output_len": 362,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "08cae58d-4084-4616-b6dd-dd6534e4825b",
+      "level": "2",
+      "question": "According to Google Finance, when was the first year the Apple stock went above $50 (without adjusting for stock split)?",
+      "gold_answer": "2018",
+      "predicted_answer": "1981",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.5,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0201,
+        "cv": 0.8173,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: Φ=0.034 too low (threshold=0.050)",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "cca530fc-4052-43b2-b130-b30968d8aa44",
+      "level": "1",
+      "question": "Review the chess position provided in the image. It is black's turn. Provide the correct next move for black which guarantees a win. Please provide your response in algebraic notation.",
+      "gold_answer": "Rd5",
+      "predicted_answer": "Insufficient information.",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0741,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.02,
+        "cv": 0.5839,
+        "is_drifting": true,
+        "output_len": 130,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "2dfc4c37-fec1-4518-84a7-10095d30ad75",
+      "level": "2",
+      "question": "According to Box Office Mojo's 2020 Worldwide Box Office list, how many of the top 10 highest-grossing worldwide movies are also on the top 10 highest-grossing domestic movies? Your answer should be a",
+      "gold_answer": "6",
+      "predicted_answer": "4",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.022,
+        "cv": 0.655,
+        "is_drifting": true,
+        "output_len": 1,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "935e2cff-ae78-4218-b3f5-115589b19dae",
+      "level": "1",
+      "question": "In the year 2022, and before December, what does \"R\" stand for in the three core policies of the type of content that was violated in the public logs on the Legume Wikipedia page?",
+      "gold_answer": "research",
+      "predicted_answer": "Revert",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.5714,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0212,
+        "cv": 0.77,
+        "is_drifting": true,
+        "output_len": 205,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "4fc2f1ae-8625-45b5-ab34-ad4433bc21f8",
+      "level": "1",
+      "question": "Who nominated the only Featured Article on English Wikipedia about a dinosaur that was promoted in November 2016?",
+      "gold_answer": "FunkMonk",
+      "predicted_answer": "FunkMonk",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0213,
+        "cv": 0.5578,
+        "is_drifting": true,
+        "output_len": 15,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "5188369a-3bbe-43d8-8b94-11558f909a08",
+      "level": "1",
+      "question": "What writer is quoted by Merriam-Webster for the Word of the Day from June 27, 2022?",
+      "gold_answer": "Annie Levin",
+      "predicted_answer": "Mark Twain",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.381,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0217,
+        "cv": 0.3915,
+        "is_drifting": true,
+        "output_len": 13,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "9f41b083-683e-4dcf-9185-ccfeaa88fa45",
+      "level": "2",
+      "question": "How many pages if the 2023 IPCC report (85 pages version) mentions nuclear energy?",
+      "gold_answer": "0",
+      "predicted_answer": "2",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0213,
+        "cv": 0.3558,
+        "is_drifting": true,
+        "output_len": 389,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "6f37996b-2ac7-44b0-8e68-6d28256631b4",
+      "level": "1",
+      "question": "Given this table defining * on the set S = {a, b, c, d, e}\n\n|*|a|b|c|d|e|\n|---|---|---|---|---|---|\n|a|a|b|c|b|d|\n|b|b|c|a|e|c|\n|c|c|a|b|b|a|\n|d|b|e|b|e|d|\n|e|d|b|a|d|c|\n\nprovide the subset of S invol",
+      "gold_answer": "b, e",
+      "predicted_answer": "b, e",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0226,
+        "cv": 0.3677,
+        "is_drifting": true,
+        "output_len": 3,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "56db2318-640f-477a-a82f-bc93ad13e882",
+      "level": "3",
+      "question": "The following numbers function similarly to ISBN 13 numbers, however, their validation methods are slightly different. Rather than using alternate weights of 1 and 3, the checksum digit is calculated ",
+      "gold_answer": "7, 9",
+      "predicted_answer": "7, 9",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0226,
+        "cv": 0.3083,
+        "is_drifting": true,
+        "output_len": 83,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "ecbc4f94-95a3-4cc7-b255-6741a458a625",
+      "level": "2",
+      "question": "How many images are there in the latest 2022 Lego english wikipedia article?",
+      "gold_answer": "13",
+      "predicted_answer": "15",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.5,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0216,
+        "cv": 0.5917,
+        "is_drifting": true,
+        "output_len": 70,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "e9a2c537-8232-4c3f-85b0-b52de6bcba99",
+      "level": "2",
+      "question": "The attached file shows a list of books in the collection of Scribe County Public Library. How many of the library’s books that are authored by Rick Riordan are not currently on the library’s shelves?",
+      "gold_answer": "7",
+      "predicted_answer": "Unknown",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0209,
+        "cv": 0.5903,
+        "is_drifting": true,
+        "output_len": 175,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "8131e2c0-0083-4265-9ce7-78c2d568425d",
+      "level": "3",
+      "question": "I was trying to remember how well the Cheater Beater performed in comparison to the Cheater when James tested it on his channel. I know that the Cheater still outperformed the Cheater Beater in terms ",
+      "gold_answer": "101.376, 84.348",
+      "predicted_answer": "650, 550",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.1905,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0206,
+        "cv": 0.4245,
+        "is_drifting": true,
+        "output_len": 348,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "9318445f-fe6a-4e1b-acbf-c68228c9906a",
+      "level": "1",
+      "question": "As a comma separated list with no whitespace, using the provided image provide all the fractions that use / as the fraction line and the answers to the sample problems. Order the list by the order in ",
+      "gold_answer": "3/4,1/4,3/4,3/4,2/4,1/2,5/35,7/21,30/5,30/5,3/4,1/15,1/3,4/9,1/8,32/23,103/170",
+      "predicted_answer": "1/2,0.5,1/4,0.25,3/4,0.75",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.3107,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0214,
+        "cv": 0.4038,
+        "is_drifting": true,
+        "output_len": 87,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "71345b0a-9c7d-4b50-b2bf-937ec5879845",
+      "level": "2",
+      "question": "On a leap day before the year 2008, a joke was removed from the Wikipedia page for “Dragon”. What was the phrase that was removed? Give the phrase as it appeared on the page, but without punctuation.",
+      "gold_answer": "Here be dragons",
+      "predicted_answer": "common pet in China",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.1176,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0214,
+        "cv": 0.4038,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: 响应的内容声称“科学证明龙是真实的”，这与常识（龙是神话生物，非真实存在）矛盾。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "72c06643-a2fa-4186-aa5c-9ec33ae9b445",
+      "level": "3",
+      "question": "What is the volume in milliliters of a system comprised of 0.312 kg Freon-12 refrigerant when placed at the bottom of the Marianas Trench and allowed to stabilize at the Trench's peak temperature, rou",
+      "gold_answer": "55",
+      "predicted_answer": "53",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.5,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0228,
+        "cv": 0.3666,
+        "is_drifting": true,
+        "output_len": 2,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "ebbc1f13-d24d-40df-9068-adcf735b4240",
+      "level": "3",
+      "question": "The Latin root of the Yola word \"gimlie\" shares a spelling with a Spanish word. What is the Google translation of the source title for the 1994 example sentence for that word in the Collins Spanish-to",
+      "gold_answer": "The World of the Twenty First Century",
+      "predicted_answer": "The twins",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.3478,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0225,
+        "cv": 0.4054,
+        "is_drifting": true,
+        "output_len": 11,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "7b5377b0-3f38-4103-8ad2-90fe89864c04",
+      "level": "2",
+      "question": "Find the value of x to the nearest tenth: Lx = (d/dx * (A * x-squared)) + 4-thousand'n'ninety-7 minus C\nWhere L is the last two digits of the year of the Venezuelan Declaration of Independence,\nA is t",
+      "gold_answer": "563.9",
+      "predicted_answer": "563.9",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0221,
+        "cv": 0.3877,
+        "is_drifting": true,
+        "output_len": 792,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "114d5fd0-e2ae-4b6d-a65a-870da2d19c08",
+      "level": "2",
+      "question": "In the endnote found in the second-to-last paragraph of page 11 of the book with the doi 10.2307/j.ctv9b2xdv, what date in November was the Wikipedia article accessed? Just give the day of the month.",
+      "gold_answer": "4",
+      "predicted_answer": "5",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0236,
+        "cv": 0.4096,
+        "is_drifting": true,
+        "output_len": 1,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "8f80e01c-1296-4371-9486-bb3d68651a60",
+      "level": "2",
+      "question": "Using bass clef notes, what is the age of someone who has experienced the word spelled out in the sheet music by the note letters the total number of lines and notes minus the number of notes on lines",
+      "gold_answer": "90",
+      "predicted_answer": "7",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0253,
+        "cv": 0.3348,
+        "is_drifting": true,
+        "output_len": 1,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "ad37a656-079a-49f9-a493-7b739c9167d1",
+      "level": "2",
+      "question": "On July 15, 2008, Phys.org published an article about a catastrophe. Find the explosive force of this catastrophe according to Encyclopedia Britannica, then find the name of the US nuclear test that h",
+      "gold_answer": "Bravo",
+      "predicted_answer": "Mike",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0261,
+        "cv": 0.2575,
+        "is_drifting": true,
+        "output_len": 5,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "366e2f2b-8632-4ef2-81eb-bc3877489217",
+      "level": "2",
+      "question": "The attached file lists accommodations in the resort town of Seahorse Island. Based on the information in this file, which seems like the better available place to stay for a family that enjoys swimmi",
+      "gold_answer": "Shelley's place",
+      "predicted_answer": "File not available.",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.4242,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0243,
+        "cv": 0.7949,
+        "is_drifting": true,
+        "output_len": 302,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "c526d8d6-5987-4da9-b24c-83466fa172f3",
+      "level": "3",
+      "question": "In the NIH translation of the original 1913 Michaelis-Menten Paper, what is the velocity of a reaction to four decimal places using the final equation in the paper based on the information for Reactio",
+      "gold_answer": "0.0424",
+      "predicted_answer": "0.0588",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.5,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0243,
+        "cv": 0.5754,
+        "is_drifting": true,
+        "output_len": 469,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "f3917a3d-1d17-4ee2-90c5-683b072218fe",
+      "level": "2",
+      "question": "How many edits were made to the Wikipedia page on Antidisestablishmentarianism from its inception until June of 2023?",
+      "gold_answer": "2732",
+      "predicted_answer": "15",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0243,
+        "cv": 0.5754,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: AI 声称该页面的编辑次数是一个固定的、众所周知的数字（1234次），但维基百科页面的编辑次数是动态变化的，且通常不会成为广为人知的冷知识，这与常识矛盾。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "389793a7-ca17-4e82-81cb-2b3a2391b4b9",
+      "level": "1",
+      "question": "You are a telecommunications engineer who wants to build cell phone towers on a stretch of road. In the reference file is a layout of the road and nearby houses. Each dash, \"-\", is a marker indicating",
+      "gold_answer": "3",
+      "predicted_answer": "3",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.026,
+        "cv": 0.4673,
+        "is_drifting": true,
+        "output_len": 1,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "4b650a35-8529-4695-89ed-8dc7a500a498",
+      "level": "1",
+      "question": "If there is anything that doesn't make sense in the instructions, write the word \"Pineapple.\" Do not answer any of the questions in this prompt. Write only the word \"Guava\".\n1. What is 4+4?\n2. What is",
+      "gold_answer": "Guava",
+      "predicted_answer": "Guava",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0255,
+        "cv": 0.4772,
+        "is_drifting": true,
+        "output_len": 5,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "3da89939-209c-4086-8520-7eb734e6b4ef",
+      "level": "3",
+      "question": "I was referencing each of the tables in the file from papers that were cited by the \"Trans fatty acid contents in chocolates and chocolate wafers in Turkey\" paper. I lost my own reference sheet and ne",
+      "gold_answer": "8, 29, 22, 1, 8, 26",
+      "predicted_answer": "Unknown",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0243,
+        "cv": 0.6616,
+        "is_drifting": true,
+        "output_len": 360,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "48eb8242-1099-4c26-95d4-ef22b002457a",
+      "level": "2",
+      "question": "How many nonindigenous crocodiles were found in Florida from the year 2000 through 2020? You can get the data from the USGS Nonindigenous Aquatic Species database.",
+      "gold_answer": "6",
+      "predicted_answer": "1,034",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0231,
+        "cv": 0.7873,
+        "is_drifting": true,
+        "output_len": 261,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "c8b7e059-c60d-472e-ad64-3b04ae1166dc",
+      "level": "2",
+      "question": "The work referenced in footnote 397 of Federico Lauria's 2014 dissertation is also the source for the titles of two paintings in the Smithsonian American Art Museum's collection, as of August 2023. Wh",
+      "gold_answer": "8",
+      "predicted_answer": "2",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0234,
+        "cv": 0.5172,
+        "is_drifting": true,
+        "output_len": 313,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "d1af70ea-a9a4-421a-b9cc-94b5e02f1788",
+      "level": "2",
+      "question": "As of the 2020 census, what was the population difference between the largest county seat and smallest county seat, by land area of the county seat, in Washington state? For population figures, please",
+      "gold_answer": "736455",
+      "predicted_answer": "735626",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.5,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0239,
+        "cv": 0.3747,
+        "is_drifting": true,
+        "output_len": 6,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "a3fbeb63-0e8c-4a11-bff6-0e3b484c3e9c",
+      "level": "1",
+      "question": "How many slides in this PowerPoint presentation mention crustaceans?",
+      "gold_answer": "4",
+      "predicted_answer": "0",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0234,
+        "cv": 0.3682,
+        "is_drifting": true,
+        "output_len": 176,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "8d46b8d6-b38a-47ff-ac74-cda14cf2d19b",
+      "level": "3",
+      "question": "What percentage of the total penguin population according to the upper estimates on english Wikipedia at the end of 2012 is made up by the penguins in this file that don't live on Dream Island or have",
+      "gold_answer": "0.00033",
+      "predicted_answer": "84.88372%",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.25,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0242,
+        "cv": 0.3223,
+        "is_drifting": true,
+        "output_len": 7,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "08f3a05f-5947-4089-a4c4-d4bcfaa6b7a0",
+      "level": "2",
+      "question": "Given $x_0 = -5$ and $f(x) = x^3 + 4x^2 - 3x + 8$, what is the smallest $n$ where using Newton's Method $n = n+1$ after rounding to four decimal places?",
+      "gold_answer": "2",
+      "predicted_answer": "2",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0241,
+        "cv": 0.2532,
+        "is_drifting": true,
+        "output_len": 400,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "c714ab3a-da30-4603-bacd-d008800188b9",
+      "level": "1",
+      "question": "You are Van Helsing, a renowned vampire hunter. A Count of Moldova, Lațcu IV, son of  Costea, has tasked you with investigating the village of Șirnea in neighboring Wallachia. The Count's advisors hav",
+      "gold_answer": "100",
+      "predicted_answer": "100",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0241,
+        "cv": 0.2532,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: 用户输入是叙事性背景（Van Helsing调查吸血鬼），而AI响应却基于一个未提及的逻辑谜题假设（村民关于“至少一人是人类”的陈述），导致结论与上下文意图完全无关，属于逻辑矛盾。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "9d191bce-651d-4746-be2d-7ef8ecadb9c2",
+      "level": "1",
+      "question": "Examine the video at https://www.youtube.com/watch?v=1htKBjuUWec.\n\nWhat does Teal'c say in response to the question \"Isn't that hot?\"",
+      "gold_answer": "Extremely",
+      "predicted_answer": "Indeed",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.2667,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0235,
+        "cv": 0.333,
+        "is_drifting": true,
+        "output_len": 30,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "54612da3-fd56-4941-80f4-5eb82330de25",
+      "level": "2",
+      "question": "The attached file shows the locomotives in the collection of a North American railroad museum. How many wheels do the listed steam locomotives have in total?",
+      "gold_answer": "60",
+      "predicted_answer": "54",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0229,
+        "cv": 0.3456,
+        "is_drifting": true,
+        "output_len": 238,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "ded28325-3447-4c56-860f-e497d6fb3577",
+      "level": "2",
+      "question": "This is a secret message my friend gave me. It says where we should meet for our picnic on Friday. The only problem is, it’s encrypted in the Caesar cipher, so I can’t read it. Can you tell me what it",
+      "gold_answer": "Picnic is in Ploybius Plaza.",
+      "predicted_answer": "Polybius Plaza",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.6341,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0229,
+        "cv": 0.3456,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: 用户明确说明消息使用凯撒密码加密，但AI解密结果“Polybius Plaza”对应的是波利比乌斯方阵密码，而非凯撒密码，两者加密方式不同，存在逻辑矛盾。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "6359a0b1-8f7b-499b-9336-840f9ab90688",
+      "level": "2",
+      "question": "What is the area of the green polygon in the attached file? The numbers in purple represent the lengths of the side they are next to.",
+      "gold_answer": "39",
+      "predicted_answer": "Insufficient information.",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0229,
+        "cv": 0.3456,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: 六边形内角和为720度，而所有内角都是直角的六边形内角和应为540度，这与几何常识矛盾。此外，将边长(2,2,3,3,4,4)的六边形假设所有内角为直角无法构成一个有效的多边形。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "e961a717-6b25-4175-8a68-874d28190ee4",
+      "level": "3",
+      "question": "According to wikipedia, how many Asian countries still have a monarchy and access to the sea in 2021?",
+      "gold_answer": "12",
+      "predicted_answer": "12",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0243,
+        "cv": 0.4473,
+        "is_drifting": true,
+        "output_len": 2,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "7cc4acfa-63fd-4acc-a1a1-e8e529e0a97f",
+      "level": "2",
+      "question": "The attached spreadsheet contains the sales of menu items for a regional fast-food chain. Which city had the greater total sales: Wharvton or Algrimand?",
+      "gold_answer": "Wharvton",
+      "predicted_answer": "Insufficient data.",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.08,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0233,
+        "cv": 0.6116,
+        "is_drifting": true,
+        "output_len": 272,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "d700d50d-c707-4dca-90dc-4528cddd0c80",
+      "level": "2",
+      "question": "Who composed the song that was performed by a rooster and a hamster in separate animated videos at separate tempos with different lyrics? Answer using the format First name Last name.",
+      "gold_answer": "Roger Miller",
+      "predicted_answer": "Roger Miller",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0231,
+        "cv": 0.4692,
+        "is_drifting": true,
+        "output_len": 13,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "65afbc8a-89ca-4ad5-8d62-355bb401f61d",
+      "level": "1",
+      "question": "You are given this Excel file as a map. You start on the START cell and move toward the END cell. You are allowed to move two cells per turn, and you may move up, down, left, or right. You may not mov",
+      "gold_answer": "F478A7",
+      "predicted_answer": "Unable to determine.",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.08,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0245,
+        "cv": 0.4268,
+        "is_drifting": true,
+        "output_len": 6,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "851e570a-e3de-4d84-bcfa-cc85578baa59",
+      "level": "3",
+      "question": "I thought we could try a fun word puzzle together :)\n\nI've got a Boggle board here:\n\nABRL\nEITE\nIONS\nFPEI\n\nI'd like to know the longest word that can be generated from the board. Please find the longes",
+      "gold_answer": "Briniest",
+      "predicted_answer": "pointel",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.4,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0244,
+        "cv": 0.3764,
+        "is_drifting": true,
+        "output_len": 273,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "cabe07ed-9eca-40ea-8ead-410ef5e83f91",
+      "level": "1",
+      "question": "What is the surname of the equine veterinarian mentioned in 1.E Exercises from the chemistry materials licensed by Marisa Alviar-Agnew & Henry Agnew under the CK-12 license in LibreText's Introductory",
+      "gold_answer": "Louvrier",
+      "predicted_answer": "Smith",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.1538,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0242,
+        "cv": 0.3006,
+        "is_drifting": true,
+        "output_len": 5,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "0a3cd321-3e76-4622-911b-0fda2e5d6b1a",
+      "level": "2",
+      "question": "According to the World Bank, which countries had gross savings of over 35% of GDP for every year in the period 2001-2010? Give your answer as a comma-separated list of countries in alphabetical order.",
+      "gold_answer": "Brunei, China, Morocco, Singapore",
+      "predicted_answer": "China, Hong Kong, Kuwait, Malaysia, Qatar, Singapore, United Arab Emirates",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.3673,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0232,
+        "cv": 0.535,
+        "is_drifting": true,
+        "output_len": 69,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "f2feb6a4-363c-4c09-a804-0db564eafd68",
+      "level": "2",
+      "question": "I’m thinking about selling my home, so I want to learn more about how homes in my area sold recently. I live in Pearl City, Hawaii, which is on the island of Oahu. I know two homes near me that sold i",
+      "gold_answer": "900000",
+      "predicted_answer": "1150000",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.6154,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0244,
+        "cv": 0.4526,
+        "is_drifting": true,
+        "output_len": 7,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "3cef3a44-215e-4aed-8e3b-b1e3f08063b7",
+      "level": "1",
+      "question": "I'm making a grocery list for my mom, but she's a professor of botany and she's a real stickler when it comes to categorizing things. I need to add different foods to different categories on the groce",
+      "gold_answer": "broccoli, celery, fresh basil, lettuce, sweet potatoes",
+      "predicted_answer": "basil, broccoli, celery, lettuce, sweet potatoes",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": true,
+        "fuzzy_score": 0.8085,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0233,
+        "cv": 0.6913,
+        "is_drifting": true,
+        "output_len": 48,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "50f58759-7bd6-406f-9b0d-5692beb2a926",
+      "level": "3",
+      "question": "How many times was a Twitter/X post cited as a reference on the english Wikipedia pages for each day of August in the last June 2023 versions of the pages?",
+      "gold_answer": "3",
+      "predicted_answer": "0",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0227,
+        "cv": 0.5636,
+        "is_drifting": true,
+        "output_len": 1469,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "0b260a57-3f3a-4405-9f29-6d7a1012dbfb",
+      "level": "2",
+      "question": "On ScienceDirect, what is the difference to 3 decimal places in the sample standard deviations of the number of Reference Works in each Life Science domain compared to Health Sciences as of 2022?",
+      "gold_answer": "0.269",
+      "predicted_answer": "0.123",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.6,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0224,
+        "cv": 0.4236,
+        "is_drifting": true,
+        "output_len": 428,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "ed58682d-bc52-4baa-9eb0-4eb81e1edacc",
+      "level": "2",
+      "question": "What is the last word before the second chorus of the King of Pop's fifth single from his sixth studio album?",
+      "gold_answer": "stare",
+      "predicted_answer": "street",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.7273,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0224,
+        "cv": 0.4236,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: 在Michael Jackson的《Human Nature》中，第二段副歌之前的最后一个词是\"time\"（对应歌词\"All the time\"），而AI回答的\"way\"是错误的，与歌词事实矛盾。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "cca70ce6-1952-45d2-acd4-80c903b0bc49",
+      "level": "2",
+      "question": "Look at the attached image. The quiz is scored as follows:\n\nProblems that ask the student to add or subtract fractions: 5 points\nProblems that ask the student to multiply or divide fractions: 10 point",
+      "gold_answer": "85",
+      "predicted_answer": "35",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.5,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0223,
+        "cv": 0.304,
+        "is_drifting": true,
+        "output_len": 239,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "872bfbb1-9ccf-49f6-8c5f-aa22818ccd66",
+      "level": "3",
+      "question": "Which of the fruits shown in the 2008 painting \"Embroidery from Uzbekistan\" were served as part of the October 1949 breakfast menu for the ocean liner that was later used as a floating prop for the fi",
+      "gold_answer": "pears, bananas",
+      "predicted_answer": "apples, pears, grapes, oranges",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.45,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0217,
+        "cv": 0.3361,
+        "is_drifting": true,
+        "output_len": 35,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "99c9cc74-fdc8-46c6-8f8d-3ce2d3bfeea3",
+      "level": "1",
+      "question": "Hi, I'm making a pie but I could use some help with my shopping list. I have everything I need for the crust, but I'm not sure about the filling. I got the recipe from my friend Aditi, but she left it",
+      "gold_answer": "cornstarch, freshly squeezed lemon juice, granulated sugar, pure vanilla extract, ripe strawberries",
+      "predicted_answer": "cornstarch, lemon juice, salt, strawberries, sugar",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.5674,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0214,
+        "cv": 0.2504,
+        "is_drifting": true,
+        "output_len": 233,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "b7f857e4-d8aa-4387-af2a-0e844df5b9d8",
+      "level": "2",
+      "question": "The attached image contains a Python script. Run the Python code against an array of strings, listed below. The output of the Python script will be a URL containing C++ source code. Compile and run th",
+      "gold_answer": "47",
+      "predicted_answer": "47",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0214,
+        "cv": 0.2504,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: 用户要求基于图片中的Python脚本运行，但AI无访问图片的能力，却直接输出结果47，这违反了常识（无法执行未提供的代码），因此存在逻辑矛盾。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "d8152ad6-e4d5-4c12-8bb7-8d57dc10c6de",
+      "level": "2",
+      "question": "I have the Standard plan in the image below, and I just uploaded 60 equally sized files and got a message that I'm 100GB over the limit. I have 980 more files of the same size to upload. What is the a",
+      "gold_answer": "0.03",
+      "predicted_answer": "0.04",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": true,
+        "fuzzy_score": 0.75,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0222,
+        "cv": 0.3355,
+        "is_drifting": true,
+        "output_len": 4,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "67e8878b-5cef-4375-804e-e6291fdbe78a",
+      "level": "2",
+      "question": "The attached PDF lists accommodations in the resort community of Seahorse Island. Which type of accommodation has a higher average rating in Seahorse Island?",
+      "gold_answer": "Hotels",
+      "predicted_answer": "Condominiums",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.2222,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0217,
+        "cv": 0.3501,
+        "is_drifting": true,
+        "output_len": 284,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "c3a79cfe-8206-451f-aca8-3fec8ebe51d3",
+      "level": "3",
+      "question": "The year is 2022. I am at the National Air and Space Museum east of the Potomac River. I want to go to Fire Station 301 DCA ARFF using the metro. I go in the wrong direction and end up at the station ",
+      "gold_answer": "8",
+      "predicted_answer": "9",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0208,
+        "cv": 0.4691,
+        "is_drifting": true,
+        "output_len": 496,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "d0633230-7067-47a9-9dbf-ee11e0a2cdd6",
+      "level": "1",
+      "question": "In the Scikit-Learn July 2017 changelog, what other predictor base command received a bug fix? Just give the name, not a path.",
+      "gold_answer": "BaseLabelPropagation",
+      "predicted_answer": "predict_proba",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.303,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0213,
+        "cv": 0.3813,
+        "is_drifting": true,
+        "output_len": 12,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "023e9d44-96ae-4eed-b912-244ee8c3b994",
+      "level": "2",
+      "question": "It's May 2023, and I'm about to drive across the U.S. from California to Maine. I always recycle my water bottles at the end of a trip, and I drink 5 12-ounce water bottles for every 100 miles I trave",
+      "gold_answer": "8",
+      "predicted_answer": "8",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0213,
+        "cv": 0.3813,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: AI假设I-90从辛辛那提直达奥古斯塔，但实际上I-90的终点在波士顿，不到奥古斯塔，且辛辛那提不在I-90主干线上，路线与地理常识矛盾。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "305ac316-eef6-4446-960a-92d80d542f82",
+      "level": "1",
+      "question": "Who did the actor who played Ray in the Polish-language version of Everybody Loves Raymond play in Magda M.? Give only the first name.",
+      "gold_answer": "Wojciech",
+      "predicted_answer": "Michał",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.4286,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0218,
+        "cv": 0.2837,
+        "is_drifting": true,
+        "output_len": 6,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "0e9e85b8-52b9-4de4-b402-5f635ab9631f",
+      "level": "2",
+      "question": "What is the latest chronological year date written in the image on the webpage found when following the first citation reference link on the latest version of Carl Nebel's Wikipedia page as of August ",
+      "gold_answer": "1927",
+      "predicted_answer": "1847",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.5,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0223,
+        "cv": 0.2114,
+        "is_drifting": true,
+        "output_len": 4,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "20194330-9976-4043-8632-f8485c6c71b2",
+      "level": "2",
+      "question": "The YouTube channel Game Grumps began a Let’s Play of the game Sonic the Hedgehog (2006) in the year 2012. Thirty seconds into the first episode, a phrase is shown on the screen in white letters on a ",
+      "gold_answer": "4",
+      "predicted_answer": "3",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0221,
+        "cv": 0.2291,
+        "is_drifting": true,
+        "output_len": 320,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "4d51c4bf-4b0e-4f3d-897b-3f6687a7d9f2",
+      "level": "2",
+      "question": "This spreadsheet contains a list of clients for a retractable awning company. Each client has ordered a new awning for the back of their house within the last 90 days. The company makes different desi",
+      "gold_answer": "8",
+      "predicted_answer": "Cannot be determined",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0218,
+        "cv": 0.2376,
+        "is_drifting": true,
+        "output_len": 715,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "0383a3ee-47a7-41a4-b493-519bdefe0488",
+      "level": "1",
+      "question": "On the BBC Earth YouTube video of the Top 5 Silliest Animal Moments, what species of bird is featured?",
+      "gold_answer": "Rockhopper penguin",
+      "predicted_answer": "shoebill",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.3077,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0212,
+        "cv": 0.2925,
+        "is_drifting": true,
+        "output_len": 96,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "65638e28-7f37-4fa7-b7b9-8c19bb609879",
+      "level": "2",
+      "question": "The book with the doi 10.1353/book.24372 concerns a certain neurologist. According to chapter 2 of the book, what author influenced this neurologist’s belief in “endopsychic myths”? Give the last name",
+      "gold_answer": "Kleinpaul",
+      "predicted_answer": "Haeckel",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.25,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0215,
+        "cv": 0.2499,
+        "is_drifting": true,
+        "output_len": 7,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "3ff6b7a9-a5bd-4412-ad92-0cd0d45c0fee",
+      "level": "2",
+      "question": "The longest-lived vertebrate is named after an island.  According to Wikipedia as of January 1, 2021, what is the 2020 estimated population of that island, to the nearest thousand?",
+      "gold_answer": "56000",
+      "predicted_answer": "56,000",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": true,
+        "fuzzy_score": 0.9091,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.022,
+        "cv": 0.2288,
+        "is_drifting": true,
+        "output_len": 6,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "f918266a-b3e0-4914-865d-4faa564f1aef",
+      "level": "1",
+      "question": "What is the final numeric output from the attached Python code?",
+      "gold_answer": "0",
+      "predicted_answer": "No code provided.",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0217,
+        "cv": 0.2383,
+        "is_drifting": true,
+        "output_len": 178,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "708b99c5-e4a7-49cb-a5cf-933c8d46470d",
+      "level": "2",
+      "question": "On the DeepFruits fruit detection graph on Connected Papers from 2016, what feature caused the largest bubble to be the size it is?",
+      "gold_answer": "Citations",
+      "predicted_answer": "citation count",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.6957,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0214,
+        "cv": 0.2267,
+        "is_drifting": true,
+        "output_len": 371,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "0a65cb96-cb6e-4a6a-8aae-c1084f613456",
+      "level": "2",
+      "question": "During the first week of August 2015, one of the NASA Astronomy Pictures of the Day shows the lights of a city on the horizon. The namesake of this city also has a landmark building in Chicago named a",
+      "gold_answer": "Holabird",
+      "predicted_answer": "Skidmore",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.25,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0217,
+        "cv": 0.1884,
+        "is_drifting": true,
+        "output_len": 8,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "11af4e1a-5f45-467d-9aeb-46f4bb0bf034",
+      "level": "1",
+      "question": "How many more blocks (also denoted as layers) in BERT base encoder than the encoder from the architecture proposed in Attention is All You Need?",
+      "gold_answer": "6",
+      "predicted_answer": "6",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0211,
+        "cv": 0.2742,
+        "is_drifting": true,
+        "output_len": 209,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "e142056d-56ab-4352-b091-b56054bd1359",
+      "level": "1",
+      "question": "Bob was invited to participate in a game show, and he advanced to the final round. The final round offered Bob the chance to win a large sum by playing a game against the host. The host has 30 shiny p",
+      "gold_answer": "16000",
+      "predicted_answer": "12000",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": true,
+        "fuzzy_score": 0.8,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0211,
+        "cv": 0.2742,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: AI响应中引入了“at least one pair with difference 6”这一约束条件，但用户输入中并未给出该约束，仅提到“one box must contain at least 2 coins, and one box must contain”且内容不完整，因此响应与上下文意图不一致，构成逻辑矛盾。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "50ad0280-0819-4bd9-b275-5de32d3b5bcb",
+      "level": "1",
+      "question": "Pull out the sentence in the following 5x7 block of text. Read from left to right and use all of the letters in order:\n\nTHESE\nAGULL\nGLIDE\nDPEAC\nEFULL\nYTOMY\nCHAIR",
+      "gold_answer": "The seagull glided peacefully to my chair.",
+      "predicted_answer": "the sea gull glided peacefully to my chair",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": true,
+        "fuzzy_score": 0.988,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0215,
+        "cv": 0.2404,
+        "is_drifting": true,
+        "output_len": 120,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "65da0822-a48a-4a68-bbad-8ed1b835a834",
+      "level": "2",
+      "question": "All of the individuals who formally held the position of United States secretary of homeland security prior to April 2019, excluding those who held the position in an acting capacity, have a bachelor'",
+      "gold_answer": "Santa Clara, Boston",
+      "predicted_answer": "Santa Clara, Boston",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0216,
+        "cv": 0.176,
+        "is_drifting": true,
+        "output_len": 22,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "da52d699-e8d2-4dc5-9191-a2199e0b6a9b",
+      "level": "3",
+      "question": "The attached spreadsheet contains a list of books I read in the year 2022. What is the title of the book that I read the slowest, using the rate of words per day?",
+      "gold_answer": "Out of the Silent Planet",
+      "predicted_answer": "Cannot determine.",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.2,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0216,
+        "cv": 0.1398,
+        "is_drifting": false,
+        "output_len": 399,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "0bb3b44a-ede5-4db5-a520-4e844b0079c5",
+      "level": "2",
+      "question": "Consider the following symbols: 𒐜  𒐐𒐚\n\nThis is a number written using the Mesopotamian/Babylonian number system and represented with Sumerian cuneiform. Convert this number into Arabic numerals as a d",
+      "gold_answer": "536",
+      "predicted_answer": "3666",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.5714,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0217,
+        "cv": 0.1215,
+        "is_drifting": false,
+        "output_len": 272,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "7673d772-ef80-4f0f-a602-1bf4485c9b43",
+      "level": "1",
+      "question": "On Cornell Law School website's legal information institute, under the fifth section of federal rules alphabetically, what word was deleted in the last amendment to the first rule in the article that ",
+      "gold_answer": "inference",
+      "predicted_answer": "shall",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0217,
+        "cv": 0.0976,
+        "is_drifting": false,
+        "output_len": 6,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "73c1b9fe-ee1d-4cf4-96ca-35c08f97b054",
+      "level": "2",
+      "question": "According to the USGS, in what year was the American Alligator first found west of Texas (not including Texas)?",
+      "gold_answer": "1954",
+      "predicted_answer": "1955",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": true,
+        "fuzzy_score": 0.75,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0222,
+        "cv": 0.1516,
+        "is_drifting": true,
+        "output_len": 4,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "c365c1c7-a3db-4d5e-a9a1-66f56eae7865",
+      "level": "1",
+      "question": "Of the cities within the United States where U.S. presidents were born, which two are the farthest apart from the westernmost to the easternmost going east, giving the city names only? Give them to me",
+      "gold_answer": "Braintree, Honolulu",
+      "predicted_answer": "Honolulu, Quincy",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.4848,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0219,
+        "cv": 0.173,
+        "is_drifting": true,
+        "output_len": 16,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "ad2b4d70-9314-4fe6-bfbe-894a45f6055f",
+      "level": "3",
+      "question": "Eva Draconis has a personal website which can be accessed on her YouTube page. What is the meaning of the only symbol seen in the top banner that has a curved line that isn't a circle or a portion of ",
+      "gold_answer": "War is not here this is a land of peace",
+      "predicted_answer": "wave",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.1395,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0225,
+        "cv": 0.1877,
+        "is_drifting": true,
+        "output_len": 8,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "5b2a14e8-6e59-479c-80e3-4696e8980152",
+      "level": "3",
+      "question": "The brand that makes these harnesses the dogs are wearing in the attached pic shares stories from their ambassadors on their website. What meat is mentioned in the story added Dec 8th 2022?",
+      "gold_answer": "bacon",
+      "predicted_answer": "Beef",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.2222,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0214,
+        "cv": 0.5304,
+        "is_drifting": true,
+        "output_len": 214,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "7d4a7d1d-cac6-44a8-96e8-ea9584a70825",
+      "level": "1",
+      "question": "According to Girls Who Code, how long did it take in years for the percentage of computer scientists that were women to change by 13% from a starting point of 37%?",
+      "gold_answer": "22",
+      "predicted_answer": "",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0223,
+        "cv": 0.4194,
+        "is_drifting": true,
+        "output_len": 8,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "dc22a632-937f-4e6a-b72f-ba0ff3f5ff97",
+      "level": "1",
+      "question": "What was the complete title of the book in which two James Beard Award winners recommended the restaurant where Ali Khan enjoyed a New Mexican staple in his cost-conscious TV show that started in 2015",
+      "gold_answer": "Five Hundred Things To Eat Before It's Too Late: and the Very Best Places to Eat Them",
+      "predicted_answer": "Roadfood",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.1522,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0217,
+        "cv": 0.4662,
+        "is_drifting": true,
+        "output_len": 64,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "e2d69698-bc99-4e85-9880-67eaccd66e6c",
+      "level": "2",
+      "question": "As of August 2023, who is the only winner of the US version of Survivor to be born in the month of May?",
+      "gold_answer": "Michele Fitzgerald",
+      "predicted_answer": "Michele Fitzgerald",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0217,
+        "cv": 0.4662,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: Michele Fitzgerald出生于6月23日，而非5月，与事实常识矛盾。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "3f57289b-8c60-48be-bd80-01f8099ca449",
+      "level": "1",
+      "question": "How many at bats did the Yankee with the most walks in the 1977 regular season have that same season?",
+      "gold_answer": "519",
+      "predicted_answer": "525",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.3333,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0213,
+        "cv": 0.4233,
+        "is_drifting": true,
+        "output_len": 158,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "a56f1527-3abf-41d6-91f8-7296d6336c3f",
+      "level": "2",
+      "question": "The cover of the August 2021 issue of Vogue shows a famous landmark in the background behind some trees. How tall is this monument in yards, rounded to the nearest yard? Give the number only.",
+      "gold_answer": "185",
+      "predicted_answer": "361",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.3333,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0223,
+        "cv": 0.4137,
+        "is_drifting": true,
+        "output_len": 3,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "23dd907f-1261-4488-b21c-e9185af91d5e",
+      "level": "1",
+      "question": "In Audre Lorde’s poem “Father Son and Holy Ghost”, what is the number of the stanza in which some lines are indented?",
+      "gold_answer": "2",
+      "predicted_answer": "2",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0215,
+        "cv": 0.5789,
+        "is_drifting": true,
+        "output_len": 91,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "42d4198c-5895-4f0a-b0c0-424a66465d83",
+      "level": "2",
+      "question": "I'm curious about how much information is available for popular video games before their release. Find the Wikipedia page for the 2019 game that won the British Academy Games Awards. How many revision",
+      "gold_answer": "60",
+      "predicted_answer": "23",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.021,
+        "cv": 0.5393,
+        "is_drifting": true,
+        "output_len": 282,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "edd4d4f2-1a58-45c4-b038-67337af4e029",
+      "level": "2",
+      "question": "The attached spreadsheet lists the locomotives owned by a local railroad museum. What is the typical American name for the type of locomotive this museum uses for the Murder Mystery Express?",
+      "gold_answer": "Berkshire",
+      "predicted_answer": "American",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.3529,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0208,
+        "cv": 0.3932,
+        "is_drifting": true,
+        "output_len": 333,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "a26649c6-1cb2-470a-871e-6910c64c3e53",
+      "level": "2",
+      "question": "What is the absolute difference in tens of thousands between the population of chinstrap penguins on the Wikipedia page for penguin species populations as of the end of 2018 and the population recorde",
+      "gold_answer": "116",
+      "predicted_answer": "300",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0221,
+        "cv": 0.4633,
+        "is_drifting": true,
+        "output_len": 3,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "4d0aa727-86b1-406b-9b33-f870dd14a4a5",
+      "level": "2",
+      "question": "The attached file lists the locomotives owned by a local railroad museum. It gives each locomotive’s identifying number, operating status, and the name of the daily excursion it heads, if operational.",
+      "gold_answer": "1 in 3",
+      "predicted_answer": "1 in 4",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": true,
+        "fuzzy_score": 0.8333,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0221,
+        "cv": 0.3945,
+        "is_drifting": true,
+        "output_len": 365,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "1f975693-876d-457b-a649-393859e79bf3",
+      "level": "1",
+      "question": "Hi, I was out sick from my classes on Friday, so I'm trying to figure out what I need to study for my Calculus mid-term next week. My friend from class sent me an audio recording of Professor Willowbr",
+      "gold_answer": "132, 133, 134, 197, 245",
+      "predicted_answer": "Cannot access file.",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.1081,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.022,
+        "cv": 0.3245,
+        "is_drifting": true,
+        "output_len": 264,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "d5141ca5-e7a0-469f-bf3e-e773507c86e2",
+      "level": "2",
+      "question": "When was a picture of St. Thomas Aquinas first added to the Wikipedia page on the Principle of double effect? Answer using the format DD/MM/YYYY.",
+      "gold_answer": "19/02/2009",
+      "predicted_answer": "15/03/2006",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.7,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0227,
+        "cv": 0.2574,
+        "is_drifting": true,
+        "output_len": 10,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "9e1fc53b-46ff-49a1-9d05-9e6faac34cc5",
+      "level": "3",
+      "question": "A 5-man group made up of one tank, one healer, and three DPS is doing a dungeon that was just released in World of Warcraft. Two are plate wearers and two are cloth wearers. At the final boss, both th",
+      "gold_answer": "Death Knight, Hunter, Paladin, Priest, Warlock",
+      "predicted_answer": "Death Knight, Hunter, Paladin, Priest, Warlock",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0223,
+        "cv": 0.2962,
+        "is_drifting": true,
+        "output_len": 436,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "840bfca7-4f7b-481a-8794-c560c340185d",
+      "level": "1",
+      "question": "On June 6, 2023, an article by Carolyn Collins Petersen was published in Universe Today. This article mentions a team that produced a paper about their observations, linked at the bottom of the articl",
+      "gold_answer": "80GSFC21M0002",
+      "predicted_answer": "80GSFC21M0002",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0228,
+        "cv": 0.2372,
+        "is_drifting": true,
+        "output_len": 352,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "1dcc160f-c187-48c2-b68e-319bd4354f3d",
+      "level": "2",
+      "question": "According to Openreview.net, at the NeurIPS 2022 Conference, how many papers by an author named Yuri were accepted with a \"certain\" recommendation?",
+      "gold_answer": "3",
+      "predicted_answer": "0",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0236,
+        "cv": 0.2197,
+        "is_drifting": true,
+        "output_len": 1,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "b2c257e0-3ad7-4f05-b8e3-d9da973be36e",
+      "level": "2",
+      "question": "If this whole pint is made up of ice cream, how many percent above or below the US federal standards for butterfat content is it when using the standards as reported by Wikipedia in 2020? Answer as + ",
+      "gold_answer": "+4.6",
+      "predicted_answer": "+4.0%",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.6667,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0236,
+        "cv": 0.2197,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: 用户未提供冰淇淋的具体乳脂含量，AI无法计算与联邦标准的差值，直接输出数值缺乏依据，构成逻辑矛盾。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "e0c10771-d627-4fd7-9694-05348e54ee36",
+      "level": "2",
+      "question": "Take the gender split from the 2011 Bulgarian census about those who have completed tertiary education. Subtract the smaller number from the larger number, then return the difference in thousands of w",
+      "gold_answer": "234.9",
+      "predicted_answer": "262.4",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.4,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0244,
+        "cv": 0.1747,
+        "is_drifting": true,
+        "output_len": 5,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "a0068077-79f4-461a-adfe-75c1a4148545",
+      "level": "1",
+      "question": "What was the actual enrollment count of the clinical trial on H. pylori in acne vulgaris patients from Jan-May 2018 as listed on the NIH website?",
+      "gold_answer": "90",
+      "predicted_answer": "30",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.5,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0238,
+        "cv": 0.3186,
+        "is_drifting": true,
+        "output_len": 292,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "e29834fd-413a-455c-a33e-c3915b07401c",
+      "level": "2",
+      "question": "I'd like to learn more about some popular reality television competition shows. As of the end of the 44th season of the American version of Survivor, how many more unique winners have there been compa",
+      "gold_answer": "21",
+      "predicted_answer": "22",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.5,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0237,
+        "cv": 0.2543,
+        "is_drifting": true,
+        "output_len": 335,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "bda648d7-d618-4883-88f4-3466eabd860e",
+      "level": "1",
+      "question": "Where were the Vietnamese specimens described by Kuznetzov in Nedoshivina's 2010 paper eventually deposited? Just give me the city name without abbreviations.",
+      "gold_answer": "Saint Petersburg",
+      "predicted_answer": "Saint Petersburg",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0233,
+        "cv": 0.2538,
+        "is_drifting": true,
+        "output_len": 16,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "50ec8903-b81f-4257-9450-1085afd2c319",
+      "level": "1",
+      "question": "A standard Rubik’s cube has been broken into cubes making up its sides. The cubes are jumbled, and one is removed. There are 6 cubes with one colored face, 12 edge cubes with two colored faces, and 8 ",
+      "gold_answer": "green, white",
+      "predicted_answer": "green, white",
+      "judge": {
+        "exact": true,
+        "contains": true,
+        "fuzzy": true,
+        "fuzzy_score": 1.0,
+        "passed": true
+      },
+      "passed": true,
+      "delta_info": {
+        "phi": 0.0233,
+        "cv": 0.2538,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: 魔方标准配色中橙色对面是红色，而AI响应给出“green, white”两个颜色，既与常识矛盾，也不符合单一对面色的逻辑。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "cf106601-ab4f-4af9-b045-5295fe67b37d",
+      "level": "1",
+      "question": "What country had the least number of athletes at the 1928 Summer Olympics? If there's a tie for a number of athletes, return the first in alphabetical order. Give the IOC country code as your answer.",
+      "gold_answer": "CUB",
+      "predicted_answer": "MLT",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0233,
+        "cv": 0.2538,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: 1928年夏季奥运会中，存在多个国家（如马耳他、摩纳哥等）的运动员人数少于古巴，而古巴并非最少，因此AI响应与常识矛盾。",
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "5f982798-16b9-4051-ab57-cfc7ebdb2a91",
+      "level": "3",
+      "question": "I read a paper about multiwavelength observations of fast radio bursts back in March 2021 on Arxiv, and it had a fascinating diagram of an X-ray time profile. There was a similar burst-1 diagram in an",
+      "gold_answer": "0.2",
+      "predicted_answer": "0.5",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.6667,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0245,
+        "cv": 0.3516,
+        "is_drifting": true,
+        "output_len": 3,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "a0c07678-e491-4bbc-8f0b-07405144218f",
+      "level": "1",
+      "question": "Who are the pitchers with the number before and after Taishō Tamai's number as of July 2023? Give them to me in the form Pitcher Before, Pitcher After, use their last names only, in Roman characters.",
+      "gold_answer": "Yoshida, Uehara",
+      "predicted_answer": "Nakamura, Miyadaira",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.25,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0242,
+        "cv": 0.3368,
+        "is_drifting": true,
+        "output_len": 13,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "7bd855d8-463d-4ed5-93ca-5fe35145f733",
+      "level": "1",
+      "question": "The attached Excel file contains the sales of menu items for a local fast-food chain. What were the total sales that the chain made from food (not including drinks)? Express your answer in USD with tw",
+      "gold_answer": "89706.00",
+      "predicted_answer": "Unable to access file.",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.069,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0228,
+        "cv": 0.7307,
+        "is_drifting": true,
+        "output_len": 207,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "5a0c1adf-205e-4841-a666-7c3ef95def9d",
+      "level": "1",
+      "question": "What is the first name of the only Malko Competition recipient from the 20th Century (after 1977) whose nationality on record is a country that no longer exists?",
+      "gold_answer": "Claus",
+      "predicted_answer": "Paavo",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.2,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0232,
+        "cv": 0.4877,
+        "is_drifting": true,
+        "output_len": 7,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "0512426f-4d28-49f0-be77-06d05daec096",
+      "level": "3",
+      "question": "In the YouTube 360 VR video from March 2018 narrated by the voice actor of Lord of the Rings' Gollum, what number was mentioned by the narrator directly after dinosaurs were first shown in the video?",
+      "gold_answer": "100000000",
+      "predicted_answer": "65",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0226,
+        "cv": 0.4511,
+        "is_drifting": true,
+        "output_len": 197,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "0bdb7c40-671d-4ad1-9ce3-986b159c0ddc",
+      "level": "3",
+      "question": "In NASA's Astronomy Picture of the Day on 2006 January 21, two astronauts are visible, with one appearing much smaller than the other. As of August 2023, out of the astronauts in the NASA Astronaut Gr",
+      "gold_answer": "White; 5876",
+      "predicted_answer": "Anderson;35648",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.3333,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.024,
+        "cv": 0.445,
+        "is_drifting": true,
+        "output_len": 13,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "08c0b6e9-1b43-4c2e-ae55-4e3fce2c2715",
+      "level": "2",
+      "question": "In the film Goldfinger, what color was the object that James Bond concealed himself and his companion Pussy Galore at the end of the film? If there are multiple colors, put them in a comma-separated l",
+      "gold_answer": "orange, white",
+      "predicted_answer": "white",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.5882,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0241,
+        "cv": 0.3492,
+        "is_drifting": true,
+        "output_len": 6,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "db4fd70a-2d37-40ea-873f-9433dc5e301f",
+      "level": "2",
+      "question": "As of May 2023, how many stops are between South Station and Windsor Gardens on MBTA’s Franklin-Foxboro line (not included)?",
+      "gold_answer": "10",
+      "predicted_answer": "5",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.0,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0253,
+        "cv": 0.2906,
+        "is_drifting": true,
+        "output_len": 2,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "853c8244-429e-46ca-89f2-addf40dfb2bd",
+      "level": "2",
+      "question": "In the 2015 Metropolitan Museum of Art exhibition titled after the Chinese zodiac animal of 2015, how many of the \"twelve animals of the Chinese zodiac\" have a hand visible?",
+      "gold_answer": "11",
+      "predicted_answer": "1",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.6667,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0244,
+        "cv": 0.4906,
+        "is_drifting": true,
+        "output_len": 181,
+        "accepted": true,
+        "reason": null,
+        "S_fro_norm": 0.0
+      }
+    },
+    {
+      "task_id": "7a4a336d-dcfa-45a0-b014-824c7619e8de",
+      "level": "2",
+      "question": "At the two-minute mark in the YouTube video uploaded by the channel “GameGrumps” on May 14, 2017 as part of their playthrough of the game Mario Kart 8 Deluxe, the shows’ hosts are competing on one of ",
+      "gold_answer": "1:41.614",
+      "predicted_answer": "1:36.69",
+      "judge": {
+        "exact": false,
+        "contains": false,
+        "fuzzy": false,
+        "fuzzy_score": 0.5333,
+        "passed": false
+      },
+      "passed": false,
+      "delta_info": {
+        "phi": 0.0244,
+        "cv": 0.4906,
+        "is_drifting": true,
+        "output_len": 0,
+        "accepted": false,
+        "reason": "D-Core: 在《马力欧卡丁车8豪华版》中，赛道“Dry Dry Desert”属于Wii杯，而非Flower Cup，AI的响应与游戏常识矛盾。",
+        "S_fro_norm": 0.0
+      }
+    }
+  ]
+}

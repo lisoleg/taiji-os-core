@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-scripts/gaia_eval.py — GAIA 外部基准评测 (v5.1.0)
+scripts/gaia_eval.py — GAIA 外部基准评测 (v5.3.0)
 
 加载 HuggingFace `gaia-benchmark/GAIA` 数据集（config="2023_all", split="validation"），
 对每个问题：
@@ -12,17 +12,18 @@ scripts/gaia_eval.py — GAIA 外部基准评测 (v5.1.0)
 
 GAIA 数据格式：task_id, Question, Level, Final answer, file_name, file_path, Annotator Metadata
 
-输出：results/gaia_v510.json
+输出：results/gaia_v510_{delta,nodelta}.json（按 δ-mem 模式自动命名）
 
 用法：
     python scripts/gaia_eval.py --limit 50         # 跑前 50 题
-    python scripts/gaia_eval.py --no-delta         # 禁用 δ-mem
+    python scripts/gaia_eval.py --no-delta         # 禁用 δ-mem（对照组）
     python scripts/gaia_eval.py                   # 默认前 50 题 + δ-mem
     python scripts/gaia_eval.py --limit 0          # 跑全部 165 题
 
-v5.1.0 (2026-06-13): 集成到 v5.1 外部基准评测 (Taiji-OS v5.1.0)
+v5.3.0 (2026-06-16): 结果文件按 δ-mem 模式自动命名 (_delta / _nodelta)
+v5.1.0 (2026-06-13): 集成到 v5.1 外部基准评测
 
-Author: Taiji OS Team (寇豆码)
+Author: Taiji OS Team
 """
 
 from __future__ import annotations
@@ -53,6 +54,10 @@ from core.embedding_adapter import auto_detect_dim
 from core.drift_detector import DriftDetector, HyperParamAdapter
 
 # ── DeepSeek API ────────────────────────────────────────────────────────
+# 需要设置环境变量:
+#   DEEPSEEK_API_KEY — DeepSeek API 密钥
+#   HF_TOKEN         — HuggingFace 访问令牌 (GAIA 是 gated dataset)
+# 示例: export DEEPSEEK_API_KEY=sk-xxx && export HF_TOKEN=hf_xxx
 from hal.llm_router import LLMRouter
 
 logging.basicConfig(
@@ -82,11 +87,18 @@ def load_gaia(limit: Optional[int] = None) -> list[dict]:
     """
     from datasets import load_dataset
 
+    # HF_TOKEN 环境变量用于 gated dataset 认证
+    hf_token = os.environ.get("HF_TOKEN") or None
     logger.info("Loading GAIA 2023_all validation from HuggingFace (streaming) ...")
     try:
-        ds = load_dataset("gaia-benchmark/GAIA", "2023_all", split="validation", streaming=True)
+        ds = load_dataset(
+            "gaia-benchmark/GAIA", "2023_all",
+            split="validation", streaming=True,
+            token=hf_token,
+        )
     except Exception as e:
         logger.error(f"Failed to load GAIA: {e}")
+        logger.error("GAIA is a gated dataset. Visit https://huggingface.co/datasets/gaia-benchmark/GAIA to request access.")
         raise
 
     instances = []
@@ -565,7 +577,8 @@ def run_evaluation(limit: int = 50, use_delta: bool = True) -> dict:
 
     out_dir = PROJECT_ROOT / "results"
     out_dir.mkdir(parents=True, exist_ok=True)
-    out_path = out_dir / "gaia_v510.json"
+    suffix = "nodelta" if not use_delta else "delta"
+    out_path = out_dir / f"gaia_v510_{suffix}.json"
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
     print(f"\nSaved: {out_path}")

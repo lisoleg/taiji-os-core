@@ -9,6 +9,11 @@ Drift detection is the trigger for δ-mem S-update damping:
   - Drift detected → reduce D-Core S beta to 0.2× (dampen noisy ingest)
   - Drift subsides → restore full S learning rate
 
+v1.7 (2026-06-16): Adaptive cv_threshold — exponentially decays threshold based on
+  conversation length. Short conversations keep conservative 0.30; long conversations
+  drift toward floor (0.12) with half-life ~50 turns. Catches gradual drift in
+  multi-turn dialogues while preserving zero false positives in short sessions.
+
 v1.6 (2026-06-13): HyperParamAdapter — automatic adaptation of γ_max, γ_min, cv_mid
   based on multi-round CV history statistics. Tracks CV distribution over 200 rounds,
   adapts every 20 rounds using percentile-based heuristics. Eliminates need for
@@ -33,7 +38,7 @@ v1.3 (2026-06-11): Exponential decay weighting for CV computation.
   exponentially, letting recent high-Φ values dominate the CV.
 
 Author: Taiji OS Team
-Version: v1.6 — hyperparameter auto-adaptation (2026-06-13)
+Version: v1.7 — adaptive cv_threshold (2026-06-16)
 """
 
 from __future__ import annotations
@@ -106,7 +111,13 @@ class DriftDetector:
     # ── Detection params ──────────────────────────────────────────────
     min_samples_before_detect: int = 5
     hysteresis_rounds: int = 2
-    phi_history: np.ndarray = field(init=False)
+    # ── v1.7 Adaptive cv_threshold ────────────────────────────────────
+    adaptive_cv_threshold: bool = True
+    cv_threshold_base: float = 0.30          # initial threshold (short conversations)
+    cv_threshold_floor: float = 0.12         # asymptotic floor (very long conversations)
+    cv_threshold_half_life: float = 50.0     # turns to halve the base→floor gap
+    _total_pushes: int = 0                   # total push count (not window-limited)
+    # ── Internal state ────────────────────────────────────────────────
     write_idx: int = 0
     count: int = 0
     _drifting_streak: int = 0          # consecutive above-threshold rounds
@@ -122,6 +133,39 @@ class DriftDetector:
         self.phi_history = np.zeros(self.window_size, dtype=np.float64)
 
     # ── Adaptive decay (v1.5: continuous auto-tune) ───────────────────
+
+    # ── v1.7: Adaptive cv_threshold ─────────────────────────────────────
+
+    def _current_cv_threshold(self) -> float:
+        """Return the dynamically-adjusted cv_threshold based on conversation length.
+
+        Uses exponential decay:
+            threshold(t) = floor + (base − floor) × exp(−t / half_life)
+
+        Rationale:
+          - Short conversations (< 20 turns): threshold ≈ base (0.30) — conservative
+          - Medium conversations (50 turns): threshold ≈ 0.21 — moderate
+          - Long conversations (100+ turns): threshold → floor (0.12) — sensitive
+          - Very long (200+ turns): threshold ≈ floor — catches slow drift
+
+        This prevents false positives in short sessions while allowing
+        detection of gradual semantic drift in multi-turn dialogues.
+        """
+        if not self.adaptive_cv_threshold:
+            return self.cv_threshold
+
+        t = self._total_pushes
+        # Warm-up: first 20 turns use base threshold to avoid early instability
+        if t < 20:
+            return self.cv_threshold_base
+
+        import math
+        gap = self.cv_threshold_base - self.cv_threshold_floor
+        decay = math.exp(-t / self.cv_threshold_half_life)
+        return max(self.cv_threshold_floor,
+                   self.cv_threshold_floor + gap * decay)
+
+    # ── Adaptive decay (v1.5: continuous auto-tune, continued) ─────────
 
     def _get_decay(self) -> float:
         """Return the effective decay factor for CV weighting.
@@ -228,6 +272,7 @@ class DriftDetector:
         self.write_idx = (self.write_idx + 1) % self.window_size
         if self.count < self.window_size:
             self.count += 1
+        self._total_pushes += 1  # v1.7: track total pushes for adaptive threshold
 
         # v1.6: trigger hyperparameter auto-adaptation after CV update
         if self.adapter is not None and self.count >= 3:
@@ -323,7 +368,9 @@ class DriftDetector:
 
         _, _, cv = self._compute_weighted_stats()
 
-        is_over_threshold = cv > self.cv_threshold
+        # v1.7: dynamic threshold based on conversation length
+        current_threshold = self._current_cv_threshold()
+        is_over_threshold = cv > current_threshold
 
         if is_over_threshold:
             self._drifting_streak += 1
@@ -373,6 +420,8 @@ class DriftDetector:
             "mean_phi": round(self.mean_phi, 4),
             "is_drifting": self.is_drifting(),
             "cv_threshold": self.cv_threshold,
+            "cv_threshold_effective": round(self._current_cv_threshold(), 4),  # v1.7
+            "total_pushes": self._total_pushes,  # v1.7
             "drifting_streak": self._drifting_streak,
             "min_samples_before_detect": self.min_samples_before_detect,
             "decay": self._get_decay(),
@@ -401,6 +450,7 @@ class DriftDetector:
         self._recovery_streak = 0
         self._prev_cv = 0.0
         self._effective_decay = self.decay
+        self._total_pushes = 0  # v1.7
 
 
 # ────────────────────────────────────────────────────────────────────────────

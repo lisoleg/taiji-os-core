@@ -74,8 +74,9 @@ class SelfConsistencyLoop:
         self, llm_router, world_model, dcore_mode: str = "semantic",
         delta_fusion=None,
         hyper_adapter: bool = False,  # v5.1: HyperParamAdapter 自动超参适配
+        use_kernel: bool = False,    # v5.2: 内核模块加速
     ):
-        """初始化推演循环（v5.1: δ-mem 集成 + 漂移检测 + 超参自适应）。
+        """初始化推演循环（v5.2: δ-mem 集成 + 漂移检测 + 超参自适应 + 内核模块）。
 
         参数:
             llm_router:   LLMRouter 实例，用于 G-Core 生成和 D-Core 检测
@@ -83,14 +84,23 @@ class SelfConsistencyLoop:
             dcore_mode:   "semantic"（DeepSeek API 语义检测）或 "keyword"（关键词回退）
             delta_fusion: DeltaFusion 实例（可选），启用 δ-mem L1/L2 融合
             hyper_adapter: 启用 HyperParamAdapter 自动超参适配 (v5.1)
+            use_kernel:   启用内核模块加速 S 矩阵运算 (v5.2)
         """
         self.llm = llm_router
         self.w = world_model
         self.dcore_mode = dcore_mode if dcore_mode in self.DCORE_MODES else "semantic"
         self.phi = PhiScheduler()
 
+        # ── v5.2: 内核模块加速 ──
+        self._use_kernel = use_kernel
+        self._kernel_delta = None
+
         # ── δ-mem L1/L2 融合 (v4.2) ──
         self.delta_fusion = delta_fusion
+
+        # 如果启用内核模块，尝试初始化内核加速层
+        if self._use_kernel:
+            self._init_kernel_delta()
 
         # ── ψ 漂移检测器 (v5.0: 连续自动调优) ──
         self.drift_detector = DriftDetector(
@@ -163,16 +173,26 @@ class SelfConsistencyLoop:
 
         # ── ψ 漂移检测 (v4.6.3: 降 β — 阻尼 D-Core 噪音，不阻断学习) ──
         if self.delta_fusion is not None:
-            self.drift_detector.push(phi_val)
-            if self.drift_detector.is_drifting():
-                # 降 β 策略：β ← β × 0.2 保持 D-Core S 学习但大幅阻尼
-                # 这样可以(1)不完全丢失检测阶段的信号
-                # (2)防止漂移期噪音过度污染 S 矩阵
-                logger.info(
-                    f"δ-mem: ψ drift confirmed (CV={self.drift_detector.current_cv:.3f}, "
-                    f"streak={self.drift_detector._drifting_streak}), "
-                    f"reducing D-Core S beta to 20%"
-                )
+            # v5.2: 如果使用内核模块，drift 检测走内核 push_phi
+            if self._use_kernel and self._kernel_delta is not None:
+                drift_info = self._kernel_delta.push_phi(phi_val)
+                if drift_info.get("is_drifting", False):
+                    logger.info(
+                        f"δ-mem (kernel): ψ drift confirmed "
+                        f"(CV={drift_info.get('current_cv', 0):.3f}), "
+                        f"reducing D-Core S beta to 20%"
+                    )
+            else:
+                self.drift_detector.push(phi_val)
+                if self.drift_detector.is_drifting():
+                    # 降 β 策略：β ← β × 0.2 保持 D-Core S 学习但大幅阻尼
+                    # 这样可以(1)不完全丢失检测阶段的信号
+                    # (2)防止漂移期噪音过度污染 S 矩阵
+                    logger.info(
+                        f"δ-mem: ψ drift confirmed (CV={self.drift_detector.current_cv:.3f}, "
+                        f"streak={self.drift_detector._drifting_streak}), "
+                        f"reducing D-Core S beta to 20%"
+                    )
 
         if ok:
             self.w.update(candidate)
@@ -227,16 +247,22 @@ class SelfConsistencyLoop:
             response = self.llm.complete(augmented_detection)
             # ── δ-mem: 更新 D-Core 结果到 S (v4.6.3: 降 β 替代完全暂停) ──
             if self.delta_fusion is not None:
-                smatrix = self.delta_fusion.delta_layer.smatrix
-                original_beta = smatrix.beta
-                if self.drift_detector.is_drifting():
-                    smatrix.beta = original_beta * 0.2  # Drift damping
-                try:
+                if self._use_kernel and self._kernel_delta is not None:
+                    # v5.2: 内核模块路径 — 直接 ingest（内核内部处理 β 控制）
                     k2 = embed_to_key(detection_prompt, self.w)
                     v2 = embed_to_value(response, self.w)
-                    self.delta_fusion.ingest(k2, v2)
-                finally:
-                    smatrix.beta = original_beta
+                    self._kernel_delta.ingest(k2, v2)
+                else:
+                    smatrix = self.delta_fusion.delta_layer.smatrix
+                    original_beta = smatrix.beta
+                    if self.drift_detector.is_drifting():
+                        smatrix.beta = original_beta * 0.2  # Drift damping
+                    try:
+                        k2 = embed_to_key(detection_prompt, self.w)
+                        v2 = embed_to_value(response, self.w)
+                        self.delta_fusion.ingest(k2, v2)
+                    finally:
+                        smatrix.beta = original_beta
             return self._parse_dcore_response(response)
         except Exception as e:
             logger.warning(
@@ -287,3 +313,44 @@ class SelfConsistencyLoop:
             f"{response[:100]}"
         )
         return False, "解析失败，保守通过"
+
+    # ------------------------------------------------------------------
+    # v5.2: 内核模块集成
+    # ------------------------------------------------------------------
+
+    def _init_kernel_delta(self) -> None:
+        """初始化内核模块 DeltaMemLayerKernel 替代 delta_fusion 底层。
+
+        当 use_kernel=True 且内核模块可用时:
+        1. 创建 DeltaMemLayerKernel 替换 self.delta_fusion 的底层实现
+        2. drift 检测改为通过内核模块的 push_phi
+        """
+        try:
+            from kmod.python.taiji_os_kmod import DeltaMemLayerKernel, HAVE_KERNEL_MODULE
+        except ImportError:
+            try:
+                from taiji_os_kmod import DeltaMemLayerKernel, HAVE_KERNEL_MODULE
+            except ImportError:
+                logger.warning(
+                    "use_kernel=True 但无法导入 taiji_os_kmod，"
+                    "回退到纯 Python delta_fusion"
+                )
+                self._use_kernel = False
+                return
+
+        if not HAVE_KERNEL_MODULE:
+            logger.warning(
+                "use_kernel=True 但内核模块未加载 (/dev/taiji_os 不可用)，"
+                "回退到纯 Python delta_fusion"
+            )
+            self._use_kernel = False
+            return
+
+        try:
+            self._kernel_delta = DeltaMemLayerKernel(rank=8, use_kernel=True)
+            self.delta_fusion = self._kernel_delta
+            logger.info("内核模块 DeltaMemLayerKernel 已启用 (v5.2 内核加速)")
+        except Exception as e:
+            logger.warning(f"内核模块初始化失败: {e}，回退到纯 Python")
+            self._use_kernel = False
+            self._kernel_delta = None

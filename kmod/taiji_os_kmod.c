@@ -172,11 +172,12 @@ static long taiji_ioctl_impl(struct file *file, unsigned int cmd, void __user *a
     }
     case TAJI_S_FLUSH: {
         struct taiji_flush_arg farg;
+        memset(&farg, 0, sizeof(farg));
         kernel_fpu_begin();
         taiji_s_flush(&sess->s_matrix, farg.S_snapshot);
         kernel_fpu_end();
-        farg.step = sess->s_matrix.step;
-        farg.flushed_count = ++sess->s_matrix.step;  /* 简化：用 step 字段存刷新计数 */
+        farg.step = sess->s_matrix.step;         /* flush 后 step 已归 0 */
+        farg.flushed_count = ++sess->flush_count; /* 使用专用 flush_count 字段 */
         if (copy_to_user(arg, &farg, sizeof(farg)))
             { ret = -EFAULT; goto out; }
         break;
@@ -283,6 +284,46 @@ static long taiji_ioctl_impl(struct file *file, unsigned int cmd, void __user *a
         stats.phi_history_len = sess->drift.count;
         if (copy_to_user(arg, &stats, sizeof(stats)))
             { ret = -EFAULT; goto out; }
+        break;
+    }
+
+    /* ── 批量操作 ──────────────────────────────────── */
+    case TAJI_BATCH_UPDATE: {
+        struct taiji_batch_arg barg;
+        float *kbuf = NULL, *vbuf = NULL;
+        uint32_t i;
+
+        if (copy_from_user(&barg, arg, sizeof(barg)))
+            { ret = -EFAULT; goto out; }
+        if (barg.count == 0 || barg.count > 64)
+            { ret = -EINVAL; goto out; }
+
+        kbuf = kmalloc(sizeof(float) * TAJI_RANK * barg.count, GFP_KERNEL);
+        vbuf = kmalloc(sizeof(float) * TAJI_RANK * barg.count, GFP_KERNEL);
+        if (!kbuf || !vbuf) {
+            ret = -ENOMEM;
+            goto batch_cleanup;
+        }
+
+        if (copy_from_user(kbuf, barg.keys,
+                           sizeof(float) * TAJI_RANK * barg.count))
+            { ret = -EFAULT; goto batch_cleanup; }
+        if (copy_from_user(vbuf, barg.values,
+                           sizeof(float) * TAJI_RANK * barg.count))
+            { ret = -EFAULT; goto batch_cleanup; }
+
+        kernel_fpu_begin();
+        for (i = 0; i < barg.count; i++) {
+            taiji_s_update(&sess->s_matrix,
+                           &kbuf[i * TAJI_RANK],
+                           &vbuf[i * TAJI_RANK]);
+        }
+        kernel_fpu_end();
+        sess->total_updates += barg.count;
+
+batch_cleanup:
+        if (kbuf) kfree(kbuf);
+        if (vbuf) kfree(vbuf);
         break;
     }
 
@@ -484,7 +525,11 @@ static int __init taiji_init(void)
     }
 
     /* 创建 /sys/class/taiji_os 用于 udev 自动创建设备文件 */
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(6,4,0)
+    taiji_class = class_create(MODULE_NAME);
+#else
     taiji_class = class_create(THIS_MODULE, MODULE_NAME);
+#endif
     if (IS_ERR(taiji_class)) {
         pr_warn(MODULE_NAME ": class_create failed, manual mknod needed\n");
     } else {
